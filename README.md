@@ -13,6 +13,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - Home page, theme/index listing, full page listing, and detail pages
 - Related pages, next pages, source notes, tags, status, and confidence indicators
 - Android-friendly mobile-first reading layout
+- Minimal, border-light visual design that uses whitespace and divider lines instead of boxed cards
 
 ## Content directories
 
@@ -41,6 +42,16 @@ npm run dev
 Then open <http://localhost:3000>.
 
 ## Validate before deployment
+
+Run the content validator before app checks:
+
+```bash
+npm run validate
+```
+
+The validator checks required content frontmatter, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
+
+Then run the Next.js checks:
 
 ```bash
 npm run typecheck

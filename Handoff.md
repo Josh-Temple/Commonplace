@@ -2,51 +2,64 @@
 
 ## Current validation status — 2026-06-23
 
-The requested pre-deployment validation was attempted from `/workspace/Commonplace`.
+Issue #3 content validation workflow was implemented from `/workspace/Commonplace`.
 
 ### Commands run
 
 ```bash
-npm install
-npm run typecheck
-npm run build
-env -u npm_config_http_proxy -u npm_config_https_proxy -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY npm install
-npm install --registry=https://registry.npmjs.org/ --fetch-timeout=30000 --fetch-retries=1
+node scripts/validate-content.mjs
+npm run validate
 ```
 
-### Build result
+Both commands passed. `npm run validate` emitted npm's existing environment warning about an unknown `http-proxy` config before running the validator, but the validator completed successfully.
 
-Build did **not** pass in this environment because dependencies could not be installed.
+### Files changed
 
-- `npm install` failed with `E403 403 Forbidden` while fetching `@types/node` from `https://registry.npmjs.org/@types%2fnode`.
-- The environment also reports npm proxy configuration warnings for `http-proxy` / `https-proxy`.
-- Retrying without proxy environment variables did not complete in a reasonable time and was stopped.
-- Retrying with an explicit npm registry still failed with the same `E403`.
-- `npm run typecheck` failed because dependency/type packages such as `next`, `@types/node`, and React JSX types were unavailable.
-- `npm run build` failed because the `next` binary was unavailable.
+- `package.json` — added the `validate` script.
+- `scripts/validate-content.mjs` — added the content validation workflow.
+- `README.md` — documented the content validation command and what it checks.
+- `Handoff.md` — refreshed this handoff with the current implementation status.
 
-No source-code changes were made to work around missing dependencies because the observed failures are consistent with an install/network policy limitation rather than an application code issue.
+### Remaining limitations
 
-### Remaining limitations before Vercel deployment
+- The validator intentionally checks repository-local structure and references only; it does not verify the factual accuracy of content claims or source summaries.
+- The validator enforces the current required frontmatter fields, accepted page `type` values, and `low` / `medium` / `high` confidence values. If the content model expands, update `scripts/validate-content.mjs` accordingly.
+- `npm run typecheck` and `npm run build` were not rerun during this Issue #3 workflow because the requested check was `npm run validate`.
 
-- Re-run validation in an environment that can install packages from npm, or commit a lockfile generated from a successful install.
-- After dependencies are installed, run:
+
+## Design update status — 2026-06-23
+
+The Lumen UI was updated for a more premium mobile reading experience with minimal enclosing borders. The current visual language uses open sections, generous vertical rhythm, soft backgrounds, and divider lines rather than boxed cards.
+
+### Commands run
 
 ```bash
+npm run validate
 npm run typecheck
 npm run build
 ```
 
-- If those commands reveal application errors after dependencies are present, fix them with the smallest safe changes and preserve content meaning.
+All three commands passed. npm still emits the existing non-fatal environment warning about an unknown `http-proxy` config before scripts run.
 
-## What was created
+### Files changed
 
-- Initialized a Vercel-ready Next.js + TypeScript app named Lumen inside the Commonplace repository.
-- Added a Markdown/frontmatter content system under `content/`.
-- Added source-note directories under `sources/` and a placeholder research note.
-- Implemented static content page generation for Markdown files in `content/`.
-- Added support for `[[wikilink]]` and `[[wikilink|label]]` internal links in rendered page bodies.
-- Added the main reader UI:
+- `app/styles.css` — redesigned global UI styling to reduce boxed borders and emphasize whitespace/dividers.
+- `README.md` — noted the border-light mobile reading design direction.
+- `Handoff.md` — documented this design pass.
+
+### Remaining limitations
+
+- No automated browser screenshot was captured because this container does not appear to include a browser binary such as Chromium or Firefox.
+- The redesign is CSS-only and preserves existing sample content meaning and page structure.
+
+## What exists now
+
+- Vercel-ready Next.js + TypeScript app named Lumen inside the Commonplace repository.
+- Markdown/frontmatter content system under `content/`.
+- Source-note directories under `sources/` and a placeholder research note.
+- Static content page generation for Markdown files in `content/`.
+- Support for `[[wikilink]]` and `[[wikilink|label]]` internal links in rendered page bodies.
+- Main reader UI with a mobile-first, border-light visual system:
   - Home page
   - Theme/index page list
   - Full content page list
@@ -55,9 +68,10 @@ npm run build
   - Next links section
   - Source notes section
   - Tags, status, confidence, and updated metadata
-- Added concise sample content for emotion control and trading workflows.
-- Added `.github/ISSUE_TEMPLATE/content_request.md` for future GitHub Issue-based content requests.
-- Added `AGENTS.md` with content and development rules for future agents.
+- Concise sample content for emotion control and trading workflows.
+- `.github/ISSUE_TEMPLATE/content_request.md` for future GitHub Issue-based content requests.
+- `AGENTS.md` with content and development rules for future agents.
+- `npm run validate` content validation workflow.
 
 ## How to run locally
 
@@ -71,6 +85,7 @@ Open <http://localhost:3000>.
 ## How to validate
 
 ```bash
+npm run validate
 npm run typecheck
 npm run build
 ```
@@ -112,18 +127,16 @@ Important conventions:
 
 - Markdown rendering is intentionally minimal and supports headings, paragraphs, ordered lists, unordered lists, and wikilinks. It does not yet support full GitHub-Flavored Markdown tables, blockquotes, code fences, or nested lists.
 - Source notes are listed on content detail pages but do not have their own rendered detail route.
-- Missing wikilinks render as red dashed text rather than creating placeholder pages.
+- Missing wikilinks render as red dashed text rather than creating placeholder pages at runtime; `npm run validate` catches missing wikilink targets before deployment.
 - There is no search UI yet.
-- There is no content validation script yet to enforce frontmatter shape or detect broken `related`, `next`, and `sources` references.
+- The content validator does not verify factual accuracy; it checks shape and repository-local references.
 - The sample content is deliberately concise and should be expanded only with verified source material or clearly marked personal rules/speculation.
 
 ## Suggested next tasks
 
-1. Restore npm registry access or generate `package-lock.json` in an environment with registry access.
-2. Re-run `npm install`, `npm run typecheck`, and `npm run build`.
-3. Add a content validation command that checks required frontmatter fields and broken page/source references.
-4. Add source-note detail pages or a protected/research-only source browser.
-5. Improve Markdown support with a parser such as `remark`/`rehype` if richer content is needed.
-6. Add search and tag-filter pages for Android reading.
-7. Test the deployed UI on an Android device and tune font size, spacing, and link tap targets.
-8. Add more real source-backed pages after research notes are created.
+1. Run `npm run typecheck` and `npm run build` after content validation before deployment.
+2. Add source-note detail pages or a protected/research-only source browser.
+3. Improve Markdown support with a parser such as `remark`/`rehype` if richer content is needed.
+4. Add search and tag-filter pages for Android reading.
+5. Test the deployed UI on an Android device and tune font size, spacing, and link tap targets.
+6. Add more real source-backed pages after research notes are created.
