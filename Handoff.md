@@ -1,5 +1,44 @@
 # Handoff: Lumen MVP
 
+## Current validation status — 2026-06-23
+
+The requested pre-deployment validation was attempted from `/workspace/Commonplace`.
+
+### Commands run
+
+```bash
+npm install
+npm run typecheck
+npm run build
+env -u npm_config_http_proxy -u npm_config_https_proxy -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY npm install
+npm install --registry=https://registry.npmjs.org/ --fetch-timeout=30000 --fetch-retries=1
+```
+
+### Build result
+
+Build did **not** pass in this environment because dependencies could not be installed.
+
+- `npm install` failed with `E403 403 Forbidden` while fetching `@types/node` from `https://registry.npmjs.org/@types%2fnode`.
+- The environment also reports npm proxy configuration warnings for `http-proxy` / `https-proxy`.
+- Retrying without proxy environment variables did not complete in a reasonable time and was stopped.
+- Retrying with an explicit npm registry still failed with the same `E403`.
+- `npm run typecheck` failed because dependency/type packages such as `next`, `@types/node`, and React JSX types were unavailable.
+- `npm run build` failed because the `next` binary was unavailable.
+
+No source-code changes were made to work around missing dependencies because the observed failures are consistent with an install/network policy limitation rather than an application code issue.
+
+### Remaining limitations before Vercel deployment
+
+- Re-run validation in an environment that can install packages from npm, or commit a lockfile generated from a successful install.
+- After dependencies are installed, run:
+
+```bash
+npm run typecheck
+npm run build
+```
+
+- If those commands reveal application errors after dependencies are present, fix them with the smallest safe changes and preserve content meaning.
+
 ## What was created
 
 - Initialized a Vercel-ready Next.js + TypeScript app named Lumen inside the Commonplace repository.
@@ -80,9 +119,11 @@ Important conventions:
 
 ## Suggested next tasks
 
-1. Add a content validation command that checks required frontmatter fields and broken page/source references.
-2. Add source-note detail pages or a protected/research-only source browser.
-3. Improve Markdown support with a parser such as `remark`/`rehype` if richer content is needed.
-4. Add search and tag-filter pages for Android reading.
-5. Test the deployed UI on an Android device and tune font size, spacing, and link tap targets.
-6. Add more real source-backed pages after research notes are created.
+1. Restore npm registry access or generate `package-lock.json` in an environment with registry access.
+2. Re-run `npm install`, `npm run typecheck`, and `npm run build`.
+3. Add a content validation command that checks required frontmatter fields and broken page/source references.
+4. Add source-note detail pages or a protected/research-only source browser.
+5. Improve Markdown support with a parser such as `remark`/`rehype` if richer content is needed.
+6. Add search and tag-filter pages for Android reading.
+7. Test the deployed UI on an Android device and tune font size, spacing, and link tap targets.
+8. Add more real source-backed pages after research notes are created.
