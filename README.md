@@ -1,2 +1,50 @@
-# Commonplace
-Commonplace
+# Lumen
+
+Lumen is a Vercel-ready personal knowledge-base viewer for linked concepts, methods, protocols, rules, index pages, and source notes.
+
+The repository is named **Commonplace**, but the app is called **Lumen**.
+
+## Features in the MVP
+
+- Next.js + TypeScript app router structure
+- Markdown content under `content/` with YAML frontmatter
+- Static content routes generated from Markdown files
+- `[[wikilink]]` and `[[wikilink|label]]` internal links
+- Home page, theme/index listing, full page listing, and detail pages
+- Related pages, next pages, source notes, tags, status, and confidence indicators
+- Android-friendly mobile-first reading layout
+
+## Content directories
+
+```text
+content/
+  concepts/
+  methods/
+  protocols/
+  rules/
+  indexes/
+  outputs/
+sources/
+  research-notes/
+  source-summaries/
+```
+
+`content/` is for reader-facing pages. `sources/` is for research notes and source summaries, not final user-facing content.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open <http://localhost:3000>.
+
+## Validate before deployment
+
+```bash
+npm run typecheck
+npm run build
+```
+
+The app is designed to deploy directly on Vercel as a standard Next.js project.
