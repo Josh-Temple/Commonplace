@@ -16,6 +16,7 @@ related:
   - market-structure
   - horizontal-levels
   - entry-decision-process
+  - no-trade-checklist
 next:
   - entry-decision-process
 updated: 2026-06-24
@@ -24,6 +25,18 @@ updated: 2026-06-24
 ## 目的
 
 エントリー前に、文脈、構造、水平線、Volume Profile補助観察、ニュース、見送り条件を短く確認します。教育目的の整理であり、金融助言ではありません。
+
+## 30秒版
+
+- Where am I? 価格は端か、中央か、重要Level付近か。
+- What structure am I trading within? trend、range、transitionのどれか。
+- What level matters? 判断に使う水平線はどれか。
+- What is the invalidation? 何で前提が崩れるか。
+- Why can I skip this? 見送る理由を一つ言えるか。
+
+## 3分版
+
+30秒版に加えて、Volume Profile、news、risk、emotionを確認します。POC / VAH / VALは補助観察であり、単独根拠にしません。
 
 ## チェック項目
 

@@ -39,3 +39,34 @@ This note supports cautious content about open monitoring meditation, decenterin
 
 - Add direct source summaries for focused-attention versus open-monitoring trials before making stronger comparative claims.
 - Add decentering-specific measurement sources if future content discusses scales or mechanisms in detail.
+
+## 2026-06-24 deeper verification pass
+
+### Focused attention versus open monitoring
+
+- Focused attention stabilizes attention around a selected object and repeatedly returns to it.
+- Open monitoring observes a wider field of experience, but safe practice still benefits from a return target.
+- Component and dismantling studies exist, but this note does not yet support strong comparative efficacy claims between focused attention and open monitoring.
+
+### Decentering mechanism caution
+
+- Gu et al. 2015 supports cautious discussion of possible mediators in MBSR/MBCT, including mindfulness skills, rumination, cognitive/emotional reactivity, worry, and self-compassion.
+- Decentering should be described as a useful target or process, not a universal mechanism or guaranteed outcome.
+- Measurement sources for decentering/metacognitive awareness still need a dedicated source pass before scales are discussed.
+
+### Practice cautions
+
+- Open monitoring can turn into rumination when the practitioner follows thought content rather than noticing thought as experience.
+- For panic, trauma activation, dissociation, derealization, or strong self-criticism, external grounding or focused attention may be safer than broad open monitoring.
+
+### Reader-facing language allowed
+
+- “Use a stable return target.”
+- “If open monitoring becomes rumination, return to feet, hands, sound, or a visible object.”
+- “Decentering is not dissociation; the practice should increase contact with the present, not reduce reality contact.”
+
+### Still needs verification
+
+- Direct summaries of focused-attention versus open-monitoring trials.
+- Decentering measurement literature and cognitive reactivity sources.
+- Rumination-specific clinical guidance for open monitoring practice.

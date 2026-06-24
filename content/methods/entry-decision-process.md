@@ -15,6 +15,8 @@ related:
   - trading-process
   - pre-trade-emotion-check
   - risk-reward-and-invalidation
+  - horizontal-line-trading-framework
+  - no-trade-checklist
 next:
   - risk-reward-and-invalidation
 updated: 2026-06-24
@@ -41,6 +43,27 @@ Context → Structure → Level → Scenario → Trigger → Invalidation → Ri
 9. Emotional check: [[pre-trade-emotion-check]]を行う。
 10. Decision: 入る、待つ、見送るを選ぶ。
 11. Review: [[post-trade-review]]でプロセスを振り返る。
+
+## 弱いエントリー理由
+
+- 「POCだから」
+- 「水平線に来たから」
+- 「前回反発したから」
+- 「大きく動きそうだから」
+
+## 強いエントリー理由
+
+強い理由は、単独signalではなく、Context、Structure、Level、Scenario、Trigger、Invalidation、Risk、Emotional stateを一文で接続します。
+
+例: 「上位足はrange、現在は下限近く、prior lowとVALが重なる。下抜け後すぐ内側へ戻り、rejectionが観察できる場合だけ反応scenarioを検討する。再び安値を更新して外側でacceptanceするなら前提は無効。risk/rewardが合わない、または焦りが強いならNo trade。」
+
+## 見送りを選ぶ理由
+
+- TriggerはあるがInvalidationが遠すぎる。
+- Levelは良いがStructureが矛盾している。
+- POC / VAH / VALは近いが、水平線や構造と重ならない。
+- Risk/rewardは見た目には良いが、到達先に構造的な意味がない。
+- 感情的に「入らない」選択ができない。
 
 ## 観察ポイント
 

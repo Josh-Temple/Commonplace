@@ -17,6 +17,8 @@ related:
   - market-structure
   - horizontal-levels
   - entry-decision-process
+  - horizontal-line-trading-framework
+  - no-trade-checklist
 next:
   - trading-context
 updated: 2026-06-24
@@ -38,6 +40,29 @@ updated: 2026-06-24
 8. Emotion check: [[pre-trade-emotion-check]]で焦りや取り返したい気持ちを確認する。
 9. Entry / No trade: 条件が揃えば行動し、揃わなければ見送る。
 10. Review: [[post-trade-review]]と[[post-trade-review-checklist]]でプロセスを記録する。
+
+## 実務用decision table
+
+| Step | Question | Good answer | Warning sign |
+|---|---|---|---|
+| Context | 今の環境は何か | 上位足、session、news、volatilityを短く説明できる | 「なんとなく動きそう」 |
+| Structure | trend / range / transitionのどれか | 高値安値、break、failed breakoutを根拠に言える | 短期足だけで断定する |
+| Level | どの価格帯で判断するか | 水平線が構造上の意味を持つ | 線が多すぎる |
+| Scenario | 何が起こりうるか | 反応、acceptance、rejection、失敗を複数置く | 一方向しか想定しない |
+| Trigger | 何を見たら行動するか | 事前に観察条件がある | 動いてから理由を作る |
+| Invalidation | 何で前提が崩れるか | 価格構造で説明できる | 損失が怖くなった場所 |
+| Risk | 場所と損失は合うか | 反応候補と損失範囲が釣り合う | 見た目のrisk/rewardだけ良い |
+| Emotion | 実行状態は安定しているか | No tradeを選べる | 取り返したい気持ちが強い |
+| Review | 何を学ぶか | processを評価する | 損益だけを見る |
+
+## 弱い判断文と強い判断文
+
+- Weak: 「POCに来たから反発しそう」
+- Strong: 「上位足はrange、下限近く、前日VALと水平線が重なり、下抜け失敗後に再受容が見える。安値更新で前提が崩れる。」
+- Weak: 「水平線に来たから入る」
+- Strong: 「上位足の押し目候補だが、現在はValue Area中央でtriggerがない。明確なrejectionか、反対にacceptanceが確認できるまでNo trade。」
+- Weak: 「ブレイクしたから続く」
+- Strong: 「break後に外側で時間を使い、戻りが浅いなら継続scenario。すぐレンジ内へ戻るならfailed breakoutとして見送りまたは再評価。」
 
 ## Volume Profileの位置づけ
 

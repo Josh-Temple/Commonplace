@@ -15,6 +15,7 @@ related:
   - market-structure
   - trading-context
   - horizontal-levels
+  - acceptance-and-rejection
 next:
   - horizontal-level-analysis
 updated: 2026-06-24
@@ -35,6 +36,36 @@ updated: 2026-06-24
 3. 直近のbreak of structureにフォロースルーがあるか確認する。
 4. failed breakoutの可能性を置く。
 5. 構造判断が変わる条件を一文で書く。
+
+## mini-template
+
+```text
+Current structure:
+Higher timeframe:
+Current location:
+Last meaningful break:
+Acceptance/rejection evidence:
+Invalidation of this structure view:
+No-trade reason if unclear:
+```
+
+## 抽象例
+
+### Trend continuation
+
+上位足は上方向のStructureを維持。現在価格は前回break後の押し候補。直近安値を明確に失い、戻りも弱い場合は継続見方を取り消す。
+
+### Range rotation
+
+価格はrange下限から中央へ戻る途中。中央では判断せず、上限・下限・POC付近でacceptance / rejectionを観察する。
+
+### Failed breakout
+
+Range上限を一度超えたが、外側で時間を使えず内側へ戻る。再び上限上で受け入れられるならfailed breakout見方を取り消す。
+
+### Transition / unclear state
+
+上位足はrange、下位足はbreak候補。優先順位が決まらないため、明確なLevelとInvalidationが出るまでNo trade。
 
 ## 観察ポイント
 
