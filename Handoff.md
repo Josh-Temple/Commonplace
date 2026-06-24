@@ -1,5 +1,86 @@
 # Handoff: Lumen MVP
 
+## Smaller compact reader font size — 2026-06-24
+
+This pass adjusted the `Aa` reader font-size control so the compact / small setting is visibly smaller than before. The change reduces the reader font scale used by reader bodies and summaries while preserving the existing standard and large settings.
+
+### Commands run
+
+```bash
+gh issue list --limit 20
+which chromium || which chromium-browser || which google-chrome || which firefox || true
+npm run validate
+```
+
+`gh issue list --limit 20` could not run because the `gh` CLI is not installed in this container. No Chromium, Chrome, or Firefox binary was found for a screenshot workflow. `npm run validate` passed, including TypeScript typecheck, content validation, and production build. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `app/styles.css` — reduced the default and compact `--reader-font-scale` from `0.94` to `0.84` so the small font setting is more noticeably small.
+- `README.md` — clarified that the compact `Aa` option is noticeably smaller.
+- `Handoff.md` — recorded this handoff entry for the next session.
+
+### Validation results
+
+- GitHub Issue check was not available because `gh` is missing.
+- `npm run validate` passed; content validation passed for 15 pages and the production build completed.
+
+### Remaining limitations
+
+- No screenshot was captured because no Chromium, Chrome, or Firefox binary was found in this container; if browser tooling is available later, visually compare compact, standard, and large on a real mobile viewport.
+
+### Suggested next tasks
+
+1. Manually review a detail page on Android with the `Aa` control set to compact, standard, and large.
+2. Consider adding a visual smoke test if the project later includes browser automation.
+
+## Volume Profile draft article cluster — 2026-06-24
+
+This pass created a linked draft educational article cluster for Volume Profile / Market Profile concepts. The cluster is reader-facing but explicitly public-safe: it frames Volume Profile as decision support and observation structure, not personalized financial advice or a standalone trading system.
+
+### Commands run
+
+```bash
+gh issue list --limit 20
+npm run validate
+```
+
+`gh issue list --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate` passed, including TypeScript typecheck, content validation, and production build. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `content/indexes/volume-profile.md` — added the Volume Profile cluster entry point and reading order.
+- `content/concepts/volume-profile-overview.md` — added the basic Volume Profile overview, including volume-by-price, Market Profile distinction, and limitations.
+- `content/concepts/point-of-control.md` — added POC as a decision area, not merely support/resistance.
+- `content/concepts/value-area.md` — added Value Area, VAH, VAL, and close-location interpretation.
+- `content/concepts/profile-shapes.md` — added cautious D-shape, P-shape, and b-shape explanations.
+- `content/methods/poc-reaction-breakout-analysis.md` — added an observation method for reaction, rejection, acceptance, and drive-through around POC.
+- `content/methods/value-area-close-analysis.md` — added a method for reading closes above, below, and inside Value Area.
+- `content/rules/eighty-percent-rule.md` — added the 80% rule as a low-confidence practitioner heuristic with explicit uncertainty.
+- `content/protocols/volume-profile-checklist.md` — added an educational checklist for before, during, and after a session.
+- `sources/research-notes/volume-profile-basics.md` — added research notes for basic Volume Profile definitions and limitations.
+- `sources/research-notes/market-profile-and-value-area.md` — added research notes for Market Profile, Value Area, POC, and profile-shape conventions.
+- `sources/research-notes/eighty-percent-rule.md` — added research notes for the 80% rule and its uncertainty.
+- `Handoff.md` — recorded this handoff entry for the next session.
+
+### Validation results
+
+- GitHub Issue check was not available because `gh` is missing.
+- `npm run validate` passed; content validation passed for 15 pages and the production build completed.
+
+### Confidence limitations
+
+- Basic definitions such as Volume Profile, POC, and Value Area are marked medium confidence where supported by the new research notes.
+- Practitioner interpretations such as profile shapes, POC reaction/breakout scenarios, Value Area close implications, and the 80% rule are marked low confidence.
+- The source notes intentionally list candidate sources to verify and do not claim checked page numbers, study details, statistics, or verified trading probabilities.
+- The cluster is draft educational material and not trading advice.
+
+### Suggested next tasks
+
+1. Verify candidate sources such as CBOT Market Profile materials, Steidlmayer/Dalton-style references, and charting-platform documentation.
+2. Add stronger source summaries if precise definitions or historical attributions are needed.
+3. Consider a future content pass with diagrams or screenshots if the app gains an image workflow.
+
 ## Quiet mobile homepage and theme index UI — 2026-06-24
 
 This pass revised the Lumen mobile UI to reduce cognitive load and keep the homepage focused on identity, primary navigation, and theme discovery.
