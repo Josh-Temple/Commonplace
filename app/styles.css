@@ -14,12 +14,12 @@
   --amber: #9a6a15;
   --amber-soft: #f3e8cf;
   --danger: #8b2f2f;
-  --reader-font-scale: 0.94;
+  --reader-font-scale: 0.84;
   color-scheme: light;
 }
 
 :root[data-font-size="compact"] {
-  --reader-font-scale: 0.94;
+  --reader-font-scale: 0.84;
 }
 
 :root[data-font-size="standard"] {
