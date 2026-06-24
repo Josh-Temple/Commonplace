@@ -1,5 +1,190 @@
 # Handoff: Lumen MVP
 
+## Meditation and mindfulness refinement pass — 2026-06-24
+
+### Purpose
+
+Developed the existing meditation and mindfulness cluster from scaffold-style pages into reader-facing articles, practical guides, and evidence-bounded comparisons. The pass focused on expanding existing pages rather than adding many new pages, while preserving safety boundaries and separating `content/` reader guidance from `sources/` research notes.
+
+### Updated files
+
+- `content/indexes/meditation-and-mindfulness.md` — clarified entry routes for introduction, practice, and psychotherapy/action-selection topics.
+- `content/methods/mbsr.md` — expanded into a readable MBSR article covering the 8-week structure, practices, use cases, cautions, misconceptions, evidence, and next steps.
+- `content/methods/mbct.md` — expanded around recurrent depression relapse-prevention framing, MBSR/CBT differences, rumination, decentering, evidence boundaries, and safety limits.
+- `content/methods/act-and-mindfulness.md` — expanded ACT as psychological flexibility and values-based action, with six processes and concrete examples.
+- `content/methods/loving-kindness-meditation.md` — expanded metta/loving-kindness practice, sequence, difficult-person cautions, Buddhist background versus modern psychological use, and evidence limits.
+- `content/methods/open-monitoring-meditation.md` — expanded open monitoring with decentering links, beginner safety adjustments, and return-target guidance.
+- `content/methods/breath-awareness-meditation.md` — expanded breath awareness as noticing rather than continuous breath manipulation, with alternative targets.
+- `content/concepts/decentering.md` — expanded decentering, open monitoring connection, emotional observation versus dissociation, examples, and safety notes.
+- `content/concepts/mindfulness-safety.md` — rebuilt as a practical pre-practice checklist with start/stop/consult conditions and alternative attention targets.
+- `content/protocols/daily-mindfulness-practice.md` — rebuilt as a 4-week daily practice plan with safety checks, daily records, weekly review, and adjustment criteria.
+- `content/protocols/five-minute-mindfulness-reset.md` — expanded into a concrete 5-minute protocol with examples and safety boundaries.
+- `content/rules/mindfulness-practice-boundaries.md` — expanded rules around medical boundaries, long/intense practice, breath manipulation, avoidance, and stop signs.
+- `Handoff.md` — recorded this handoff entry.
+
+### New files added
+
+- `content/protocols/emotion-regulation-mindfulness-protocol.md` — added a public-safe protocol for anger, anxiety, self-criticism, and reaction pauses, connected to ACT and decentering.
+- `sources/research-notes/loving-kindness-and-compassion-meditation.md` — added draft source notes for loving-kindness/compassion meditation and cautions.
+- `sources/research-notes/open-monitoring-and-decentering.md` — added draft source notes for open monitoring, decentering, and mechanism cautions.
+
+No body-scan article or practice-card output page was added; the existing MBSR and daily-practice pages were sufficient for this pass.
+
+### Source notes updated
+
+- `sources/research-notes/mbsr-evidence-and-practice.md` — added a 2026-06-24 verification update for Brown University MBSR structure, NCCIH caution language, and remaining UMass/home-practice limitations.
+- `sources/research-notes/mbct-evidence-and-practice.md` — added a verification update for NICE NG222 rationale language, Oxford/Kuyken relapse-prevention support, and remaining NICE recommendation extraction needs.
+- `sources/research-notes/act-and-mindfulness.md` — added a verification update for ACBS six ACT processes and psychological flexibility framing.
+- `sources/research-notes/meditation-and-mindfulness-overview.md` — added a verification update preserving cautious overview language.
+- `sources/research-notes/meditation-safety-and-adverse-effects.md` — added a verification update for NCCIH, Farias et al., Britton/Lindahl-related work, and Hirshberg/Goldberg/Rosenkranz/Davidson harm framing.
+- `sources/research-notes/buddhist-mindfulness-background.md` — added a verification update clarifying SuttaCentral use as background, not clinical-effect evidence.
+
+### External materials checked
+
+- Brown University Mindfulness-Based Stress Reduction page.
+- Brown University Mindfulness Center page.
+- NCCIH “Meditation and Mindfulness: Effectiveness and Safety.”
+- NICE NG222 rationale-and-impact page for depression relapse prevention and MBCT.
+- ACBS ACT and six-core-processes pages.
+- PubMed / PMC records for Goyal et al. 2014, Parsons et al. 2017, Kuyken et al. 2016, Farias et al. 2020, Hirshberg et al. harm in MBSR, and loving-kindness/open-monitoring related reviews.
+- SuttaCentral references already present for Satipaṭṭhāna, Ānāpānasati, and Karaṇīya Mettā were preserved as background sources.
+
+### Unverified or insufficient materials
+
+- University of Massachusetts / Center for Mindfulness historical material was not directly verified in detail.
+- NICE exact recommendation wording should still be extracted from the current recommendations page, not only the rationale summary.
+- Hayes et al. 2006 and ACT books were not deeply summarized beyond conceptual framing already present in the source note.
+- Body scan/interoception sources were not added as a dedicated source note.
+- Loving-kindness/compassion and open-monitoring evidence notes are still draft and should be deepened before stronger effect claims are made.
+- No prevalence numbers for meditation-related adverse effects were promoted into reader-facing pages because measurement methods and denominators need closer review.
+
+### Validation results
+
+Commands run:
+
+```bash
+npm run validate:content
+npm run validate
+```
+
+Both passed. `npm run validate:content` passed for 41 pages. `npm run validate` passed TypeScript typechecking, content validation, and production Next.js build; the build generated 47 static pages. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining uncertainty
+
+- The cluster remains educational and should not be treated as medical advice, psychotherapy, or a substitute for professional care.
+- MBSR, MBCT, ACT, loving-kindness, open monitoring, and daily practice have different evidence bases; future edits should not collapse them into a single “meditation works” claim.
+- Safety pages are practical boundaries, not a diagnostic tool.
+- Buddhist background references support terminology and historical context, not clinical effectiveness.
+
+### Suggested next tasks
+
+1. Dedicated source verification pass for NICE NG222 recommendations, MBCT relapse-prevention trials, ACT model/evidence sources, and UMass/Brown MBSR history.
+2. Add a body scan page or practice cards only after body-scan/interoception source notes are strengthened.
+3. Consider adding public-safe diagrams or short practice cards if a safe image/content workflow is available.
+
+
+## Trading editorial refinement pass — 2026-06-24
+
+This pass refined the existing trading knowledge area instead of adding new reader-facing pages. It made the trading index a shorter domain map, clarified the practical decision sequence, positioned Volume Profile as auxiliary observation support, strengthened no-trade conditions, standardized headings across the trading cluster, and added source-verification TODOs to research notes.
+
+### Files reviewed
+
+- `AGENTS.md`
+- `README.md`
+- `Handoff.md`
+- `Commonplace Project Source.md`
+- `content/indexes/trading.md`
+- `content/indexes/trading-process.md`
+- `content/indexes/volume-profile.md`
+- `content/concepts/trading-context.md`
+- `content/concepts/market-structure.md`
+- `content/concepts/horizontal-levels.md`
+- `content/concepts/volume-profile-overview.md`
+- `content/concepts/point-of-control.md`
+- `content/concepts/value-area.md`
+- `content/concepts/profile-shapes.md`
+- `content/methods/market-structure-assessment.md`
+- `content/methods/horizontal-level-analysis.md`
+- `content/methods/entry-decision-process.md`
+- `content/methods/risk-reward-and-invalidation.md`
+- `content/methods/poc-reaction-breakout-analysis.md`
+- `content/methods/value-area-close-analysis.md`
+- `content/methods/post-trade-review.md`
+- `content/protocols/pre-trade-context-checklist.md`
+- `content/protocols/pre-trade-emotion-check.md`
+- `content/protocols/volume-profile-checklist.md`
+- `content/protocols/post-trade-review-checklist.md`
+- `content/rules/trading-rules.md`
+- `content/rules/eighty-percent-rule.md`
+- `sources/research-notes/trading-knowledge-map.md`
+- `sources/research-notes/market-structure-basics.md`
+- `sources/research-notes/horizontal-levels-basics.md`
+- `sources/research-notes/volume-profile-basics.md`
+- `sources/research-notes/market-profile-and-value-area.md`
+- `sources/research-notes/eighty-percent-rule.md`
+
+### Files changed
+
+- `content/indexes/trading.md` — rewrote the index as the primary trading domain map with a clearer reading order from context to rules and concise no-trade conditions.
+- `content/indexes/trading-process.md` — rebuilt the process page around Context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review.
+- `content/indexes/volume-profile.md` — reframed Volume Profile as an auxiliary observation layer, not a standalone signal.
+- `content/concepts/trading-context.md` — standardized concept headings and connected context to structure, levels, and no-trade decisions.
+- `content/concepts/market-structure.md` — standardized concept headings and clarified Dow-like structure concepts as context rather than signals.
+- `content/concepts/horizontal-levels.md` — emphasized horizontal lines as primary decision areas and Volume Profile as confluence/support.
+- `content/concepts/volume-profile-overview.md` — added Japanese structure and reinforced Volume Profile as support for context/structure/levels.
+- `content/concepts/point-of-control.md` — clarified POC as a decision area rather than support/resistance.
+- `content/concepts/value-area.md` — clarified VAH/VAL and close-location interpretation with caution.
+- `content/concepts/profile-shapes.md` — added a concise low-confidence caution and related-page section.
+- `content/methods/market-structure-assessment.md` — standardized method sections and added clearer non-decision conditions.
+- `content/methods/horizontal-level-analysis.md` — standardized method sections and strengthened level-priority/no-trade criteria.
+- `content/methods/entry-decision-process.md` — inserted Structure and Volume Profile support into the sequence while keeping entry dependent on invalidation/risk.
+- `content/methods/risk-reward-and-invalidation.md` — expanded method structure and no-trade conditions around undefined invalidation or unsuitable risk.
+- `content/methods/poc-reaction-breakout-analysis.md` — standardized headings and added POC-specific non-decision conditions.
+- `content/methods/value-area-close-analysis.md` — standardized headings and clarified close-location reads as observational, not predictive.
+- `content/protocols/pre-trade-context-checklist.md` — rebuilt protocol sections and added stronger no-trade conditions.
+- `content/protocols/pre-trade-emotion-check.md` — rebuilt protocol sections and clarified emotional no-trade conditions.
+- `content/protocols/volume-profile-checklist.md` — rebuilt checklist around session/data/POC/Value Area observations and no-trade conditions.
+- `content/protocols/post-trade-review-checklist.md` — rebuilt checklist structure while preserving public-safe boundaries around private records.
+- `sources/research-notes/trading-knowledge-map.md` — added source-verification TODOs.
+- `sources/research-notes/market-structure-basics.md` — added source-verification TODOs.
+- `sources/research-notes/horizontal-levels-basics.md` — added source-verification TODOs.
+- `sources/research-notes/volume-profile-basics.md` — added source-verification TODOs.
+- `sources/research-notes/market-profile-and-value-area.md` — added source-verification TODOs.
+- `sources/research-notes/eighty-percent-rule.md` — added source-verification TODOs.
+- `Handoff.md` — recorded this handoff entry.
+
+### New pages created
+
+No new pages were created. The existing structure was sufficient for this editorial pass.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate` passed, including TypeScript typecheck, content validation for 40 pages, and production build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 40 page(s).
+- TypeScript typecheck passed.
+- Production Next.js build passed and generated 46 static pages.
+
+### Remaining weaknesses
+
+- Trading pages remain draft educational material and do not establish statistical edge, win rates, or personalized guidance.
+- Market Profile / auction-market theory references still need source verification before stronger claims about value, balance, acceptance, rejection, or failed auctions.
+- Volume Profile platform-specific calculations for POC, Value Area, VAH, and VAL still need documentation verification.
+- Horizontal level, risk management, journaling, performance review, and trading psychology sources still need deeper verification.
+- Public-safe chart examples or diagrams are not yet included.
+
+### Recommended next task
+
+Source verification pass for trading and Volume Profile notes, especially Market Profile / auction market theory, Volume Profile platform documentation, horizontal levels, risk management and invalidation, trading journaling, performance review, and trading psychology.
+
+
 ## Trading knowledge area expansion — 2026-06-24
 
 This pass expanded the trading knowledge area from a small emotion/rules cluster into a broader draft educational map covering context, market structure, horizontal levels, Volume Profile, entry decisions, invalidation/risk planning, emotional execution discipline, and post-trade review. The cluster is public-safe and explicitly not personalized financial advice.

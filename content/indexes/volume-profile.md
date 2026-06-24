@@ -3,7 +3,7 @@ id: volume-profile
 title: Volume Profile
 type: index
 status: draft
-summary: Volume Profileを、価格帯ごとの出来高から観察を整理するための入口ページ。
+summary: Volume Profileを、水平線と市場構造を補助する価格帯別出来高の観察レイヤーとして読む入口ページ。
 tags:
   - trading
   - volume-profile
@@ -12,6 +12,7 @@ sources:
   - sources/research-notes/volume-profile-basics.md
   - sources/research-notes/market-profile-and-value-area.md
 related:
+  - trading
   - volume-profile-overview
   - point-of-control
   - value-area
@@ -23,42 +24,35 @@ updated: 2026-06-24
 
 ## 目的
 
-このページは教育目的の整理であり、金融助言ではありません。売買判断は自己責任で行い、単独の指標やルールを売買シグナルとして扱わないでください。
+Volume Profileは、選んだセッションや範囲で、どの価格帯に出来高が集まったかを観察するための道具です。このページは教育目的の整理であり、金融助言ではありません。
 
-Volume Profileは、選んだセッションや範囲の中で、どの価格帯に出来高が集まったかを観察するための枠組みです。
+このクラスターでは、Volume Profileを主役の売買シグナルではなく、[[trading-context]]、[[market-structure]]、[[horizontal-levels]]で作ったシナリオを補助する観察層として扱います。
 
-このクラスターでは、Volume Profileを予測エンジンではなく、意思決定を整理するための観察ツールとして扱います。単独の売買シグナルではありません。
-
-## まず読むページ
+## 読む順序
 
 1. [[volume-profile-overview|Volume Profile overview]]
-2. [[point-of-control|POC]]
-3. [[value-area|Value Area]]
+2. [[point-of-control|POC / Point of Control]]
+3. [[value-area|Value Area / VAH / VAL]]
 4. [[profile-shapes|Profile shapes]]
 5. [[poc-reaction-breakout-analysis|POC reaction / breakout analysis]]
 6. [[value-area-close-analysis|Value Area close analysis]]
 7. [[eighty-percent-rule|80% rule]]
 8. [[volume-profile-checklist|Volume Profile checklist]]
 
-## 判断に使う主な観点
+## 使い方の原則
 
-- どの価格帯に出来高が集まったか。
-- [[point-of-control|POC]]付近で、価格が反応・拒否するのか、強く受け入れて通過するのか。
-- 終値が[[value-area|Value Area]]の上、下、内側のどこにあるか。
-- [[profile-shapes|Profile shapes]]が、バランス、片方向のオークション、清算的な動きのどれに近いか。
-- その観察が、上位足の構造、ニュース、流動性、リスク管理と矛盾していないか。
+- 先に市場文脈、構造、水平線を決める。
+- POC、VAH、VALは「反応を見る場所」であり、魔法の線ではない。
+- Profile shapesや80% ruleは低信頼度のヒューリスティックとして扱う。
+- Volume Profileがシナリオと合わない時は、確認ではなく注意や代替シナリオとして読む。
+- 最後はprice action、invalidation、risk/rewardで判断する。
 
 ## 注意点
 
-Volume Profileの読み方は、範囲設定、セッション区切り、データソース、プラットフォームの計算方法に影響されます。
-
-特にFXやCFDでは、実出来高ではなくティックボリュームを使う場合があります。どのデータを見ているのかを確認してください。
+範囲設定、セッション区切り、データソース、プラットフォームの計算方法によってプロファイルは変わります。FXやCFDでは、実出来高ではなくティックボリュームを使う場合があります。
 
 ## 関連ページ
 
-- [[trading]]
-- [[point-of-control|POC]]
-- [[value-area|Value Area]]
-- [[profile-shapes|Profile shapes]]
-- [[eighty-percent-rule|80% rule]]
-- [[volume-profile-checklist|Volume Profile checklist]]
+- [[trading-process]]
+- [[horizontal-levels]]
+- [[volume-profile-checklist]]

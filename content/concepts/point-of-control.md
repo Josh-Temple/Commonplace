@@ -20,19 +20,23 @@ next:
 updated: 2026-06-24
 ---
 
-## Definition
+## 要点
+
+POC / Point of Controlは、選択したプロファイルで活動が最も集中した価格帯です。支持線・抵抗線ではなく、再評価が起きやすい判断エリアとして扱います。
+
+## これは何か
 
 POCはPoint of Controlの略で、選択したVolume ProfileまたはMarket Profileの中で、最も活動や出来高が集中した価格水準、または価格帯を指します。
 
 そのプロファイルの中では、POCは一時的な「公正価値」や「受け入れられた価格」の候補として扱われることがあります。
 
-## Decision area, not just support or resistance
+## どう読むか
 
 POCは、単純な支持線や抵抗線ではありません。
 
 より慎重には、POCは市場参加者が価値を再評価しやすい判断エリアです。価格がPOCに近づくと、過去に取引が集中した場所で再び売買の判断が起きる可能性があります。
 
-## What to observe around POC
+## 使いどころ
 
 POC付近では、少なくとも2つのシナリオを観察します。
 
@@ -41,8 +45,14 @@ POC付近では、少なくとも2つのシナリオを観察します。
 
 どちらも保証された結果ではありません。[[poc-reaction-breakout-analysis|POC reaction / breakout analysis]]では、この観察を方法として整理します。
 
-## Practical caution
+## 注意点
 
 POCの意味は、現在セッション、前日セッション、複合プロファイル、表示範囲プロファイルのどれを見ているかで変わります。
 
-POCだけで売買を決めず、[[value-area|Value Area]]、上位足の構造、出来高変化、ニュース、リスク許容度と合わせて確認します。
+POCだけで売買を決めず、[[value-area|Value Area]]、[[market-structure]]、[[horizontal-levels]]、出来高変化、ニュース、invalidation、risk/rewardと合わせて確認します。
+
+## 関連ページ
+
+- [[poc-reaction-breakout-analysis]]
+- [[value-area]]
+- [[volume-profile-checklist]]

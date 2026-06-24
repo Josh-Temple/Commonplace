@@ -43,3 +43,14 @@ Mindfulness-Based Stress Reduction (MBSR) was developed by Jon Kabat-Zinn in a c
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- Brown University's MBSR page was rechecked via web search: it describes an 8-week program with orientation, weekly instructor-led sessions, home practice framing, and one all-day session.
+- NCCIH's meditation/mindfulness page was rechecked for cautious effectiveness and safety language, including not treating meditation as a replacement for conventional care.
+- Claims in reader-facing content remain general: MBSR has research for stress-related and other outcomes, but no guaranteed effect is asserted.
+
+## Still insufficient
+
+- University of Massachusetts / Center for Mindfulness historical sources still need direct verification before adding detailed institutional history.
+- MBSR home-practice dose-response should remain cautious; Parsons et al. supports relevance but measurement and adherence vary.

@@ -3,7 +3,7 @@ id: volume-profile-checklist
 title: Volume Profile checklist
 type: protocol
 status: draft
-summary: Volume Profileを教育的な観察と意思決定整理に使うための実用チェックリスト。
+summary: Volume Profileを、水平線と市場構造を補助する観察レイヤーとして使うための実用チェックリスト。
 tags:
   - trading
   - volume-profile
@@ -16,63 +16,35 @@ related:
   - volume-profile
   - point-of-control
   - value-area
+  - profile-shapes
 next:
-  - volume-profile-overview
+  - trading-rules
 updated: 2026-06-24
 ---
 
-## Educational boundary
+## 目的
 
-This checklist is for educational review and decision-structure only. It is not financial advice and should not be used as a standalone trading system.
+Volume Profileを単独シグナルではなく、[[market-structure]]と[[horizontal-levels]]を補助する観察レイヤーとして使います。教育目的のチェックリストであり、金融助言ではありません。
 
-## Before the session
+## チェック項目
 
-- Define the session: RTH, ETH, 24-hour, or another range.
-- Mark prior [[value-area|VAH and VAL]].
-- Mark prior and composite [[point-of-control|POC]].
-- Note trend, range, news risk, and higher-timeframe levels.
-- Decide which observations would invalidate your initial read.
+- Session: RTH、ETH、24時間、任意範囲のどれを見ているか。
+- Data: 実出来高か、ティックボリュームか。
+- Levels: prior VAH / VAL、current VAH / VAL、prior / composite [[point-of-control|POC]]を確認したか。
+- Context: 上位足、ニュース、流動性、レンジ/トレンドと矛盾しないか。
+- POC: 反応、拒否、受容、drive-throughのどれに近いか。
+- Value Area: VAH / VALの外で受け入れられるか、内側へ戻るか。
+- Shape: [[profile-shapes]]は参考程度に留めているか。
+- Heuristic: [[eighty-percent-rule|80% rule]]を検証済み確率として扱っていないか。
 
-## During the session
+## 見送り条件
 
-- Watch whether price is building value or moving quickly through thin areas.
-- Compare current activity with prior value.
-- Note whether price is accepting above, below, or inside prior value.
-- Avoid forcing a trade from profile information alone.
+- Volume Profileだけが根拠になっている。
+- プロファイル範囲やセッション定義が曖昧。
+- 価格がValue Area中央にあり、水平線や構造の優先順位がない。
+- POC / VAH / VAL付近のinvalidationが定義できない。
+- ニュースや薄い流動性でプロファイル観察が unreliable。
 
-## Around POC
+## 次の行動
 
-- Is price reacting or rejecting?
-- Is price slowing and accepting?
-- Is price driving through with force?
-- Does it return to POC after leaving?
-- Does the answer align with [[poc-reaction-breakout-analysis|POC reaction / breakout analysis]]?
-
-## Around VAH / VAL
-
-- Does price pause at VAH or VAL?
-- Does it reject the outside auction and return inside value?
-- Does it hold outside value long enough to suggest acceptance?
-- Is the movement supported by structure and volume?
-
-## At the close
-
-- Did the session close above VAH, below VAL, or inside value?
-- Was the close near an extreme or back near POC?
-- Did the close create a possible failed auction?
-- Does [[value-area-close-analysis|Value Area close analysis]] suggest a specific observation plan for the next session?
-
-## After the session
-
-- Save the session profile.
-- Label the day shape cautiously: [[profile-shapes|D-shape, P-shape, or b-shape]] if useful.
-- Record whether any [[eighty-percent-rule|80% rule]] setup was present, without assuming the number is a verified probability.
-- Note what would have helped avoid hindsight bias.
-
-## What not to do
-
-- Do not treat POC as automatic support or resistance.
-- Do not treat a Value Area close as guaranteed continuation.
-- Do not use profile shape alone as an entry signal.
-- Do not present practitioner heuristics as proven statistics.
-- Do not ignore risk, liquidity, news, or broader market structure.
+観察結果を[[entry-decision-process]]へ戻し、Trigger、Invalidation、risk/rewardを確認します。セッション後は[[post-trade-review-checklist]]で、Volume Profileの読みが後付けになっていないかを確認します。

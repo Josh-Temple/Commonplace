@@ -15,30 +15,36 @@ related:
   - trading-context
   - horizontal-levels
 next:
-  - market-structure-assessment
   - horizontal-levels
 updated: 2026-06-24
 ---
 
-
 ## 要点
 
-市場構造は、価格がどのように高値・安値を作り、どこで受け入れられ、どこで拒否されたかを見る枠組みです。
+市場構造は、高値・安値の作られ方と、価格がどこで受容または拒否されたかを読む枠組みです。
 
-## 基本語彙
+## これは何か
 
-- trend: 高値と安値が一方向に更新されやすい状態。
-- range: 上下の境界内で往来しやすい状態。
-- higher high / higher low: 上昇構造を示す候補。
-- lower high / lower low: 下降構造を示す候補。
-- break of structure: 直近構造を破る動き。
-- failed breakout: 外へ出たが受け入れられず戻る動き。
-- acceptance / rejection: 価格がその水準の外で続くのか、すぐ戻るのかという観察。
+Dow-likeな高値安値の観察、trend / range、break of structure、failed breakoutを使い、今の相場がどの状態に近いかを整理します。
 
-## なぜ重要か
+## どう読むか
 
-構造はインジケーターやVolume Profileの解釈を枠づけます。レンジ内の反応とトレンド中の押し戻しは、同じ見た目でも意味が違うことがあります。
+- higher high / higher lowが続いているか。
+- lower high / lower lowが続いているか。
+- レンジ上限・下限で受容されたか、拒否されたか。
+- break of structure後にフォロースルーがあるか。
+- ブレイク後すぐに戻るfailed breakoutになっていないか。
 
-## 注意
+## 使いどころ
 
-構造認識は後知恵になりやすいです。事前に「何が起きたら構造が変わったとみなすか」を決めます。
+構造は、[[horizontal-levels]]をどの方向から試しているか、[[volume-profile]]のPOCやVAH/VALをどう観察するかを決める背景になります。
+
+## 注意点
+
+構造認識は時間軸で変わり、後知恵になりやすいです。事前に「何が起きたら構造判断を取り消すか」を決めます。
+
+## 関連ページ
+
+- [[market-structure-assessment]]
+- [[horizontal-levels]]
+- [[entry-decision-process]]

@@ -18,31 +18,29 @@ related:
   - entry-decision-process
   - risk-reward-and-invalidation
 next:
-  - pre-trade-context-checklist
-  - entry-decision-process
   - trading-rules
 updated: 2026-06-24
 ---
 
+## 目的
 
-このプロトコルは、トレード前に感情で判断していないかを確認するための個人的チェックです。
-
-このページは教育目的の整理であり、金融助言ではありません。売買判断は自己責任で行い、単独の感情チェックを売買シグナルとして扱わないでください。
+感情で判断していないかを、エントリー前に確認します。このページは教育目的の整理であり、金融助言ではありません。
 
 ## チェック項目
 
-- 焦り、怒り、取り返したい気持ちはあるか。
-- 事前に決めた条件を満たしているか。
-- 損切りと無効条件は明確か。
-- 見送りを選んでも問題ないか。
+- 焦り、怒り、恐怖、取り返したい気持ちはあるか。
+- 見送りを選んでも問題ないと思えるか。
+- 事前に決めたContext、Structure、Level、Scenarioを満たしているか。
+- Trigger、Invalidation、risk/rewardは明確か。
+- 直前の損失や成功で判断が荒くなっていないか。
 
-## 追加で確認するページ
+## 見送り条件
 
-- 文脈が曖昧なら[[pre-trade-context-checklist]]へ戻る。
-- 判断順序が曖昧なら[[entry-decision-process]]を確認する。
-- 損切りや撤退条件が曖昧なら[[risk-reward-and-invalidation]]を確認する。
-- 行動ルールの運用は[[trading-rules]]にまとめる。
+- 急いで入らないと置いていかれると感じている。
+- 損切りを広げたい、サイズを増やしたい、すぐ取り返したい。
+- ルール違反を正当化する理由を探している。
+- Invalidationが曖昧なのに入ろうとしている。
 
-## 次に読む
+## 次の行動
 
-判断後の運用は[[trading-rules|トレーディングルール]]にまとめます。
+文脈が曖昧なら[[pre-trade-context-checklist]]へ戻ります。判断順序は[[entry-decision-process]]、撤退条件は[[risk-reward-and-invalidation]]、行動ルールは[[trading-rules]]で確認します。

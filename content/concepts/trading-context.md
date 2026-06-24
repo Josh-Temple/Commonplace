@@ -12,32 +12,41 @@ sources:
   - sources/research-notes/trading-knowledge-map.md
 related:
   - trading
+  - trading-process
   - market-structure
   - pre-trade-context-checklist
 next:
   - market-structure
-  - pre-trade-context-checklist
 updated: 2026-06-24
 ---
 
-
 ## 要点
 
-相場文脈は、個別のラインや指標を見る前の前提です。上位足、セッション、ボラティリティ、ニュース、流動性、トレンドかバランスかを確認します。
+文脈は、水平線やVolume Profileを見る前の前提です。同じ水準でも、上位足、セッション、ニュース、流動性によって読み方が変わります。
 
-## 見る項目
+## これは何か
 
-- 上位足の方向感と重要水準。
-- 現在のセッションと残り時間。
-- 直近のボラティリティと急変リスク。
-- ニュース、指標、決算、要人発言などのイベント。
-- 流動性が厚い時間帯か薄い時間帯か。
-- 市場がトレンド的か、レンジ/バランス的か。
+トレーディング文脈は、現在の価格がどの環境にいるかを説明するための枠組みです。予測ではなく、シナリオの背景です。
 
-## なぜ重要か
+## どう読むか
 
-同じ水平線やVolume Profile水準でも、トレンドデー、レンジ内、ニュース直後では意味が変わります。文脈は、指標解釈の枠です。
+- 上位足はトレンドか、レンジか。
+- 現在はどのセッションで、残り時間はどれくらいか。
+- ボラティリティは通常か、急変後か。
+- ニュース、指標、決算、要人発言などが近いか。
+- 流動性が厚い時間帯か、薄い時間帯か。
+- 価格はValue Area内、レンジ中央、重要水準付近のどこにいるか。
 
-## 注意
+## 使いどころ
 
-文脈は売買シグナルではありません。文脈を決めたあとも、[[entry-decision-process]]、[[risk-reward-and-invalidation]]、[[pre-trade-emotion-check]]を確認します。
+文脈を先に決めると、[[market-structure]]、[[horizontal-levels]]、[[volume-profile]]の観察が後付けになりにくくなります。
+
+## 注意点
+
+文脈だけでは売買しません。文脈が曖昧な時は、[[entry-decision-process]]へ進まず見送る選択を残します。
+
+## 関連ページ
+
+- [[pre-trade-context-checklist]]
+- [[market-structure]]
+- [[trading-process]]
