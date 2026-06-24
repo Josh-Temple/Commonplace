@@ -14,6 +14,7 @@ sources:
 related:
   - post-trade-review
   - trading-rules
+  - trading-review-template
 next:
   - trading-rules
 updated: 2026-06-24
@@ -34,6 +35,21 @@ updated: 2026-06-24
 - Rules: [[trading-rules]]を守ったか。
 - Outcome: 結果とプロセスを分けて評価したか。
 - Lesson: 次回の一つの改善点は何か。
+
+## 公開-safe review template
+
+```text
+Process grade:
+Rule adherence:
+Emotional state:
+Setup quality:
+Invalidation quality:
+Exit quality:
+One lesson:
+One adjustment:
+```
+
+実際のscreenshots、P/L、口座サイズ、個別のprivate recordsは公開repositoryへcommitしません。必要ならローカルまたは非公開の記録に分けます。
 
 ## 見送り条件
 

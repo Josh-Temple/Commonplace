@@ -16,6 +16,8 @@ related:
   - pre-trade-emotion-check
   - risk-reward-and-invalidation
   - post-trade-review
+  - horizontal-line-trading-framework
+  - no-trade-checklist
 next:
   - pre-trade-emotion-check
   - post-trade-review-checklist
@@ -50,6 +52,35 @@ updated: 2026-06-24
 - 結果だけで判断せず、プロセス品質を記録する。
 - セットアップ、エントリー理由、無効条件、感情状態、ルール遵守、学びを残す。
 - レビューは[[post-trade-review]]と[[post-trade-review-checklist]]で行う。
+
+## Setup rules
+
+- Context、Structure、Levelの三つを説明できないsetupは扱わない。
+- 中央価格、ニュース直前、流動性が薄い場面では慎重に見送る。
+
+## Invalidation rules
+
+- Invalidationが遠すぎるなら、stopを広げずsetupを見送る。
+- Invalidationとmonetary stopが噛み合わない時は、取引しない選択を優先する。
+
+## Position / risk rules
+
+- 具体的なposition sizeはこの公開ページに書かない。
+- 損失許容を超える形に調整してまで入らない。
+- リスクを下げる方法が「祈る」だけなら見送る。
+
+## Repository / public-safety rules
+
+- 公開repositoryにprivate trade log、account size、broker情報、個別損益を残さない。
+- 教育メモとpersonal recommendationを混同しない。
+
+## ルール違反後の対応
+
+1. Stop trading / pause: すぐ次の取引で取り返そうとしない。
+2. Write what happened: 何が起きたかを短く書く。
+3. Identify which rule failed: Entry、Invalidation、Emotion、Reviewなど失敗したruleを特定する。
+4. Do not immediately compensate: サイズや頻度で埋め合わせない。
+5. Update checklist only after review: 感情が落ち着いてから[[pre-trade-context-checklist]]や[[post-trade-review-checklist]]を見直す。
 
 ## What not to do
 

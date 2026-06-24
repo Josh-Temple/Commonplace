@@ -54,3 +54,29 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 
 - University of Massachusetts / Center for Mindfulness historical sources still need direct verification before adding detailed institutional history.
 - MBSR home-practice dose-response should remain cautious; Parsons et al. supports relevance but measurement and adherence vary.
+
+## 2026-06-24 deeper verification pass
+
+### Confirmed from currently checked sources
+
+- Brown University School of Professional Studies currently describes its public MBSR offering as an 8-week program with orientation, weekly instructor-led sessions, home practice framing, and one all-day session.
+- Brown University Mindfulness Center confirms Brown hosts mindfulness training pathways/classes including MBSR and MBCT, delivered on-site, live online, and in person.
+- NCCIH continues to support cautious language: meditation and mindfulness research is condition- and study-dependent, and meditation should not be used to replace or postpone conventional care.
+- Goyal et al. 2014 and Parsons et al. 2017 remain useful for cautious claims about meditation-program effects and home practice, but neither supports a guarantee for any individual reader.
+
+### Confirmed / unconfirmed structure details
+
+- Confirmed for Brown public MBSR page: 8-week structure, orientation, weekly sessions, instructor-led practice/reflection, home practice framing, one all-day session.
+- Generally described in MBSR literature and institutional descriptions: body scan, sitting meditation, mindful movement/yoga-like movement.
+- Still insufficient here: exact UMass / Center for Mindfulness historical curriculum details and original manual-level sequencing.
+
+### Reader-facing language allowed
+
+- “MBSR is commonly described as an 8-week structured mindfulness program that includes body scan, sitting meditation, movement, home practice, and group reflection.”
+- “Evidence should be described cautiously and not as a cure, therapy replacement, or universal stress solution.”
+
+### Do not promote without more verification
+
+- Exact home-practice dose-response claims.
+- Claims that body scan by itself has a specific clinical effect.
+- Detailed UMass history beyond broad attribution to the UMass clinical context unless primary materials are checked.

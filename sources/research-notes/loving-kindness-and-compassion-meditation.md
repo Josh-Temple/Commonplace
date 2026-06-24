@@ -39,3 +39,28 @@ This note supports cautious reader-facing content about loving-kindness meditati
 
 - Recent meta-analyses on loving-kindness / compassion meditation for anxiety, life satisfaction, and self-compassion should be reviewed directly before adding stronger effect claims.
 - More sources are needed on contraindications or adaptations for trauma and high self-criticism.
+
+## 2026-06-24 deeper verification pass
+
+### Distinctions to preserve
+
+- Metta / loving-kindness commonly emphasizes goodwill or friendliness.
+- Compassion meditation commonly emphasizes noticing suffering and wishing for relief.
+- Self-compassion interventions overlap but should not be treated as identical to traditional metta or all compassion meditation.
+- Buddhist background sources support terminology and context, not modern clinical efficacy claims.
+
+### Evidence caution
+
+- Galante et al. 2014 and Zeng et al. 2015 support cautious statements that kindness-based or loving-kindness practices may affect some self-reported well-being or positive emotion outcomes in studied contexts.
+- Intervention forms, comparison groups, populations, and outcome measures vary; do not promote broad claims such as “metta treats anxiety” without a condition-specific source review.
+
+### Safety / practice cautions
+
+- High self-criticism can make self-directed loving-kindness aversive or shame-provoking.
+- “Difficult person” practice can intensify anger, fear, shame, or trauma activation.
+- Reader-facing pages should explicitly say metta is not forgiveness, reconciliation, boundary removal, or a reason to contact unsafe people.
+
+### Still needs verification
+
+- Recent meta-analyses on loving-kindness, compassion meditation, self-compassion, anxiety, well-being, and trauma-sensitive adaptations.
+- More practical adaptation sources for high self-criticism and trauma histories.

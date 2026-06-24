@@ -44,6 +44,15 @@ updated: 2026-06-24
 - acceptanceとは何か: 時間、出来高、複数足、再テストのどれで判断するか。
 - invalidationとは何か: 再びValue Area外へ出ることか、POCを維持できないことか。
 
+## 使用前に定義すること
+
+- Which session’s Value Area: 前日、RTH、ETH、24時間、週次、compositeのどれか。
+- What counts as re-entry: wick、終値、複数足、または時間滞在のどれか。
+- What counts as acceptance: Value内での時間、出来高、retest、POC到達など。
+- Where the idea is invalidated: 再び外側で受け入れられる、または反対方向のStructureが出るなど。
+- Trend-like or balance-like day: trend dayではValue内回帰の発想が弱くなる可能性。
+- False precision avoidance: 「80%」を勝率や保証として扱わず、未検証の名称として扱う。
+
 ## Risks
 
 - Value Area内でチョップし、方向が出ない。

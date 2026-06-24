@@ -15,6 +15,8 @@ related:
   - horizontal-levels
   - market-structure
   - volume-profile-overview
+  - acceptance-and-rejection
+  - horizontal-line-trading-framework
 next:
   - entry-decision-process
 updated: 2026-06-24
@@ -35,6 +37,29 @@ updated: 2026-06-24
 3. [[point-of-control|POC]]、VAH、VALなどVolume Profile水準との重なりを見る。
 4. 各水準について、反応、受容、拒否、突破失敗のシナリオを作る。
 5. 無効条件と見送り条件を決める。
+
+## priority aid table
+
+これは統計スコアではなく、すべての線を引く癖を避けるためのpriority aidです。
+
+| Criteria | 観察 | 注意 |
+|---|---|---|
+| Higher timeframe relevance | 上位足でも見える | 短期足だけの細かい線は弱いことがある |
+| Clean prior reaction | 明確な反応があった | 反応が曖昧なら後付けになりやすい |
+| Near current price | 近い判断エリアになる | 遠すぎる線は今の判断に使いにくい |
+| Market structure overlap | trend/range端と重なる | 中央の線は判断が難しい |
+| POC / VAH / VAL overlap | Volume Profileが補助する | Profileだけでは根拠にしない |
+| Clear invalidation | 前提が崩れる場所が見える | 無効条件が遠すぎるなら弱い |
+| Acceptable risk/reward | 次の反応候補まで説明できる | 見た目だけの比率にしない |
+
+## scenario comparison
+
+| 場所 | 観察scenario | No-trade理由 |
+|---|---|---|
+| Range上限 | rejection、acceptance、failed breakout | Triggerなし、上位足が矛盾 |
+| Range中央 | POC回帰、チョップ | 端まで距離がなく、risk/rewardが弱い |
+| Prior high付近 | 突破後acceptance、上抜け失敗 | ニュース直前、出来高が薄い |
+| VAL付近 | Value内への再受容、下側acceptance | session定義が曖昧 |
 
 ## 観察ポイント
 

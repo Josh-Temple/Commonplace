@@ -37,6 +37,15 @@ Volume Profileを単独シグナルではなく、[[market-structure]]と[[horiz
 - Shape: [[profile-shapes]]は参考程度に留めているか。
 - Heuristic: [[eighty-percent-rule|80% rule]]を検証済み確率として扱っていないか。
 
+## POC / Value Area確認
+
+- POC type: current session、prior session、composite、visible rangeのどれか。
+- Value Area: VAH / VALのsession定義は明確か。
+- Close location: above VAH、below VAL、inside value、re-entryのどれか。
+- Shape: D / P / bを見ているなら、rangeやdata qualityは十分か。
+- Confluence: 水平線やMarket Structureと重なるか。
+- Caution: Profileだけでentry理由を作っていないか。
+
 ## 見送り条件
 
 - Volume Profileだけが根拠になっている。

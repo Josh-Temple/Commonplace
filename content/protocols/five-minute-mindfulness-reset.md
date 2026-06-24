@@ -63,7 +63,7 @@ updated: 2026-06-24
 
 この手順は、マインドフルネス、脱中心化、ACTの価値行動を短く組み合わせた実用プロトコルです。特定の臨床効果を保証するものではありません。
 
-## 関連ページ
+## 関連ノート
 
 - [[mindfulness-safety]]
 - [[breath-awareness-meditation]]

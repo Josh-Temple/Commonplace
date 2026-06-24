@@ -18,6 +18,8 @@ related:
   - horizontal-levels
   - volume-profile
   - trading-rules
+  - horizontal-line-trading-framework
+  - no-trade-checklist
 next:
   - trading-process
 updated: 2026-06-24
@@ -41,6 +43,17 @@ updated: 2026-06-24
 8. [[post-trade-review|トレード後レビュー]] — 結果とプロセスを分けて振り返る。
 9. [[trading-rules|トレーディングルール]] — 見送り、リスク、レビューの行動ルールに戻す。
 
+## この領域で育てる判断力
+
+この領域で育てたいのは、予測を当てる力ではなく、公開可能な形で説明できる判断力です。
+
+- Context recognition: 今の相場がどの環境にあるかを言語化する。
+- Level selection: すべての線ではなく、判断に使う水平線を絞る。
+- Scenario planning: 反応、受容、拒否、失敗を複数置く。
+- No-trade judgment: 条件が揃わない時に見送る。
+- Invalidation-first thinking: 入る前に前提が崩れる条件を決める。
+- Process review: 損益ではなく、判断手順とルール遵守を振り返る。
+
 ## 判断の骨格
 
 [[trading-process]]では、次の順序で実務的に確認します。
@@ -56,6 +69,14 @@ Context → Structure → Level → Scenario → Trigger → Invalidation → Ri
 - invalidationまたはrisk/rewardが先に定義できない。
 - ニュース、急変、薄い流動性でシナリオが読みにくい。
 - 感情状態が不安定で、見送りを選べない。
+
+## よくある誤用
+
+- ひとつのindicatorを売買signalとして扱う。
+- 水平線を引きすぎて、どの線でも理由にしてしまう。
+- [[point-of-control|POC]]を自動的な支持線・抵抗線として扱う。
+- Invalidationを決める前に入る。
+- Reviewでprofit/lossだけを見て、processを見ない。
 
 ## サブマップ
 

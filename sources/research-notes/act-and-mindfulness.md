@@ -46,3 +46,23 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 
 - Condition-specific ACT efficacy claims were not reviewed in this pass and should not be added without separate source summaries.
 - Hayes et al. 2006 and ACT books are listed as priority sources, but detailed page-level extraction was not performed here.
+
+## 2026-06-24 deeper verification pass
+
+### Concept model versus outcome evidence
+
+- ACBS pages support the conceptual model: ACT aims to increase psychological flexibility through acceptance, cognitive defusion, contact with the present moment, self as context, values, and committed action.
+- The ACT book by Hayes, Strosahl, and Wilson and Hayes et al. 2006 are priority conceptual/model sources, but this pass did not perform page-level extraction from the book.
+- Condition-specific efficacy claims are separate from the conceptual model and should not be added without diagnosis- or outcome-specific source review.
+
+### Reader-facing language allowed
+
+- “ACT uses mindfulness and acceptance processes together with values and committed action.”
+- “ACT is not a meditation program; it translates awareness into values-based action.”
+- “For this repository, ACT can support everyday action selection without claiming treatment efficacy for specific conditions.”
+
+### Still needs verification
+
+- Page-level extraction from Hayes et al. 2006 and the ACT book.
+- Meta-analyses by condition if future content names clinical outcomes.
+- Boundaries for self-help use versus therapist-guided ACT.

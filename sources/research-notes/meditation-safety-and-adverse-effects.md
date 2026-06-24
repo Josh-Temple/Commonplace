@@ -51,3 +51,35 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 
 - More detail is needed on screening, trauma-sensitive adaptations, dissociation, mania/psychosis cautions, and sleep-worsening management.
 - Do not add prevalence numbers to reader-facing pages without closer review of denominators and measurement methods.
+
+## 2026-06-24 deeper verification pass
+
+### Types of adverse or challenging experiences
+
+- NCCIH notes that meditation and mindfulness are usually considered low risk, but some people report negative experiences; it also cautions against using meditation to replace or postpone conventional care.
+- Farias et al. 2020 systematically reviewed adverse events across meditation practices and meditation-based therapies. The review supports saying adverse events have been reported, but prevalence estimates depend on study design, measurement, and reporting.
+- Britton/Lindahl-related VCE work supports a broad taxonomy of meditation-related challenges across domains such as somatic, affective, cognitive, perceptual, conative, sense of self, and social experiences.
+- Hirshberg/Goldberg/Rosenkranz/Davidson’s MBSR harm analysis is important for balance: available MBSR harm data should not be simplified into “MBSR is categorically dangerous.”
+
+### Frequency, causality, and measurement uncertainty
+
+- Do not put prevalence numbers in reader-facing pages unless the denominator, study type, adverse-event definition, measurement approach, and intervention context are stated.
+- Current reader-facing pages should use qualitative warnings rather than percentages.
+- Observational, experimental, clinical, retreat, and self-selected samples should not be collapsed.
+
+### Trauma-sensitive adaptations
+
+- Prefer choice, short duration, eyes open, external grounding, movement, clear stopping options, and avoiding forced internal attention.
+- For trauma activation, dissociation, panic, worsening sleep, mania-like activation, psychosis-like experiences, suicidality, or functional impairment, reader-facing pages should recommend stopping self-directed intensification and seeking appropriate support.
+
+### Reader-facing language allowed
+
+- “Some people have negative or destabilizing experiences with meditation.”
+- “If internal attention worsens panic, dissociation, trauma memories, sleep, or reality testing, stop or modify practice and seek support.”
+- “This page is not diagnostic and does not ask readers to decide what condition they have.”
+
+### Still needs verification
+
+- Dedicated trauma-sensitive mindfulness clinical guidance beyond web-level summaries.
+- Specific sleep-worsening management evidence.
+- Mania/psychosis risk evidence by practice type and population.

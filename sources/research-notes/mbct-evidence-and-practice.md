@@ -52,3 +52,28 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 
 - A future pass should quote and summarize the exact NICE recommendations page, not only the rationale summary.
 - NHS/Sussex materials should remain supplementary because they are service/referrer materials rather than the primary guideline.
+
+## 2026-06-24 deeper verification pass
+
+### NICE recommendation text versus rationale
+
+- NICE NG222 recommendations section 1.8 addresses preventing relapse after full or partial remission.
+- Recommendation 1.8.5 says that for people remitted after antidepressant medication alone and assessed as higher risk of relapse, options to consider include continuing antidepressants, a course of psychological therapy such as group CBT or MBCT for people who do not wish to continue antidepressants, or continuing antidepressants plus group CBT/MBCT.
+- Recommendation 1.8.6 says group CBT or MBCT for relapse prevention should explicitly focus on relapse-prevention skills and usually consists of 8 sessions over 2 to 3 months, with optional additional sessions over the next 12 months.
+- NICE rationale states that SSRIs, SNRIs, TCAs, group CBT, and MBCT had evidence for relapse prevention and were on average cost-effective for people at high risk of relapse, with data up to 2 years.
+
+### Recommendation / rationale / service materials
+
+- Recommendation text: use for cautious content about higher-risk relapse prevention after remission and explicit relapse-prevention skills.
+- Rationale text: use for why NICE included MBCT among relapse-prevention options.
+- Oxford/NHS/service/referrer materials: use as supplementary context, not as the primary guideline wording.
+
+### Reader-facing language allowed
+
+- “MBCT is associated especially with relapse-prevention contexts for recurrent depression or people at higher relapse risk, under appropriate support.”
+- “MBCT is not a self-directed replacement for care during acute severe depression, suicidality, mania, psychosis, or complex trauma activation.”
+
+### Still needs verification
+
+- Current NHS service pages beyond NICE and Oxford.
+- Detailed extraction from Kuyken 2015 PREVENT, Kuyken 2016 IPD meta-analysis, and Piet & Hougaard 2011 if stronger comparative claims are desired.

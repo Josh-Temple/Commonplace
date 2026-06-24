@@ -41,3 +41,39 @@ The 80% rule is commonly discussed as a practitioner heuristic: when price moves
 
 - Locate primary or high-quality practitioner sources for the 80% rule and document exact definitions of re-entry, acceptance, target, and invalidation.
 - Do not present the 80% label as a verified probability unless a future evidence note supports it.
+
+## 2026-06-24 content-deepening verification TODOs
+
+These notes remain candidate working notes. Do not promote stronger claims into reader-facing pages until primary or high-quality sources are checked.
+
+### Claims that need verification
+- 80% rule source quality.
+- session-specific Value Area definition.
+- re-entry and acceptance definitions.
+- claims not supported by robust published evidence.
+
+### Candidate source types
+
+- Primary Market Profile / auction market theory texts or official training material.
+- Platform documentation for Volume Profile, POC, Value Area, VAH, and VAL calculations.
+- Exchange or data-provider documentation where calculation or session definitions matter.
+- Risk management, journaling, and trading psychology sources with clear methodology.
+
+### Platform documentation to check
+
+- How POC is calculated and whether ties, tick aggregation, visible range, and session boundaries are handled differently.
+- How Value Area percentage is selected and expanded around POC.
+- Whether VAH / VAL are based on TPO count, volume, or vendor-specific logic.
+
+### Practitioner heuristics requiring caution
+
+- Horizontal level priority rules.
+- POC as support/resistance.
+- Profile-shape interpretations such as D / P / b shapes.
+- The 80% rule as a named probability claim.
+
+### Claims not yet supported
+
+- Any exact win rate, probability, or guaranteed edge.
+- Any personalized position-sizing or trade recommendation.
+- Any claim that a single indicator or pattern is sufficient for entry.

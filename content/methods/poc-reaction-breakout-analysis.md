@@ -66,6 +66,17 @@ POCを試したあと、次を確認します。
 - 水平線、構造、invalidation、risk/rewardが未定義。
 - ニュースや薄い流動性で反応が unreliable。
 
+## reaction comparison
+
+| Observation | Possible read | Warning |
+|---|---|---|
+| Rejection at POC | 以前の活動集中価格が再評価され、滞在できない | 反転保証ではない |
+| Acceptance through POC | POC反対側で取引が続く | どのPOCかで意味が変わる |
+| Drive-through | POCがその場で止める水準として機能しない | momentum後の追いかけに注意 |
+| Return / retest | 離れた後に再評価が起きる | retestだけではtriggerにならない |
+
+Current session POC、prior session POC、composite POC、visible range POCを混同しない。
+
 ## 注意点
 
 この方法は、観察とシナリオ作成のためのものです。

@@ -14,6 +14,7 @@ sources:
 related:
   - post-trade-review-checklist
   - trading-rules
+  - trading-review-template
 next:
   - post-trade-review-checklist
 updated: 2026-06-24
