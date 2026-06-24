@@ -1,5 +1,56 @@
 # Handoff: Lumen MVP
 
+## Reader font-size setting update — 2026-06-23
+
+The Lumen UI now defaults to a slightly smaller compact reading size and includes a persistent font-size control in the top navigation.
+
+### Commands run
+
+```bash
+npm run validate
+npm run typecheck
+npm run build
+```
+
+All three commands passed. npm still emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `app/font-size-control.tsx` — added a client-side compact / standard / large font-size setting stored in `localStorage`.
+- `app/components.tsx` — added the font-size control to the top navigation.
+- `app/layout.tsx` — applies the saved font-size setting before the app renders, defaulting to compact.
+- `app/styles.css` — added font-size scaling variables, compact default sizing, and styling for the control.
+- `README.md` — documented the reader font-size setting as an MVP feature.
+- `Handoff.md` — recorded this UI update for the next session.
+
+### Remaining documentation questions or inconsistencies
+
+- No automated screenshot was captured because this container does not include a browser binary such as Chromium, Google Chrome, or Firefox.
+- The setting currently has three fixed choices: compact, standard, and large. If finer control is needed later, replace the segmented buttons with a slider or more levels.
+
+## Project source documentation update — 2026-06-23
+
+The project-level source of truth for Commonplace and Lumen was added at `Commonplace Project Source.md`.
+
+### Commands run
+
+```bash
+npm run validate
+```
+
+`npm run validate` passed. npm still emitted the existing non-fatal environment warning about an unknown `http-proxy` config before running the validator.
+
+### Files changed
+
+- `Commonplace Project Source.md` — added the stable project source document with usage guidance, project identity, architecture, content rules, `content/outputs/` terminology, instruction priority, public content standard, source-note quality rule, Codex workflow, and templates.
+- `Handoff.md` — recorded this documentation update for the next session.
+
+### Remaining documentation questions or inconsistencies
+
+- No prior `Commonplace Project Source.md` file existed in the repository, so this update created the root-level project source document.
+- The project source document standardizes on `content/outputs/`; there is no current root-level `outputs/` directory decision.
+- Validation exists through `npm run validate`; it checks content structure and references, not the factual accuracy of source notes or reader-facing claims.
+
 ## Current validation status — 2026-06-23
 
 Issue #3 content validation workflow was implemented from `/workspace/Commonplace`.

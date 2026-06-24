@@ -16,6 +16,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+              try {
+                const value = window.localStorage.getItem("lumen-font-size");
+                document.documentElement.dataset.fontSize = ["compact", "standard", "large"].includes(value) ? value : "compact";
+              } catch {
+                document.documentElement.dataset.fontSize = "compact";
+              }
+            })();`,
+          }}
+        />
         <div className="app-shell">{children}</div>
       </body>
     </html>
