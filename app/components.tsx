@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FontSizeControl } from "./font-size-control";
 import type { ContentPage } from "../lib/content";
 
 export function TopNav() {
@@ -7,6 +8,7 @@ export function TopNav() {
       <Link href="/">Lumen</Link>
       <Link href="/indexes">Themes</Link>
       <Link href="/pages">Pages</Link>
+      <FontSizeControl />
     </nav>
   );
 }

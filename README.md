@@ -13,6 +13,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - Home page, theme/index listing, full page listing, and detail pages
 - Related pages, next pages, source notes, tags, status, and confidence indicators
 - Android-friendly mobile-first reading layout
+- Reader font-size setting with compact, standard, and large text options
 - Minimal, border-light visual design that uses whitespace and divider lines instead of boxed cards
 
 ## Content directories

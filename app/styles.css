@@ -14,7 +14,16 @@
   --amber: #9a6a15;
   --amber-soft: #f3e8cf;
   --danger: #8b2f2f;
+  --reader-font-scale: 0.94;
   color-scheme: light;
+}
+
+:root[data-font-size="standard"] {
+  --reader-font-scale: 1;
+}
+
+:root[data-font-size="large"] {
+  --reader-font-scale: 1.1;
 }
 
 * { box-sizing: border-box; }
@@ -29,6 +38,7 @@ body {
   background-size: 22px 22px, auto;
   color: var(--ink);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: calc(1rem * var(--reader-font-scale));
   line-height: 1.72;
   text-rendering: optimizeLegibility;
 }
@@ -74,10 +84,46 @@ a { color: inherit; }
 }
 
 .top-nav a:not(:first-child):active,
-.top-nav a:not(:first-child):focus-visible {
+.top-nav a:not(:first-child):focus-visible,
+.font-size-options button:focus-visible {
   background: var(--accent-soft);
   color: var(--accent-dark);
   outline: none;
+}
+
+.font-size-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 2px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 780;
+}
+
+.font-size-options {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  background: #ffffff82;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+}
+
+.font-size-options button {
+  min-width: 30px;
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.font-size-options button[aria-pressed="true"] {
+  background: var(--accent-dark);
+  color: #fffaf0;
 }
 
 main {
@@ -266,7 +312,7 @@ main {
 }
 
 .markdown-body {
-  font-size: clamp(1.05rem, 4.1vw, 1.16rem);
+  font-size: clamp(1rem, 3.8vw, 1.1rem);
 }
 
 .markdown-body h2 {
@@ -340,6 +386,10 @@ main {
   .top-nav {
     margin-inline: -30px;
     padding-inline: 30px;
+  }
+
+  .font-size-control {
+    margin-left: 6px;
   }
 
   .hero,
