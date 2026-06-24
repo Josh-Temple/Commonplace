@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "validate": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate": "npm run typecheck && npm run validate:content && npm run build"
   },
   "dependencies": {
     "@types/node": "^20.14.10",

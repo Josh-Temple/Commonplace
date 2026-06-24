@@ -18,12 +18,16 @@
   color-scheme: light;
 }
 
+:root[data-font-size="compact"] {
+  --reader-font-scale: 0.94;
+}
+
 :root[data-font-size="standard"] {
   --reader-font-scale: 1;
 }
 
 :root[data-font-size="large"] {
-  --reader-font-scale: 1.1;
+  --reader-font-scale: 1.12;
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +42,7 @@ body {
   background-size: 22px 22px, auto;
   color: var(--ink);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: calc(1rem * var(--reader-font-scale));
+  font-size: 1rem;
   line-height: 1.72;
   text-rendering: optimizeLegibility;
 }
@@ -178,7 +182,7 @@ main {
 .page-header p {
   max-width: 40rem;
   color: var(--muted);
-  font-size: clamp(1.02rem, 4.2vw, 1.18rem);
+  font-size: calc(clamp(1.02rem, 4.2vw, 1.18rem) * var(--reader-font-scale));
 }
 
 .hero-actions,
@@ -303,6 +307,7 @@ main {
 
 .reader-card {
   padding-top: 18px;
+  font-size: calc(1rem * var(--reader-font-scale));
 }
 
 .reader-header {
@@ -312,7 +317,8 @@ main {
 }
 
 .markdown-body {
-  font-size: clamp(1rem, 3.8vw, 1.1rem);
+  font-size: calc(clamp(1.08rem, 4vw, 1.16rem) * var(--reader-font-scale));
+  line-height: 1.74;
 }
 
 .markdown-body h2 {
@@ -326,6 +332,7 @@ main {
 
 .markdown-body p,
 .markdown-body li {
+  font-size: inherit;
   overflow-wrap: anywhere;
 }
 

@@ -111,22 +111,22 @@ The purpose is to make Codex behavior predictable when Issue instructions, hando
 For documentation and content tasks:
 
 1. Read `README.md`, `Handoff.md`, and relevant content or source files before editing.
-2. Preserve the current project direction unless the current task explicitly changes it.
-3. Prefer additive updates, draft pages, or proposals for major content changes.
-4. Keep `content/` and `sources/` roles distinct.
-5. Update `Handoff.md` with files changed, summary, validation status, and remaining questions.
+2. Check open GitHub Issues before selecting work, unless the user gives a direct instruction in the current chat.
+3. Preserve the current project direction unless the current task explicitly changes it.
+4. Prefer additive updates, draft pages, or proposals for major content changes.
+5. Keep `content/` and `sources/` roles distinct.
+6. Update `Handoff.md` with files changed, summary, validation status, and remaining questions.
 
-For app-code changes, run:
-
-```bash
-npm run typecheck
-npm run build
-```
-
-For content or documentation changes, run the repository validation command when available:
+For app-code changes, run the full repository validation command:
 
 ```bash
 npm run validate
+```
+
+`npm run validate` runs typechecking, content validation, and the production build. For content-only checks, use:
+
+```bash
+npm run validate:content
 ```
 
 ## Templates

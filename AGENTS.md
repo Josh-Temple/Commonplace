@@ -2,6 +2,29 @@
 
 This repository contains Lumen, a Vercel-ready Next.js reading app for a personal knowledge base.
 
+## Startup checklist
+
+Before starting work, Codex should:
+
+1. Read `AGENTS.md`.
+2. Read `Handoff.md`.
+3. Check open GitHub Issues before selecting work.
+4. Prefer working from GitHub Issues unless the user gives a direct instruction in chat.
+5. Identify whether the task is:
+   - app development
+   - content writing
+   - source integration
+   - link maintenance
+   - validation
+   - documentation
+   - review or cleanup
+6. After completing work, update `Handoff.md` with:
+   - files changed
+   - commands run
+   - validation results
+   - remaining limitations
+   - suggested next tasks
+
 ## Content boundaries
 
 - Treat `sources/` as research notes and source summaries. These are not final reader-facing pages.

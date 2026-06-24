@@ -44,19 +44,18 @@ Then open <http://localhost:3000>.
 
 ## Validate before deployment
 
-Run the content validator before app checks:
+Run the full repository validation command before deployment:
 
 ```bash
 npm run validate
 ```
 
-The validator checks required content frontmatter, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
+`npm run validate` runs TypeScript typechecking, the content validator, and the production Next.js build. The content validator checks required content frontmatter, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
 
-Then run the Next.js checks:
+For a faster content-only check, run:
 
 ```bash
-npm run typecheck
-npm run build
+npm run validate:content
 ```
 
 The app is designed to deploy directly on Vercel as a standard Next.js project.
