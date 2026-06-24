@@ -35,3 +35,14 @@ This note only supports basic conceptual claims about ACT and mindfulness. Condi
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- ACBS materials were rechecked for the six ACT processes: acceptance, cognitive defusion, contact with the present moment / being present, self as context, values, and committed action.
+- ACBS frames ACT around psychological flexibility and mindfulness/acceptance plus commitment/behavior-change processes.
+- Reader-facing content should keep ACT as a psychological flexibility and values-based action model, not a generic meditation method.
+
+## Still insufficient
+
+- Condition-specific ACT efficacy claims were not reviewed in this pass and should not be added without separate source summaries.
+- Hayes et al. 2006 and ACT books are listed as priority sources, but detailed page-level extraction was not performed here.

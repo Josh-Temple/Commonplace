@@ -38,3 +38,8 @@ Volume Profile is commonly described as a charting study that organizes traded v
 - Use this note only for cautious definitions and limitations.
 - Mark basic Volume Profile definitions as medium confidence when the article also signals platform variability.
 - Do not invent citations, page numbers, studies, or verified probabilities.
+
+## TODO: source verification pass
+
+- Verify current charting-platform documentation for Volume Profile, POC, Value Area, VAH, VAL, range/session settings, and tick-volume limitations.
+- Preserve Volume Profile as auxiliary observation support unless stronger evidence is added.

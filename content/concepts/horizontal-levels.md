@@ -15,29 +15,37 @@ related:
   - market-structure
   - volume-profile-overview
 next:
-  - horizontal-level-analysis
-  - entry-decision-process
+  - volume-profile
 updated: 2026-06-24
 ---
 
-
 ## 要点
 
-水平線は魔法の線ではなく、過去に判断が起きた価格帯を再確認するための目印です。
+水平線は主な判断エリアです。ただし線そのものが売買命令になるわけではなく、反応、受容、拒否、失敗を見る場所として使います。
 
-## よく見る水準
+## これは何か
+
+過去に判断が起きた価格帯、または多くの参加者が参照しやすい価格帯を、事前に可視化する方法です。
+
+## どう読むか
 
 - prior highs / lows: 前日、前週、前セッションの高値安値。
 - swing highs / lows: 直近の目立つ反転点。
 - daily / weekly levels: 日足・週足の高値、安値、終値、始値など。
 - round numbers: 参加者が意識しやすい丸い価格。
 - session highs / lows: 現在または前セッションの高値安値。
-- Volume Profile confluence: [[point-of-control]]、VAH、VALとの重なり。
+- Volume Profile confluence: [[point-of-control|POC]]、VAH、VALとの重なり。
 
-## 使い方
+## 使いどころ
 
-線そのものではなく、線の周辺での反応、受容、拒否、出来高、時間経過を見ます。複数の根拠が集まる場所は判断エリアとして扱います。
+[[market-structure]]で方向と状態を見たあと、水平線周辺でシナリオを作ります。Volume Profileは、その水準に追加の観察材料を与える補助として使います。
 
-## 注意
+## 注意点
 
-水平線だけで売買しません。[[market-structure]]、[[trading-context]]、[[risk-reward-and-invalidation]]と組み合わせます。
+線を増やしすぎると、後付けの理由を作りやすくなります。重要水準が定義できない時、または価格がレンジ中央・Value Area中央にある時は見送りを優先します。
+
+## 関連ページ
+
+- [[horizontal-level-analysis]]
+- [[volume-profile]]
+- [[entry-decision-process]]

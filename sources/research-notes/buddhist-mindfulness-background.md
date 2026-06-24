@@ -36,3 +36,12 @@ This note records Buddhist-background terms that are often mentioned in modern m
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- SuttaCentral references remain appropriate for background on Satipaṭṭhāna, Ānāpānasati, and Karaṇīya Mettā.
+- Reader-facing pages now more explicitly separate Buddhist background from modern clinical efficacy evidence.
+
+## Still insufficient
+
+- A future pass could add brief, carefully attributed summaries of MN 10, MN 118, and Snp 1.8, but should avoid turning Buddhist texts into health-effect evidence.

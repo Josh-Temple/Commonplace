@@ -41,3 +41,14 @@ Mindfulness-Based Cognitive Therapy (MBCT) integrates mindfulness practices with
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- NICE NG222 rationale text was rechecked via web search and identifies MBCT as one relapse-prevention option for people at high risk of relapse, alongside continuation antidepressants and group CBT.
+- Oxford/Kuyken MBCT sources remain the main support for cautious relapse-prevention language.
+- Reader-facing content should say MBCT is especially associated with recurrent depression relapse-prevention contexts, not all depression symptoms or acute severe depression.
+
+## Still insufficient
+
+- A future pass should quote and summarize the exact NICE recommendations page, not only the rationale summary.
+- NHS/Sussex materials should remain supplementary because they are service/referrer materials rather than the primary guideline.

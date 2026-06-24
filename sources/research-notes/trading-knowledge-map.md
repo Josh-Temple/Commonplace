@@ -33,3 +33,11 @@ The trading area should be a decision-structure map, not a trading system. It ca
 ## Notes for Codex
 
 Keep all reader-facing trading pages public-safe, non-personalized, and cautious. Do not add private trading records or account details.
+
+## TODO: source verification pass
+
+- Verify Market Profile / auction market theory sources before strengthening any claims about acceptance, rejection, value, or auction behavior.
+- Verify Volume Profile platform documentation before describing exact POC, Value Area, VAH, or VAL calculations for a specific tool.
+- Verify horizontal level trading sources before making stronger claims about support/resistance behavior.
+- Verify risk management and invalidation sources before adding stronger practical guidance.
+- Verify trading journaling, performance review, and trading psychology sources before expanding review or emotion-control claims.

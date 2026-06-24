@@ -38,3 +38,8 @@ Market Profile is commonly associated with auction-market framing and time-at-pr
 - Use medium confidence for definitions such as POC and Value Area when framed as conventional platform terms.
 - Use low confidence for shape interpretation and close-location implications.
 - Avoid saying that a close outside value automatically predicts continuation.
+
+## TODO: source verification pass
+
+- Verify Market Profile / auction market theory sources for value, balance, excess, failed auction, and profile-shape terminology.
+- Verify whether Value Area conventions differ across TPO and Volume Profile platforms before adding exact claims.

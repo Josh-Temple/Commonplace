@@ -36,3 +36,8 @@ The 80% rule is commonly discussed as a practitioner heuristic: when price moves
 - Keep reader-facing confidence low.
 - Do not call the 80% figure a verified win rate.
 - Frame the rule as an observation prompt and study hypothesis, not financial advice.
+
+## TODO: source verification pass
+
+- Locate primary or high-quality practitioner sources for the 80% rule and document exact definitions of re-entry, acceptance, target, and invalidation.
+- Do not present the 80% label as a verified probability unless a future evidence note supports it.

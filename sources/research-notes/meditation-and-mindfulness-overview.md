@@ -44,3 +44,12 @@ This note separates broad definitions from intervention-specific evidence. It sh
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- NCCIH and Goyal et al. continue to support cautious overview language: evidence varies by condition, program, comparison group, and study quality.
+- The content pages now distinguish introductory practice, daily practice, MBSR, MBCT, ACT, open monitoring, and loving-kindness more clearly.
+
+## Still insufficient
+
+- More source work is needed for body scan, interoception, open monitoring, loving-kindness, compassion, and mechanism-specific claims.

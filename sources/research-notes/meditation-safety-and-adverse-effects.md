@@ -40,3 +40,14 @@ Reported meditation-related adverse effects include anxiety or panic, emotional 
 ## Source note status
 
 Working research note, not a reader-facing article. Claims promoted into `content/` should remain weaker than the cited sources.
+
+## 2026-06-24 verification update
+
+- NCCIH safety language was rechecked: meditation is usually considered low risk, but harmful effects are not sufficiently studied for definite safety statements, and meditation should not delay conventional care.
+- Farias et al. and Britton/Lindahl-related work remain support for cautious adverse-event language.
+- Hirshberg/Goldberg/Rosenkranz/Davidson remains useful to avoid the opposite overstatement that MBSR is categorically harmful.
+
+## Still insufficient
+
+- More detail is needed on screening, trauma-sensitive adaptations, dissociation, mania/psychosis cautions, and sleep-worsening management.
+- Do not add prevalence numbers to reader-facing pages without closer review of denominators and measurement methods.

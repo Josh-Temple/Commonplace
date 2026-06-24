@@ -32,3 +32,8 @@ Market structure is a descriptive framework for organizing price movement. It ca
 ## Notes for Codex
 
 Use medium confidence for broad definitions only; use low confidence for practitioner interpretations.
+
+## TODO: source verification pass
+
+- Check reputable sources for Dow-like market-structure terminology, trend/range definitions, break of structure, failed breakout, acceptance, and rejection.
+- Keep reader-facing structure interpretation low-confidence unless supported by stronger source notes.

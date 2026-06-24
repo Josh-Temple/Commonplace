@@ -32,3 +32,8 @@ Horizontal levels are commonly drawn from prior highs/lows, swing points, daily/
 ## Notes for Codex
 
 Phrase levels as decision areas and observation prompts. Do not turn them into trade calls.
+
+## TODO: source verification pass
+
+- Verify support/resistance and horizontal level material from technical-analysis texts, exchange/platform education, or other reputable educational sources.
+- Check whether any source distinguishes decision areas from exact-price signals in a public-safe way.
