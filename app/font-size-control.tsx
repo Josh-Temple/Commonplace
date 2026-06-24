@@ -5,11 +5,12 @@ import { useEffect, useState } from "react";
 type FontSize = "compact" | "standard" | "large";
 
 const STORAGE_KEY = "lumen-font-size";
-const OPTIONS: Array<{ value: FontSize; label: string; ariaLabel: string }> = [
-  { value: "compact", label: "小", ariaLabel: "Use compact text size" },
-  { value: "standard", label: "中", ariaLabel: "Use standard text size" },
-  { value: "large", label: "大", ariaLabel: "Use large text size" },
-];
+const ORDER: FontSize[] = ["compact", "standard", "large"];
+const LABELS: Record<FontSize, string> = {
+  compact: "小さめ",
+  standard: "標準",
+  large: "大きめ",
+};
 
 function isFontSize(value: string | null): value is FontSize {
   return value === "compact" || value === "standard" || value === "large";
@@ -29,28 +30,22 @@ export function FontSizeControl() {
     setFontSize(nextSize);
   }, []);
 
-  function updateFontSize(value: FontSize) {
-    applyFontSize(value);
-    window.localStorage.setItem(STORAGE_KEY, value);
-    setFontSize(value);
+  function cycleFontSize() {
+    const nextSize = ORDER[(ORDER.indexOf(fontSize) + 1) % ORDER.length];
+    applyFontSize(nextSize);
+    window.localStorage.setItem(STORAGE_KEY, nextSize);
+    setFontSize(nextSize);
   }
 
   return (
-    <div className="font-size-control" aria-label="Font size setting">
-      <span>文字</span>
-      <div className="font-size-options" role="group" aria-label="Choose font size">
-        {OPTIONS.map((option) => (
-          <button
-            key={option.value}
-            type="button"
-            aria-label={option.ariaLabel}
-            aria-pressed={fontSize === option.value}
-            onClick={() => updateFontSize(option.value)}
-          >
-            {option.label}
-          </button>
-        ))}
-      </div>
-    </div>
+    <button
+      type="button"
+      className="font-size-control"
+      aria-label={`文字サイズ: ${LABELS[fontSize]}。押すと変更します。`}
+      title={`文字サイズ: ${LABELS[fontSize]}`}
+      onClick={cycleFontSize}
+    >
+      Aa
+    </button>
   );
 }

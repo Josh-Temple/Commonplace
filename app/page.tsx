@@ -1,39 +1,30 @@
 import Link from "next/link";
 import { PageGrid, TopNav } from "./components";
-import { getAllPages, getIndexPages } from "../lib/content";
+import { getIndexPages } from "../lib/content";
 
 export default function HomePage() {
   const indexes = getIndexPages();
-  const recent = getAllPages().slice(0, 4);
 
   return (
     <>
       <TopNav />
       <main>
         <section className="hero">
-          <p className="eyebrow">Personal knowledge base</p>
+          <p className="eyebrow">個人の知識ベース</p>
           <h1>Lumen</h1>
-          <p>Linked concepts, methods, protocols, rules, and source notes for focused mobile reading.</p>
+          <p>読むことに集中するための、静かな個人知識ベース。</p>
           <div className="hero-actions">
-            <Link href="/indexes" className="button primary">Browse themes</Link>
-            <Link href="/pages" className="button">All pages</Link>
+            <Link href="/indexes" className="button primary">テーマを見る</Link>
+            <Link href="/pages" className="button">すべてのページ</Link>
           </div>
         </section>
 
         <section className="section-block">
           <div className="section-heading">
-            <h2>Theme indexes</h2>
-            <Link href="/indexes">View all</Link>
+            <h2>テーマ索引</h2>
+            <Link href="/indexes">すべて見る</Link>
           </div>
           <PageGrid pages={indexes} />
-        </section>
-
-        <section className="section-block">
-          <div className="section-heading">
-            <h2>Reading pages</h2>
-            <Link href="/pages">View all</Link>
-          </div>
-          <PageGrid pages={recent} />
         </section>
       </main>
     </>
