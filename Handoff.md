@@ -1,5 +1,46 @@
 # Handoff: Lumen MVP
 
+## Workflow, validation, and reader font-size fixes — 2026-06-24
+
+This pass tightened Codex workflow documentation, clarified validation scripts, and fixed reader font-size scaling so the setting applies to the main reading body instead of globally enlarging navigation.
+
+### Commands run
+
+```bash
+npm run validate
+```
+
+`npm run validate` passed. It now runs `npm run typecheck`, `npm run validate:content`, and `npm run build`. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `AGENTS.md` — added the startup checklist, including the instruction to check open GitHub Issues before selecting work and to update `Handoff.md` after work.
+- `Commonplace Project Source.md` — updated the Codex workflow section to mention checking open GitHub Issues before selecting work, while preserving the current instruction priority.
+- `package.json` — added `validate:content` and made `validate` run typecheck, content validation, and build.
+- `README.md` — documented that `npm run validate` is the full validation command and that `npm run validate:content` is the content-only check.
+- `app/styles.css` — scoped font-size scaling to reader and summary content, kept the body/navigation at stable base size, and made `.markdown-body`, `.markdown-body p`, and `.markdown-body li` inherit the reader scale.
+- `Handoff.md` — recorded this handoff entry for the next session.
+
+### Validation results
+
+- `npm run typecheck` passed as part of `npm run validate`.
+- `npm run validate:content` passed as part of `npm run validate`; content validation passed for 6 pages.
+- `npm run build` passed as part of `npm run validate`.
+
+### Remaining limitations and Android reading concerns
+
+- No automated screenshot was captured because this change was CSS/documentation-focused and no browser review was requested. Manual Android review is still recommended for the compact, standard, and large reader text sizes.
+- The font-size control now affects `.markdown-body`, paragraphs and list items inside `.markdown-body`, `.reader-card`, and summary text while avoiding oversized top navigation and controls.
+- The existing `localStorage` key remains `lumen-font-size`; compact remains the default.
+- The existing npm `http-proxy` warning appeared again and remains non-fatal.
+
+### Suggested next tasks
+
+1. Manually test the reader page on Android at compact, standard, and large settings.
+2. Consider adding a small Playwright or browser smoke test if this project gains browser tooling.
+3. Keep future content expansion source-backed and maintain the distinction between `content/` and `sources/`.
+
+
 ## Reader font-size setting update — 2026-06-23
 
 The Lumen UI now defaults to a slightly smaller compact reading size and includes a persistent font-size control in the top navigation.
