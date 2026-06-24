@@ -1,5 +1,153 @@
 # Handoff: Lumen MVP
 
+## Trading knowledge area expansion — 2026-06-24
+
+This pass expanded the trading knowledge area from a small emotion/rules cluster into a broader draft educational map covering context, market structure, horizontal levels, Volume Profile, entry decisions, invalidation/risk planning, emotional execution discipline, and post-trade review. The cluster is public-safe and explicitly not personalized financial advice.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+rg --files content sources | rg '(trading|volume|profile|poc|value|market|eighty|trade|horizontal|risk|invalidation)' | sort
+npm run validate:content
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 40 pages. `npm run validate` passed, including TypeScript typecheck, content validation, and production build. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files created
+
+- `content/indexes/trading-process.md` — added a process map from context through post-trade review.
+- `content/concepts/trading-context.md` — added higher-timeframe, session, volatility, news, liquidity, and trend/balance context.
+- `content/concepts/market-structure.md` — added trend/range, higher-high/higher-low, lower-high/lower-low, break of structure, failed breakout, acceptance, and rejection basics.
+- `content/concepts/horizontal-levels.md` — added prior highs/lows, swing highs/lows, daily/weekly levels, round numbers, session highs/lows, and Volume Profile confluence as decision areas.
+- `content/methods/market-structure-assessment.md` — added a cautious market-structure assessment sequence.
+- `content/methods/horizontal-level-analysis.md` — added horizontal-level analysis as scenario planning around decision areas.
+- `content/methods/entry-decision-process.md` — added the Context → Level → Scenario → Trigger → Invalidation → Risk/reward → Emotional check → Decision → Review sequence.
+- `content/methods/risk-reward-and-invalidation.md` — added invalidation-first risk planning and stop-discipline guidance.
+- `content/methods/post-trade-review.md` — added post-trade review focused on process quality rather than outcome alone.
+- `content/protocols/pre-trade-context-checklist.md` — added a short context checklist for the pre-entry workflow.
+- `content/protocols/post-trade-review-checklist.md` — added a public-safe review checklist that avoids personal account/trade records in the repository.
+- `sources/research-notes/trading-knowledge-map.md` — added draft working notes for the trading knowledge structure.
+- `sources/research-notes/market-structure-basics.md` — added draft working notes for market-structure terminology.
+- `sources/research-notes/horizontal-levels-basics.md` — added draft working notes for horizontal-level terminology and limitations.
+
+### Files updated
+
+- `content/indexes/trading.md` — expanded the trading index into a domain map with sections for context, market structure, horizontal levels, Volume Profile, entry decisions, risk/invalidation, emotion/execution discipline, review, and financial-advice boundary.
+- `content/protocols/pre-trade-emotion-check.md` — preserved the short emotional safety check and linked it to context, entry process, risk/invalidation, and trading rules.
+- `content/rules/trading-rules.md` — preserved the cautious personal-rule draft and organized it into entry, risk, emotional, review, and what-not-to-do rules.
+- `content/indexes/volume-profile.md` — added an explicit education/not-financial-advice boundary and linked it back to the broader trading index.
+
+### Existing Volume Profile pages preserved
+
+The existing Volume Profile cluster already covered `content/concepts/volume-profile-overview.md`, `content/concepts/point-of-control.md`, `content/concepts/value-area.md`, `content/concepts/profile-shapes.md`, `content/methods/poc-reaction-breakout-analysis.md`, `content/methods/value-area-close-analysis.md`, `content/protocols/volume-profile-checklist.md`, `content/rules/eighty-percent-rule.md`, and related source notes. These were retained rather than duplicated.
+
+### Source notes used or created
+
+- `sources/research-notes/trading-knowledge-map.md`
+- `sources/research-notes/market-structure-basics.md`
+- `sources/research-notes/horizontal-levels-basics.md`
+- `sources/research-notes/volume-profile-basics.md`
+- `sources/research-notes/market-profile-and-value-area.md`
+- `sources/research-notes/eighty-percent-rule.md`
+
+### Validation results
+
+- GitHub Issue check was not available because `gh` is missing.
+- Existing trading/Volume Profile pages were inspected before editing to avoid duplicating equivalent pages.
+- `npm run validate:content` passed for 40 pages.
+- `npm run validate` passed; typecheck, content validation, and production build completed.
+
+### Confidence limitations
+
+- The trading cluster is draft educational material and not personalized financial advice.
+- Basic definitions such as market structure terms and horizontal-level categories are medium/low confidence depending on whether they are broad terminology or practical interpretation.
+- Volume Profile definitions remain medium confidence where they are conventional terms; POC/Value Area reactions, profile shapes, value-area close reads, and the 80% rule remain low-confidence heuristics.
+- No statistical edge, win rate, or personalized risk recommendation is established.
+
+### Suggested next tasks
+
+1. Verify candidate sources for market structure, horizontal levels, risk management, journaling, and trading psychology.
+2. Add chart examples or diagrams only if they can be public-safe and not tied to private trading records.
+3. Consider adding a content pass that standardizes Japanese/English headings across older Volume Profile pages.
+
+
+## Meditation and mindfulness article cluster — 2026-06-24
+
+This pass added a linked draft article cluster for meditation and mindfulness. The cluster keeps `sources/` as working research notes and `content/` as reader-facing Lumen pages, with explicit boundaries around medical claims, adverse effects, breath manipulation, and Buddhist-vs-clinical context.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+rg -n "mindfulness|meditation|MBSR|MBCT|ACT|瞑想|マインドフル|decentering|呼吸|メッタ|慈愛" content sources || true
+npm run validate:content
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 29 pages. `npm run validate` passed, including TypeScript typecheck, content validation, and production build. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `content/indexes/meditation-and-mindfulness.md` — added the meditation and mindfulness cluster entry point, reading order, and links to key concepts, methods, protocols, and safety boundaries.
+- `content/concepts/mindfulness.md` — added the reader-facing definition of mindfulness as attention, awareness, and returning practice rather than a simple relaxation technique.
+- `content/concepts/meditation-family-of-practices.md` — added a page distinguishing focused attention, open monitoring, loving-kindness, body-based practices, and the risk of overgeneralizing “meditation effects.”
+- `content/concepts/decentering.md` — added decentering/metacognitive awareness and its relationship to MBCT, ACT, self-distancing, rumination, and emotion regulation.
+- `content/concepts/mindfulness-safety.md` — added safety cautions for trauma, strong anxiety, dissociation, mania/psychosis symptoms, sleep worsening, intensive practice, and breath manipulation.
+- `content/methods/mbsr.md` — added an MBSR overview as an 8-week stress-reduction program with body scan, sitting meditation, mindful movement, and daily-life practice.
+- `content/methods/mbct.md` — added an MBCT overview focused on CBT integration and recurrent depression relapse-prevention context.
+- `content/methods/act-and-mindfulness.md` — added ACT as a psychological-flexibility and values-based action model, distinct from MBSR/MBCT.
+- `content/methods/breath-awareness-meditation.md` — added breath awareness as noticing and returning rather than continuous deep-breath manipulation.
+- `content/methods/open-monitoring-meditation.md` — added open monitoring as observation of sensations, thoughts, and emotions, with beginner cautions.
+- `content/methods/loving-kindness-meditation.md` — added metta/loving-kindness practice with separate Buddhist-background and modern-intervention framing.
+- `content/protocols/five-minute-mindfulness-reset.md` — added a short 5-minute practical reset for posture, breath awareness, body awareness, labeling, and choosing the next action.
+- `content/protocols/daily-mindfulness-practice.md` — added a daily 10-minute starting routine with weekly reflection and stopping criteria.
+- `content/rules/mindfulness-practice-boundaries.md` — added boundaries against medical substitution, overlong practice, continuous breath control, and avoidance.
+- `sources/research-notes/meditation-and-mindfulness-overview.md` — added source-backed working notes on definitions, classifications, broad evidence tendencies, and limits.
+- `sources/research-notes/mbsr-evidence-and-practice.md` — added MBSR source notes and evidence cautions.
+- `sources/research-notes/mbct-evidence-and-practice.md` — added MBCT source notes and relapse-prevention evidence cautions.
+- `sources/research-notes/act-and-mindfulness.md` — added ACT source notes centered on ACBS and the six-process model.
+- `sources/research-notes/meditation-safety-and-adverse-effects.md` — added safety/adverse-effect source notes.
+- `sources/research-notes/buddhist-mindfulness-background.md` — added Buddhist background notes for Satipaṭṭhāna, Ānāpānasati, Mettā, Vipassanā, and SuttaCentral candidates.
+- `Handoff.md` — recorded this handoff entry.
+
+### Validation results
+
+- GitHub Issue check was not available because `gh` is missing.
+- Existing related content search found only `content/concepts/self-distancing.md` as a nearby page; new pages link to it instead of duplicating the same concept.
+- `npm run validate:content` passed for 29 pages.
+- `npm run validate` passed; typecheck, content validation, and production build completed.
+
+### Source notes used
+
+- `sources/research-notes/meditation-and-mindfulness-overview.md`
+- `sources/research-notes/mbsr-evidence-and-practice.md`
+- `sources/research-notes/mbct-evidence-and-practice.md`
+- `sources/research-notes/act-and-mindfulness.md`
+- `sources/research-notes/meditation-safety-and-adverse-effects.md`
+- `sources/research-notes/buddhist-mindfulness-background.md`
+
+### Unverified or incomplete sources
+
+- NICE/NHS MBCT material was only lightly represented via an NHS-linked Sussex Mindfulness referrer sheet; a future pass should verify current NICE guideline wording directly.
+- University of Massachusetts MBSR historical material was not deeply verified in this pass; Brown University and NCCIH were used for current institutional descriptions.
+- Loving-kindness and open-monitoring efficacy claims were intentionally kept conservative and need deeper source notes before stronger claims.
+
+### Uncertainty and limitations
+
+- Content pages are draft educational material, not medical advice or psychotherapy.
+- Effect claims remain cautious because meditation interventions, populations, teachers, home practice, and comparison conditions differ.
+- Buddhist source references support background and terminology, not clinical efficacy.
+- Adverse-effect prevalence differs by definition and measurement method, so safety pages emphasize practical boundaries rather than a single risk estimate.
+
+### Suggested next tasks
+
+1. Add deeper source summaries for loving-kindness, open monitoring, compassion meditation, and mechanisms such as decentering.
+2. Verify current NICE depression/relapse-prevention recommendations directly and update the MBCT source note.
+3. Consider adding small diagrams or practice cards if Lumen later supports visual assets.
+
+
 ## Smaller compact reader font size — 2026-06-24
 
 This pass adjusted the `Aa` reader font-size control so the compact / small setting is visibly smaller than before. The change reduces the reader font scale used by reader bodies and summaries while preserving the existing standard and large settings.
