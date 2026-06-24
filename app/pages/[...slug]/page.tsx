@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Badge, PageCard, TopNav } from "../../components";
+import { Badge, PageListItem, TopNav } from "../../components";
 import { getAllPages, getPageBySlug, getSourceNote, resolvePageRefs } from "../../../lib/content";
 import { MarkdownBody } from "../../../lib/markdown";
 
@@ -49,14 +49,14 @@ export default function ContentDetailPage({ params }: { params: { slug: string[]
         {related.length > 0 ? (
           <section className="section-block">
             <h2>Related pages</h2>
-            <div className="compact-grid">{related.map((item) => <PageCard key={item.id} page={item} />)}</div>
+            <div className="compact-grid">{related.map((item) => <PageListItem key={item.id} page={item} />)}</div>
           </section>
         ) : null}
 
         {nextPages.length > 0 ? (
           <section className="section-block next-section">
             <h2>Next links</h2>
-            <div className="compact-grid">{nextPages.map((item) => <PageCard key={item.id} page={item} />)}</div>
+            <div className="compact-grid">{nextPages.map((item) => <PageListItem key={item.id} page={item} />)}</div>
           </section>
         ) : null}
 

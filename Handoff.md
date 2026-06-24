@@ -1,5 +1,48 @@
 # Handoff: Lumen MVP
 
+## Quiet mobile homepage and theme index UI — 2026-06-24
+
+This pass revised the Lumen mobile UI to reduce cognitive load and keep the homepage focused on identity, primary navigation, and theme discovery.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+npm run typecheck
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run typecheck` passed. `npm run validate` passed, including typecheck, content validation, and production build. npm emitted the existing non-fatal environment warning about an unknown `http-proxy` config before scripts ran.
+
+### Files changed
+
+- `app/page.tsx` — compressed the homepage content, switched functional labels to Japanese, removed the secondary recent-pages section, and kept the page focused on Lumen and the theme list.
+- `app/indexes/page.tsx` — localized the theme index page header and shortened the description.
+- `app/pages/page.tsx` — localized the all-pages page title.
+- `app/components.tsx` — simplified top navigation labels and removed status, confidence, and type metadata from list items.
+- `app/font-size-control.tsx` — replaced the segmented `文字 / 小 / 中 / 大` control with a compact cycling `Aa` control.
+- `app/styles.css` — reduced hero/header height, tightened spacing, simplified the top navigation, and kept list items as divider-based rows without shadows or card backgrounds.
+- `README.md` — updated the feature summary to describe the quieter theme index and compact `Aa` control.
+- `Handoff.md` — recorded this handoff entry for the next session.
+
+### Validation results
+
+- GitHub Issue check was not available because `gh` is missing.
+- `npm run typecheck` passed.
+- `npm run validate` passed; content validation passed for 6 pages and the production build completed.
+
+### Remaining limitations and Android reading concerns
+
+- No browser screenshot was captured because this environment does not include an obvious browser workflow; manual Android review is recommended for the quieter mobile spacing and the `Aa` font-size cycle.
+- The `Aa` control cycles through compact, standard, and large sizes and still uses the existing `lumen-font-size` localStorage key.
+- Detail pages still show their editorial metadata; the requested metadata hiding was applied to the main list/navigation UI.
+
+### Suggested next tasks
+
+1. Manually review the homepage and `/indexes` on an Android device for first-screen theme visibility.
+2. Consider adding a small settings menu if the `Aa` cycle needs clearer discoverability later.
+3. Continue keeping homepage content focused on navigation rather than administrative metadata.
+
 ## Workflow, validation, and reader font-size fixes — 2026-06-24
 
 This pass tightened Codex workflow documentation, clarified validation scripts, and fixed reader font-size scaling so the setting applies to the main reading body instead of globally enlarging navigation.

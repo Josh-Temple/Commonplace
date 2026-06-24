@@ -60,22 +60,22 @@ a { color: inherit; }
   top: 0;
   z-index: 2;
   display: flex;
-  gap: 4px;
+  gap: 2px;
   align-items: center;
-  margin: 0 -18px 10px;
-  padding: 10px 18px 12px;
+  margin: 0 -18px 6px;
+  padding: 8px 18px 9px;
   background: color-mix(in srgb, var(--bg-soft) 88%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
   backdrop-filter: blur(14px);
 }
 
 .top-nav a {
-  min-height: 44px;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   font-weight: 760;
-  padding: 8px 10px;
+  padding: 7px 9px;
   border-radius: 999px;
   color: var(--muted);
 }
@@ -89,62 +89,40 @@ a { color: inherit; }
 
 .top-nav a:not(:first-child):active,
 .top-nav a:not(:first-child):focus-visible,
-.font-size-options button:focus-visible {
+.font-size-control:focus-visible {
   background: var(--accent-soft);
   color: var(--accent-dark);
   outline: none;
 }
 
 .font-size-control {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: 2px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 780;
-}
-
-.font-size-options {
-  display: inline-flex;
-  padding: 2px;
-  border-radius: 999px;
-  background: #ffffff82;
-  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
-}
-
-.font-size-options button {
-  min-width: 30px;
-  min-height: 34px;
+  min-width: 40px;
+  min-height: 40px;
   border: 0;
   border-radius: 999px;
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-weight: 850;
+  font-size: 0.9rem;
+  font-weight: 800;
   cursor: pointer;
-}
-
-.font-size-options button[aria-pressed="true"] {
-  background: var(--accent-dark);
-  color: #fffaf0;
 }
 
 main {
   display: grid;
-  gap: 34px;
+  gap: 24px;
 }
 
 .hero,
 .page-header,
 .reader-card,
 .section-block {
-  padding: 24px 0;
+  padding: 18px 0;
 }
 
 .hero,
 .page-header {
-  min-height: 34vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -167,8 +145,7 @@ main {
   font-size: clamp(2.45rem, 12vw, 4.2rem);
 }
 
-.eyebrow,
-.card-type {
+.eyebrow {
   margin: 0 0 10px;
   color: var(--accent);
   text-transform: uppercase;
@@ -187,22 +164,21 @@ main {
 
 .hero-actions,
 .meta-row,
-.tag-row,
-.card-meta {
+.tag-row {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.hero-actions { margin-top: 10px; }
+.hero-actions { margin-top: 6px; }
 
 .button {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 42px;
   align-items: center;
   justify-content: center;
-  padding: 11px 16px;
+  padding: 9px 14px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 850;
@@ -213,7 +189,7 @@ main {
 .button.primary {
   background: var(--accent-dark);
   color: #fffaf0;
-  box-shadow: 0 12px 26px #5d37111f;
+  box-shadow: none;
 }
 
 .section-block {
@@ -225,7 +201,7 @@ main {
   justify-content: space-between;
   gap: 14px;
   align-items: baseline;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .section-heading a {
@@ -243,32 +219,33 @@ main {
   letter-spacing: -0.04em;
 }
 
-.page-grid,
+.page-list,
 .compact-grid {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.page-card {
+.page-list-item {
   display: block;
-  min-height: 44px;
-  padding: 18px 0 19px;
+  min-height: 40px;
+  padding: 15px 0 16px;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
   text-decoration: none;
 }
 
-.page-card:last-child { border-bottom-color: transparent; }
+.page-list-item:last-child { border-bottom-color: transparent; }
 
-.page-card h3 {
-  margin: 0 0 7px;
-  font-size: 1.28rem;
+.page-list-item h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
   line-height: 1.22;
   letter-spacing: -0.03em;
 }
 
-.page-card p {
-  margin: 0 0 12px;
+.page-list-item p {
+  margin: 0;
   color: var(--muted);
+  line-height: 1.55;
 }
 
 .badge {
@@ -375,12 +352,12 @@ main {
 
 @media (hover: hover) {
   .top-nav a:not(:first-child):hover,
-  .page-card:hover h3,
+  .page-list-item:hover h3,
   .section-heading a:hover {
     color: var(--accent-dark);
   }
 
-  .page-card:hover {
+  .page-list-item:hover {
     border-bottom-color: var(--line-strong);
   }
 }
@@ -395,18 +372,14 @@ main {
     padding-inline: 30px;
   }
 
-  .font-size-control {
-    margin-left: 6px;
-  }
-
   .hero,
   .page-header,
   .reader-card,
   .section-block {
-    padding-block: 34px;
+    padding-block: 26px;
   }
 
-  .page-grid,
+  .page-list,
   .compact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 34px;

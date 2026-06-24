@@ -7,9 +7,9 @@ export default function IndexesPage() {
       <TopNav />
       <main>
         <header className="page-header">
-          <p className="eyebrow">Themes</p>
-          <h1>Theme indexes</h1>
-          <p>Start from a theme, then follow related and next links through the knowledge base.</p>
+          <p className="eyebrow">テーマ</p>
+          <h1>テーマ索引</h1>
+          <p>テーマから読み始め、必要なページへ静かにつなげます。</p>
         </header>
         <PageGrid pages={getIndexPages()} />
       </main>
