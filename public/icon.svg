@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lumen app icon</title>
+  <desc id="desc">A warm reading lamp shape above an open page.</desc>
+  <rect width="512" height="512" rx="112" fill="#f8f3e8"/>
+  <circle cx="256" cy="178" r="76" fill="#efe0c7"/>
+  <path d="M149 287c45-20 78-20 107 0 29-20 62-20 107 0v105c-45-20-78-20-107 0-29-20-62-20-107 0V287Z" fill="#5d3711"/>
+  <path d="M256 287v105" stroke="#f8f3e8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M200 204h112l-26 56h-60l-26-56Z" fill="#9a5b18"/>
+</svg>

@@ -4,6 +4,17 @@ import "./styles.css";
 export const metadata: Metadata = {
   title: "Lumen",
   description: "A personal knowledge-base viewer for linked reading notes.",
+  manifest: "/manifest.webmanifest",
+  applicationName: "Lumen",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Lumen",
+  },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
@@ -25,6 +36,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               } catch {
                 document.documentElement.dataset.fontSize = "compact";
               }
+            })();`,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+              if (!("serviceWorker" in navigator)) {
+                return;
+              }
+
+              window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js");
+              });
             })();`,
           }}
         />

@@ -1,0 +1,16 @@
+{
+  "name": "Lumen",
+  "short_name": "Lumen",
+  "description": "A personal knowledge-base viewer for linked reading notes.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8f3e8",
+  "theme_color": "#f8f3e8",
+  "categories": ["books", "education", "productivity"],
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/maskable-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

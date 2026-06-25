@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lumen maskable app icon</title>
+  <desc id="desc">Centered warm reading lamp and open page with generous safe area.</desc>
+  <rect width="512" height="512" fill="#f8f3e8"/>
+  <circle cx="256" cy="184" r="72" fill="#efe0c7"/>
+  <path d="M158 292c42-18 72-18 98 0 26-18 56-18 98 0v96c-42-18-72-18-98 0-26-18-56-18-98 0V292Z" fill="#5d3711"/>
+  <path d="M256 292v96" stroke="#f8f3e8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M206 212h100l-23 50h-54l-23-50Z" fill="#9a5b18"/>
+</svg>
