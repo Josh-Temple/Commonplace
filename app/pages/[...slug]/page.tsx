@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Badge, PageListItem, TopNav } from "../../components";
+import { PageListItem, TopNav } from "../../components";
 import { getAllPages, getPageBySlug, getSourceNote, resolvePageRefs } from "../../../lib/content";
 import { MarkdownBody } from "../../../lib/markdown";
 
@@ -48,18 +48,6 @@ export default function ContentDetailPage({ params }: { params: { slug: string[]
             <p className="eyebrow">{typeLabels[page.type] ?? page.type}</p>
             <h1>{page.title}</h1>
             <p className="summary">{page.summary}</p>
-            <div className="meta-row">
-              <Badge>{statusLabels[page.status] ?? page.status}</Badge>
-              <Badge tone={page.confidence === "medium" ? "amber" : page.confidence === "high" ? "green" : "neutral"}>
-                信頼度: {confidenceLabels[page.confidence] ?? page.confidence}
-              </Badge>
-              {page.updated ? <Badge>更新: {page.updated}</Badge> : null}
-            </div>
-            {page.tags.length > 0 ? (
-              <div className="tag-row" aria-label="Tags">
-                {page.tags.map((tag) => <span key={tag}>#{tag}</span>)}
-              </div>
-            ) : null}
           </header>
 
           <MarkdownBody body={page.body} />
@@ -92,6 +80,32 @@ export default function ContentDetailPage({ params }: { params: { slug: string[]
             </ul>
           </section>
         ) : null}
+
+        <section className="section-block page-info">
+          <h2>ページ情報</h2>
+          <dl>
+            <div>
+              <dt>状態</dt>
+              <dd>{statusLabels[page.status] ?? page.status}</dd>
+            </div>
+            <div>
+              <dt>信頼度</dt>
+              <dd>{confidenceLabels[page.confidence] ?? page.confidence}</dd>
+            </div>
+            {page.updated ? (
+              <div>
+                <dt>更新日</dt>
+                <dd>{page.updated}</dd>
+              </div>
+            ) : null}
+            {page.tags.length > 0 ? (
+              <div>
+                <dt>タグ</dt>
+                <dd>{page.tags.map((tag) => `#${tag}`).join(" / ")}</dd>
+              </div>
+            ) : null}
+          </dl>
+        </section>
       </main>
     </>
   );

@@ -13,7 +13,9 @@ sources:
   - sources/research-notes/meditation-and-mindfulness-overview.md
   - sources/research-notes/mbct-evidence-and-practice.md
   - sources/research-notes/open-monitoring-and-decentering.md
+  - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
 related:
+  - mindfulness-practice-effects-map
   - mindfulness
   - self-distancing
   - mbct
@@ -21,7 +23,7 @@ related:
 next:
   - act-and-mindfulness
   - emotion-regulation-mindfulness-protocol
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## 要点
@@ -73,6 +75,28 @@ updated: 2026-06-24
 ## 根拠と不確実性
 
 MBCTの再発予防文脈では、脱中心化や反すう低減が重要な候補メカニズムとされます。ただし、メカニズム研究は決定的ではなく、すべての人に同じ効果を保証しません。
+
+
+## 練習する動機と効果の見方
+
+脱中心化を練習する動機は、思考を信じない人になることではなく、思考を思考として見て、それに従うかどうかを選びやすくすることです。
+
+### 近い指標
+
+- 「私はだめだ」を「自己批判の思考が出ている」と言えた。
+- 感情と身体反応に名前をつけられた。
+- 反応前に一拍置けた。
+- 思考が残っていても、価値に沿った小さい行動を選べた。
+
+### 関連する概念
+
+自己距離化は、体験を少し離れた視点から見る実践です。ACTの脱フュージョンは、思考を命令や事実としてではなく言葉やイメージとして扱う練習です。MBCTでは、反すうや再発予防の文脈で、思考を思考として見ることが重要になります。
+
+### 失敗例
+
+脱中心化を、感情の切り離し、責任回避、問題回避、必要な謝罪や相談を避ける理由に使うと逆効果です。距離を取る目的は、現実から離れることではなく、より有効な行動を選ぶことです。
+
+場面別の練習は[[mindfulness-practice-cards]]、強い感情には[[emotion-regulation-mindfulness-protocol]]、効果の階層は[[mindfulness-practice-effects-map]]を参照します。
 
 ## 関連ノート
 

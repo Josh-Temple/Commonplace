@@ -13,14 +13,17 @@ sources:
   - sources/research-notes/meditation-and-mindfulness-overview.md
   - sources/research-notes/buddhist-mindfulness-background.md
   - sources/research-notes/open-monitoring-and-decentering.md
+  - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
 related:
+  - mindfulness-practice-log
+  - mindfulness-practice-effects-map
   - breath-awareness-meditation
   - decentering
   - mindfulness-safety
 next:
   - loving-kindness-meditation
   - decentering
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## 要点
@@ -89,6 +92,27 @@ Focused attentionは、呼吸、足裏、音など一つの対象に気づき、
 オープンモニタリング、集中瞑想、脱中心化の関係は研究されていますが、実践形式や測定方法は研究ごとに異なります。仏教的なvipassanāやSatipaṭṭhānaとの関係も、伝統・流派・翻訳で幅があります。
 
 このページでは、短時間の安全な観察練習として説明します。
+
+
+## 実践する動機と効果の見方
+
+オープンモニタリングをする動機は、経験を広く観察し、思考や感情をそのまま事実や命令として扱わない練習をすることです。
+
+### focused attentionから移る理由
+
+Focused attentionで戻る対象がある程度安定すると、音、身体感覚、思考、感情の流れを広く観察しやすくなります。戻る対象がないまま広げると、反すうやぼんやりに入りやすいため、足裏や音へ戻る導線を残します。
+
+### 観察と反すうの違い
+
+観察は「思考」「不安」「記憶」と短く知り、追いかけすぎないことです。反すうは、内容の検討、原因探し、自己批判を続けることです。分析が続くなら、それも「分析」と名づけて戻ります。
+
+### 期待する近い効果
+
+思考を思考として見る、感情を名づける、身体反応に気づく、反応前に止まることです。遠い効果は[[mindfulness-practice-effects-map]]のように慎重に扱います。
+
+### 中止条件
+
+反すう化、解離、現実感の低下、過覚醒、睡眠悪化、強い不安が出る場合は中止し、外部対象へ戻ります。記録と調整は[[mindfulness-practice-log]]を使います。
 
 ## 関連ノート
 

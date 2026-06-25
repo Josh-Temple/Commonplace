@@ -14,13 +14,15 @@ sources:
   - sources/research-notes/mbsr-evidence-and-practice.md
   - sources/research-notes/mbct-evidence-and-practice.md
   - sources/research-notes/act-and-mindfulness.md
+  - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
 related:
   - mbsr
   - mbct
   - act-and-mindfulness
+  - mindfulness-practice-effects-map
 next:
   - daily-mindfulness-practice
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## 要点
@@ -38,6 +40,20 @@ MBSR、MBCT、ACT、一般的な瞑想実践、仏教的実践は重なる部分
 | オープンモニタリング | 経験の流れを観察 | 感覚・思考・感情を広く見る | 安定したreturn targetの後 | [[decentering]]と接続しやすい | 反すう化や解離に注意 | [[open-monitoring-meditation]] |
 | メッタ瞑想 | 善意・慈愛を育てる | 短い句、対象の広げ方 | 自己批判・対人感情 | やわらかい態度を練習できる | forgivenessや境界放棄ではない | [[loving-kindness-meditation]] |
 | 仏教的実践 | 伝統ごとの倫理・智慧・解脱 | ānāpānasati、satipaṭṭhāna、mettāなど | 宗教・哲学・共同体文脈 | 背景理解を深める | 臨床効果の根拠として使わない | [[meditation-family-of-practices]] |
+
+
+## 目標と効果の見方
+
+| 対象 | 近い目標 | 遠い効果 | 見誤りやすい点 | 実践を選ぶ動機 |
+|---|---|---|---|---|
+| MBSR | ストレス反応に気づく、身体反応と思考を分ける、日常で一呼吸置く | ストレス、痛み、QOLなどは対象者と条件で変わる | ストレスや痛みが消える技法だと見る | 生活全体の反応パターンを観察する |
+| MBCT | 反すうの始まりに気づく、思考を思考として見る、早期サインを扱う | 再発予防は文脈依存で、急性症状への自己対応ではない | 気分低下をすぐ消す技法だと見る | 再発リスクや反すうへの気づきを支援につなげる |
+| ACT | 感情と思考に気づき、価値に沿った小さい行動を選ぶ | 症状変化は領域ごとの根拠が必要 | 気分が良くなれば成功と見る | 感情が残っていても選択可能性を増やす |
+| 呼吸瞑想 | 注意が逸れたことに気づき、戻る | 不安やストレス低減は保証しない | 深呼吸を続ける技法だと見る | 戻る対象を作る |
+| オープンモニタリング | 思考・感情・感覚を短く観察し、追いかけすぎない | 脱中心化や反すう低減は個人差がある | 観察が分析や反すうになる | 思考を思考として見る練習をする |
+| メッタ瞑想 | 善意の向きを短く練習する | 自己批判や対人関係の変化は不確実 | 温かい感情が出れば成功と見る | 敵意や自己攻撃に飲まれすぎない |
+
+詳しい階層化は[[mindfulness-practice-effects-map]]で確認します。
 
 ## MBSR
 

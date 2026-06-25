@@ -13,14 +13,16 @@ sources:
   - sources/research-notes/buddhist-mindfulness-background.md
   - sources/research-notes/meditation-and-mindfulness-overview.md
   - sources/research-notes/loving-kindness-and-compassion-meditation.md
+  - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
 related:
+  - mindfulness-practice-effects-map
   - meditation-family-of-practices
   - mindfulness-safety
   - open-monitoring-meditation
   - mindfulness-practice-cards
 next:
   - daily-mindfulness-practice
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## 要点
@@ -97,6 +99,27 @@ updated: 2026-06-24
 loving-kindness / compassion meditationにはレビューやメタ分析がありますが、実践形式、対象者、比較条件、測定項目が異なります。効果を一般化しすぎません。
 
 このページでは、効果保証ではなく、安全に試すための実践構造として説明します。
+
+
+## 実践する動機と効果の見方
+
+メッタ瞑想をする動機は、温かい感情を必ず作ることではなく、善意の向きを短く練習することです。善意は、相手を許すこと、危険な相手に近づくこと、境界線を外すことではありません。
+
+### 温かい感情と善意の向き
+
+温かい感情が出る日もありますが、それを成功条件にしません。「そう願う練習をしている」と言葉を弱めても、善意の向きを練習できます。
+
+### 自己批判が強い人の使い方
+
+自己批判が強い場合は、自分を好きになることを急がず、「今日を安全に過ごせますように」のように小さい句から始めます。苦しくなるなら足裏、音、見える物へ戻ります。
+
+### 難しい人へ急がない理由
+
+難しい人へ早く進むと、怒り、恐怖、恥、トラウマ反応、自己否定が強まることがあります。親しい人、中立の人、安全な対象までで止めることも練習の一部です。
+
+### 期待しすぎない効果
+
+自己批判、対人関係、怒りが必ず改善するとは言いません。効果は実践形式、対象者、比較条件で変わります。短く使う場合は[[mindfulness-practice-cards]]を参照します。
 
 ## 関連ノート
 

@@ -19,6 +19,8 @@ related:
   - mindfulness-based-interventions-comparison
   - body-scan
   - mindfulness-practice-cards
+  - mindfulness-practice-effects-map
+  - mindfulness-practice-log
   - mbsr
   - mbct
   - act-and-mindfulness
@@ -26,7 +28,7 @@ next:
   - mindfulness
   - meditation-family-of-practices
   - mindfulness-safety
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## 要点
@@ -34,6 +36,15 @@ updated: 2026-06-24
 瞑想は単一技法ではなく、注意、身体、感情、慈悲、行動選択を扱う実践群です。マインドフルネスは、ただ落ち着くためではなく、経験に気づき、反応の自動性をゆるめるための枠組みとして扱います。
 
 この領域は教育目的です。医療・心理療法の代替ではなく、症状が強い場合は安全確認と専門的支援を優先します。
+
+
+## 実践の理由と効果を知る
+
+[[mindfulness-practice-effects-map]]で、実践の近い目標、中間的な変化、遠い・不確実な効果を整理します。
+
+実践を続ける場合は、[[daily-mindfulness-practice]]だけでなく、[[mindfulness-practice-log]]で記録と調整の仕方を確認します。
+
+短い場面別の使い方は[[mindfulness-practice-cards]]へ進みます。
 
 ## 入門
 
