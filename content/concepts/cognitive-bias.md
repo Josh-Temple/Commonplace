@@ -9,7 +9,9 @@ tags:
   - decision-making
   - judgment
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/decision-review-and-decision-journals.md
 related:
   - decision-making
   - pre-decision-check
@@ -67,9 +69,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-認知バイアスは意思決定研究で広く扱われる概念ですが、このページでは個別研究名、効果量、発表年を直接検証していません。
+認知バイアスとヒューリスティックは、判断と意思決定の研究で広く扱われてきました。確証バイアス、利用可能性、アンカリング、損失に関する評価、後知恵バイアスには代表的研究やレビューがあります。
 
-このページは実践上の整理です。今後、代表的バイアスごとのsource noteを追加し、用語の厳密性と限界を確認します。
+ただし、バイアス名を知るだけで判断が改善するとは限りません。このページでは、研究上の概念を、反対根拠の確認、判断前チェック、判断後レビューへ接続するための実践上の警告ラベルとして慎重に使います。個別判断の原因を一つのバイアスだけで断定しません。
 
 ## 関連ページ
 

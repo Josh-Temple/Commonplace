@@ -9,7 +9,10 @@ tags:
   - review
   - judgment
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/decision-review-and-decision-journals.md
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/metacognition-and-judgment.md
 related:
   - decision-making
   - judgment-training
@@ -71,9 +74,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-判断レビューは、プロセス評価、後知恵バイアス対策、学習のための実践手順として有用と考えられます。ただし、このページでは特定研究を直接検証していません。
+判断レビューは、アウトカムバイアスと後知恵バイアスへの注意に基づき、判断時点の情報と結果を分けて見るための実践手順です。
 
-今後、判断日誌、プレモーテム、専門技能のフィードバックに関するsource noteを追加すると、根拠を補強できます。
+事前の根拠、不確実性、撤退条件を残すと、後から結果論だけで評価するリスクを下げやすくなります。ただし、レビューや判断日誌は成果改善を保証せず、記録が重すぎると続かない、自己正当化になる、結果から過剰修正するリスクがあります。
 
 ## 関連ページ
 

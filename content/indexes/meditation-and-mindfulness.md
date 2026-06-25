@@ -22,6 +22,10 @@ related:
   - mindfulness-practice-effects-map
   - mindfulness-practice-log
   - mbsr
+  - mbsr-eight-week-roadmap
+  - mbsr-home-practice-guide
+  - act-six-processes-practice-guide
+  - act-values-and-committed-action
   - mbct
   - act-and-mindfulness
 next:
@@ -51,6 +55,19 @@ updated: 2026-06-25
 [[mindfulness]] → [[meditation-family-of-practices]] → [[mindfulness-safety]] → [[five-minute-mindfulness-reset]]
 
 まずは「長く座る」より、「安全に止められる」「日常に戻れる」ことを優先します。
+
+
+## MBSRを詳しく知る
+
+[[mbsr]] → [[mbsr-eight-week-roadmap]] → [[mbsr-home-practice-guide]] → [[body-scan]] → [[mindfulness-practice-log]]
+
+MBSRは、ストレスを消す技法ではなく、8週間型の構造の中でストレス反応への気づきを育てるプログラムとして読みます。
+
+## ACTを詳しく知る
+
+[[act-and-mindfulness]] → [[act-six-processes-practice-guide]] → [[act-values-and-committed-action]] → [[emotion-regulation-mindfulness-protocol]] → [[mindfulness-practice-cards]]
+
+ACTは、瞑想プログラムではなく、気づきを価値と小さい行動選択へつなげるモデルとして読みます。
 
 ## 比較
 

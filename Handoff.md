@@ -1,5 +1,225 @@
 # Handoff: Lumen MVP
 
+## Content loader cached-index cleanup — 2026-06-25
+
+### Purpose
+
+Implemented the second cleanup pass for Lumen's content-loading foundation. This was an app-development and internal architecture cleanup task focused on avoiding repeated filesystem reads and repeated full-page scans. It did not change routes, slugs, ids, frontmatter schema, validation rules, wikilink syntax, Markdown rendering behavior, search behavior, UI design, or PWA behavior.
+
+### Files changed
+
+- `lib/content.ts` — added an internal lazy module-level `ContentIndex` cache with sorted pages, `byId`, and `bySlug` maps. Public functions remain available with the same names: `getAllPages`, `getPageBySlug`, `getPageById`, `getIndexPages`, `resolvePageRefs`, and `getSourceNote`.
+- `Handoff.md` — recorded this cleanup, validation results, limitations, and suggested next tasks.
+
+### Summary of internal content-loading change
+
+- Markdown files under `content/` are now read and parsed through `getContentIndex()` once per server/module lifecycle.
+- `getAllPages()` returns the cached, Japanese-title-sorted page array.
+- `getPageBySlug()` normalizes slug arrays with `/` and uses the `bySlug` map instead of scanning all pages.
+- `getPageById()` uses the `byId` map instead of scanning all pages.
+- `resolvePageRefs()` uses the cached `byId` map for each id instead of repeatedly scanning arrays.
+- Duplicate id handling remains delegated to the existing content validator; no second validation system was added.
+
+### Commands run
+
+```bash
+cat AGENTS.md README.md Handoff.md
+cat package.json
+gh issue list --state open --limit 20 || true
+npm run typecheck
+npm run validate
+rg -n "function getPageBySlug|function getPageById|function resolvePageRefs|getAllPages\(\)|getContentIndex|cachedContentIndex|byId|bySlug" lib/content.ts
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run typecheck` passed. `npm run validate` passed TypeScript typecheck, content validation for 63 pages, and Next.js production build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- TypeScript typecheck passed.
+- Content validation passed for 63 page(s).
+- Production build completed successfully and generated the existing static routes.
+- Inspection confirmed `getPageBySlug()` and `getPageById()` now call `getContentIndex()` map lookups rather than `getAllPages()` scans, and `resolvePageRefs()` uses `byId`.
+
+### Remaining limitations
+
+- No browser screenshot or Android viewport check was captured because this pass does not change visual UI and the environment lacks a browser workflow.
+- `getSourceNote()` still reads individual source files on demand; this was left unchanged because the requested cleanup was specifically the reader-facing content page index and wikilink/page-reference lookup path.
+- Client-side search still receives Markdown body text, which may become heavy as content grows.
+
+### Suggested next tasks
+
+1. Decide whether to document the supported Markdown subset more explicitly.
+2. Consider reducing the client-side search payload later, since search currently includes Markdown body text.
+3. Consider a future Markdown renderer strategy only if content needs outgrow the current minimal renderer.
+4. If source-note rendering becomes expensive later, consider a small source-note metadata cache separate from the content page index.
+
+
+## Decision-making source-note reinforcement — 2026-06-25
+
+### Purpose
+
+Added research-note support for the existing decision-making / cognitive-bias / judgment-training cluster and connected those notes to the existing reader-facing pages. This was a source-integration, content-maintenance, validation, and documentation task. The goal was to distinguish research-supported concepts from Commonplace practice interpretations and personal operating rules, while keeping claims cautious and public-safe.
+
+### Added source notes
+
+- `sources/research-notes/cognitive-bias-and-debiasing.md` — working note on heuristics-and-biases research, confirmation bias, availability, anchoring, loss-related evaluation, debiasing limits, and safe reader-facing wording.
+- `sources/research-notes/dual-process-theory.md` — working note on dual-process theory as a broad family of models, System 1 / System 2 shorthand, limitations and critiques, and safe use as a practical pause cue.
+- `sources/research-notes/metacognition-and-judgment.md` — working note on metacognition, monitoring/control, confidence, calibration, limits under fatigue/emotion/time pressure, and connection to judgment checks/reviews.
+- `sources/research-notes/implementation-intentions.md` — working note on if-then implementation intentions, goal-intention distinction, action initiation/self-regulation use, and practical limits.
+- `sources/research-notes/decision-review-and-decision-journals.md` — working note on outcome bias, hindsight bias, decision journals, premortem/postmortem relationship, process-versus-outcome review, and public-safe limits.
+
+### Updated content pages
+
+- `content/indexes/decision-making.md` — added source notes and replaced the old “not directly verified” caveat with a cautious distinction between research concepts, practical interpretation, and operating rules.
+- `content/concepts/cognitive-bias.md` — added source notes and strengthened the basis for confirmation bias / availability / anchoring / loss-related evaluation / hindsight cautions without claiming guaranteed judgment improvement.
+- `content/concepts/metacognition.md` — added source notes and clarified metacognition as self-monitoring that can weaken under fatigue, emotion, sleep loss, and time pressure.
+- `content/concepts/dual-process-theory.md` — added source notes and emphasized dual-process language as a practical support line rather than a complete two-box theory of mind.
+- `content/methods/implementation-intentions.md` — added source notes and clarified if-then plans as a researched self-regulation strategy whose usefulness depends on concrete cues and feasible actions.
+- `content/methods/judgment-training.md` — added source notes and improved process/outcome review language, including limits around heavy logs, self-justification, and rumination.
+- `content/protocols/pre-decision-check.md` — added source notes and reframed the checklist as a translation of bias awareness, metacognition, implementation intentions, and premortem-like prompts rather than a validated guarantee.
+- `content/protocols/decision-review.md` — added source notes and clarified outcome-bias / hindsight-bias rationale plus decision-journal limitations.
+- `content/rules/judgment-rules.md` — added source notes and made clear that the rules are public-safe operating hypotheses, not general laws.
+
+### External materials checked
+
+- Tversky and Kahneman 1974, “Judgment under Uncertainty: Heuristics and Biases” via PubMed / DOI records and accessible mirrors.
+- Nickerson 1998, “Confirmation Bias: A Ubiquitous Phenomenon in Many Guises” via DOI / accessible PDF records.
+- Kahneman and Tversky 1979, “Prospect Theory: An Analysis of Decision under Risk” via JSTOR / accessible PDF records.
+- Stanovich and West 2000 reasoning/rationality debate via PubMed.
+- Milkman, Chugh, and Bazerman 2009 decision-improvement review via SAGE / HBS records.
+- Larrick 2004 debiasing chapter via Wiley record.
+- Evans 2008 and Evans & Stanovich 2013 dual-process theory records via PubMed / publisher records.
+- Melnikoff and Bargh 2018 dual-process critique via PubMed.
+- Flavell 1979, Nelson and Narens 1990, and Dunlosky / Metcalfe metacognition sources via Semantic Scholar / book records.
+- Gollwitzer 1999 and Gollwitzer & Brandstätter 1997 implementation-intention sources via accessible PDF mirrors / Springer record.
+- Baron and Hershey 1988 outcome-bias record via PubMed.
+- Fischhoff / Fischhoff & Beyth hindsight-bias sources via PubMed-related records and accessible PDF records.
+- Klein 2007 premortem article via Harvard Business Review.
+
+### Unverified or insufficient materials
+
+- Page-level extraction from all cited papers remains incomplete; the new source notes intentionally avoid effect sizes and page-numbered claims.
+- No quantitative claims were promoted into content pages.
+- Decision-journal evidence remains mostly a practical rationale supported by outcome-bias/hindsight-bias concerns; stronger claims need dedicated evidence review.
+- Premortem empirical support beyond Klein's practitioner article remains insufficient for a standalone strong claim.
+- Domain-specific claims for trading, investing, medical, legal, career, or health outcomes remain unsupported and should not be added without domain-specific source review.
+
+### Issue #3 handling
+
+- `gh issue list --state open --limit 20 || true` could not run because the `gh` CLI is not installed.
+- Based on repository inspection, Issue #3 (“Add content validation and Codex issue-check workflow”) appears implemented but remains unverified/possibly open remotely: `npm run validate:content` exists, `npm run validate` exists, `AGENTS.md` has a Codex startup checklist, `Handoff.md` records validation workflow, and `npm run validate` passed.
+- Could not comment on or close Issue #3 due to missing GitHub CLI / unavailable issue permissions in this environment.
+
+### Commands run
+
+```bash
+cat README.md AGENTS.md Handoff.md
+cat package.json
+gh issue list --state open --limit 20 || true
+npm run validate:content
+npm run validate
+rg -n "cognitive-bias|decision-making|metacognition|dual-process|implementation-intentions|judgment-training|pre-decision-check|decision-review|judgment-rules|sources:" content sources Handoff.md
+```
+
+`npm run validate:content` passed for 63 content pages. `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 63 page(s).
+- Full repository validation passed, including TypeScript typecheck and Next.js production build.
+- All targeted decision-making content pages now reference relevant source notes.
+- No new reader-facing content pages were created in this pass.
+
+### Remaining limitations
+
+- Source notes are working notes, not complete literature reviews.
+- Bias/debiasing and metacognition claims remain cautious and should not be used to promise improved results.
+- Public-safe examples remain abstract; no private diary, live trade history, asset information, real relationship details, or health information was added.
+
+### Suggested next tasks
+
+1. Add targeted content pages only after source extraction: `content/concepts/confirmation-bias.md`, `content/concepts/availability-heuristic.md`, `content/concepts/anchoring.md`, `content/concepts/loss-aversion.md`, `content/concepts/hindsight-bias.md`, and `content/concepts/outcome-bias.md`.
+2. Add `content/methods/premortem.md` after reviewing stronger premortem / prospective hindsight evidence.
+3. Add `content/protocols/decision-journal.md` after a dedicated review of decision journals, forecasting records, calibration, and professional judgment feedback.
+4. Add domain-specific pages such as `content/protocols/trading-decision-check.md` only with explicit financial-advice boundaries and evidence limits.
+5. If GitHub access becomes available, verify whether Issue #3 is still open and comment/close it if repository state satisfies the issue.
+
+
+## MBSR and ACT detailed practice-page expansion — 2026-06-25
+
+### Purpose
+
+Expanded the Commonplace / Lumen MBSR and ACT cluster from overview pages into a more detailed reader-facing practice pathway. This was a content writing, source-integration, link-maintenance, validation, and documentation task. The main boundary was to explain MBSR as an 8-week structured mindfulness education program and ACT as a psychological-flexibility / values-based action model, without implying that self-guided content replaces medical care, psychotherapy, official MBSR courses, or therapist-guided ACT.
+
+### Added content pages
+
+- `content/protocols/mbsr-eight-week-roadmap.md` — new draft protocol for understanding MBSR as an 8-week learning map, with weekly themes, practices, reflection questions, safety boundaries, and uncertainty notes.
+- `content/protocols/mbsr-home-practice-guide.md` — new draft protocol for safe MBSR home practice, with 5-, 10-, and 20-minute options, shortening/stopping conditions, logging, common failures, and cautious home-practice evidence language.
+- `content/protocols/act-six-processes-practice-guide.md` — new draft protocol translating ACT's six processes into 1-minute and 5-minute daily-use sequences, plus examples for anger, anxiety, self-criticism, and procrastination.
+- `content/methods/act-values-and-committed-action.md` — new draft method page distinguishing values from goals and mood states, and translating values into small observable committed actions.
+
+### Updated content pages
+
+- `content/methods/mbsr.md` — added the MBSR detailed learning path, links to the new roadmap and home-practice guide, and cautions that the roadmap is not a course replacement.
+- `content/methods/act-and-mindfulness.md` — added the ACT detailed learning path, links to the six-process and values pages, and clearer ACT-informed self-practice versus therapist-guided ACT boundaries.
+- `content/concepts/mindfulness-based-interventions-comparison.md` — added a deeper MBSR/ACT distinction and a reader-choice table covering program/model, practice center, near goals, self-practice scope, and professional-support boundaries.
+- `content/indexes/meditation-and-mindfulness.md` — added explicit MBSR and ACT detail-reading paths.
+- `content/concepts/mindfulness-practice-effects-map.md` — separated near changes to look for in MBSR versus ACT.
+
+### Added source notes
+
+- `sources/research-notes/mbsr-curriculum-and-practice.md` — new working note defining verified MBSR curriculum/practice claims, safe wording, home-practice caution, and needed verification.
+- `sources/research-notes/act-six-processes-and-practice.md` — new working note defining ACT six-process claims, interaction among processes, values/committed-action boundaries, self-help boundaries, and needed verification.
+
+### Updated source notes
+
+- `sources/research-notes/mbsr-evidence-and-practice.md` — added a 2026-06-25 detailed-page support update, with what may be reflected in content and what should not yet be promoted.
+- `sources/research-notes/act-and-mindfulness.md` — added a 2026-06-25 detailed-page support update, including ACBS-confirmed six-process language and restrictions on condition-specific efficacy claims.
+
+### External materials checked
+
+- No new live web extraction was performed in this pass. The work used already-recorded repository source notes that document prior checks of Brown University public MBSR pages, Brown Mindfulness Center descriptions, NCCIH mindfulness safety/effectiveness language, Goyal et al. 2014, Parsons et al. 2017, and ACBS ACT / Six Core Processes pages.
+
+### Unverified or insufficient materials
+
+- Original UMass / Center for Mindfulness manual-level MBSR curriculum sequencing remains insufficiently extracted.
+- Exact official week-by-week MBSR curriculum order remains unverified; the new roadmap is explicitly framed as a reader-facing learning map, not an official curriculum.
+- MBSR teacher-training standards and exact home-practice requirements from primary materials remain unverified.
+- Hayes et al. 2006 and the Hayes, Strosahl, Wilson ACT book still need page-level extraction before page-numbered or stronger conceptual claims are added.
+- ACT condition-specific efficacy claims require separate source review before content pages mention them.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20 || true
+rg -n "MBSR|MBCT|ACT|Acceptance and Commitment|psychological flexibility|values|committed action|defusion|acceptance|body scan|home practice|8-week|Jon Kabat-Zinn|Hayes|Strosahl|Wilson|ACBS|UMass|Brown|NCCIH|Goyal|Parsons" content sources Handoff.md
+npm run validate:content
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 63 content pages. `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 63 page(s).
+- Full repository validation passed, including TypeScript typecheck and Next.js production build.
+- New wikilinks and frontmatter `related` / `next` ids validate.
+- No screenshot was required because this was a content-only pass with no perceptible web-app UI change.
+
+### Remaining limitations
+
+- Content is intentionally cautious and does not claim that MBSR or ACT cures any condition.
+- Reader-facing pages rely on source-note boundaries rather than newly extracted external sources in this pass.
+- Long Japanese pages may benefit from mobile reading review for section length and scanability.
+
+### Suggested next tasks
+
+1. Do a primary-source extraction pass for UMass / Center for Mindfulness MBSR curriculum and teacher-training standards before adding official-sequence details.
+2. Do page-level extraction for Hayes et al. 2006 and the Hayes, Strosahl, Wilson ACT book before strengthening ACT conceptual claims.
+3. Add condition-specific source reviews only if future pages discuss ACT or MBSR efficacy for specific clinical conditions.
+4. Review the new MBSR/ACT pathways on an Android-sized viewport after deployment.
+
+
 ## Article detail header quieting pass — 2026-06-25
 
 ### Purpose

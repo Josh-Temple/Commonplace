@@ -66,3 +66,30 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 - Page-level extraction from Hayes et al. 2006 and the ACT book.
 - Meta-analyses by condition if future content names clinical outcomes.
 - Boundaries for self-help use versus therapist-guided ACT.
+
+## 2026-06-25 detailed-page support update
+
+See also `sources/research-notes/act-six-processes-and-practice.md` for the detailed boundary note used by the ACT six-process guide and values/committed-action page.
+
+### May reflect in detailed ACT pages
+
+- ACT can be described as a psychological flexibility model that uses mindfulness/acceptance and commitment/behavior-change processes.
+- ACBS supports the six-process list: acceptance, cognitive defusion, contact with the present moment, self as context, values, and committed action.
+- The six processes may be described as interrelated rather than a rigid checklist.
+- Values may be described as chosen directions for action, distinct from goals and mood states.
+- Committed action may be described as small, observable, values-consistent behavior when content remains self-help-limited.
+- Reader-facing pages may distinguish ACT-informed self-practice from therapist-guided ACT.
+
+### Should not yet reflect in detailed ACT pages
+
+- Condition-specific efficacy claims.
+- Diagnosis-specific treatment recommendations.
+- Page-numbered claims from Hayes et al. 2006 or the Hayes, Strosahl, Wilson ACT book.
+- Claims that ACT self-practice replaces psychotherapy, crisis care, or medical care.
+
+### Source status summary
+
+- ACBS: six processes and psychological-flexibility framing checked.
+- Hayes et al. 2006: priority source listed, but page-level extraction remains needed.
+- Hayes, Strosahl, Wilson ACT book: priority source listed, but page-level extraction remains needed.
+- Condition-specific efficacy claims require a separate source review before being added to content pages.
