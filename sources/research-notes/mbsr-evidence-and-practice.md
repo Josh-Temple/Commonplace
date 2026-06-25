@@ -80,3 +80,32 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 - Exact home-practice dose-response claims.
 - Claims that body scan by itself has a specific clinical effect.
 - Detailed UMass history beyond broad attribution to the UMass clinical context unless primary materials are checked.
+
+## 2026-06-25 detailed-page support update
+
+See also `sources/research-notes/mbsr-curriculum-and-practice.md` for the detailed curriculum/practice boundary note used by the new MBSR roadmap and home-practice guide.
+
+### May reflect in detailed MBSR pages
+
+- MBSR can be described as an 8-week structured mindfulness education program when wording stays general and cautious.
+- Public Brown sources support mentioning orientation, weekly instructor-led sessions, home practice, and an all-day or extended practice session.
+- Common practice elements can be named: body scan, sitting meditation, mindful movement, informal mindfulness, home practice, and group reflection/inquiry.
+- NCCIH supports safety language that meditation/mindfulness should not replace conventional care.
+- Goyal et al. 2014 supports cautious, non-guaranteed language about meditation-program outcomes.
+- Parsons et al. 2017 supports discussing home practice as relevant while avoiding simple dose-response claims.
+
+### Should not yet reflect in detailed MBSR pages
+
+- Exact official week-by-week MBSR curriculum sequencing.
+- Exact UMass / Center for Mindfulness manual-level details.
+- Teacher training standards or certification requirements.
+- Claims that a specific amount of home practice produces a specific outcome.
+- Claims that MBSR cures or reliably eliminates stress, anxiety, pain, depression, or illness.
+
+### Source status summary
+
+- Brown: public structure checked at a general level.
+- NCCIH: cautious effectiveness and safety framing checked.
+- Goyal: checked as a general meditation-program evidence source, not as an individual guarantee.
+- Parsons: checked as a home-practice/adherence source, not as proof that more minutes are always better.
+- UMass / Center for Mindfulness: historically important, but exact curriculum and manual-level sequencing remain insufficiently extracted in this repository.

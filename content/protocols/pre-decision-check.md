@@ -9,7 +9,11 @@ tags:
   - checklist
   - judgment
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/metacognition-and-judgment.md
+  - sources/research-notes/implementation-intentions.md
+  - sources/research-notes/decision-review-and-decision-journals.md
 related:
   - decision-making
   - cognitive-bias
@@ -70,9 +74,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-判断前チェックは、認知バイアス、メタ認知、実行意図を実践に落とすための整理です。ただし、このページでは効果を検証する研究を直接引用していません。
+判断前チェックは、認知バイアスへの注意、メタ認知、実行意図、プレモーテム的な失敗想定を、短い実践手順に翻訳したものです。
 
-今後、意思決定チェックリストやプレモーテムに関するsource noteを追加すると、根拠を強化できます。
+研究で支持される概念と、このページのチェックリスト形式は同一ではありません。この手順は正解を保証せず、感情、根拠、反対根拠、不確実性、撤退条件を見える形にするための補助です。
 
 ## 関連ページ
 

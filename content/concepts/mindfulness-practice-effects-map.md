@@ -13,6 +13,8 @@ confidence: medium
 sources:
   - sources/research-notes/meditation-and-mindfulness-overview.md
   - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
+  - sources/research-notes/mbsr-curriculum-and-practice.md
+  - sources/research-notes/act-six-processes-and-practice.md
   - sources/research-notes/meditation-safety-and-adverse-effects.md
 related:
   - mindfulness
@@ -55,6 +57,26 @@ updated: 2026-06-25
 - 反応前に少し止まる。
 
 気分がすぐ良くならなくても、気づいて戻れたなら練習は成立しています。
+
+
+## MBSRで見る近い変化
+
+- ストレス反応に気づく。
+- 身体反応と思考を分ける。
+- 注意が逸れたことに気づいて戻る。
+- 日常行動の中で一呼吸置く。
+
+MBSRの近い目標は、ストレスを消すことではなく、ストレス反応に気づくことです。
+
+## ACTで見る近い変化
+
+- 思考を思考として見る。
+- 不快感があっても行動を選ぶ。
+- 価値を言葉にする。
+- 価値を2分行動に落とす。
+- 感情を消す前に次の小さい一歩を選ぶ。
+
+ACTの近い目標は、感情が消えることではなく、感情があっても価値に沿った行動を選びやすくすることです。
 
 ## 中間的な効果
 

@@ -9,7 +9,9 @@ tags:
   - cognitive-bias
   - judgment
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/dual-process-theory.md
+  - sources/research-notes/cognitive-bias-and-debiasing.md
 related:
   - decision-making
   - cognitive-bias
@@ -64,9 +66,9 @@ Commonplaceでは、衝動的判断を止めるための実践上の補助線と
 
 ## 根拠と不確実性
 
-二重過程理論は広く知られた枠組みですが、このページでは個別の研究史やモデル差を直接検証していません。
+二重過程理論は、速い・自動的な処理と、遅い・制御的な処理を区別する複数の理論群として扱われます。一方で、人間の認知を二つの箱に分けすぎることへの批判もあります。
 
-ここでは、厳密な理論説明ではなく、衝動的判断を止めるための実践的なメタファーとして使います。
+Commonplaceでは、厳密な心理学モデルというより、衝動的判断に気づいて[[pre-decision-check]]へ移るための補助線として使います。速い判断が常に悪いわけでも、遅い判断が常に正しいわけでもありません。
 
 ## 関連ページ
 

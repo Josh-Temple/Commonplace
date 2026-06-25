@@ -9,7 +9,10 @@ tags:
   - judgment
   - review
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/decision-review-and-decision-journals.md
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/metacognition-and-judgment.md
 related:
   - decision-making
   - decision-review
@@ -63,9 +66,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-判断訓練、事後レビュー、プロセス評価は実践上有用と考えられますが、このページでは特定の研究や統計を検証していません。
+判断訓練は、結果論、後知恵バイアス、アウトカムバイアスへの注意と相性があります。判断時点の情報、根拠、不確実性、感情、撤退条件を残すと、後からプロセスを検証しやすくなります。
 
-今後、意思決定、専門技能、フィードバック学習に関するsource noteを追加すると精度が上がります。
+ただし、記録やレビューが判断成果を保証するわけではありません。レビューが重すぎる、自己正当化になる、自己攻撃や反すうになる場合は、項目を減らして軽く扱います。
 
 ## 関連ページ
 

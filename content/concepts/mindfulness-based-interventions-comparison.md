@@ -14,6 +14,8 @@ sources:
   - sources/research-notes/mbsr-evidence-and-practice.md
   - sources/research-notes/mbct-evidence-and-practice.md
   - sources/research-notes/act-and-mindfulness.md
+  - sources/research-notes/act-six-processes-and-practice.md
+  - sources/research-notes/mbsr-curriculum-and-practice.md
   - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
 related:
   - mbsr
@@ -28,6 +30,27 @@ updated: 2026-06-25
 ## 要点
 
 MBSR、MBCT、ACT、一般的な瞑想実践、仏教的実践は重なる部分がありますが、同じものではありません。目的、文脈、根拠の範囲を分けることで、過剰な期待や誤用を避けます。
+
+
+## MBSRとACTの根本的な違い
+
+MBSRは、構造化されたマインドフルネス教育プログラムとして理解しやすいです。ACTは、心理的柔軟性を高め、価値に沿った行動へつなげる心理療法モデルとして理解しやすいです。
+
+MBSRでは、実践を通じてストレス反応に気づくことが中心になります。ACTでは、気づきが価値とコミットメント行動へつながるかが中心になります。
+
+読者が選ぶ時は、「8週間型の練習構造を知りたいのか」「感情が強い場面で価値に沿った次の行動を選びたいのか」を分けます。どちらも医療・心理療法の代替ではなく、強い症状や安全リスクがある時は専門的支援を優先します。
+
+## MBSRとACTを選ぶための軸
+
+| 軸 | MBSR | ACT |
+|---|---|---|
+| プログラムか心理療法モデルか | 8週間型の構造化されたマインドフルネス教育プログラムとして理解しやすい | 心理的柔軟性を高める心理療法モデルとして理解しやすい |
+| 実践の中心 | body scan、座る瞑想、mindful movement、日常生活の気づき | 受容、脱フュージョン、今この瞬間、自己文脈、価値、コミットメント行動 |
+| 変化の近い目標 | ストレス反応に気づき、身体反応と思考を分け、一呼吸置く | 感情があっても価値に沿った小さい行動を選びやすくする |
+| 生活への落とし方 | 週ごとの学習テーマ、ホームプラクティス、日常動作の気づき | 価値を言葉にし、2分行動へ落とす |
+| 自己実践でできる範囲 | 構造の理解、短い練習、記録、短縮・中止条件の確認 | ACT-informedな自己観察、思考との距離、価値に沿った小さい行動選択 |
+| 専門家が必要な範囲 | 標準コース受講、強い症状、悪化サイン、医療判断 | 心理療法としてのACT、強い症状、安全リスク、臨床判断 |
+| 次に読むページ | [[mbsr-eight-week-roadmap]]、[[mbsr-home-practice-guide]] | [[act-six-processes-practice-guide]]、[[act-values-and-committed-action]] |
 
 ## 比較表
 

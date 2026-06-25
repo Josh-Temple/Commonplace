@@ -25,6 +25,14 @@ export type ContentPage = {
 
 type RawFrontmatter = Partial<Omit<ContentPage, "body" | "slug" | "href">>;
 
+type ContentIndex = {
+  pages: ContentPage[];
+  byId: Map<string, ContentPage>;
+  bySlug: Map<string, ContentPage>;
+};
+
+let cachedContentIndex: ContentIndex | undefined;
+
 function walkMarkdownFiles(directory: string): string[] {
   if (!fs.existsSync(directory)) return [];
 
@@ -38,6 +46,10 @@ function walkMarkdownFiles(directory: string): string[] {
 
 function toStringArray(value: unknown): string[] {
   return Array.isArray(value) ? value.map(String) : [];
+}
+
+function normalizeSlugKey(slug: string[]): string {
+  return slug.join("/");
 }
 
 function pageFromFile(filePath: string): ContentPage {
@@ -62,34 +74,45 @@ function pageFromFile(filePath: string): ContentPage {
     updated: String(data.updated ?? ""),
     body: parsed.content.trim(),
     slug,
-    href: `/pages/${slug.join("/")}`,
+    href: `/pages/${normalizeSlugKey(slug)}`,
   };
 }
 
-export function getAllPages(): ContentPage[] {
-  return walkMarkdownFiles(contentRoot)
+function getContentIndex(): ContentIndex {
+  if (cachedContentIndex) return cachedContentIndex;
+
+  const pages = walkMarkdownFiles(contentRoot)
     .map(pageFromFile)
     .sort((a, b) => a.title.localeCompare(b.title, "ja"));
+
+  cachedContentIndex = {
+    pages,
+    byId: new Map(pages.map((page) => [page.id, page])),
+    bySlug: new Map(pages.map((page) => [normalizeSlugKey(page.slug), page])),
+  };
+
+  return cachedContentIndex;
+}
+
+export function getAllPages(): ContentPage[] {
+  return getContentIndex().pages;
 }
 
 export function getPageBySlug(slug: string[]): ContentPage | undefined {
-  const normalized = slug.join("/");
-  return getAllPages().find((page) => page.slug.join("/") === normalized);
+  return getContentIndex().bySlug.get(normalizeSlugKey(slug));
 }
 
 export function getPageById(id: string): ContentPage | undefined {
-  return getAllPages().find((page) => page.id === id);
+  return getContentIndex().byId.get(id);
 }
 
 export function getIndexPages(): ContentPage[] {
-  return getAllPages().filter((page) => page.type === "index");
+  return getContentIndex().pages.filter((page) => page.type === "index");
 }
 
 export function resolvePageRefs(ids: string[]): ContentPage[] {
-  const pages = getAllPages();
-  return ids
-    .map((id) => pages.find((page) => page.id === id))
-    .filter((page): page is ContentPage => Boolean(page));
+  const { byId } = getContentIndex();
+  return ids.map((id) => byId.get(id)).filter((page): page is ContentPage => Boolean(page));
 }
 
 export function getSourceNote(sourcePath: string): { path: string; title: string; exists: boolean } {

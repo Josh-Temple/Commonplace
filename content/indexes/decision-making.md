@@ -10,7 +10,11 @@ tags:
   - judgment
   - metacognition
 confidence: medium
-sources: []
+sources:
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/metacognition-and-judgment.md
+  - sources/research-notes/implementation-intentions.md
+  - sources/research-notes/decision-review-and-decision-journals.md
 related:
   - cognitive-bias
   - metacognition
@@ -69,9 +73,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-認知バイアス、メタ認知、実行意図、判断レビューは、意思決定を扱う実践領域で一般的に示唆される考え方です。ただし、このページでは個別研究、効果量、統計を直接検証していません。
+認知バイアス、メタ認知、実行意図、判断レビューには、それぞれ判断研究、認知心理学、自己制御研究、結果論・後知恵バイアス研究と接点があります。
 
-今後、source noteで認知バイアス、実行意図、判断訓練の根拠を整理する必要があります。
+ただし、この入口ページは研究知見をそのまま実践効果として断定しません。研究で支持される概念、Commonplaceでの実践上の解釈、個人運用ルールを分けて扱います。判断前チェックやレビューは、成果改善を保証するものではなく、判断プロセスを後から検証しやすくする道具です。
 
 ## 関連ページ
 

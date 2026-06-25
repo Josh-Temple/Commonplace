@@ -9,7 +9,10 @@ tags:
   - judgment
   - rules
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/cognitive-bias-and-debiasing.md
+  - sources/research-notes/implementation-intentions.md
+  - sources/research-notes/decision-review-and-decision-journals.md
 related:
   - decision-making
   - pre-decision-check
@@ -71,9 +74,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-このページのルールは、判断ミスを減らすための運用仮説です。個別研究で検証済みの一般法則としては扱いません。
+このページのルールは、認知バイアス、実行意図、判断レビューの考え方を、公開可能な個人運用ルールへ翻訳したものです。研究で検証済みの一般法則ではなく、状況に応じて見直す仮説として扱います。
 
-[[decision-review]]で機能したかを見て、状況に応じて調整します。今後、認知バイアス、チェックリスト、実行意図に関するsource noteで補強します。
+機能したかは[[decision-review]]で確認します。ルールが多すぎる、曖昧すぎる、自己正当化になる、専門判断を置き換える場合は、短くするか削除します。
 
 ## 関連ページ
 

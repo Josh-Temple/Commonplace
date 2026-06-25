@@ -9,7 +9,9 @@ tags:
   - habit
   - self-regulation
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/implementation-intentions.md
+  - sources/research-notes/metacognition-and-judgment.md
 related:
   - decision-making
   - pre-decision-check
@@ -71,9 +73,9 @@ Xは具体的なきっかけ、Yは小さく実行できる行動にします。
 
 ## 根拠と不確実性
 
-実行意図は行動変容の文脈で知られる方法ですが、このページでは個別研究や効果量を直接検証していません。
+実行意図は、目標だけでなく「もしXが起きたらYをする」という状況と反応の結びつきを作る方法として研究されてきました。
 
-Commonplaceでは、一般的に示唆される方法を、公開可能な判断ルール作成の型として慎重に使います。後でsource noteを追加します。
+ただし、効果は目標への関与、条件の具体性、行動の小ささ、状況の安定性によって変わります。Commonplaceでは、判断前チェックや判断ルールへ戻るための実践上の型として使い、成果改善や習慣化を保証しません。
 
 ## 関連ページ
 

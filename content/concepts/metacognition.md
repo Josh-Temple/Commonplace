@@ -9,7 +9,9 @@ tags:
   - decision-making
   - self-monitoring
 confidence: low
-sources: []
+sources:
+  - sources/research-notes/metacognition-and-judgment.md
+  - sources/research-notes/decision-review-and-decision-journals.md
 related:
   - decision-making
   - cognitive-bias
@@ -67,9 +69,9 @@ updated: 2026-06-25
 
 ## 根拠と不確実性
 
-メタ認知は心理学や学習研究で広く扱われる概念ですが、このページでは個別研究を直接検証していません。
+メタ認知は、認知状態のモニタリングやコントロール、確信度、キャリブレーションと関わる研究領域です。学習や記憶の研究では、自己評価と制御の関係が扱われてきました。
 
-Commonplaceでは、研究上の厳密な測定概念ではなく、判断前後の自己観察として慎重に使います。
+Commonplaceでは、厳密な心理測定ではなく、判断前後の自己観察として使います。高い確信は正しさを保証せず、疲労、強い感情、睡眠不足、時間圧では自己観察も弱まりえます。
 
 ## 関連ページ
 
