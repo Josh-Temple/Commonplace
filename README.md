@@ -13,7 +13,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - `[[wikilink]]` and `[[wikilink|label]]` internal links
 - Minimal Markdown table rendering with horizontal scroll for narrow mobile screens
 - Home page, theme/index listing, searchable full page listing, and detail pages
-- Related pages, next pages, source notes, tags, status, and confidence indicators on detail pages
+- Quiet detail-page headers with secondary page metadata kept lower on the page
 - Android-friendly mobile-first reading layout
 - Compact `Aa` reader font-size control with a noticeably smaller compact option plus standard and large text options
 - Minimal, border-light visual design that uses whitespace and divider lines instead of boxed cards

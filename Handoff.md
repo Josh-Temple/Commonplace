@@ -1,5 +1,187 @@
 # Handoff: Lumen MVP
 
+## Article detail header quieting pass — 2026-06-25
+
+### Purpose
+
+Reduced cognitive load on article/detail pages by making the reader header show only page type, title, and summary. Administrative metadata is preserved lower on the page in a quieter `ページ情報` section. This was an app-development and reading-experience cleanup task; content, routing, Markdown rendering, search, source-note behavior, and PWA behavior were not refactored.
+
+### Files changed
+
+- `app/pages/[...slug]/page.tsx` — removed status/confidence/updated/tags from the main article header and added a lower `ページ情報` section for status, confidence, updated date, and tags.
+- `app/styles.css` — added quiet typography/divider styling for the bottom page metadata section without cards, shadows, badges, icons, or dashboard-like treatment.
+- `README.md` — updated the MVP feature wording to describe quiet detail-page headers with secondary metadata lower on the page.
+- `Handoff.md` — recorded this handoff entry.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20 || true
+npm run typecheck
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run typecheck` passed. `npm run validate` passed TypeScript typecheck, content validation for 59 pages, and Next.js production build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Article/detail headers now render only the page type label, title, and summary.
+- Status, confidence, updated date, and tags remain available in the lower `ページ情報` section.
+- Full repository validation passed.
+
+### Remaining limitations
+
+- No browser screenshot, Lighthouse check, or mobile device verification was captured in this environment. The change should be visually reviewed on an Android-sized viewport after deployment or in a browser-equipped environment.
+- The bottom `ページ情報` section is intentionally simple text; further visual tuning should remain minimal and avoid card/dashboard styling.
+
+### Suggested next tasks
+
+1. Review a representative article page on Android/mobile viewport for spacing and reading rhythm.
+2. Consider whether related/next/source-note sections should receive a separate quieting pass later, without changing the Markdown renderer or content model.
+
+## Decision-making, cognitive bias, and judgment training cluster — 2026-06-25
+
+### Purpose
+
+Added a new reader-facing Commonplace / Lumen page cluster for decision-making, cognitive bias, metacognition, judgment training, pre-decision checks, post-decision review, and abstract public-safe judgment rules. This was a content writing, link-maintenance, validation, and documentation task.
+
+### Created content pages
+
+- `content/indexes/decision-making.md` — new theme index for decision-making as a trainable practice, with routes into concepts, methods, protocols, and rules.
+- `content/concepts/cognitive-bias.md` — new concept page on cognitive bias, including confirmation bias, availability heuristic, anchoring, loss aversion, and hindsight bias.
+- `content/concepts/metacognition.md` — new concept page on observing and evaluating one’s cognitive state during judgment.
+- `content/concepts/dual-process-theory.md` — new concept page using intuitive/automatic versus reflective/controlled processing as a practical caution, without overclaiming the model.
+- `content/methods/implementation-intentions.md` — new method page for “if X, then Y” action planning in judgment and emotion regulation contexts.
+- `content/methods/judgment-training.md` — new method page for reviewing judgment conditions, evidence, emotion, outcome, and process quality.
+- `content/protocols/pre-decision-check.md` — new protocol page for a short seven-item pre-decision checklist.
+- `content/protocols/decision-review.md` — new protocol page for post-decision review that separates known information, unknowns, emotion, bias, outcome, and process quality.
+- `content/rules/judgment-rules.md` — new rule page with abstract public-safe operational rules for important judgments.
+
+### Updated content pages
+
+- No existing content pages were edited in this pass. The new cluster is linked internally through frontmatter and wikilinks.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20 || true
+npm run validate:content
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 59 content pages. `npm run validate` passed typecheck, content validation, and production build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 59 page(s).
+- Full validation passed, including TypeScript typecheck and Next.js production build.
+- New frontmatter `related` and `next` ids validate.
+- New wikilinks validate.
+
+### Unresolved TODO
+
+- Add source notes for cognitive biases, dual-process theory, metacognition, implementation intentions, judgment review / decision journaling, and premortem-style checks before making stronger research-backed claims.
+- Consider whether the new decision-making cluster should be linked from an existing home/index navigation page if a future information-architecture pass needs stronger discoverability.
+
+### Future source notes to add
+
+- `sources/research-notes/cognitive-bias-and-debiasing.md`
+- `sources/research-notes/metacognition-and-judgment.md`
+- `sources/research-notes/implementation-intentions.md`
+- `sources/research-notes/decision-review-and-decision-journals.md`
+- `sources/research-notes/dual-process-theory.md`
+
+### Future pages to consider
+
+- `content/concepts/confirmation-bias.md`
+- `content/concepts/loss-aversion.md`
+- `content/concepts/availability-heuristic.md`
+- `content/concepts/anchoring.md`
+- `content/concepts/hindsight-bias.md`
+- `content/concepts/uncertainty.md`
+- `content/methods/premortem.md`
+- `content/protocols/decision-journal.md`
+- `content/concepts/emotional-decision-making.md`
+- `content/protocols/trading-decision-check.md`
+
+## Mindfulness practice motivation, effects, and logging pass — 2026-06-25
+
+### Purpose
+
+Expanded the Commonplace / Lumen meditation and mindfulness article cluster around what to practice, why to practice, near/intermediate/distal effect levels, common misunderstandings about effects, motivation for continuing, logging/review, and when to shorten, stop, or seek support. This was a content writing, source-integration, link-maintenance, validation, and documentation task.
+
+### Added content pages
+
+- `content/concepts/mindfulness-practice-effects-map.md` — added a draft concept page mapping practice motivation, proximal skills, intermediate processes, distal/uncertain outcomes, effect-misreading risks, evaluation indicators, and safety-first boundaries.
+- `content/protocols/mindfulness-practice-log.md` — added a draft protocol page with a public-safe 1-minute log, weekly review, change indicators, adverse-sign indicators, adjustment choices, and an example record.
+
+### Updated content pages
+
+- `content/indexes/meditation-and-mindfulness.md` — added an entry route for practice reasons, effect levels, logging, and short practice cards.
+- `content/outputs/mindfulness-practice-cards.md` — reshaped all cards into a consistent mobile-friendly pattern: aim, expected near effect, steps, success criteria, and what to avoid.
+- `content/protocols/daily-mindfulness-practice.md` — added weekly aims, near changes versus overexpected changes, restart guidance after interruption, lengthening/shortening criteria, and practice-log routing.
+- `content/protocols/emotion-regulation-mindfulness-protocol.md` — reorganized anger, anxiety, self-criticism, urgency, compensatory/“取り返したさ,” and procrastination into aim / near effect / steps / success criteria / avoid sections.
+- `content/concepts/mindfulness-based-interventions-comparison.md` — added a separate target/effect framing table to avoid making the existing comparison table too wide.
+- `content/methods/mbsr.md` — added MBSR motivation, expected near changes, overexpected changes, home-practice rationale, and practice-log/effects-map links.
+- `content/methods/mbct.md` — added MBCT motivation, rumination framing, early-warning signs in relapse-prevention context, effect-misreading cautions, and acute-symptom boundaries.
+- `content/methods/act-and-mindfulness.md` — added ACT motivation, “choice possibility” language, values-to-action practice, and links to cards/protocol/log/effects map.
+- `content/methods/loving-kindness-meditation.md` — added metta motivation, warm-feeling versus goodwill-direction distinction, self-criticism use, difficult-person pacing, expectation limits, and practice-card routing.
+- `content/methods/open-monitoring-meditation.md` — added motivation, focused-attention transition rationale, observation-versus-rumination distinction, near effects, stop conditions, and practice-log routing.
+- `content/concepts/decentering.md` — added motivation, “thoughts as thoughts” framing, near indicators, self-distancing / ACT defusion / MBCT relationships, misuse examples, and links to cards/protocol/effects map.
+
+### Added source notes
+
+- `sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md` — added a working research note separating proximal practice skills, intermediate candidate processes, distal outcomes, evidence notes, cautions, safe wording, and needs-verification items.
+- `sources/research-notes/mindfulness-practice-motivation-and-habit.md` — added a working research note on sustaining practice through awareness/choice, reduced automaticity, values, safe self-observation, small sessions, logs, weekly review, adjustment, and safety boundaries.
+
+### Updated source notes
+
+- No existing source notes were edited in this pass; the new source notes synthesize and constrain claims already represented in the existing mindfulness source-note cluster.
+
+### External materials checked
+
+- PubMed record for Goyal et al. 2014, “Meditation Programs for Psychological Stress and Well-being.”
+- PubMed record for Gu et al. 2015, “How do mindfulness-based cognitive therapy and mindfulness-based stress reduction improve mental health and wellbeing?”
+- PubMed record for Parsons et al. 2017 home-practice systematic review/meta-analysis in MBSR/MBCT.
+- NCCIH “Meditation and Mindfulness: Effectiveness and Safety.”
+
+### Unverified or insufficient materials
+
+- Implementation-intention and habit-formation studies were not directly extracted; habit language remains general and cautious.
+- Loving-kindness / compassion / self-compassion effect claims still need a dedicated source-verification pass before stronger outcome language is added.
+- Trauma-sensitive, dissociation, mania/psychosis, panic, and sleep-worsening adaptations still need stronger clinical/training source review before detailed protocols are added.
+- Gu et al. 2015, Goyal et al. 2014, Parsons et al. 2017, and ACT sources should receive page-level extraction before more detailed quantitative claims are added.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20 || true
+rg -n "mindfulness|meditation|MBSR|MBCT|ACT|瞑想|マインドフル|decentering|呼吸|メッタ|慈愛|compassion|open monitoring|body scan|interoception|practice cards|効果|動機|継続|記録|振り返り|habit|motivation|mechanism|outcome" content sources Handoff.md
+npm run validate:content
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 50 content pages. `npm run validate` passed typecheck, content validation, and production build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 50 page(s).
+- Full validation passed, including TypeScript typecheck and Next.js production build.
+- New wikilinks for `mindfulness-practice-effects-map` and `mindfulness-practice-log` validate.
+
+### Remaining limitations
+
+- This was a content-only pass; no screenshot was required or captured.
+- Effect language remains deliberately cautious and does not provide medical or psychological treatment advice.
+- Source notes remain working notes and should not be treated as primary literature replacements.
+
+### Suggested next tasks
+
+1. Do a dedicated source extraction pass for implementation intentions, habit formation, and mindfulness adherence/self-efficacy.
+2. Deepen loving-kindness, compassion meditation, and self-compassion source notes before expanding outcome claims.
+3. Add stronger clinical-source support for trauma-sensitive adaptations, dissociation, sleep worsening, panic, and mania/psychosis cautions.
+4. Review the updated cards and comparison table on Android for length and scanability.
+
 ## PWA install and offline fallback — 2026-06-25
 
 ### Purpose
