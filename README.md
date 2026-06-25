@@ -7,6 +7,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 ## Features in the MVP
 
 - Next.js + TypeScript app router structure
+- PWA metadata, web app manifest, install icons, service worker registration, and offline fallback page
 - Markdown content under `content/` with YAML frontmatter
 - Static content routes generated from Markdown files
 - `[[wikilink]]` and `[[wikilink|label]]` internal links
@@ -61,4 +62,4 @@ For a faster content-only check, run:
 npm run validate:content
 ```
 
-The app is designed to deploy directly on Vercel as a standard Next.js project.
+The app is designed to deploy directly on Vercel as a standard Next.js project. It includes a web app manifest and service worker so supported browsers can install Lumen as a standalone PWA and reuse cached pages when offline.

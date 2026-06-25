@@ -1,5 +1,53 @@
 # Handoff: Lumen MVP
 
+## PWA install and offline fallback — 2026-06-25
+
+### Purpose
+
+Enabled Lumen to run as an installable Progressive Web App for Android-oriented reading, with app metadata, a web app manifest, install icons, service worker registration, app-shell caching, and a simple offline fallback page.
+
+### Files changed
+
+- `app/layout.tsx` — added manifest/app icon/apple web app metadata and registers `/sw.js` after window load when service workers are supported.
+- `public/manifest.webmanifest` — added the PWA manifest with standalone display mode, portrait orientation, theme/background colors, categories, and icon entries.
+- `public/sw.js` — added a small service worker that precaches the home/index/list shell, caches same-origin GET responses, serves cached navigations when available, and falls back to `/offline.html` when offline.
+- `public/offline.html` — added a lightweight Japanese offline fallback page.
+- `public/icon.svg` and `public/maskable-icon.svg` — added install icons matching the existing warm Lumen visual direction.
+- `README.md` — documented PWA support as an MVP feature and Vercel deployment behavior.
+- `Handoff.md` — recorded this handoff entry.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+npm run typecheck
+npm run build
+npm run validate
+command -v chromium || command -v chromium-browser || command -v google-chrome || command -v firefox || command -v playwright || true
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. No browser binary or Playwright executable was found by the browser check. `npm run typecheck`, `npm run build`, and `npm run validate` passed. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Next.js metadata now emits a manifest link and app icon references.
+- The root layout registers the service worker in browsers that support it.
+- The service worker precaches key shell routes and provides an offline HTML fallback for uncached navigations.
+- The production build completed successfully.
+
+### Remaining limitations
+
+- No browser screenshot or Lighthouse PWA audit was captured because this container does not include a browser binary.
+- Installability should be verified on a real Android device after deployment over HTTPS.
+- Icons are SVG-based; if an app store, launcher, or audit target requires raster PNG sizes, add generated PNG icons later.
+- The service worker is intentionally small and does not implement advanced cache expiration or background sync.
+
+### Suggested next tasks
+
+1. Deploy over HTTPS and test Android installation from Chrome.
+2. Run Lighthouse PWA checks in a browser-equipped environment.
+3. Add PNG icon variants if launcher compatibility requires them.
+
 ## Markdown table rendering fix — 2026-06-25
 
 ### Purpose
