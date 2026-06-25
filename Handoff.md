@@ -1,5 +1,88 @@
 # Handoff: Lumen MVP
 
+## Markdown table rendering fix — 2026-06-25
+
+### Purpose
+
+Added basic Markdown table rendering so pipe tables such as the MBSR / MBCT / ACT comparison render as actual tables instead of a long paragraph of pipe-delimited text. This continues the app-development cleanup from the h3/search pass.
+
+### Files changed
+
+- `lib/markdown.tsx` — added simple pipe-table detection, separator validation, row splitting, and table rendering with wikilink support inside cells.
+- `app/styles.css` — added horizontally scrollable table styling for mobile reading, plus header/cell typography and dividers.
+- `README.md` — documented minimal Markdown table rendering as an MVP feature.
+- `Handoff.md` — recorded this handoff entry.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+npm run typecheck
+npm run validate
+command -v chromium || command -v chromium-browser || command -v google-chrome || command -v firefox || command -v playwright
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run typecheck` passed. `npm run validate` passed TypeScript typechecking, content validation for 48 pages, and production Next.js build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Pipe tables with a header row, separator row, and body rows are now recognized by the in-repo Markdown renderer.
+- Table cell text still passes through the existing wikilink renderer.
+- Tables use horizontal scrolling on narrow screens instead of being squeezed into unreadable columns.
+
+### Remaining limitations
+
+- Table parsing is intentionally small and does not support escaped pipes, inline Markdown emphasis, code spans, column alignment, captions, or multiline cells.
+- No screenshot was captured because no browser binary or Playwright executable was available in this container.
+
+### Suggested next tasks
+
+1. Review the mindfulness comparison table on an Android device.
+2. If more Markdown features are needed, consider replacing the custom renderer with a vetted Markdown pipeline such as remark/rehype.
+
+## H3 rendering and article search implementation — 2026-06-25
+
+### Purpose
+
+Fixed Markdown level-three headings (`###`) so article subsections render as real h3 elements instead of plain paragraphs, and added a mobile-friendly article search UI to the full page listing.
+
+### Files changed
+
+- `lib/markdown.tsx` — added explicit `###` block handling before `##` and `#` heading checks.
+- `app/styles.css` — added reader h3 typography and search input/result styles.
+- `app/page-search.tsx` — added a client-side article search component that filters pages by title, summary, id, type, tags, and Markdown body text.
+- `app/pages/page.tsx` — replaced the static all-pages grid with the searchable page list.
+- `README.md` — documented the searchable page listing and search coverage.
+- `Handoff.md` — recorded this handoff entry.
+
+### Commands run
+
+```bash
+gh issue list --state open --limit 20
+npm run typecheck
+npm run validate
+command -v chromium || command -v chromium-browser || command -v google-chrome || command -v firefox || command -v playwright
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run typecheck` passed. `npm run validate` passed TypeScript typechecking, content validation for 48 pages, and production Next.js build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- h3 Markdown rendering is now supported by the in-repo renderer.
+- The `/pages` route now includes a client-side search box and live result count.
+- No screenshot was captured because no browser binary or Playwright executable was available in this container.
+
+### Remaining limitations
+
+- Search is client-side and simple substring matching; it does not rank results, highlight matches, persist the query in the URL, or provide tag-only filters yet.
+- Markdown rendering remains intentionally minimal beyond h1/h2/h3, paragraphs, lists, and wikilinks.
+
+### Suggested next tasks
+
+1. Test `/pages` and an article containing `###` headings on an Android device.
+2. Consider URL-synced search queries and highlighted matches if search becomes a primary navigation path.
+3. Consider richer Markdown parsing only if future content needs tables, blockquotes, code fences, or nested lists.
+
 ## Japanese heading label refinement — 2026-06-24
 
 ### Purpose

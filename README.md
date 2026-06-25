@@ -10,12 +10,14 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - Markdown content under `content/` with YAML frontmatter
 - Static content routes generated from Markdown files
 - `[[wikilink]]` and `[[wikilink|label]]` internal links
-- Home page, theme/index listing, full page listing, and detail pages
+- Minimal Markdown table rendering with horizontal scroll for narrow mobile screens
+- Home page, theme/index listing, searchable full page listing, and detail pages
 - Related pages, next pages, source notes, tags, status, and confidence indicators on detail pages
 - Android-friendly mobile-first reading layout
 - Compact `Aa` reader font-size control with a noticeably smaller compact option plus standard and large text options
 - Minimal, border-light visual design that uses whitespace and divider lines instead of boxed cards
 - Quiet theme index lists that show only titles and summaries in the main navigation UI
+- Client-side article search across page titles, summaries, tags, ids, types, and Markdown bodies
 
 ## Content directories
 
