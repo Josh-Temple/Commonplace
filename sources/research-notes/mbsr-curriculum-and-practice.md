@@ -81,3 +81,27 @@ Do not claim that more minutes automatically produce better outcomes. Reader-fac
 - Teacher training standards, if referenced.
 - Exact home practice recommendations from primary materials.
 - Page-level extraction from Brown course pages if future content needs exact session length, attendance requirements, or cost/access details.
+
+## 2026-06-25 alignment with primary-source extraction
+
+This note should now be read together with `sources/research-notes/mbsr-primary-source-extraction.md` and `sources/research-notes/mbsr-act-self-practice-boundaries.md`.
+
+### Reader-facing roadmap versus official curriculum
+
+The Commonplace `mbsr-eight-week-roadmap` page is a reader-facing learning map. It organizes common MBSR elements and themes into a comprehensible eight-week path, but it is not an official MBSR curriculum, teacher-training document, medical program, or reproduction of a specific institution's course.
+
+If an official week-by-week sequence cannot be directly verified from primary curriculum materials, content pages must not state that the Commonplace week order is the Brown, UMass, or official MBSR order.
+
+### Home-practice boundaries
+
+Home practice may be described as important in MBSR and MBCT research, but content pages should not prescribe exact duration, frequency, or dose-response claims unless primary materials are directly checked. The safer emphasis is repeated noticing, safe shortening, changing practice objects, stopping when needed, and using a practice log.
+
+### Teacher training / instructor qualification
+
+Public Brown and UMass-related materials support the general boundary that official MBSR involves trained teachers and institutional training pathways. This note still does not verify universal teacher-training requirements, certification standards, or instructor-qualification rules. Keep those details source-note-only until a dedicated standards review is done.
+
+### Reader-facing safe wording update
+
+- 「この8週間構成は、MBSRの一般的な実践要素と学習テーマを、Commonplace向けに整理した読者用ロードマップです。」
+- 「特定機関の正式カリキュラム、教師養成資料、医療プログラムを再現するものではありません。」
+- 「公式プログラムには、訓練を受けた指導者、グループでの inquiry、参加前の確認、実践中の調整が含まれることがあります。」

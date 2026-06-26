@@ -1,5 +1,216 @@
 # Handoff: Lumen MVP
 
+## Client search payload reduction — 2026-06-26
+
+### Purpose
+
+Implemented the third cleanup pass for Lumen by reducing the data shape sent to the client-side `/pages` search UI. This was an app-development and performance cleanup task focused only on search payload shape. It did not redesign the UI, change routes, refactor Markdown rendering, add full-text search, add ranking/highlighting, add URL-synced queries, or introduce external search libraries.
+
+### Files changed
+
+- `lib/content.ts` — added the lightweight `SearchPageItem` type and `getSearchPages()` helper derived from the cached content index. The helper preserves the `getAllPages()` ordering while sending only `id`, `title`, `type`, `summary`, `tags`, `updated`, and `href`.
+- `app/pages/page.tsx` — changed `/pages` to pass `getSearchPages()` into `PageSearch` instead of full `getAllPages()` results.
+- `app/page-search.tsx` — updated the client component to receive `SearchPageItem[]`, removed `page.body` from search text, and changed the placeholder to `タイトル、要約、タグ、IDから検索`.
+- `app/components.tsx` — loosened `PageListItem` to accept only the minimal list fields it renders (`id`, `title`, `summary`, `href`), preserving the same quiet title + summary list style.
+- `README.md` — updated the feature description so client-side article search no longer claims Markdown body search.
+- `Handoff.md` — recorded this cleanup, commands, validation results, limitations, and suggested next tasks.
+
+### Summary of search payload reduction
+
+The `/pages` route now sends a lightweight array to the client search component instead of full `ContentPage[]`. The client payload no longer includes Markdown `body`, `sources`, `related`, `next`, `status`, `confidence`, or `slug`. Search still covers title, summary, id, type, and tags. Results still render through the existing minimal list item with title and summary only.
+
+### Commands run
+
+```bash
+cat README.md
+cat AGENTS.md
+sed -n '1,140p' Handoff.md
+gh issue list --state open --limit 20 || true
+sed -n '1,220p' app/pages/page.tsx
+sed -n '1,260p' app/page-search.tsx
+rg -n "function PageListItem|PageListItem|type .*Page" app lib -g '*.tsx' -g '*.ts'
+sed -n '1,260p' lib/content.ts
+rg -n "Markdown bodies|page\.body|getAllPages\(\)|getSearchPages|SearchPageItem|sources|confidence|status|slug" app lib README.md
+npm run typecheck
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container, so open issues could not be checked remotely.
+
+### Validation results
+
+- `npm run typecheck` passed.
+- `npm run validate` passed TypeScript typecheck, content validation for 69 pages, and the production Next.js build.
+- Inspection confirmed `app/pages/page.tsx` uses `getSearchPages()` rather than `getAllPages()`.
+- Inspection confirmed `app/page-search.tsx` no longer references `page.body`.
+- Inspection confirmed `README.md` no longer claims Markdown body search.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining limitations
+
+- No browser screenshot or Android viewport check was captured because this pass does not change visible UI and no browser workflow was available in the container.
+- Search is still simple client-side substring matching over lightweight metadata. There is no full-text search, ranking, highlighting, URL-synced query state, tag filtering, server action, API route, external search library, or generated search-index file.
+
+### Suggested next tasks
+
+1. Document the supported Markdown subset more explicitly.
+2. Consider URL-synced search queries only if search becomes a primary navigation path.
+3. Consider a future Markdown renderer strategy only if content needs outgrow the current minimal renderer.
+
+## Decision-bias concept page split — 2026-06-26
+
+### Purpose
+
+Added individual reader-facing concept pages for representative cognitive biases in the decision-making / cognitive-bias / judgment-training cluster. This was a content-writing, link-maintenance, validation, and documentation task. The goal was to turn source-note-supported bias concepts into short warning-label pages that can be used before decisions and during reviews, without implying outcome improvement, diagnosis, investment advice, medical advice, legal advice, or career-result guarantees.
+
+### Created content pages
+
+- `content/concepts/confirmation-bias.md` — confirmation bias as a check for over-weighting evidence that supports an existing hypothesis.
+- `content/concepts/availability-heuristic.md` — availability heuristic as a check for confusing vivid/recent examples with frequency or representativeness.
+- `content/concepts/anchoring.md` — anchoring as a check for over-relying on the first number, price, evaluation, title, hypothesis, or impression.
+- `content/concepts/loss-aversion.md` — loss aversion as a check for delaying withdrawal or review because realizing a loss feels difficult.
+- `content/concepts/hindsight-bias.md` — hindsight bias as a review check for separating what was known before the outcome from what became known afterward.
+- `content/concepts/outcome-bias.md` — outcome bias as a review check for separating outcome quality from decision-process quality.
+
+### Updated existing pages
+
+- `content/concepts/cognitive-bias.md` — converted the representative-bias list into wikilinks and added an individual-page entry section.
+- `content/indexes/decision-making.md` — added the six bias pages to navigation and the concept-reading path.
+- `content/protocols/pre-decision-check.md` — added links to confirmation bias, availability heuristic, anchoring, and loss aversion as pre-decision warning labels.
+- `content/protocols/decision-review.md` — added stronger routing to hindsight bias and outcome bias for separating result, memory, and process.
+- `content/methods/judgment-training.md` — connected training to confirmation bias, hindsight bias, and outcome bias as review labels.
+- `content/rules/judgment-rules.md` — linked rules for opposing evidence, withdrawal/review conditions, and process review to the new bias pages.
+
+### Source notes used
+
+- `sources/research-notes/cognitive-bias-and-debiasing.md`
+- `sources/research-notes/decision-review-and-decision-journals.md`
+- `sources/research-notes/metacognition-and-judgment.md`
+
+No new source notes were created. No new research names, years, effect sizes, ratios, page numbers, or direct quotations were invented or added.
+
+### Commands run
+
+```bash
+cat README.md
+cat AGENTS.md
+sed -n '1,180p' Handoff.md
+cat package.json
+sed -n '1,220p' content/indexes/decision-making.md content/concepts/cognitive-bias.md content/protocols/pre-decision-check.md content/protocols/decision-review.md content/rules/judgment-rules.md content/methods/judgment-training.md sources/research-notes/cognitive-bias-and-debiasing.md sources/research-notes/decision-review-and-decision-journals.md sources/research-notes/metacognition-and-judgment.md
+gh issue list --state open --limit 20 || true
+npm run validate:content
+rg -n "confirmation-bias|availability-heuristic|anchoring|loss-aversion|hindsight-bias|outcome-bias|認知バイアス|判断前チェック|判断レビュー" content sources Handoff.md
+npm run validate
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. Therefore Issue #3 could not be checked remotely, commented on, or closed. Based on repository state already recorded in prior handoffs, `npm run validate:content`, `npm run validate`, the Codex startup checklist, and the validation workflow exist and pass locally.
+
+### Validation results
+
+- `npm run validate:content` passed for 69 content pages after adding the six concept pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build.
+- The post-edit `rg` check found the six new ids and the expected Japanese decision-check / decision-review links across content and source notes.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining uncertainty
+
+- These pages are practical reader-facing summaries, not detailed literature reviews.
+- Bias labels should remain warnings for review, not diagnoses or single-cause explanations.
+- The pages do not claim that reading about biases improves trading, investing, medical, legal, career, writing, or learning outcomes.
+- Direct page-level extraction from several classic bias papers remains incomplete in source notes.
+
+### Suggested next tasks
+
+1. Add `content/protocols/decision-journal.md` after stronger review of decision journals, forecasting records, calibration, and feedback loops.
+2. Add `content/methods/premortem.md` after stronger review of premortem / prospective hindsight evidence.
+3. Add `content/protocols/trading-decision-check.md` only with explicit financial-advice boundaries and evidence limits.
+4. Consider an output page with short decision-bias check cards if the individual concept pages become too dispersed.
+5. Verify whether Issue #3 remains open, and comment or close it if repository state satisfies the issue.
+
+## MBSR / ACT primary-source boundary reinforcement — 2026-06-25
+
+### Purpose
+
+Strengthened the MBSR and ACT article cluster by adding primary/model source-extraction notes and tightening reader-facing boundaries. This was a source-integration, content-maintenance, validation, and documentation task. The goal was not to add new reader-facing pages, but to keep existing pages from implying official MBSR curriculum reproduction, self-guided ACT therapy, condition-specific efficacy, or medical/psychotherapy replacement.
+
+### Added source notes
+
+- `sources/research-notes/mbsr-primary-source-extraction.md` — new draft note on UMass / Center for Mindfulness origin context, Brown public MBSR structure, NCCIH safety/evidence caution, Goyal, Parsons, teacher-training boundaries, and claims to avoid.
+- `sources/research-notes/act-primary-model-extraction.md` — new draft note on ACBS ACT overview, ACBS Six Core Processes, Hayes et al. 2006 status, ACT book status, psychological flexibility, values, committed action, and self-practice limits.
+- `sources/research-notes/mbsr-act-self-practice-boundaries.md` — new draft note defining what Commonplace can safely support as MBSR-informed / ACT-informed self-practice and when to stop or consult.
+
+### Updated source notes
+
+- `sources/research-notes/mbsr-evidence-and-practice.md` — added references to the new MBSR primary-source and self-practice-boundary notes, plus reader-facing / source-note-only / unverified divisions and source-status summaries.
+- `sources/research-notes/mbsr-curriculum-and-practice.md` — clarified reader-facing roadmap versus official curriculum, home-practice uncertainty, and teacher-training limitations.
+- `sources/research-notes/act-and-mindfulness.md` — added references to the ACT model-extraction and self-practice-boundary notes, plus content-safe ACT model claims and condition-specific efficacy restrictions.
+- `sources/research-notes/act-six-processes-and-practice.md` — separated ACBS-confirmed content from Hayes / ACT book material still needing page-level extraction, and clarified source-supported versus interpretive translation.
+
+### Updated content pages
+
+- `content/protocols/mbsr-eight-week-roadmap.md` — made the page harder to misread as an official curriculum, added an explicit “official program versus roadmap” section, and emphasized professional support for strong symptoms or safety risk.
+- `content/protocols/mbsr-home-practice-guide.md` — added what to look for in home practice, common misreadings, and stronger routing to `[[mindfulness-practice-log]]`.
+- `content/protocols/act-six-processes-practice-guide.md` — added a section on choosing which ACT process to enter from and an explicit ACT-informed self-practice limitation section.
+- `content/methods/act-values-and-committed-action.md` — added cautions about values becoming self-punishment and included “stopping / resting / asking for help” as values-consistent actions.
+- `content/methods/mbsr.md` — clarified the different roles of the MBSR overview, roadmap, and home-practice guide, and noted that official curriculum details remain partly unverified in source notes.
+- `content/methods/act-and-mindfulness.md` — clarified that ACT-informed self-observation and psychotherapy as ACT are separate, and distinguished the six-process guide from the values/committed-action page.
+- `content/concepts/mindfulness-based-interventions-comparison.md` — added self-practice-friendly and self-practice-avoidance boundaries for MBSR and ACT.
+
+### External materials checked
+
+- UMass Memorial Health / Center for Mindfulness public pages for MBSR origin and current institutional context.
+- Brown University School of Professional Studies public MBSR page for 8-week structure, orientation, weekly instructor-led sessions, reflection/practice, home practice framing, and all-day session.
+- Brown Mindfulness Center / Brown MBSR teacher-training pages for training-pathway and teacher-boundary language.
+- NCCIH “Meditation and Mindfulness: Effectiveness and Safety” for cautious evidence and safety boundaries.
+- Parsons et al. 2017 home-practice systematic review / meta-analysis via PubMed/PMC record and accessible full-text summary.
+- Goyal et al. 2014 meditation-program review as cautious background evidence.
+- ACBS ACT overview and ACBS Six Core Processes pages for psychological flexibility, six processes, and process interrelationship language.
+- Hayes et al. 2006 PubMed / accessible PDF records for priority-model-source status only; no page-numbered claims were promoted.
+
+### Unverified or insufficient materials
+
+- Exact official week-by-week MBSR curriculum sequence remains unverified.
+- Exact UMass / Center for Mindfulness manual-level curriculum, teaching scripts, intake details, and home-practice requirements remain insufficiently extracted.
+- Universal MBSR teacher-training or instructor-qualification requirements remain unreviewed beyond public Brown pathway descriptions.
+- Kabat-Zinn primary texts were not page-extracted.
+- Hayes et al. 2006 and the Hayes, Strosahl, Wilson ACT book still need page-level extraction before stronger ACT conceptual claims, direct quotations, or page-numbered claims are added.
+- ACT and MBSR condition-specific efficacy claims still require separate source reviews.
+
+### Commands run
+
+```bash
+cat README.md AGENTS.md Handoff.md
+sed -n '1,220p' 'Commonplace Project Source.md'
+gh issue list --state open --limit 20 || true
+rg -n "MBSR|ACT|Acceptance and Commitment|psychological flexibility|values|committed action|defusion|acceptance|home practice|8-week|Jon Kabat-Zinn|Hayes|Strosahl|Wilson|ACBS|UMass|Center for Mindfulness|Brown|NCCIH|Goyal|Parsons|teacher|curriculum|manual|official|condition-specific|efficacy" content sources Handoff.md
+npm run validate:content
+npm run validate
+git diff --stat
+git status --short
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. `npm run validate:content` passed for 63 content pages. `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build. npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Validation results
+
+- Content validation passed for 63 page(s).
+- Full repository validation passed, including TypeScript typecheck and production Next.js build.
+- No screenshot was required because this was a content/source-note-only pass with no perceptible web-app UI change.
+
+### Remaining uncertainty
+
+- The new source notes are working notes, not complete literature reviews.
+- MBSR public institutional descriptions support the general 8-week structure but not a Commonplace official curriculum table.
+- ACT pages rely mainly on ACBS model pages for current reader-facing claims; Hayes et al. 2006 and the ACT book remain priority extraction targets.
+- No condition-specific claims, effect sizes, improvement rates, or clinical recommendations were added.
+
+### Suggested next tasks
+
+1. Perform page-level extraction of Hayes et al. 2006 and the Hayes / Strosahl / Wilson ACT book.
+2. Review Kabat-Zinn primary texts or official MBSR manuals only if the project needs official curriculum-sequence claims.
+3. Create separate condition-specific source reviews before adding pages about MBSR or ACT for anxiety, depression, pain, trauma, or other clinical outcomes.
+4. Review the updated MBSR/ACT pages on an Android-sized viewport after deployment.
+
 ## Content loader cached-index cleanup — 2026-06-25
 
 ### Purpose

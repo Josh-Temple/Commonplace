@@ -10,6 +10,8 @@ tags:
   - practice-roadmap
 confidence: low
 sources:
+  - sources/research-notes/mbsr-primary-source-extraction.md
+  - sources/research-notes/mbsr-act-self-practice-boundaries.md
   - sources/research-notes/mbsr-evidence-and-practice.md
   - sources/research-notes/mbsr-curriculum-and-practice.md
   - sources/research-notes/meditation-safety-and-adverse-effects.md
@@ -27,6 +29,8 @@ updated: 2026-06-25
 
 MBSRは、8週間型の構造化されたマインドフルネス教育プログラムとして理解しやすいです。
 
+この8週間構成は、MBSRの一般的な実践要素と学習テーマを、Commonplace向けに整理した読者用ロードマップです。特定機関の正式カリキュラム、教師養成資料、医療プログラムを再現するものではありません。
+
 このページは、MBSRの構造を「学習テーマ」「実践」「振り返り」に分けて読むためのロードマップです。ストレスを消す手順ではなく、ストレス反応に気づく練習として扱います。
 
 長期的な効果は、対象者、文脈、実践形式、支援体制、比較条件によって変わります。
@@ -36,6 +40,12 @@ MBSRは、8週間型の構造化されたマインドフルネス教育プログ
 このロードマップは、公式MBSRコース、医療、心理療法、専門家による評価の代替ではありません。
 
 Brown Universityなどの公開情報では、MBSRは8週間構造、週次セッション、ホームプラクティス、終日または長時間の実践を含むものとして説明されています。一方で、このページの週ごとの並べ方は、公開情報と一般的なMBSRテーマから作った読者向けの学習地図であり、特定機関の正式カリキュラムを正確に再現すると断定しません。
+
+## 公式プログラムとこのロードマップの違い
+
+- 公式プログラムには、訓練を受けた指導者、グループでの inquiry、参加前の確認、実践中の調整が含まれることがあります。
+- このページは、構造を理解するための読者向け地図です。
+- 強い症状、安全リスク、医療上の問題がある場合は、自己流でMBSR化せず、専門的支援を優先します。
 
 ## 8週間で何を学ぶのか
 

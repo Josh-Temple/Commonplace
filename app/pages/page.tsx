@@ -1,6 +1,6 @@
 import { TopNav } from "../components";
 import { PageSearch } from "../page-search";
-import { getAllPages } from "../../lib/content";
+import { getSearchPages } from "../../lib/content";
 
 export default function PagesPage() {
   return (
@@ -12,7 +12,7 @@ export default function PagesPage() {
           <h1>すべてのページ</h1>
           <p>Concepts, methods, protocols, rules, indexes, and outputs rendered from Markdown.</p>
         </header>
-        <PageSearch pages={getAllPages()} />
+        <PageSearch pages={getSearchPages()} />
       </main>
     </>
   );

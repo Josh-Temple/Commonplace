@@ -93,3 +93,29 @@ See also `sources/research-notes/act-six-processes-and-practice.md` for the deta
 - Hayes et al. 2006: priority source listed, but page-level extraction remains needed.
 - Hayes, Strosahl, Wilson ACT book: priority source listed, but page-level extraction remains needed.
 - Condition-specific efficacy claims require a separate source review before being added to content pages.
+
+## 2026-06-25 primary-model extraction alignment
+
+See also:
+
+- `sources/research-notes/act-primary-model-extraction.md`
+- `sources/research-notes/mbsr-act-self-practice-boundaries.md`
+
+### Can be reflected as ACT conceptual model
+
+- ACT can be described as a psychological-flexibility model using mindfulness/acceptance and commitment/behavior-change processes.
+- ACBS supports the six-process list: acceptance, cognitive defusion, contact with the present moment, self as context, values, and committed action.
+- The six processes may be presented as interrelated rather than as a fixed sequence.
+- Values may be described as chosen directions or qualities of action, not one-time goals or mood states.
+- Committed action may be described as small, observable, values-consistent behavior when clearly framed as ACT-informed self-practice rather than therapy.
+
+### Should not yet be reflected
+
+- Condition-specific efficacy claims, including claims about anxiety, depression, pain, trauma, OCD, substance use, or other clinical outcomes.
+- Diagnosis-specific recommendations.
+- Direct quotations, page numbers, or detailed distinctions from Hayes et al. 2006 or the ACT book until page-level extraction is completed.
+- Claims that self-guided ACT-informed practice replaces therapist-guided ACT.
+
+### Boundary wording
+
+Condition-specific efficacy claims require a separate source review. ACT-informed self-reflection in Commonplace can support daily action selection, but psychotherapy as ACT includes clinical judgment, case formulation, therapist guidance, and safety planning when needed.

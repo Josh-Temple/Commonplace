@@ -109,3 +109,49 @@ See also `sources/research-notes/mbsr-curriculum-and-practice.md` for the detail
 - Goyal: checked as a general meditation-program evidence source, not as an individual guarantee.
 - Parsons: checked as a home-practice/adherence source, not as proof that more minutes are always better.
 - UMass / Center for Mindfulness: historically important, but exact curriculum and manual-level sequencing remain insufficiently extracted in this repository.
+
+## 2026-06-25 primary-source extraction alignment
+
+See also:
+
+- `sources/research-notes/mbsr-primary-source-extraction.md`
+- `sources/research-notes/mbsr-act-self-practice-boundaries.md`
+
+### Can be reflected in reader-facing pages
+
+- MBSR may be described as an 8-week structured mindfulness education program.
+- UMass Memorial Health / Center for Mindfulness pages support the cautious historical claim that Jon Kabat-Zinn developed MBSR at UMass Memorial Medical Center in 1979.
+- Brown public pages support cautious structure language: orientation, weekly instructor-led sessions, reflection/practice, home practice, and one all-day session.
+- Body scan, sitting meditation, mindful movement, informal mindfulness, home practice, and group reflection/inquiry may be described as common MBSR elements.
+- NCCIH supports warning that meditation/mindfulness should not replace or postpone conventional care.
+- Goyal et al. 2014 may support cautious general evidence-background language for meditation programs, not individual guarantees.
+- Parsons et al. 2017 may support discussing home practice as relevant, with careful avoidance of simple dose-response language.
+
+### Should remain source-note only
+
+- Teacher-training pathway details and qualification standards beyond the general fact that formal pathways exist.
+- Brown course logistics such as current price, exact scheduling, and enrollment details, unless a future page needs current program navigation.
+- Primary-text or manual-level claims from Kabat-Zinn materials until page-level extraction is completed.
+- Any condition-specific effectiveness statement that would require a dedicated clinical evidence review.
+
+### Still unverified
+
+- Exact official week-by-week MBSR curriculum sequence.
+- Exact UMass / Center for Mindfulness manual-level curriculum and teaching scripts.
+- Exact official home-practice minutes or frequency requirements from primary materials.
+- Universal teacher-training or instructor-qualification requirements across institutions.
+
+### Source status summary
+
+- UMass / Center for Mindfulness: checked for origin and institutional context; not sufficient for official curriculum reconstruction.
+- Brown: checked for current public structure and teacher-training boundary language; not used as a universal curriculum manual.
+- NCCIH: checked for cautious effectiveness and safety language.
+- Goyal: checked as a cautious meditation-program evidence source; no effect sizes promoted.
+- Parsons: checked for home-practice relevance and adherence uncertainty; no “more is better” rule promoted.
+
+### Reader-facing safe wording
+
+- 「MBSRは、8週間型の構造化されたマインドフルネス教育プログラムとして理解しやすいです。」
+- 「このロードマップは公式コースの代替ではなく、構造を理解するための読者向け地図です。」
+- 「公式カリキュラムの詳細や週ごとの正式順序には、まだ未確認の部分があります。」
+- 「ホームプラクティスは、長く座るためではなく、日常で気づく回数を増やすために使います。」

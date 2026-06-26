@@ -19,6 +19,9 @@ related:
   - decision-review
   - implementation-intentions
   - metacognition
+  - confirmation-bias
+  - loss-aversion
+  - outcome-bias
 next:
   - pre-decision-check
   - decision-review
@@ -48,10 +51,10 @@ updated: 2026-06-25
 次のルールを、必要な場面だけに使います。
 
 - 強い感情があるときは、重要判断を急がない。
-- 反対証拠を一度は確認する。
+- 反対証拠を一度は確認する。これは[[confirmation-bias|確証バイアス]]への対策候補として使う。
 - 「今すぐ決めたい」という感覚があるときほど、時間圧を疑う。
-- 判断前に、撤退条件または見直し条件を決める。
-- 結果ではなく、判断プロセスをレビューする。
+- 判断前に、撤退条件または見直し条件を決める。[[loss-aversion|損失回避]]で遅らせないために使う。
+- 結果だけでなく、判断プロセスをレビューする。[[outcome-bias|結果バイアス]]に注意する。
 - 一度の成功・失敗から過度に一般化しない。
 - 自信が高いときほど、見落としを確認する。
 - 他人に説明できない判断は、記録してから実行する。
@@ -83,6 +86,9 @@ updated: 2026-06-25
 - [[decision-making]]
 - [[pre-decision-check]]
 - [[decision-review]]
+- [[confirmation-bias|確証バイアス]]
+- [[loss-aversion|損失回避]]
+- [[outcome-bias|結果バイアス]]
 - [[implementation-intentions]]
 - [[metacognition]]
 

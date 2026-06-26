@@ -23,6 +23,16 @@ export type ContentPage = {
   href: string;
 };
 
+export type SearchPageItem = {
+  id: string;
+  title: string;
+  type: string;
+  summary: string;
+  tags: string[];
+  updated: string;
+  href: string;
+};
+
 type RawFrontmatter = Partial<Omit<ContentPage, "body" | "slug" | "href">>;
 
 type ContentIndex = {
@@ -96,6 +106,18 @@ function getContentIndex(): ContentIndex {
 
 export function getAllPages(): ContentPage[] {
   return getContentIndex().pages;
+}
+
+export function getSearchPages(): SearchPageItem[] {
+  return getContentIndex().pages.map(({ id, title, type, summary, tags, updated, href }) => ({
+    id,
+    title,
+    type,
+    summary,
+    tags,
+    updated,
+    href,
+  }));
 }
 
 export function getPageBySlug(slug: string[]): ContentPage | undefined {

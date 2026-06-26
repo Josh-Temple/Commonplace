@@ -17,6 +17,12 @@ related:
   - pre-decision-check
   - decision-review
   - metacognition
+  - confirmation-bias
+  - availability-heuristic
+  - anchoring
+  - loss-aversion
+  - hindsight-bias
+  - outcome-bias
 next:
   - pre-decision-check
   - decision-review
@@ -45,13 +51,25 @@ updated: 2026-06-25
 
 判断前には、次を確認します。
 
-- 確証バイアス: 自分の仮説に合う根拠だけを集めていないか。
-- 利用可能性ヒューリスティック: 最近見た例、印象の強い例を過大評価していないか。
-- アンカリング: 最初に見た価格、評価、情報に引っ張られていないか。
-- 損失回避: 損を確定したくない気持ちで判断を遅らせていないか。
-- 後知恵バイアス: 結果を見た後で「最初から分かっていた」と思っていないか。
+- [[confirmation-bias|確証バイアス]]: 自分の仮説に合う根拠だけを集めていないか。
+- [[availability-heuristic|利用可能性ヒューリスティック]]: 最近見た例、印象の強い例を過大評価していないか。
+- [[anchoring|アンカリング]]: 最初に見た価格、評価、情報に引っ張られていないか。
+- [[loss-aversion|損失回避]]: 損を確定したくない気持ちで判断を遅らせていないか。
+- [[hindsight-bias|後知恵バイアス]]: 結果を見た後で「最初から分かっていた」と思っていないか。
+- [[outcome-bias|結果バイアス]]: 結果だけで判断プロセスを評価していないか。
 
 判断後には、結果ではなく、判断時点で何が分かっていたかを[[decision-review]]で見直します。
+
+## 個別ページ
+
+代表的なバイアスは、詳しい研究レビューではなく、判断前後で使う短い警告ラベルとして個別ページ化しています。
+
+- [[confirmation-bias|確証バイアス]]
+- [[availability-heuristic|利用可能性ヒューリスティック]]
+- [[anchoring|アンカリング]]
+- [[loss-aversion|損失回避]]
+- [[hindsight-bias|後知恵バイアス]]
+- [[outcome-bias|結果バイアス]]
 
 ## 例
 
@@ -80,6 +98,12 @@ updated: 2026-06-25
 - [[dual-process-theory]]
 - [[pre-decision-check]]
 - [[decision-review]]
+- [[confirmation-bias|確証バイアス]]
+- [[availability-heuristic|利用可能性ヒューリスティック]]
+- [[anchoring|アンカリング]]
+- [[loss-aversion|損失回避]]
+- [[hindsight-bias|後知恵バイアス]]
+- [[outcome-bias|結果バイアス]]
 
 ## 次に読むページ
 
