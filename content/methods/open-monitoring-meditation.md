@@ -14,16 +14,18 @@ sources:
   - sources/research-notes/buddhist-mindfulness-background.md
   - sources/research-notes/open-monitoring-and-decentering.md
   - sources/research-notes/mindfulness-practice-mechanisms-and-outcomes.md
+  - sources/research-notes/samatha-vipassana-jhana.md
 related:
   - mindfulness-practice-log
   - mindfulness-practice-effects-map
   - breath-awareness-meditation
   - decentering
   - mindfulness-safety
+  - samatha-vipassana-jhana
 next:
   - loving-kindness-meditation
   - decentering
-updated: 2026-06-25
+updated: 2026-06-26
 ---
 
 ## 要点
@@ -81,6 +83,14 @@ Focused attentionは、呼吸、足裏、音など一つの対象に気づき、
 
 この場合は、足裏、手の接触、部屋の音、見える物などのreturn targetへ戻ります。必要なら[[mindfulness-safety]]を優先します。
 
+## vipassanāとの違い
+
+[[samatha-vipassana-jhana|vipassanā]]は、現代心理学的なopen monitoringと重なる説明をされることがありますが、同一ではありません。
+
+オープンモニタリングは研究上の分類として、経験の流れを広く観察する形式を指します。vipassanāは、伝統や流派によって説明が異なり、仏教的には洞察、智慧、三相、非執着、解脱の文脈を持ちます。
+
+このページでは、現代的な短い観察練習に限定し、伝統的な洞察実践や到達判定は扱いません。
+
 ## 注意点
 
 感情を観察することは、感情を切り離すことではありません。感情の存在を認めつつ、飲まれすぎない距離を作ります。
@@ -120,6 +130,7 @@ Focused attentionで戻る対象がある程度安定すると、音、身体感
 - [[decentering]]
 - [[mindfulness-safety]]
 - [[loving-kindness-meditation]]
+- [[samatha-vipassana-jhana]]
 
 ## 次に読むページ
 

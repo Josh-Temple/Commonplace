@@ -2,7 +2,7 @@
 id: source-buddhist-mindfulness-background
 title: Buddhist mindfulness background research note
 status: draft
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 # Buddhist mindfulness background
@@ -45,3 +45,15 @@ Working research note, not a reader-facing article. Claims promoted into `conten
 ## Still insufficient
 
 - A future pass could add brief, carefully attributed summaries of MN 10, MN 118, and Snp 1.8, but should avoid turning Buddhist texts into health-effect evidence.
+
+## 2026-06-26 Theravada expansion note
+
+This older background note has been superseded for detailed reader-facing support by:
+
+- `sources/research-notes/theravada-meditation-overview.md`
+- `sources/research-notes/satipatthana-primary-texts.md`
+- `sources/research-notes/anapanasati-primary-texts.md`
+- `sources/research-notes/samatha-vipassana-jhana.md`
+- `sources/research-notes/metta-and-brahmavihara-primary-texts.md`
+
+Use this note only as a light background index. Use the newer notes for page-specific claims about Satipaṭṭhāna, Ānāpānasati, mettā / brahmavihāra, samatha, vipassanā, and jhāna.

@@ -12,14 +12,16 @@ confidence: medium
 sources:
   - sources/research-notes/meditation-and-mindfulness-overview.md
   - sources/research-notes/buddhist-mindfulness-background.md
+  - sources/research-notes/anapanasati-primary-texts.md
 related:
   - mindfulness
   - mindfulness-safety
   - open-monitoring-meditation
+  - anapanasati-sixteen-steps
 next:
   - open-monitoring-meditation
   - five-minute-mindfulness-reset
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 ## 要点
@@ -56,6 +58,14 @@ updated: 2026-06-24
 
 代替対象は、足裏、手の接触、椅子の感触、外の音、目に見える一つの物です。詳しくは[[mindfulness-safety]]を確認します。
 
+## Ānāpānasatiとの関係
+
+仏教的には、呼吸への気づきは[[anapanasati-sixteen-steps|Ānāpānasati 16段階]]と関係します。
+
+ただし、このページの短い呼吸瞑想と、Ānāpānasati Suttaの16段階は同一ではありません。16段階には身体、感受、心、法のまとまりがあり、後半には教理的・洞察的な文脈も含まれます。
+
+ここでは、呼吸を操作せず、自然な呼吸に短く気づく範囲に留めます。
+
 ## 注意点
 
 深呼吸を続けること、息を長く止めること、呼吸を理想形に直すことを目的にしません。強い不安、睡眠悪化、解離感がある時は短縮または中止します。
@@ -68,6 +78,7 @@ updated: 2026-06-24
 
 - [[mindfulness-safety]]
 - [[open-monitoring-meditation]]
+- [[anapanasati-sixteen-steps]]
 - [[five-minute-mindfulness-reset]]
 
 ## 次に読むページ
