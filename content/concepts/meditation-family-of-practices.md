@@ -16,11 +16,12 @@ related:
   - mindfulness
   - breath-awareness-meditation
   - open-monitoring-meditation
+  - theravada-meditation
 next:
   - breath-awareness-meditation
   - open-monitoring-meditation
   - loving-kindness-meditation
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 ## 要点
@@ -45,6 +46,12 @@ updated: 2026-06-24
 
 集中瞑想は「戻る力」、オープンモニタリングは「気づいて眺める力」、メッタは「善意を向ける力」を練習します。
 
+## 上座部仏教系の実践
+
+上座部仏教系の瞑想には、四念処、呼吸への気づき、メッタ、samatha、vipassanā、jhānaなどがあります。
+
+これらは現代マインドフルネスと重なる部分がありますが、倫理・智慧・解脱・非執着の文脈を持つため、同じものとして扱いません。詳しくは[[theravada-meditation]]へ進みます。
+
 ## 注意点
 
 長くやれば必ず良いわけではありません。強い症状が出る場合は[[mindfulness-practice-boundaries]]を優先します。
@@ -55,7 +62,7 @@ updated: 2026-06-24
 
 ## 関連ノート
 
-[[mindfulness]] / [[mbsr]] / [[mbct]] / [[loving-kindness-meditation]]
+[[mindfulness]] / [[mbsr]] / [[mbct]] / [[loving-kindness-meditation]] / [[theravada-meditation]]
 
 ## 次に読むページ
 

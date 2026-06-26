@@ -1,5 +1,179 @@
 # Handoff: Lumen MVP
 
+## Theravada meditation content cluster — 2026-06-26
+
+### Purpose
+
+Added and connected a Theravada Buddhist meditation article cluster for Commonplace / Lumen. This was a content-writing, source-integration, link-maintenance, validation, and documentation task. The goal was to distinguish Pāli-canon / Theravada-related practice maps from modern mindfulness, MBSR, MBCT, ACT, and clinical / psychological interventions, while preserving public-safe self-practice boundaries.
+
+### Added content pages
+
+- `content/indexes/theravada-meditation.md` — new index page for Theravada-related meditation, distinguishing Buddhist practice context from modern mindfulness and clinical intervention contexts.
+- `content/methods/satipatthana-practice-map.md` — new method page mapping Satipaṭṭhāna across body, feeling tone, mind, and dhammas, with cautions around body-parts, cemetery contemplations, and intense self-guided observation.
+- `content/methods/anapanasati-sixteen-steps.md` — new method page explaining MN 118's sixteen-step breathing structure as body / feeling / mind / dhamma tetrads, not as beginner breathwork.
+- `content/concepts/samatha-vipassana-jhana.md` — new concept page distinguishing samatha, vipassanā, and jhāna without reducing them to relaxation, open monitoring, or casual concentration.
+- `content/methods/theravada-metta-and-brahmavihara.md` — new method page distinguishing Buddhist mettā / brahmavihāra from modern loving-kindness / compassion interventions.
+- `content/protocols/theravada-inspired-daily-practice.md` — new cautious daily-practice protocol that limits self-practice to brief breath awareness, feeling-tone naming, mind-state checking, goodwill phrases, and light hindrance awareness.
+
+### Updated content pages
+
+- `content/indexes/meditation-and-mindfulness.md` — added a “上座部仏教系の瞑想を知る” reading path to the new Theravada cluster.
+- `content/concepts/meditation-family-of-practices.md` — added a section on Theravada-related practice as a distinct family with ethical, wisdom, liberation, and non-clinging contexts.
+- `content/methods/breath-awareness-meditation.md` — added a link to `anapanasati-sixteen-steps` and clarified that a short modern breath-awareness practice is not the same as the MN 118 sixteen-step path.
+- `content/methods/loving-kindness-meditation.md` — added a link to `theravada-metta-and-brahmavihara` and separated modern LKM from Buddhist mettā / brahmavihāra.
+- `content/methods/open-monitoring-meditation.md` — added a link to `samatha-vipassana-jhana` and clarified that open monitoring and vipassanā should not be treated as identical.
+- `content/concepts/mindfulness-based-interventions-comparison.md` — expanded comparison to include MBSR / MBCT / ACT / Theravada-related practice across purpose, context, practice object, near goal, far goal, clinical-evidence handling, and Commonplace handling.
+
+### Added source notes
+
+- `sources/research-notes/theravada-meditation-overview.md`
+- `sources/research-notes/satipatthana-primary-texts.md`
+- `sources/research-notes/anapanasati-primary-texts.md`
+- `sources/research-notes/samatha-vipassana-jhana.md`
+- `sources/research-notes/metta-and-brahmavihara-primary-texts.md`
+
+### Updated source notes
+
+- `sources/research-notes/buddhist-mindfulness-background.md` — updated to point detailed future use to the new Theravada-specific source notes.
+
+### External materials checked
+
+- SuttaCentral MN 10 Satipaṭṭhānasutta pages, especially Bhikkhu Sujato and available alternative translation pages.
+- SuttaCentral DN 22 Mahāsatipaṭṭhānasutta page.
+- SuttaCentral MN 118 Ānāpānassatisutta pages, especially Bhikkhu Bodhi and Bhikkhu Sujato translations.
+- SuttaCentral Snp 1.8 Karaṇīyamettasutta pages and translation collection.
+- SuttaCentral Dhammapada collection as background only.
+- Access to Insight MN 10 Satipaṭṭhāna Sutta, Thanissaro Bhikkhu translation.
+- Access to Insight MN 10 Satipaṭṭhāna Sutta, Soma Thera translation.
+- Access to Insight MN 118 Ānāpānasati Sutta, Thanissaro Bhikkhu translation.
+- Access to Insight Snp 1.8 Karaṇīya Mettā Sutta / Amaravati translation.
+- Thanissaro Bhikkhu, “One Tool Among Many: The Place of Vipassana in Buddhist Practice,” via Access to Insight.
+
+### Unverified or insufficient materials
+
+- Bhikkhu Anālayo's Satipaṭṭhāna / Ānāpānasati writings were identified as important but not deeply extracted.
+- Nyanaponika Thera / Buddhist Publication Society materials were not deeply extracted.
+- Bhikkhu Bodhi's broader Theravada / Pāli-canon explanations were not deeply extracted beyond checked SuttaCentral translation pages.
+- Ajahn Chah, Ajahn Sumedho, Ajahn Sucitto, Ajahn Brahm, Mahasi Sayadaw, Ledi Sayadaw, U Ba Khin, and S. N. Goenka materials remain candidates for future tradition-specific notes.
+- Visuddhimagga / commentarial framing, modern Burmese vipassanā traditions, Thai Forest approaches, and lay retreat adaptations remain insufficiently differentiated for stronger claims.
+- Dhammapada verse-level extraction was not performed.
+
+### Commands run
+
+```bash
+cat README.md
+cat AGENTS.md
+sed -n '1,180p' Handoff.md
+sed -n '1,220p' 'Commonplace Project Source.md'
+cat package.json
+gh issue list --state open --limit 20 || true
+git remote -v
+rg -n "Buddhist|仏教|Theravada|上座部|Satipa|sati|ānāpāna|anapanasati|Ānāpānasati|Mettā|metta|vipassan|samatha|jhāna|jhana|brahmavih|Dhammapada|SuttaCentral|MN 10|MN 118|DN 22|Snp 1.8|四念処|五蓋|七覚支|四聖諦|三相|無常|苦|無我" content sources Handoff.md
+sed -n '1,220p' content/indexes/meditation-and-mindfulness.md content/concepts/meditation-family-of-practices.md content/methods/breath-awareness-meditation.md content/methods/loving-kindness-meditation.md content/methods/open-monitoring-meditation.md content/concepts/mindfulness-based-interventions-comparison.md sources/research-notes/buddhist-mindfulness-background.md sources/research-notes/meditation-and-mindfulness-overview.md sources/research-notes/loving-kindness-and-compassion-meditation.md sources/research-notes/meditation-safety-and-adverse-effects.md
+npm run validate:content
+npm run validate
+rg -n "theravada-meditation|satipatthana-practice-map|anapanasati-sixteen-steps|samatha-vipassana-jhana|theravada-metta-and-brahmavihara|theravada-inspired-daily-practice|上座部仏教系|四念処|Ānāpānasati|samatha|vipassanā|jhāna|四梵住|brahmavihāra" content sources Handoff.md
+```
+
+### Validation results
+
+- `npm run validate:content` passed for 76 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build.
+- The post-edit `rg` check found the new Theravada page ids, source-note ids, and key terms across `content/`, `sources/`, and `Handoff.md`.
+- `gh issue list --state open --limit 20 || true` could not check open issues because the `gh` CLI is not installed in this container. No git remote is configured in this checkout.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining uncertainty
+
+- The new pages are introductory learning maps, not doctrinal authorities, lineage manuals, retreat instructions, or clinical-efficacy reviews.
+- Buddhist sutta material is used as source support for vocabulary, practice structure, and religious / philosophical context, not as clinical-effect evidence.
+- Stronger claims about Satipaṭṭhāna, Ānāpānasati, samatha, vipassanā, jhāna, brahmavihāra, or specific lineages need deeper extraction from primary texts and teacher / scholar materials.
+- No Android viewport screenshot was captured because this was a content/source-note update with no app UI code changes.
+
+### Suggested next tasks
+
+1. Add a source note specifically comparing Bhikkhu Anālayo, Nyanaponika Thera, and Bhikkhu Bodhi on Satipaṭṭhāna before strengthening the four-foundations pages.
+2. Add a tradition-differences note for modern Burmese vipassanā, Thai Forest approaches, and lay retreat adaptations before adding lineage-specific reader pages.
+3. Review Dhammapada verses only as background for Buddhist ethical / contemplative vocabulary, not as meditation-efficacy evidence.
+4. Review the new Theravada meditation pages on an Android-sized viewport for scanability and Pāli diacritic readability.
+5. Keep any future self-practice pages limited to brief, safe, stop-capable practices unless stronger safety and teacher-guidance boundaries are added.
+
+## Decision-bias content enrichment — 2026-06-26
+
+### Purpose
+
+Deepened the Commonplace decision-making / cognitive-bias cluster from short warning labels into practical reader-facing articles for use before and after judgments. This was a content-writing, link-maintenance, validation, and documentation task. It focused on enriching existing pages, strengthening links to `pre-decision-check` and `decision-review`, and preserving public-repository boundaries around trading, finance, career, medical, legal, and private personal records.
+
+### Enriched pages
+
+- `content/concepts/confirmation-bias.md` — clarified that the issue is protecting a hypothesis through selective evidence, not having a hypothesis; added recognition questions, common contexts, comparison with anchoring, pre-decision / review prompts, misuse cautions, examples, and related judgment rules.
+- `content/concepts/availability-heuristic.md` — reframed availability as confusing ease of recall with frequency, probability, or representativeness; added prompts, contexts, comparison with confirmation bias, safeguards, misuse cautions, examples, and rules.
+- `content/concepts/anchoring.md` — expanded anchoring around first standards, prices, titles, evaluations, hypotheses, and impressions; added prompts, contexts, comparison with confirmation bias, safeguards, misuse cautions, examples, and rules.
+- `content/concepts/loss-aversion.md` — expanded loss aversion with careful boundaries around risk management, sunk effort, withdrawal/review conditions, and non-advice examples.
+- `content/concepts/hindsight-bias.md` — expanded hindsight bias around post-outcome predictability, prior uncertainty, records, and non-self-attacking reviews.
+- `content/concepts/outcome-bias.md` — expanded outcome bias around separating outcome quality from process quality and avoiding both result-only review and result-ignoring review.
+- `content/concepts/cognitive-bias.md` — reorganized the page as an entry point that separates biases used before a decision from biases used after a decision.
+- `content/indexes/decision-making.md` — strengthened the cluster reading path: first read, use before a decision, use after a decision, and convert repeated lessons into rules.
+- `content/protocols/pre-decision-check.md` — added a 30-second and 3-minute usage split and linked checklist items to relevant bias pages.
+- `content/protocols/decision-review.md` — strengthened hindsight/outcome-bias routing and added a short result-quality / process-quality table with self-attack caution.
+- `content/methods/judgment-training.md` — clarified judgment training as an iterative record → review → rule cycle, not a one-time reflection or guaranteed improvement method.
+- `content/rules/judgment-rules.md` — organized rules for important judgments, daily judgments, and higher-risk trading/writing-style judgments, with short bias links and execution-light cautions.
+
+### New page created
+
+- `content/outputs/decision-bias-check-cards.md` — added short bias cards for quick review before or after important judgments and for NotebookLM / read-aloud-friendly repetition.
+
+### Source notes used
+
+- `sources/research-notes/cognitive-bias-and-debiasing.md`
+- `sources/research-notes/decision-review-and-decision-journals.md`
+- `sources/research-notes/metacognition-and-judgment.md`
+- `sources/research-notes/implementation-intentions.md`
+
+No new research names, years, effect sizes, numerical claims, page numbers, or direct quotations were added to reader-facing content. Source notes were not materially changed in this pass.
+
+### Commands run
+
+```bash
+pwd && rg --files -g 'AGENTS.md' -g 'Handoff.md' -g 'HANDOFF.md' -g 'README*' -g 'package.json'
+git status --short && gh issue list --state open --limit 20
+cat AGENTS.md
+cat Handoff.md
+sed -n '1,220p' README.md
+cat package.json
+sed -n '1,220p' sources/research-notes/cognitive-bias-and-debiasing.md sources/research-notes/decision-review-and-decision-journals.md sources/research-notes/metacognition-and-judgment.md sources/research-notes/implementation-intentions.md
+sed -n '1,180p' content/concepts/confirmation-bias.md content/concepts/availability-heuristic.md content/concepts/anchoring.md content/concepts/loss-aversion.md content/concepts/hindsight-bias.md content/concepts/outcome-bias.md content/concepts/cognitive-bias.md content/indexes/decision-making.md
+npm run validate:content
+npm run validate
+rg -n "見分けるための問い|起こりやすい場面|他のバイアスとの違い|判断前の小さな対策|判断後レビューで見ること|よくある誤用|decision-bias-check-cards|confirmation-bias|availability-heuristic|anchoring|loss-aversion|hindsight-bias|outcome-bias" content sources Handoff.md
+git diff --stat
+git status --short
+```
+
+`gh issue list --state open --limit 20` could not run because the `gh` CLI is not installed in this container. No `origin` remote is configured in this checkout, so Issue #3 could not be checked remotely from local git state.
+
+### Validation results
+
+- `npm run validate:content` passed for 70 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build.
+- The `rg` inspection found the requested section labels, new output page id, and decision-bias page ids across the updated content.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining uncertainty
+
+- The enriched pages remain practical reader-facing summaries, not full literature reviews.
+- The pages intentionally avoid claims that bias awareness, checklists, or reviews improve trading, investing, medical, legal, career, writing, or learning outcomes.
+- Issue #3 remote state remains unverified because `gh` is unavailable and no git remote is configured.
+- Android-sized visual scanability was not manually reviewed in a browser during this pass.
+
+### Suggested next tasks
+
+1. Add `content/protocols/decision-journal.md` after stronger review of decision journals, forecasting records, calibration, and feedback loops.
+2. Add `content/methods/premortem.md` after stronger review of premortem / prospective hindsight evidence.
+3. Add `content/protocols/trading-decision-check.md` only with explicit financial-advice boundaries and evidence limits.
+4. Review enriched decision-bias pages on Android-sized viewport for scanability.
+5. Verify whether Issue #3 remains open, and comment or close it if repository state satisfies the issue.
+
 ## Client search payload reduction — 2026-06-26
 
 ### Purpose

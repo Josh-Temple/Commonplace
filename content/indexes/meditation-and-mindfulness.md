@@ -28,11 +28,13 @@ related:
   - act-values-and-committed-action
   - mbct
   - act-and-mindfulness
+  - theravada-meditation
+  - satipatthana-practice-map
 next:
   - mindfulness
   - meditation-family-of-practices
   - mindfulness-safety
-updated: 2026-06-25
+updated: 2026-06-26
 ---
 
 ## 要点
@@ -99,6 +101,14 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 
 メッタは、forgiveness、reconciliation、境界線の放棄ではありません。難しい相手へ急いで広げないことも安全な選択です。
 
+## 上座部仏教系の瞑想を知る
+
+[[theravada-meditation]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+
+上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
+
+メッタと四梵住を知る場合は、[[theravada-metta-and-brahmavihara]]へ進みます。日常で慎重に参照する場合は、[[theravada-inspired-daily-practice]]を読みます。
+
 ## 安全境界
 
 [[mindfulness-safety]] → [[mindfulness-practice-boundaries]]
@@ -109,7 +119,7 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 
 Ānāpānasati、Satipaṭṭhāna、Mettā、Vipassanāなどは仏教的文脈を持ちます。現代のMBSR、MBCT、ACTは、重なる要素を持つことがありますが、同じ根拠で語れるものではありません。
 
-仏教文献は背景・用語・思想の根拠として扱い、臨床効果の根拠としては扱いません。
+仏教文献は背景・用語・思想の根拠として扱い、臨床効果の根拠としては扱いません。詳しくは[[theravada-meditation]]から読みます。
 
 ## 根拠と不確実性
 
