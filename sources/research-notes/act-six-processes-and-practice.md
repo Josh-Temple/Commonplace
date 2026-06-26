@@ -75,3 +75,48 @@ Do not invent page numbers, quotes, clinical indications, or condition-specific 
 - Page-level extraction from the ACT book.
 - Meta-analyses by condition, only if future content mentions condition-specific efficacy.
 - More detailed clinical/self-help boundary sources for high-risk presentations.
+
+## 2026-06-25 alignment with primary-model extraction
+
+This note should now be read together with `sources/research-notes/act-primary-model-extraction.md` and `sources/research-notes/mbsr-act-self-practice-boundaries.md`.
+
+### ACBS-confirmed content
+
+- ACT is organized around psychological flexibility.
+- ACT uses mindfulness/acceptance processes and commitment/behavior-change processes.
+- The six core processes are acceptance, cognitive defusion, contact with the present moment, self as context, values, and committed action.
+- The processes support one another and need not be treated as a fixed order.
+
+### Hayes et al. 2006 / ACT book still insufficiently extracted
+
+Hayes et al. 2006 and the Hayes, Strosahl, Wilson ACT book remain priority primary/model sources, but this repository has not completed page-level extraction. Do not add page-numbered claims, direct quotes, or stronger conceptual distinctions from those sources until they are directly reviewed.
+
+### Source-supported versus interpretive translation
+
+Source-supported:
+
+- Six process names.
+- Psychological flexibility as the central target.
+- Mindfulness/acceptance and commitment/behavior-change process grouping.
+- Processes are mutually supportive rather than isolated.
+
+Interpretive translation for reader-facing practice:
+
+- Choosing an entry process based on the immediate situation.
+- Describing committed action as a “next small observable action.”
+- Using 1-minute or 5-minute daily sequences.
+- Turning values into Japanese everyday examples such as learning, honesty, health, contribution, or care.
+
+These translations are allowed only when labeled as ACT-informed self-practice, not as therapist-guided ACT.
+
+### Values, goals, mood, and committed action
+
+- Values can be explained as directions or qualities of action, not completed goals.
+- Goals can be useful when they serve values, but they are not identical to values.
+- Mood states such as “feeling confident” or “eliminating anxiety” should not be treated as values.
+- Committed action can include continuing, starting, stopping, resting, asking for help, setting a boundary, or reducing commitments when those actions serve values and safety.
+- Values should not become self-punishment, perfectionism, overwork, people-pleasing, or unsafe endurance.
+
+### Self-help boundaries update
+
+Reader-facing pages may offer defusion-style phrasing, present-moment grounding, values clarification, and small committed actions. They must not claim to diagnose, treat, deliver ACT therapy, replace therapist-guided ACT, or handle self-harm risk, suicidality, severe depression, mania/hypomania-like activation, psychosis-like symptoms, severe dissociation, derealization/depersonalization, trauma activation, panic escalation, sleep worsening, or functional impairment through self-practice alone.

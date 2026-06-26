@@ -21,6 +21,12 @@ related:
   - implementation-intentions
   - pre-decision-check
   - decision-review
+  - confirmation-bias
+  - availability-heuristic
+  - anchoring
+  - loss-aversion
+  - hindsight-bias
+  - outcome-bias
 next:
   - cognitive-bias
   - pre-decision-check
@@ -48,7 +54,7 @@ updated: 2026-06-25
 
 ## 使い方
 
-- 概念を知る: [[cognitive-bias]]、[[metacognition]]、[[dual-process-theory]]。
+- 概念を知る: [[cognitive-bias]]、[[confirmation-bias|確証バイアス]]、[[availability-heuristic|利用可能性ヒューリスティック]]、[[anchoring|アンカリング]]、[[loss-aversion|損失回避]]、[[hindsight-bias|後知恵バイアス]]、[[outcome-bias|結果バイアス]]、[[metacognition]]、[[dual-process-theory]]。
 - 判断前に止まる: [[pre-decision-check]]。
 - 判断後に検証する: [[decision-review]]。
 - 行動条件に変える: [[implementation-intentions]]。
@@ -80,6 +86,12 @@ updated: 2026-06-25
 ## 関連ページ
 
 - [[cognitive-bias]]
+- [[confirmation-bias|確証バイアス]]
+- [[availability-heuristic|利用可能性ヒューリスティック]]
+- [[anchoring|アンカリング]]
+- [[loss-aversion|損失回避]]
+- [[hindsight-bias|後知恵バイアス]]
+- [[outcome-bias|結果バイアス]]
 - [[metacognition]]
 - [[dual-process-theory]]
 - [[implementation-intentions]]

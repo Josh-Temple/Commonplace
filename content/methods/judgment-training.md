@@ -18,6 +18,9 @@ related:
   - decision-review
   - cognitive-bias
   - metacognition
+  - hindsight-bias
+  - outcome-bias
+  - confirmation-bias
 next:
   - decision-review
   - judgment-rules
@@ -46,7 +49,7 @@ updated: 2026-06-25
 
 1. 判断前に、根拠、反対根拠、撤退条件を短く記録する。
 2. 判断後に、[[decision-review]]で当時分かっていた情報と結果を分ける。
-3. 関わった可能性のある[[cognitive-bias|認知バイアス]]を見る。
+3. 関わった可能性のある[[cognitive-bias|認知バイアス]]を見る。特に、[[confirmation-bias|確証バイアス]]、[[hindsight-bias|後知恵バイアス]]、[[outcome-bias|結果バイアス]]を結果とプロセスの分離に使う。
 4. 次回の[[judgment-rules|判断ルール]]または[[implementation-intentions|実行意図]]へ変換する。
 5. 一度の成功・失敗から過度に一般化しない。
 
@@ -60,7 +63,7 @@ updated: 2026-06-25
 
 ## 注意点
 
-結果論、後知恵バイアス、自己正当化に注意します。
+結果論、[[hindsight-bias|後知恵バイアス]]、[[outcome-bias|結果バイアス]]、自己正当化に注意します。
 
 レビューが自己攻撃や反すうになるなら、項目を減らします。判断訓練は自分を責めるためではなく、次のルールを軽く直すために使います。
 
@@ -75,6 +78,9 @@ updated: 2026-06-25
 - [[decision-making]]
 - [[decision-review]]
 - [[cognitive-bias]]
+- [[confirmation-bias|確証バイアス]]
+- [[hindsight-bias|後知恵バイアス]]
+- [[outcome-bias|結果バイアス]]
 - [[metacognition]]
 - [[judgment-rules]]
 

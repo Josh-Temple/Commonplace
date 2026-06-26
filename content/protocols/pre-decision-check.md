@@ -20,6 +20,10 @@ related:
   - metacognition
   - implementation-intentions
   - decision-review
+  - confirmation-bias
+  - availability-heuristic
+  - anchoring
+  - loss-aversion
 next:
   - decision-review
   - judgment-rules
@@ -58,6 +62,15 @@ updated: 2026-06-25
 
 時間がない時は、2、4、7だけでも確認します。
 
+## バイアス別の確認
+
+判断前に特に使いやすい警告ラベルは次の4つです。
+
+- [[confirmation-bias|確証バイアス]]: 自分の仮説を支持する証拠だけを集めていないか。
+- [[availability-heuristic|利用可能性ヒューリスティック]]: 最近の例や印象の強い例を一般化していないか。
+- [[anchoring|アンカリング]]: 最初の数値、価格、評価、仮説が基準になりすぎていないか。
+- [[loss-aversion|損失回避]]: 損を確定したくないだけで、撤退や見直しを遅らせていないか。
+
 ## 例
 
 トレード前なら、「焦りはあるか」「反対シナリオは何か」「無効条件は何か」を見ます。これは金融助言ではなく、判断前の一般的な確認です。
@@ -82,6 +95,10 @@ updated: 2026-06-25
 
 - [[decision-making]]
 - [[cognitive-bias]]
+- [[confirmation-bias|確証バイアス]]
+- [[availability-heuristic|利用可能性ヒューリスティック]]
+- [[anchoring|アンカリング]]
+- [[loss-aversion|損失回避]]
 - [[metacognition]]
 - [[dual-process-theory]]
 - [[implementation-intentions]]

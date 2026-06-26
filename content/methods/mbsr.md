@@ -10,6 +10,8 @@ tags:
   - stress
 confidence: medium
 sources:
+  - sources/research-notes/mbsr-primary-source-extraction.md
+  - sources/research-notes/mbsr-act-self-practice-boundaries.md
   - sources/research-notes/mbsr-evidence-and-practice.md
   - sources/research-notes/mbsr-curriculum-and-practice.md
   - sources/research-notes/meditation-and-mindfulness-overview.md
@@ -47,7 +49,7 @@ MBSRはMindfulness-Based Stress Reductionの略です。臨床・教育文脈で
 
 ## MBSRを詳しく学ぶ順番
 
-MBSRを深く知る場合は、まずこのページで全体像を確認し、次に[[mbsr-eight-week-roadmap]]で8週間の学習テーマを見ます。実践を日常に移す場合は[[mbsr-home-practice-guide]]で、時間、対象、記録、短縮条件を確認します。
+MBSRを深く知る場合は、まずこのページで全体像を確認します。[[mbsr-eight-week-roadmap]]は、公式カリキュラムではなく、8週間構造と学習テーマを理解するための読者向け地図です。[[mbsr-home-practice-guide]]は、実践を日常へ移すときの時間、対象、記録、短縮条件を扱う安全調整ガイドです。
 
 このロードマップはMBSRコースの代替ではありません。MBSRの構造を理解し、自分の練習を安全に調整するための地図です。
 

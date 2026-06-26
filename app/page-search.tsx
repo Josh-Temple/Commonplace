@@ -1,16 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { ContentPage } from "../lib/content";
+import type { SearchPageItem } from "../lib/content";
 import { PageListItem } from "./components";
-
-type SearchablePage = Pick<ContentPage, "id" | "title" | "type" | "status" | "summary" | "tags" | "confidence" | "sources" | "related" | "next" | "updated" | "body" | "slug" | "href">;
 
 function normalizeSearchText(value: string): string {
   return value.toLocaleLowerCase("ja-JP").normalize("NFKC");
 }
 
-function pageMatchesQuery(page: SearchablePage, query: string): boolean {
+function pageMatchesQuery(page: SearchPageItem, query: string): boolean {
   const normalizedQuery = normalizeSearchText(query.trim());
   if (!normalizedQuery) return true;
 
@@ -20,13 +18,12 @@ function pageMatchesQuery(page: SearchablePage, query: string): boolean {
     page.id,
     page.type,
     page.tags.join(" "),
-    page.body,
   ].join("\n"));
 
   return normalizedQuery.split(/\s+/).every((term) => searchableText.includes(term));
 }
 
-export function PageSearch({ pages }: { pages: SearchablePage[] }) {
+export function PageSearch({ pages }: { pages: SearchPageItem[] }) {
   const [query, setQuery] = useState("");
   const filteredPages = useMemo(() => pages.filter((page) => pageMatchesQuery(page, query)), [pages, query]);
 
@@ -41,7 +38,7 @@ export function PageSearch({ pages }: { pages: SearchablePage[] }) {
         type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="タイトル、要約、タグ、本文から検索"
+        placeholder="タイトル、要約、タグ、IDから検索"
         autoComplete="off"
       />
       <p className="search-count" aria-live="polite">

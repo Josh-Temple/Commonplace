@@ -19,6 +19,8 @@ related:
   - cognitive-bias
   - metacognition
   - judgment-rules
+  - hindsight-bias
+  - outcome-bias
 next:
   - judgment-rules
   - pre-decision-check
@@ -58,6 +60,15 @@ updated: 2026-06-25
 
 長く書きすぎず、次回使える形にまとめます。
 
+## 結果論を分ける
+
+判断後は、特に[[hindsight-bias|後知恵バイアス]]と[[outcome-bias|結果バイアス]]に注意します。
+
+- 後知恵バイアス: 結果を知った後で「最初から分かっていた」と感じていないか。
+- 結果バイアス: 良い結果を良い判断、悪い結果を悪い判断と短絡していないか。
+
+レビューでは、判断時点で分かっていた情報、後から分かった情報、結果、プロセス品質を分けます。
+
 ## 例
 
 記事の主張が強くなりすぎた場合、結果として読まれたかどうかだけでなく、根拠、不確実性、反対例、表現の強さを見ます。
@@ -83,6 +94,8 @@ updated: 2026-06-25
 - [[decision-making]]
 - [[judgment-training]]
 - [[cognitive-bias]]
+- [[hindsight-bias|後知恵バイアス]]
+- [[outcome-bias|結果バイアス]]
 - [[metacognition]]
 - [[judgment-rules]]
 
