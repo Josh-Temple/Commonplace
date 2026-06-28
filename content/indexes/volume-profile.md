@@ -13,13 +13,17 @@ sources:
   - sources/research-notes/market-profile-and-value-area.md
 related:
   - trading
+  - trading-process
+  - no-trade-checklist
   - volume-profile-overview
   - point-of-control
   - value-area
   - profile-shapes
+  - volume-profile-checklist
 next:
   - volume-profile-overview
-updated: 2026-06-24
+  - volume-profile-checklist
+updated: 2026-06-28
 ---
 
 ## 目的
@@ -27,6 +31,12 @@ updated: 2026-06-24
 Volume Profileは、選んだセッションや範囲で、どの価格帯に出来高が集まったかを観察するための道具です。このページは教育目的の整理であり、金融助言ではありません。
 
 このクラスターでは、Volume Profileを主役の売買シグナルではなく、[[trading-context]]、[[market-structure]]、[[horizontal-levels]]で作ったシナリオを補助する観察層として扱います。
+
+## Androidでの最短ルート
+
+- 初回: [[volume-profile-overview]] → [[point-of-control]] → [[value-area]]。
+- 実践前: [[volume-profile-checklist]]だけ開き、必要な用語へ戻る。
+- 判断に迷う時: [[trading-process]] → [[no-trade-checklist]]へ戻る。
 
 ## 読む順序
 

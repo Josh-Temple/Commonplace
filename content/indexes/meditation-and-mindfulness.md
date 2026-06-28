@@ -34,7 +34,7 @@ next:
   - mindfulness
   - meditation-family-of-practices
   - mindfulness-safety
-updated: 2026-06-26
+updated: 2026-06-28
 ---
 
 ## 要点
@@ -43,6 +43,11 @@ updated: 2026-06-26
 
 この領域は教育目的です。医療・心理療法の代替ではなく、症状が強い場合は安全確認と専門的支援を優先します。
 
+## Androidでの最短ルート
+
+- 初回: [[mindfulness]] → [[mindfulness-safety]] → [[five-minute-mindfulness-reset]]。
+- 実践を選ぶ: [[mindfulness-practice-cards]] → [[daily-mindfulness-practice]]。
+- 体系比較: [[mindfulness-based-interventions-comparison]] → [[mbsr]] / [[mbct]] / [[act-and-mindfulness]] / [[theravada-meditation]]。
 
 ## 実践の理由と効果を知る
 
@@ -103,7 +108,7 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 
 ## 上座部仏教系の瞑想を知る
 
-[[theravada-meditation]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+[[theravada-meditation]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
 
 上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
 

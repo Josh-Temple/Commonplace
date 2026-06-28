@@ -1,5 +1,243 @@
 # Handoff: Lumen MVP
 
+## Android reading and navigation QA pass — 2026-06-28
+
+### Purpose
+
+Reviewed Commonplace / Lumen for Android-sized reading and navigation without editing first, then made small additive navigation improvements to dense major index pages. This was a review / cleanup, link-maintenance, validation, and documentation task. No new conceptual content, private content, citations, statistics, source claims, or evidence-strength claims were added.
+
+### Issue #3 verification
+
+- Local repository state indicates Issue #3 (“Add content validation and Codex issue-check workflow”) is satisfied: `package.json` includes `validate:content` and `validate`, `scripts/validate-content.mjs` exists, `README.md` documents validation, `AGENTS.md` requires checking open GitHub Issues before selecting work, and `npm run validate` passes.
+- Recommended closure note: “Issue #3 appears satisfied in the current repository state. The content validator and full validation script are present, documented in README, and passing locally; AGENTS.md includes the issue-check workflow. Recommend closing Issue #3 after confirming remote issue state.”
+- Remote Issue #3 state and recent PRs could not be verified or commented on because the `gh` CLI is not installed and this checkout has no configured git remote. Web search did not locate a reliable public issue page for this repository.
+
+### Files reviewed
+
+- `AGENTS.md`
+- `README.md`
+- `Handoff.md`
+- `Commonplace Project Source.md`
+- `package.json`
+- `scripts/validate-content.mjs`
+- `app/components.tsx`
+- `app/styles.css`
+- `app/page.tsx`
+- `app/indexes/page.tsx`
+- `app/pages/[...slug]/page.tsx`
+- `lib/content.ts`
+- `content/indexes/trading.md`
+- `content/indexes/decision-making.md`
+- `content/indexes/meditation-and-mindfulness.md`
+- `content/indexes/theravada-meditation.md`
+- `content/indexes/volume-profile.md`
+
+### Files changed
+
+- `content/indexes/trading.md` — added an Android-focused shortest-route section for overview, pre-trade use, and no-trade / review use.
+- `content/indexes/decision-making.md` — added an Android-focused shortest-route section for first read, pre-decision use, and post-decision review.
+- `content/indexes/meditation-and-mindfulness.md` — added an Android-focused shortest-route section and updated the Theravada path to include the newer five hindrances / seven awakening factors pages.
+- `content/indexes/theravada-meditation.md` — added an Android-focused shortest-route section for overview, doctrinal map, and confusion-avoidance path.
+- `content/indexes/volume-profile.md` — added an Android-focused shortest-route section and strengthened `related` / `next` links to checklist and no-trade routing.
+- `Handoff.md` — recorded this QA pass.
+
+### Commands run
+
+```bash
+git status --short
+git log --oneline -5
+git remote -v
+cat AGENTS.md
+cat README.md
+sed -n '1,240p' 'Commonplace Project Source.md'
+sed -n '1,220p' Handoff.md
+gh issue view 3 --comments || true
+gh issue list --state open --limit 20 || true
+gh pr list --state all --limit 10 || true
+find .. -name AGENTS.md -print
+sed -n '1,240p' content/indexes/trading.md content/indexes/decision-making.md content/indexes/meditation-and-mindfulness.md content/indexes/theravada-meditation.md content/indexes/volume-profile.md
+rg -n "Issue #3|#3|Android|reading|navigation|QA|viewport|screenshot|mobile" .github README.md Handoff.md content package.json scripts src app 2>/dev/null
+cat package.json
+sed -n '1,220p' app/styles.css
+sed -n '1,200p' app/components.tsx
+sed -n '240,330p' Handoff.md
+sed -n '620,685p' Handoff.md
+sed -n '1728,1762p' Handoff.md
+command -v chromium || command -v chromium-browser || command -v google-chrome || command -v firefox || command -v playwright || true
+sed -n '1,220p' app/pages/[...slug]/page.tsx app/indexes/page.tsx app/page.tsx lib/content.ts scripts/validate-content.mjs
+npm run validate:content
+npm run validate
+git status --short
+```
+
+### Validation result
+
+- `npm run validate:content` passed for 86 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build; Next generated 92 static pages.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Android reading / navigation QA result
+
+- The app already has mobile-first layout patterns in `app/styles.css`, including sticky compact top navigation, reader font scaling, quiet list rows, and mobile table scrolling.
+- The major index pages were structurally valid, but several had long reading paths before a mobile reader could decide where to go. The added “Androidでの最短ルート” sections provide short first-screen decision paths without adding new concepts.
+- No browser screenshot was captured because no Chromium, Chrome, Firefox, or Playwright executable was available in this container.
+
+### Remaining limitations
+
+- Remote Issue #3 and recent PR state remain unverified because `gh` is unavailable and no git remote is configured.
+- Android scanability was reviewed from source structure and mobile-first CSS, not from a real Android device or browser screenshot.
+- The edits improve navigation text only; they do not tune CSS spacing, tap targets, rendered line length, or browser-specific behavior.
+
+### Recommended next task
+
+Run a real Android Chrome or browser-equipped viewport review of `/indexes` plus the five major index detail pages, capture screenshots, and tune CSS only if visible spacing, line length, or tap-target issues appear. If GitHub access is available, verify Issue #3 remotely and close it with the prepared closure note above.
+
+## Theravada doctrinal practice maps expansion — 2026-06-27
+
+### Purpose
+
+Expanded the Theravada-related meditation cluster with doctrinal / psychological practice maps that connect Satipaṭṭhāna, Ānāpānasati, samatha / vipassanā / jhāna, mettā / brahmavihāra, and daily practice boundaries to five hindrances, seven awakening factors, three characteristics, four noble truths, noble eightfold path, and lineage-difference cautions. This was a content-writing, source-integration, link-maintenance, validation, and documentation task. The pass preserves the distinction among Buddhist texts / traditions, modern mindfulness programs, ACT / MBCT / MBSR, and clinical evidence.
+
+### Added content pages
+
+- `content/concepts/five-hindrances.md` — reader-facing map of the five hindrances as state-noticing vocabulary, not self-criticism.
+- `content/concepts/seven-awakening-factors.md` — reader-facing map of the seven awakening factors as balance vocabulary, not attainment diagnosis.
+- `content/concepts/three-characteristics.md` — cautious background page for anicca / dukkha / anattā, avoiding self-guided strong insight practice.
+- `content/concepts/four-noble-truths-and-eightfold-path.md` — cautious background page for four noble truths and noble eightfold path as ethics / concentration / wisdom context.
+- `content/concepts/theravada-lineages-overview.md` — overview page distinguishing modern vipassanā lineages, Thai Forest, text-based explanations, commentarial framing, and secular mindfulness translation.
+
+### Updated content pages
+
+- `content/indexes/theravada-meditation.md` — added doctrinal map and lineage-difference sections linking to the new pages.
+- `content/methods/satipatthana-practice-map.md` — linked five hindrances, seven awakening factors, and four noble truths / eightfold path; clarified dhammas as doctrinal frameworks, not merely thought content.
+- `content/methods/anapanasati-sixteen-steps.md` — linked three characteristics and seven awakening factors; strengthened the boundary that the final tetrad belongs to Buddhist insight context, not stress relief.
+- `content/concepts/samatha-vipassana-jhana.md` — added lineage-difference routing, clarified that samatha / vipassanā relations vary by textual and traditional context, and strengthened non-diagnosis of jhāna.
+- `content/methods/theravada-metta-and-brahmavihara.md` — clarified upekkhā as equanimity / balance rather than indifference, separated brahmavihāra terms, and strengthened difficult-person cautions.
+- `content/protocols/theravada-inspired-daily-practice.md` — added light five-hindrance recording, seven-awakening-factor balance wording, and stronger boundaries against self-guided three-characteristics / no-self / suffering contemplation.
+- `content/concepts/mindfulness-based-interventions-comparison.md` — clarified MBSR / MBCT as clinical / education programs, ACT as a psychotherapy model, and Theravada-related practice as a Buddhist religious / philosophical / practical system; strengthened the note that Buddhist texts are not clinical-efficacy evidence.
+
+### Added source notes
+
+- `sources/research-notes/satipatthana-interpretation-comparison.md` — comparison scaffold for SuttaCentral, Access to Insight, Anālayo, Nyanaponika, and Bhikkhu Bodhi related to Satipaṭṭhāna interpretation.
+- `sources/research-notes/theravada-lineages-and-modern-vipassana.md` — distinction map for Pāli-canon framing, commentarial framing, modern Burmese vipassanā, Mahasi, Ledi, U Ba Khin / Goenka, Thai Forest, and secular mindfulness adaptations.
+- `sources/research-notes/five-hindrances-seven-awakening-factors.md` — source note connecting five hindrances and seven awakening factors to Satipaṭṭhāna / Ānāpānasati contexts.
+- `sources/research-notes/three-characteristics-four-noble-truths.md` — source note for anicca, dukkha, anattā, four noble truths, and safe reader-facing framing.
+
+### Updated source notes
+
+- No existing source note was materially rewritten in this pass; new source notes were added and existing content pages were linked to them.
+
+### External materials checked
+
+- SuttaCentral MN 10 Satipaṭṭhānasutta and DN 22 Mahāsatipaṭṭhānasutta pages as already used by existing source notes.
+- SuttaCentral MN 118 Ānāpānassatisutta page as already used by existing source notes.
+- Access to Insight MN 10 translations by Thanissaro Bhikkhu and Soma Thera as already used by existing source notes.
+- Bhikkhu Anālayo, `Satipaṭṭhāna: The Direct Path to Realization`, located via University of Hamburg / Abhayagiri PDF copies and checked only at a high level.
+- Nyanaponika Thera, `The Heart of Buddhist Meditation`, located via Buddhist Publication Society PDF and checked only at a high level.
+- Lion's Roar overview of Vipassana as a secondary overview for modern vipassanā movement context.
+- Vipassana Research Institute pages on U Ba Khin as a tradition-affiliated source for U Ba Khin / Goenka lineage context.
+- Forest Sangha website as a tradition-affiliated source for Ajahn Chah / Thai Forest community context.
+- Tricycle / modern vipassanā history article snippets as a secondary overview for Burmese institutional expansion context.
+
+### Unverified or insufficient materials
+
+- Anālayo and Nyanaponika were not deeply extracted chapter-by-chapter.
+- Bhikkhu Bodhi's broader Satipaṭṭhāna, four noble truths, and noble eightfold path explanations still need direct extraction.
+- Academic histories of the modern vipassanā movement, including Erik Braun and related scholarship, remain insufficiently checked.
+- Direct Mahasi Sayadaw, Ledi Sayadaw, U Ba Khin, S. N. Goenka, Ajahn Chah, Ajahn Mun, Ajahn Lee, Ajahn Sumedho, Ajahn Sucitto, Ajahn Brahm, and Thanissaro Bhikkhu source extraction remains incomplete.
+- Visuddhimagga / commentarial framing remains mostly unreviewed.
+- No retreat instructions, jhāna instructions, attainment diagnosis, or strong no-self / cemetery / body-parts practice instructions were added.
+
+### Commands run
+
+```bash
+cat README.md
+cat AGENTS.md
+sed -n '1,140p' Handoff.md
+sed -n '1,220p' 'Commonplace Project Source.md'
+rg -n "Theravada|上座部|satipaṭṭhāna|Satipa|Ānāpānasati|anapanasati|samatha|vipassanā|vipassana|jhāna|jhana|mettā|metta|brahmavihāra|brahmavihara|五蓋|七覚支|四聖諦|八正道|三相|無常|苦|無我|nīvaraṇa|bojjhaṅga|anicca|dukkha|anattā|Dhammapada|Anālayo|Nyanaponika|Bhikkhu Bodhi|Mahasi|Ledi|Goenka|Thai Forest|Ajahn" content sources Handoff.md
+gh issue list --state open --limit 20 || true
+sed -n '1,220p' content/indexes/theravada-meditation.md content/methods/satipatthana-practice-map.md content/methods/anapanasati-sixteen-steps.md
+sed -n '1,240p' content/concepts/samatha-vipassana-jhana.md content/methods/theravada-metta-and-brahmavihara.md content/protocols/theravada-inspired-daily-practice.md content/concepts/mindfulness-based-interventions-comparison.md
+sed -n '1,220p' sources/research-notes/satipatthana-primary-texts.md sources/research-notes/anapanasati-primary-texts.md sources/research-notes/samatha-vipassana-jhana.md sources/research-notes/metta-and-brahmavihara-primary-texts.md sources/research-notes/theravada-meditation-overview.md
+npm run validate:content
+rg -n "five-hindrances|seven-awakening-factors|three-characteristics|four-noble-truths-and-eightfold-path|theravada-lineages-overview|satipatthana-interpretation-comparison|theravada-lineages-and-modern-vipassana|five-hindrances-seven-awakening-factors|three-characteristics-four-noble-truths" content sources
+npm run validate
+git status --short
+```
+
+### Validation results
+
+- `npm run validate:content` passed for 86 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build; Next generated 92 static pages.
+- The post-edit `rg` check found the new page ids and source-note ids across `content/` and `sources/`.
+- `gh issue list --state open --limit 20 || true` could not check open issues because the `gh` CLI is not installed in this container.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining uncertainty
+
+- The new pages are cautious learning maps, not doctrinal authorities, lineage manuals, retreat guides, clinical-efficacy reviews, or formal meditation instructions.
+- Five hindrances, seven awakening factors, three characteristics, four noble truths, and eightfold path material needs deeper source extraction before stronger claims.
+- Lineage comparisons are intentionally preliminary and should not be used to judge which tradition is correct or superior.
+- Buddhist texts and lineage materials are used for vocabulary, religious / philosophical context, and practice-map background, not for health-effect or clinical claims.
+- No Android viewport screenshot was captured because this was a content/source-note update with no app UI code changes.
+
+### Suggested next tasks
+
+1. Deeply extract Anālayo, Nyanaponika, and Bhikkhu Bodhi on Satipaṭṭhāna before strengthening interpretation-comparison claims.
+2. Add a dedicated source note for Visuddhimagga / commentarial framing if samatha / vipassanā / jhāna distinctions need more precision.
+3. Add academic source extraction for modern vipassanā history, especially Mahasi, Ledi, U Ba Khin / Goenka, Thai Forest, and Western Insight transmission.
+4. Review the new Japanese pages on Android-sized viewport for scanability, Pāli diacritics, and title ambiguity with the broader Buddhism draft pages.
+
+## Buddhism basic concepts draft cluster — 2026-06-27
+
+### Purpose
+
+Added a draft Buddhism concept cluster supplied by the user and a small index page to make the new pages easier to browse in Lumen. This was a content-writing, link-maintenance, validation, and documentation task. No source notes were created in this pass, so the pages remain medium-confidence drafts with empty `sources` arrays and explicit uncertainty notes.
+
+### Files changed
+
+- `content/concepts/buddhism-four-noble-truths.md` — added a draft concept page for 四諦 with practical framing for observing suffering, causes, cessation, and path.
+- `content/concepts/buddhism-noble-eightfold-path.md` — added a draft concept page for 八聖道 with a practical checklist for view, intention, speech, action, livelihood, effort, mindfulness, and concentration.
+- `content/concepts/buddhism-five-precepts.md` — added a draft concept page for 五戒 as behavioral boundaries for reducing harm and preserving judgment.
+- `content/concepts/buddhism-five-hindrances.md` — added a draft concept page for 五蓋 as a classification for attention and self-regulation obstacles.
+- `content/indexes/buddhism.md` — added a draft Buddhism theme index linking the four new concept pages by starting order and use case.
+- `Handoff.md` — recorded this handoff entry.
+
+### Commands run
+
+```bash
+cat AGENTS.md
+cat Handoff.md
+cat README.md
+gh issue list --state open --limit 20 || true
+find .. -name AGENTS.md -print
+find content -maxdepth 2 -type f | sort | sed -n '1,120p'
+npm run validate:content
+npm run validate
+git status --short
+```
+
+### Validation results
+
+- `npm run validate:content` passed for 81 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and the production Next.js build.
+- `gh issue list --state open --limit 20 || true` could not check open issues because the `gh` CLI is not installed in this container.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+
+### Remaining limitations
+
+- The new Buddhism pages are reader-facing drafts, not source-backed doctrinal or philological explanations.
+- No source notes were added for Four Noble Truths, Noble Eightfold Path, Five Precepts, or Five Hindrances.
+- The pages use modern practical interpretation for self-understanding, emotion regulation, and judgment; stronger claims need primary texts, reliable translations, tradition-specific notes, and research sources.
+- No UI screenshot was captured because this was a content-only update.
+
+### Suggested next tasks
+
+1. Create source notes for 四諦, 八聖道, 五戒, and 五蓋 using primary Buddhist texts and reliable scholarly or teacher sources.
+2. Cross-link the new `buddhism` index from existing meditation or Theravada index pages if a broader Buddhist navigation hub is desired.
+3. Decide whether the new pages should remain broad Buddhism drafts or be scoped more narrowly to early Buddhism / Theravada framing.
+
 ## Theravada meditation content cluster — 2026-06-26
 
 ### Purpose
