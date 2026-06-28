@@ -21,7 +21,7 @@ related:
 next:
   - satipatthana-practice-map
   - anapanasati-sixteen-steps
-updated: 2026-06-26
+updated: 2026-06-28
 ---
 
 ## 要点
@@ -29,6 +29,12 @@ updated: 2026-06-26
 上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。
 
 このページでは、宗教実践そのものを再現するのではなく、理解の地図として整理します。現代マインドフルネス、MBSR、MBCT、ACTと同じものとして扱いません。
+
+## Androidでの最短ルート
+
+- 全体像: [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]]。
+- 教理地図: [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]]。
+- 混同を避ける: [[theravada-lineages-overview]] → [[mindfulness-based-interventions-comparison]]。
 
 ## 上座部仏教系瞑想とは何を指すか
 
@@ -73,6 +79,18 @@ samathaを単なるリラックス法、vipassanāを単なるオープンモニ
 
 伝統や解釈によって関係づけが異なるため、このページ群では到達判定や自己流の高度実践を扱いません。
 
+## 実践を支える教理地図
+
+四念処を読む前後に、[[five-hindrances]]、[[seven-awakening-factors]]、[[three-characteristics]]、[[four-noble-truths-and-eightfold-path]]を確認します。
+
+これらは臨床効果の根拠ではなく、上座部仏教系瞑想の宗教的・哲学的・実践的背景です。瞑想を注意技法だけに縮小せず、倫理・集中・智慧・非執着の体系として読むための地図です。
+
+## 系譜差を知る
+
+現代ヴィパッサナー、Thai Forest、経典ベースの説明を混同しないために、[[theravada-lineages-overview]]を読みます。
+
+現代ヴィパッサナー運動には複数の系譜があり、一つの方法としてまとめません。
+
 ## 日常実践として参照できる範囲
 
 日常では、短い呼吸への気づき、感受の名づけ、心の状態の確認、善意の短い句、五蓋に気づく程度に留めます。
@@ -87,7 +105,7 @@ samathaを単なるリラックス法、vipassanāを単なるオープンモニ
 
 ## 読む順番
 
-[[theravada-meditation]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+[[theravada-meditation]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
 
 メッタと四梵住を知る場合は、[[theravada-metta-and-brahmavihara]]へ進みます。日常で慎重に参照する場合は、[[theravada-inspired-daily-practice]]を読みます。
 

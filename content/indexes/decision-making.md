@@ -31,13 +31,19 @@ next:
   - cognitive-bias
   - pre-decision-check
   - decision-review
-updated: 2026-06-26
+updated: 2026-06-28
 ---
 ## 要点
 
 意思決定は、知識を増やすだけではなく、判断前に止まり、根拠を分け、判断後に振り返る訓練対象として扱います。
 
 このページは、意思決定クラスターの読み方を示す入口です。
+
+## Androidでの最短ルート
+
+- 初回: [[cognitive-bias]] → [[metacognition]] → [[pre-decision-check]]。
+- 判断前: [[pre-decision-check]]だけ開いて、必要ならバイアスページへ戻る。
+- 判断後: [[decision-review]] → [[hindsight-bias]] → [[outcome-bias]]。
 
 ## まず読む
 

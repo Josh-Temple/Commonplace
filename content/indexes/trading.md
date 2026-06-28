@@ -22,7 +22,7 @@ related:
   - no-trade-checklist
 next:
   - trading-process
-updated: 2026-06-24
+updated: 2026-06-28
 ---
 
 ## この領域の目的
@@ -30,6 +30,12 @@ updated: 2026-06-24
 この領域は、売買シグナル集ではなく、判断を整理するための公開向け教育メモです。金融助言ではありません。
 
 基本の流れは、先に文脈と場所を決め、Volume Profileは補助的な観察層として使い、最後に無効条件・risk/reward・感情状態を確認することです。
+
+## Androidでの最短ルート
+
+- 全体像だけ見る: [[trading-process]] → [[trading-rules]]。
+- エントリー前に使う: [[pre-trade-context-checklist]] → [[pre-trade-emotion-check]]。
+- 迷ったら見送る: [[no-trade-checklist]] → [[post-trade-review-checklist]]。
 
 ## 読む順序
 

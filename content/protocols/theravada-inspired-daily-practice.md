@@ -11,9 +11,14 @@ tags:
 confidence: low
 sources:
   - sources/research-notes/theravada-meditation-overview.md
+  - sources/research-notes/five-hindrances-seven-awakening-factors.md
+  - sources/research-notes/three-characteristics-four-noble-truths.md
   - sources/research-notes/meditation-safety-and-adverse-effects.md
 related:
   - theravada-meditation
+  - five-hindrances
+  - seven-awakening-factors
+  - three-characteristics
   - mindfulness-safety
   - mindfulness-practice-log
 next:
@@ -31,7 +36,9 @@ updated: 2026-06-26
 
 Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 
-日常で使う場合は、短い呼吸への気づき、感受の名づけ、心の状態の確認、善意の短い句、五蓋への気づき程度に留めます。
+日常で使う場合は、短い呼吸への気づき、感受の名づけ、心の状態の確認、善意の短い句、[[five-hindrances|五蓋]]への気づき程度に留めます。
+
+[[seven-awakening-factors|七覚支]]は、到達判定ではなく、心のバランスを理解する語彙として弱く参照します。[[three-characteristics|三相]]、無我、苦の強い観察は日常プロトコルに入れません。
 
 ## 朝の1分
 
@@ -52,11 +59,15 @@ Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 
 分析せず、状態として確認します。
 
+必要なら、五蓋の記録として「欲・怒り・眠気や鈍さ・そわそわ・疑いのどれが強いか」を一語だけ残します。これは自己批判ではなく、状態のメモです。
+
 ## 感情が強い時の1分
 
 怒り、不安、焦り、自己批判が強い時は、まず安全な対象に戻ります。
 
 呼吸が合わなければ、目を開け、部屋の物を見て、足裏を感じます。感情を消すことを目的にしません。
+
+気づきが苦しくなる場合は、仏教語彙で深めず外部対象へ戻ります。無我、苦、無常、執着といった言葉で分析を続けません。
 
 ## 対人場面の1分
 
@@ -75,6 +86,8 @@ Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 ## やらないほうがよいこと
 
 - 死体観、不浄観、強い無我観を自己流で行う。
+- 三相、無我、苦の観察を日常プロトコルとして強める。
+- 七覚支を悟りや進歩の自己診断に使う。
 - 長時間の内観や強集中を増やす。
 - jhānaや悟りの到達段階を判定する。
 - 強い症状を瞑想だけで扱おうとする。
@@ -88,6 +101,8 @@ Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 - 何分行ったか。
 - 苦しくなったか。
 - 対象を変えたか。
+- 五蓋のうち、どれが強かったか。
+- 七覚支を使うなら、努力が強すぎたか弱すぎたかなど、バランス語彙としてだけ記録したか。
 - 日常行動へ戻れたか。
 
 ## 注意点
@@ -101,6 +116,9 @@ Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 - [[theravada-meditation]]
 - [[satipatthana-practice-map]]
 - [[anapanasati-sixteen-steps]]
+- [[five-hindrances]]
+- [[seven-awakening-factors]]
+- [[three-characteristics]]
 - [[theravada-metta-and-brahmavihara]]
 - [[mindfulness-safety]]
 - [[mindfulness-practice-log]]

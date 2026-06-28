@@ -14,9 +14,14 @@ sources:
   - sources/research-notes/theravada-meditation-overview.md
 related:
   - theravada-meditation
+  - five-hindrances
+  - seven-awakening-factors
+  - four-noble-truths-and-eightfold-path
   - breath-awareness-meditation
   - open-monitoring-meditation
 next:
+  - five-hindrances
+  - seven-awakening-factors
   - anapanasati-sixteen-steps
 updated: 2026-06-26
 ---
@@ -53,9 +58,11 @@ Commonplaceで参照しやすいのは、呼吸、姿勢、歩く・立つ・座
 
 ## 法を見る
 
-法を見る領域には、五蓋、五蘊、六処、七覚支、四聖諦などの教理的枠組みが含まれます。
+法を見る領域には、[[five-hindrances|五蓋]]、五蘊、六処、[[seven-awakening-factors|七覚支]]、[[four-noble-truths-and-eightfold-path|四聖諦]]などの教理的枠組みが含まれます。
 
-ここでの「法」は、現代心理学の法則や、単なる思考内容とは同じではありません。読者向けページでは、五蓋に気づく程度の軽い参照に留めます。
+ここでの「法」は、現代心理学の法則や、単なる思考内容とは同じではありません。dhammas の観察は、思考を眺めるだけでなく、仏教的な教理・実践地図に照らして心身の状態を見る領域も含みます。
+
+五蓋は、悪い自分を責めるためではなく、心を覆っている状態に気づくための語彙として参照します。読者向けページでは、五蓋に気づく程度の軽い参照に留めます。
 
 ## 現代マインドフルネスとの違い
 
@@ -69,7 +76,9 @@ Commonplaceで参照しやすいのは、呼吸、姿勢、歩く・立つ・座
 - 姿勢や動作に気づく。
 - 快・不快・中立のトーンを短く名づける。
 - 心が散っている、重い、急いでいる、落ち着いていると気づく。
-- 五蓋のような妨げを、自己批判ではなく状態として見る。
+- [[five-hindrances|五蓋]]のような妨げを、自己批判ではなく状態として見る。
+- [[seven-awakening-factors|七覚支]]を、到達判定ではなくバランス語彙として知る。
+- [[four-noble-truths-and-eightfold-path|四聖諦と八正道]]を、瞑想が倫理・智慧・実践全体に支えられる地図として読む。
 
 ## 自己流で扱わないほうがよい範囲
 
@@ -92,6 +101,9 @@ Commonplaceでは、学習地図として理解し、日常実践では短く安
 ## 関連ノート
 
 - [[theravada-meditation]]
+- [[five-hindrances]]
+- [[seven-awakening-factors]]
+- [[four-noble-truths-and-eightfold-path]]
 - [[anapanasati-sixteen-steps]]
 - [[breath-awareness-meditation]]
 - [[open-monitoring-meditation]]
