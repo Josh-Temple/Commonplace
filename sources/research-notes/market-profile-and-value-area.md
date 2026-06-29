@@ -79,3 +79,11 @@ These notes remain candidate working notes. Do not promote stronger claims into 
 - Any exact win rate, probability, or guaranteed edge.
 - Any personalized position-sizing or trade recommendation.
 - Any claim that a single indicator or pattern is sufficient for entry.
+
+## 2026-06-28 nodes / distribution verification TODOs
+
+- Verify HVN / LVN terminology where it overlaps with Market Profile, auction-market theory, and volume-at-price tools.
+- Verify single prints / poor structure as Market Profile / TPO terms and separate them from Volume Profile low-volume pockets.
+- Check platform differences in Value Area, POC, HVN, LVN, row size, bin size, and session definitions.
+- Verify double-distribution and multiple-distribution descriptions before raising confidence.
+- Keep fast travel and thin-area movement claims as practitioner heuristics until stronger sources are reviewed.

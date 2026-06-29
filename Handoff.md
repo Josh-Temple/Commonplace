@@ -1,5 +1,126 @@
 # Handoff: Lumen MVP
 
+## Volume Profile nodes / fast travel deepening pass — 2026-06-28
+
+### Purpose
+
+Performed a content-writing, source-integration, link-maintenance, validation, and documentation pass for the Commonplace / Lumen trading area. The pass deepens the Volume Profile cluster around HVN, LVN, thin areas, fast travel, and distribution structure while preserving the existing public-safe boundary that Volume Profile is an auxiliary observation layer, not a standalone trading signal or financial advice.
+
+### Files reviewed
+
+- `AGENTS.md`
+- `Handoff.md`
+- `Commonplace Project Source.md`
+- `README.md`
+- `content/indexes/volume-profile.md`
+- `content/concepts/volume-profile-overview.md`
+- `content/concepts/point-of-control.md`
+- `content/concepts/value-area.md`
+- `content/concepts/profile-shapes.md`
+- `content/methods/poc-reaction-breakout-analysis.md`
+- `content/methods/value-area-close-analysis.md`
+- `content/protocols/volume-profile-checklist.md`
+- `content/rules/eighty-percent-rule.md`
+- `content/indexes/trading.md`
+- `content/indexes/trading-process.md`
+- `content/concepts/market-structure.md`
+- `content/concepts/horizontal-levels.md`
+- `content/methods/horizontal-level-analysis.md`
+- `content/methods/entry-decision-process.md`
+- `content/methods/risk-reward-and-invalidation.md`
+- `content/protocols/pre-trade-context-checklist.md`
+- `sources/research-notes/volume-profile-basics.md`
+- `sources/research-notes/market-profile-and-value-area.md`
+- `sources/research-notes/eighty-percent-rule.md`
+- `sources/research-notes/trading-knowledge-map.md`
+- `sources/research-notes/market-structure-basics.md`
+- `sources/research-notes/horizontal-levels-basics.md`
+
+### Files created
+
+- `content/concepts/high-volume-node.md` — HVN definition and cautious interpretation as acceptance / congestion / rotation / slowdown area.
+- `content/concepts/low-volume-node.md` — LVN definition and cautious interpretation as rejection / low-acceptance / transition / distribution-boundary area.
+- `content/concepts/fast-travel-zone.md` — fast travel as a possible thin-area scenario, not a prediction.
+- `content/concepts/volume-profile-distribution-structure.md` — single / double / multiple distribution, high-volume areas, low-volume areas, thin areas, and cautious volume-ledge framing.
+- `content/methods/lvn-hvn-analysis.md` — step-by-step LVN / HVN analysis method with scenario table.
+- `content/methods/fast-travel-scenario-analysis.md` — setup, confirmation, invalidation, and slowdown candidates for fast-travel scenarios.
+- `content/protocols/volume-profile-advanced-checklist.md` — advanced Volume Profile checklist and no-trade conditions.
+- `sources/research-notes/volume-profile-nodes-and-fast-travel.md` — draft source note with low evidence level and verification TODOs.
+
+### Files updated
+
+- `content/indexes/volume-profile.md` — expanded reading path to include HVN, LVN, distribution structure, fast travel, LVN/HVN analysis, fast-travel analysis, and advanced checklist.
+- `content/concepts/volume-profile-overview.md` — added major components section covering POC, Value Area, HVN, LVN, thin area, distribution, and profile shape.
+- `content/concepts/point-of-control.md` — clarified POC as the strongest platform-calculated node within the selected profile and connected it to HVN / distribution structure.
+- `content/concepts/value-area.md` — added HVN / LVN relationship and cautions around outside value versus accepted outside value.
+- `content/concepts/profile-shapes.md` — connected D / P / b shapes to distribution structure, HVN, LVN, POC, and session definition checks.
+- `content/methods/poc-reaction-breakout-analysis.md` — added HVN / LVN integration for POC reaction, rotation, fast-travel scenarios, and next-HVN stalls.
+- `content/methods/value-area-close-analysis.md` — added HVN / LVN integration for closes above / below / back inside value.
+- `content/protocols/volume-profile-checklist.md` — added basic vs advanced distinction and routed to the advanced checklist.
+- `content/rules/eighty-percent-rule.md` — kept confidence low and added internal HVN / LVN / distribution checks without promoting the rule as verified probability.
+- `content/indexes/trading.md` — updated the Volume Profile subpath to include new node and distribution pages.
+- `sources/research-notes/volume-profile-basics.md` — added HVN / LVN / fast-travel / platform-setting verification TODOs.
+- `sources/research-notes/market-profile-and-value-area.md` — added node, distribution, single-prints / poor-structure, and platform-difference TODOs.
+- `sources/research-notes/eighty-percent-rule.md` — added LVN / HVN interaction and source-quality TODOs.
+- `Handoff.md` — recorded this pass.
+
+### Summary of the Volume Profile deepening pass
+
+The Volume Profile cluster now treats HVN, LVN, fast travel, thin areas, and distribution structure as first-class pages. The new material emphasizes that high-volume areas may represent acceptance, congestion, magnets, rotation, or slowdown areas depending on context, while low-volume areas may represent rejection, transition, distribution boundaries, or possible fast-travel areas only if acceptance occurs. Fast travel is framed as a conditional scenario to prepare for, not a guaranteed move.
+
+### Source note changes
+
+A new draft source note, `sources/research-notes/volume-profile-nodes-and-fast-travel.md`, was added with `evidence_level: low` and `review_status: unreviewed`. Existing Volume Profile / Market Profile / 80% rule notes were updated with TODOs for HVN / LVN terminology verification, fast-travel source quality, single prints / poor structure as Market Profile / TPO concepts, platform differences, bin / row size effects, and session versus composite versus visible-range implications.
+
+### Confidence limitations
+
+- HVN and distribution pages use medium confidence only for broad terminology and cautious structure framing.
+- LVN, fast travel, LVN/HVN methods, fast-travel methods, profile-shape implications, and 80% rule interactions remain low confidence.
+- No win rates, probabilities, statistics, personalized trade instructions, or guaranteed signals were added.
+- Single prints / poor structure were mentioned only as related Market Profile / TPO concepts, not as verified Volume Profile signals.
+
+### Commands run
+
+```bash
+pwd
+find .. -name AGENTS.md -print
+sed -n '1,220p' AGENTS.md
+sed -n '1,220p' Handoff.md
+sed -n '1,160p' README.md
+sed -n '1,160p' 'Commonplace Project Source.md'
+gh issue list --state open --limit 20 || true
+rg -n "low-volume-node|high-volume-node|fast-travel|fast travel|LVN|HVN|single prints|poor structure" content sources || true
+sed -n '1,220p' content/indexes/volume-profile.md content/concepts/volume-profile-overview.md content/concepts/point-of-control.md content/concepts/value-area.md content/concepts/profile-shapes.md content/methods/poc-reaction-breakout-analysis.md content/methods/value-area-close-analysis.md content/protocols/volume-profile-checklist.md content/rules/eighty-percent-rule.md
+sed -n '1,160p' content/indexes/trading.md content/indexes/trading-process.md content/concepts/market-structure.md content/concepts/horizontal-levels.md content/methods/horizontal-level-analysis.md content/methods/entry-decision-process.md content/methods/risk-reward-and-invalidation.md content/protocols/pre-trade-context-checklist.md
+sed -n '1,220p' sources/research-notes/volume-profile-basics.md sources/research-notes/market-profile-and-value-area.md sources/research-notes/eighty-percent-rule.md sources/research-notes/trading-knowledge-map.md sources/research-notes/market-structure-basics.md sources/research-notes/horizontal-levels-basics.md
+sed -n '1,260p' scripts/validate-content.mjs
+cat package.json
+npm run validate:content
+npm run validate
+git status --short
+git diff --stat
+```
+
+### Validation / build result
+
+- `npm run validate:content` passed for 93 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and production Next.js build; Next generated 99 static pages.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning before scripts ran.
+- `gh issue list --state open --limit 20 || true` could not check open GitHub Issues because the `gh` CLI is not installed in this container.
+
+### Remaining weaknesses
+
+- HVN / LVN / fast travel terminology still needs a dedicated source verification pass using platform documentation and Market Profile / auction-market sources.
+- Fast travel remains a practitioner heuristic with low evidence support in the repository.
+- Distribution structure labels can change with profile range, session definition, row size, bin size, and data source.
+- No diagrams were added; readers may benefit from public-safe schematic examples.
+- No real chart examples were added to avoid accidental trade advice or unsupported claims.
+
+### Recommended next task
+
+Run a dedicated source verification pass for Volume Profile terminology and platform documentation, especially HVN / LVN definitions, Value Area and POC calculation differences, row / bin size effects, session versus composite versus visible-range profiles, and Market Profile / TPO distinctions such as single prints and poor structure.
+
+
 ## Android reading and navigation QA pass — 2026-06-28
 
 ### Purpose

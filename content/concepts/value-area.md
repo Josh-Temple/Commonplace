@@ -14,10 +14,13 @@ sources:
 related:
   - volume-profile
   - point-of-control
+  - high-volume-node
+  - low-volume-node
+  - volume-profile-distribution-structure
   - value-area-close-analysis
 next:
-  - profile-shapes
-updated: 2026-06-24
+  - high-volume-node
+updated: 2026-06-28
 ---
 
 ## 要点
@@ -67,4 +70,7 @@ Value Area外で終わったからといって、自動的に継続を意味す�
 
 - [[point-of-control]]
 - [[profile-shapes]]
+- [[high-volume-node]]
+- [[low-volume-node]]
+- [[volume-profile-distribution-structure]]
 - [[eighty-percent-rule]]
