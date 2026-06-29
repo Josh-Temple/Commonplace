@@ -12,11 +12,14 @@ sources:
   - sources/research-notes/market-profile-and-value-area.md
 related:
   - value-area
+  - high-volume-node
+  - low-volume-node
+  - lvn-hvn-analysis
   - eighty-percent-rule
   - volume-profile-checklist
 next:
-  - eighty-percent-rule
-updated: 2026-06-24
+  - lvn-hvn-analysis
+updated: 2026-06-28
 ---
 
 ## 要点

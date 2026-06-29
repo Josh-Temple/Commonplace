@@ -79,3 +79,11 @@ These notes remain candidate working notes. Do not promote stronger claims into 
 - Any exact win rate, probability, or guaranteed edge.
 - Any personalized position-sizing or trade recommendation.
 - Any claim that a single indicator or pattern is sufficient for entry.
+
+## 2026-06-28 nodes / fast-travel verification TODOs
+
+- Verify HVN / LVN terminology across current platform documentation.
+- Verify fast travel source quality and avoid treating it as a guaranteed movement claim.
+- Verify whether single prints / poor structure are best framed as Market Profile / TPO concepts rather than pure Volume Profile terms.
+- Compare platform differences in node calculation, ties, row size, bin size, and visible-range behavior.
+- Document session versus composite versus visible-range implications before strengthening reader-facing claims.

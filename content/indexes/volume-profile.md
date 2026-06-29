@@ -18,11 +18,14 @@ related:
   - volume-profile-overview
   - point-of-control
   - value-area
-  - profile-shapes
+  - high-volume-node
+  - low-volume-node
+  - volume-profile-distribution-structure
+  - fast-travel-zone
   - volume-profile-checklist
+  - volume-profile-advanced-checklist
 next:
   - volume-profile-overview
-  - volume-profile-checklist
 updated: 2026-06-28
 ---
 
@@ -43,16 +46,29 @@ Volume Profileは、選んだセッションや範囲で、どの価格帯に出
 1. [[volume-profile-overview|Volume Profile overview]]
 2. [[point-of-control|POC / Point of Control]]
 3. [[value-area|Value Area / VAH / VAL]]
-4. [[profile-shapes|Profile shapes]]
-5. [[poc-reaction-breakout-analysis|POC reaction / breakout analysis]]
-6. [[value-area-close-analysis|Value Area close analysis]]
-7. [[eighty-percent-rule|80% rule]]
-8. [[volume-profile-checklist|Volume Profile checklist]]
+4. [[high-volume-node|HVN / High Volume Node]]
+5. [[low-volume-node|LVN / Low Volume Node]]
+6. [[volume-profile-distribution-structure|Distribution structure]]
+7. [[fast-travel-zone|Fast travel zones]]
+8. [[profile-shapes|Profile shapes]]
+9. [[poc-reaction-breakout-analysis|POC reaction / breakout analysis]]
+10. [[value-area-close-analysis|Value Area close analysis]]
+11. [[lvn-hvn-analysis|LVN/HVN analysis]]
+12. [[fast-travel-scenario-analysis|Fast travel scenario analysis]]
+13. [[eighty-percent-rule|80% rule]]
+14. [[volume-profile-checklist|Volume Profile checklist]]
+15. [[volume-profile-advanced-checklist|Volume Profile advanced checklist]]
+
+## 追加で見る価格帯
+
+- [[high-volume-node|HVN]]: 出来高が厚い価格帯。acceptance、congestion、rotation、slowdown候補として観察する。
+- [[low-volume-node|LVN]]: 出来高が薄い価格帯。rejection、transition、distribution boundary候補として観察する。
+- [[fast-travel-zone|fast travel]]: thin areaを価格が速く移動する可能性を準備するシナリオ。保証ではなく、acceptanceとinvalidationを定義して観察する。
 
 ## 使い方の原則
 
 - 先に市場文脈、構造、水平線を決める。
-- POC、VAH、VALは「反応を見る場所」であり、魔法の線ではない。
+- POC、HVN、LVN、VAH、VALは「反応を見る場所」であり、魔法の線ではない。
 - Profile shapesや80% ruleは低信頼度のヒューリスティックとして扱う。
 - Volume Profileがシナリオと合わない時は、確認ではなく注意や代替シナリオとして読む。
 - 最後はprice action、invalidation、risk/rewardで判断する。

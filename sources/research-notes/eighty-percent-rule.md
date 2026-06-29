@@ -77,3 +77,11 @@ These notes remain candidate working notes. Do not promote stronger claims into 
 - Any exact win rate, probability, or guaranteed edge.
 - Any personalized position-sizing or trade recommendation.
 - Any claim that a single indicator or pattern is sufficient for entry.
+
+## 2026-06-28 LVN / HVN interaction TODOs
+
+- Verify whether published 80% rule explanations discuss internal HVN / LVN structure inside value.
+- Check whether single distribution versus double distribution changes the way practitioners define re-entry and target areas.
+- Verify source quality for fast travel claims after value re-entry through thin areas.
+- Compare platform differences in Value Area calculation, POC, row size, bin size, session, composite, and visible-range settings.
+- Do not upgrade the rule above low confidence without source verification and explicit definitions.

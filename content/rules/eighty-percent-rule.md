@@ -14,10 +14,13 @@ sources:
 related:
   - value-area
   - value-area-close-analysis
+  - high-volume-node
+  - low-volume-node
+  - volume-profile-distribution-structure
   - volume-profile-checklist
 next:
   - volume-profile-checklist
-updated: 2026-06-24
+updated: 2026-06-28
 ---
 
 ## Rule status
@@ -52,6 +55,18 @@ updated: 2026-06-24
 - Where the idea is invalidated: 再び外側で受け入れられる、または反対方向のStructureが出るなど。
 - Trend-like or balance-like day: trend dayではValue内回帰の発想が弱くなる可能性。
 - False precision avoidance: 「80%」を勝率や保証として扱わず、未検証の名称として扱う。
+
+## LVN / HVN structure check
+
+80% ruleを観察する場合も、Value Area内部の構造を確認します。
+
+- Value内の[[low-volume-node|LVN]] / [[high-volume-node|HVN]]構造。
+- Valueがsingle distributionかdouble distributionか。
+- re-entry後にacceptanceがあるか。
+- 内部HVNや[[point-of-control|POC]]でstallしていないか。
+- [[profile-shapes]]がbalance的かtrend-likeか。
+
+これらは「80%」という名称を検証済み確率にするものではありません。むしろ、単純化しすぎないための確認です。
 
 ## Risks
 

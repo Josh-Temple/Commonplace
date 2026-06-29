@@ -15,9 +15,13 @@ related:
   - volume-profile
   - point-of-control
   - value-area
+  - high-volume-node
+  - low-volume-node
+  - volume-profile-distribution-structure
+  - fast-travel-zone
 next:
   - point-of-control
-updated: 2026-06-24
+updated: 2026-06-28
 ---
 
 ## 要点
@@ -30,11 +34,23 @@ Volume Profileは、選んだ期間や表示範囲の中で、出来高がどの
 
 通常の出来高バーは「その時間にどれだけ取引されたか」を示します。Volume Profileは「どの価格でどれだけ取引されたか」を見ます。
 
+## 主要な構成要素
+
+- [[point-of-control|POC]]: 選択したprofile内でもっとも活動が集中した価格帯。
+- [[value-area|Value Area]]: 活動の中心領域と、VAH / VALという上下境界。
+- [[high-volume-node|HVN]]: 出来高が厚いnode。acceptance、balance、congestion候補。
+- [[low-volume-node|LVN]]: 出来高が薄いnode。rejection、transition、distribution boundary候補。
+- thin area: 価格があまり出来高を作らずに通過した可能性がある低出来高帯。
+- [[volume-profile-distribution-structure|distribution]]: single / double / multiple distributionなど、全体の受容・拒否の形。
+- [[profile-shapes|profile shape]]: D / P / bなどの視覚的要約。低信頼度の補助として扱う。
+
 ## どう読むか
 
 - 出来高が集中した価格帯を見る。
 - 速く通過した薄い価格帯を見る。
-- POC、Value Area、VAH、VALを判断エリアとして見る。
+- POC、Value Area、VAH、VAL、HVN、LVNを判断エリアとして見る。
+- 高出来高帯をacceptance / congestion候補、低出来高帯をrejection / transition候補として区別する。
+- thin areaを通る[[fast-travel-zone|fast travel]]はscenarioとして観察し、予測として扱わない。
 - その観察が[[market-structure]]と[[horizontal-levels]]に合うか確認する。
 
 ## Market Profileとの違い
@@ -65,3 +81,7 @@ Volume Profileは、それだけで未来を予測しません。
 - [[volume-profile]]
 - [[point-of-control]]
 - [[value-area]]
+- [[high-volume-node]]
+- [[low-volume-node]]
+- [[volume-profile-distribution-structure]]
+- [[fast-travel-zone]]

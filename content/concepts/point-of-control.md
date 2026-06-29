@@ -14,10 +14,12 @@ sources:
 related:
   - volume-profile
   - value-area
+  - high-volume-node
+  - volume-profile-distribution-structure
   - poc-reaction-breakout-analysis
 next:
   - value-area
-updated: 2026-06-24
+updated: 2026-06-28
 ---
 
 ## 要点
@@ -73,4 +75,6 @@ POCだけで売買を決めず、[[value-area|Value Area]]、[[market-structure]
 
 - [[poc-reaction-breakout-analysis]]
 - [[value-area]]
+- [[high-volume-node]]
+- [[volume-profile-distribution-structure]]
 - [[volume-profile-checklist]]

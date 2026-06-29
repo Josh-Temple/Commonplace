@@ -88,5 +88,5 @@ Context → Structure → Level → Scenario → Trigger → Invalidation → Ri
 
 - 実務順序: [[trading-process]]
 - トレード前確認: [[pre-trade-context-checklist]] / [[pre-trade-emotion-check]]
-- Volume Profileサブパス: [[volume-profile]] → [[volume-profile-overview]] → [[point-of-control]] → [[value-area]] → [[profile-shapes]]
+- Volume Profileサブパス: [[volume-profile]] → [[volume-profile-overview]] → [[point-of-control]] → [[value-area]] → [[high-volume-node]] → [[low-volume-node]] → [[volume-profile-distribution-structure]] → [[fast-travel-zone]]
 - レビュー: [[post-trade-review]] / [[post-trade-review-checklist]]

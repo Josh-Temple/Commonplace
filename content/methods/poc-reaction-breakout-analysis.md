@@ -14,10 +14,13 @@ sources:
 related:
   - point-of-control
   - value-area
+  - high-volume-node
+  - low-volume-node
+  - volume-profile-distribution-structure
   - volume-profile-checklist
 next:
   - value-area-close-analysis
-updated: 2026-06-24
+updated: 2026-06-28
 ---
 
 ## 要点

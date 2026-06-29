@@ -16,15 +16,25 @@ related:
   - volume-profile
   - point-of-control
   - value-area
+  - high-volume-node
+  - low-volume-node
   - profile-shapes
+  - volume-profile-advanced-checklist
 next:
-  - trading-rules
-updated: 2026-06-24
+  - volume-profile-advanced-checklist
+updated: 2026-06-28
 ---
 
 ## 目的
 
 Volume Profileを単独シグナルではなく、[[market-structure]]と[[horizontal-levels]]を補助する観察レイヤーとして使います。教育目的のチェックリストであり、金融助言ではありません。
+
+## Basic vs advanced
+
+- Basic: [[point-of-control|POC]]、[[value-area|Value Area]]、VAH / VAL、close locationを確認する。
+- Advanced: [[high-volume-node|HVN]] / [[low-volume-node|LVN]]、thin areas、[[volume-profile-distribution-structure|distribution structure]]、[[fast-travel-zone|fast travel]] scenariosを確認する。
+
+詳しい確認は[[volume-profile-advanced-checklist]]へ進みます。
 
 ## チェック項目
 
