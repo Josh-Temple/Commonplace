@@ -29,12 +29,13 @@ related:
   - mbct
   - act-and-mindfulness
   - theravada-meditation
+  - five-precepts
   - satipatthana-practice-map
 next:
   - mindfulness
   - meditation-family-of-practices
   - mindfulness-safety
-updated: 2026-06-28
+updated: 2026-06-30
 ---
 
 ## 要点
@@ -108,9 +109,9 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 
 ## 上座部仏教系の瞑想を知る
 
-[[theravada-meditation]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+[[theravada-meditation]] → [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
 
-上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
+上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。[[five-precepts|五戒]]は、その倫理的背景を日常の言葉・行動・生活の境界線として弱く参照する入口です。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
 
 メッタと四梵住を知る場合は、[[theravada-metta-and-brahmavihara]]へ進みます。日常で慎重に参照する場合は、[[theravada-inspired-daily-practice]]を読みます。
 

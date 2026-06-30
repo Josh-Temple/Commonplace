@@ -21,7 +21,7 @@ related:
   - fast-travel-zone
 next:
   - point-of-control
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -52,6 +52,68 @@ Volume Profileは、選んだ期間や表示範囲の中で、出来高がどの
 - 高出来高帯をacceptance / congestion候補、低出来高帯をrejection / transition候補として区別する。
 - thin areaを通る[[fast-travel-zone|fast travel]]はscenarioとして観察し、予測として扱わない。
 - その観察が[[market-structure]]と[[horizontal-levels]]に合うか確認する。
+
+## Volume Profileで見ているもの
+
+Volume Profileで見ているのは、選択した範囲の中で「どの価格帯にどれだけ活動が集まったか」です。通常の出来高バーが時間ごとの量を示すのに対し、Volume Profileは価格ごとの分布を見ます。
+
+そのため、POC、Value Area、HVN、LVNはすべて「選んだprofile内での相対的な活動分布」です。銘柄そのものの永久的な価値ではありません。
+
+## 何を見ていないか
+
+Volume Profileは、単独では次を教えません。
+
+- 次に価格が上がるか下がるか。
+- その水準で必ず反発するか。
+- 大口が今どこで注文を出しているか。
+- entry、stop、targetの正解。
+- 将来の勝率や確率。
+
+過去の活動を整理する道具であり、未来を保証するモデルではありません。
+
+## Profile rangeの種類
+
+| Range type | 何を見るか | 注意 |
+|---|---|---|
+| Session profile | 1 session内の活動 | RTH / ETH / 24時間で変わる |
+| Prior session profile | 前sessionの活動 | 今日も同じ反応とは限らない |
+| Fixed range profile | 任意に選んだ区間 | 範囲選択が恣意的になりやすい |
+| Visible range profile | 画面に見えている範囲 | zoomやscrollでPOC / VAが変わる |
+| Composite profile | 複数sessionの合成 | 長期の受容は見えるが短期変化を隠す |
+
+## Row size / bin sizeの影響
+
+Row size、bin size、ticks per row、ticks per levelは、価格をどれだけ細かく区切るかを決めます。細かすぎるとノイズが増え、粗すぎると複数のnodeがひとつに見えることがあります。
+
+HVN / LVNは特にこの影響を受けます。row設定を変えただけで、薄い場所が消えたり、POCの位置が別のrowへ移ったりすることがあります。
+
+## Real volumeとtick volume
+
+株式や先物のように取引所出来高を扱いやすい市場と、FX / CFDのようにプラットフォームがtick volumeやブローカー由来データを使う場合では、同じ「Volume Profile」でも意味が異なります。
+
+FX / CFDのprofileは「中央集権的な全市場出来高」と同一視しない方が安全です。読めるのは、そのデータソースで観測されたactivityです。
+
+## Platform differences
+
+TradingView、Sierra Chart、NinjaTraderなどはPOCやValue Areaを扱いますが、計算に使う下位足、Value Area percentage、row aggregation、session template、表示範囲の扱いは異なります。
+
+したがって、reader-facingな説明では「公式定義として安定している部分」と「プラットフォーム設定に依存する部分」を分けます。
+
+## 信頼できる読み方と危ない読み方
+
+信頼しやすい読み方:
+
+- 「この選択範囲では、この価格帯に活動が集中していた。」
+- 「このrow設定では、この場所が相対的な低出来高帯に見える。」
+- 「POC / VAH / VALは、このprofile設定で計算された水準である。」
+
+危ない読み方:
+
+- 「POCだから必ず反発する。」
+- 「LVNだから必ず速く抜ける。」
+- 「Value Area外に出たから自動的に継続する。」
+- 「80% ruleだから80%勝てる。」
+
 
 ## Market Profileとの違い
 

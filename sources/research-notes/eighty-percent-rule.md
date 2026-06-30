@@ -8,80 +8,40 @@ How should Lumen describe the Market Profile / auction-market "80% rule" in a ca
 
 ## Working summary
 
-The 80% rule is commonly discussed as a practitioner heuristic: when price moves outside a prior value area and then re-enters and is accepted back inside value, traders may watch for rotation toward the opposite side of that value area. The name should not be treated as a verified probability unless supported by actual evidence. Definitions of re-entry, acceptance, session, and invalidation need to be explicit before anyone studies or tests the idea.
+The 80% rule remains a low-confidence practitioner heuristic in this repository. This pass verified Value Area, POC, VAH, and VAL definitions from platform documentation, but it did not find robust empirical evidence that the “80%” label is a verified probability. Reader-facing pages should distinguish the existence of the practitioner rule from proof that the named probability holds.
 
-## Key claims
+## Source verification status
 
-- The 80% rule appears in some Market Profile and auction-market practitioner discussions.
-- The common idea involves re-entry into a prior value area after an attempted auction outside value.
-- Practitioners often watch for movement toward the opposite side of value after accepted re-entry.
-- The "80%" label should not be presented as a guaranteed or verified probability in this repository.
+- Source type: official platform documentation. TradingView, NinjaTrader, and Sierra Chart support the underlying Value Area / POC terminology and show that Value Area percentage and calculation settings vary. These sources do not verify the 80% rule as an empirical probability.
+- Source type: established practitioner reference. Steidlmayer / CBOT and Dalton-style materials remain candidate sources for historical Market Profile background, but direct passages were not reviewed in this pass.
+- Source type: informal practitioner article. Many online explanations mention an 80% rule, but informal repetition is not enough to promote the rule above low confidence.
 
-## Uncertainty / limits
+## Where the 80% rule appears
 
-- No verified statistical study is included in this note.
-- Exact definitions vary across traders and platforms.
-- News events, trend days, false re-entries, and poor session boundaries can make the heuristic misleading.
-- This should remain low confidence until stronger source verification or local testing exists.
+The rule appears in Market Profile / auction-market practitioner discussions as a setup idea: after price auctions outside a prior Value Area and then re-enters and is accepted back inside value, traders may watch for rotation toward the opposite side of value. Lumen should phrase this as “a practitioner rule exists,” not “the probability is verified.”
 
-## Candidate sources to verify
+## Probability claim caution
 
-- CBOT Market Profile educational materials.
-- J. Peter Steidlmayer's Market Profile work.
-- James Dalton / Mind Over Markets style Market Profile discussions.
-- Reputable charting-platform or exchange educational notes that define value-area re-entry concepts.
+The number “80%” must not be presented as a verified win rate. Any serious use would require a defined instrument, session template, value-area calculation, re-entry rule, acceptance rule, target definition, invalidation, costs, slippage, and sample period. None of that evidence is included here.
+
+## Interaction with HVN / LVN / internal distribution
+
+Even if price re-enters value, internal structure can interrupt or invalidate the simple idea:
+
+- internal POC may cause rotation or stall;
+- internal HVNs can become congestion zones;
+- LVNs inside value can create rejection or transition areas;
+- a double-distribution value area may not behave like one smooth range;
+- a trend day can keep price from rotating across value.
+
+## Unsupported claims
+
+- “80%” as a verified probability.
+- automatic movement to opposite VAH/VAL.
+- entry at re-entry without confirmation.
+- fixed stops or targets.
+- universal behavior across futures, stocks, crypto, FX, and CFD profiles.
 
 ## Notes for Codex
 
-- Keep reader-facing confidence low.
-- Do not call the 80% figure a verified win rate.
-- Frame the rule as an observation prompt and study hypothesis, not financial advice.
-
-## TODO: source verification pass
-
-- Locate primary or high-quality practitioner sources for the 80% rule and document exact definitions of re-entry, acceptance, target, and invalidation.
-- Do not present the 80% label as a verified probability unless a future evidence note supports it.
-
-## 2026-06-24 content-deepening verification TODOs
-
-These notes remain candidate working notes. Do not promote stronger claims into reader-facing pages until primary or high-quality sources are checked.
-
-### Claims that need verification
-- 80% rule source quality.
-- session-specific Value Area definition.
-- re-entry and acceptance definitions.
-- claims not supported by robust published evidence.
-
-### Candidate source types
-
-- Primary Market Profile / auction market theory texts or official training material.
-- Platform documentation for Volume Profile, POC, Value Area, VAH, and VAL calculations.
-- Exchange or data-provider documentation where calculation or session definitions matter.
-- Risk management, journaling, and trading psychology sources with clear methodology.
-
-### Platform documentation to check
-
-- How POC is calculated and whether ties, tick aggregation, visible range, and session boundaries are handled differently.
-- How Value Area percentage is selected and expanded around POC.
-- Whether VAH / VAL are based on TPO count, volume, or vendor-specific logic.
-
-### Practitioner heuristics requiring caution
-
-- Horizontal level priority rules.
-- POC as support/resistance.
-- Profile-shape interpretations such as D / P / b shapes.
-- The 80% rule as a named probability claim.
-
-### Claims not yet supported
-
-- Any exact win rate, probability, or guaranteed edge.
-- Any personalized position-sizing or trade recommendation.
-- Any claim that a single indicator or pattern is sufficient for entry.
-
-## 2026-06-28 LVN / HVN interaction TODOs
-
-- Verify whether published 80% rule explanations discuss internal HVN / LVN structure inside value.
-- Check whether single distribution versus double distribution changes the way practitioners define re-entry and target areas.
-- Verify source quality for fast travel claims after value re-entry through thin areas.
-- Compare platform differences in Value Area calculation, POC, row size, bin size, session, composite, and visible-range settings.
-- Do not upgrade the rule above low confidence without source verification and explicit definitions.
+Keep reader-facing confidence low. Treat the rule as a study prompt and scenario checklist, not financial advice or a trading system.

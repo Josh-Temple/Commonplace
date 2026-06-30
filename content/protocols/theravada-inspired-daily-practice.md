@@ -11,11 +11,13 @@ tags:
 confidence: low
 sources:
   - sources/research-notes/theravada-meditation-overview.md
+  - sources/research-notes/five-precepts.md
   - sources/research-notes/five-hindrances-seven-awakening-factors.md
   - sources/research-notes/three-characteristics-four-noble-truths.md
   - sources/research-notes/meditation-safety-and-adverse-effects.md
 related:
   - theravada-meditation
+  - five-precepts
   - five-hindrances
   - seven-awakening-factors
   - three-characteristics
@@ -23,7 +25,7 @@ related:
   - mindfulness-practice-log
 next:
   - mindfulness-practice-log
-updated: 2026-06-26
+updated: 2026-06-30
 ---
 
 ## 要点
@@ -37,6 +39,8 @@ updated: 2026-06-26
 Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 
 日常で使う場合は、短い呼吸への気づき、感受の名づけ、心の状態の確認、善意の短い句、[[five-hindrances|五蓋]]への気づき程度に留めます。
+
+日常で上座部仏教系の語彙を参照する場合、瞑想だけでなく、言葉・行動・生活の境界線も確認します。倫理的な土台を確認するページとして[[five-precepts|五戒]]を参照します。ただし、五戒を厳格な自己監視プロトコルにはしません。
 
 [[seven-awakening-factors|七覚支]]は、到達判定ではなく、心のバランスを理解する語彙として弱く参照します。[[three-characteristics|三相]]、無我、苦の強い観察は日常プロトコルに入れません。
 
@@ -115,6 +119,7 @@ Commonplaceでは、伝統的な修行体系を自己流で再現しません。
 
 - [[theravada-meditation]]
 - [[satipatthana-practice-map]]
+- [[five-precepts]]
 - [[anapanasati-sixteen-steps]]
 - [[five-hindrances]]
 - [[seven-awakening-factors]]

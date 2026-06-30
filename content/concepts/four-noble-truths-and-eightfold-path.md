@@ -14,11 +14,14 @@ sources:
   - sources/research-notes/theravada-meditation-overview.md
 related:
   - theravada-meditation
+  - five-precepts
+  - buddhism-four-noble-truths
+  - buddhism-noble-eightfold-path
   - three-characteristics
   - satipatthana-practice-map
 next:
   - theravada-lineages-overview
-updated: 2026-06-26
+updated: 2026-06-30
 ---
 
 # 四聖諦と八正道
@@ -63,6 +66,34 @@ MBSRやMBCTは臨床・教育プログラムとして、ACTは心理療法モデ
 
 上座部仏教系実践は、仏教的な修行体系として、戒・定・慧、非執着、解脱などの文脈を持ちます。重なる語彙があっても、目的と根拠の種類を混同しません。
 
+
+## 日常で軽く参照する方法
+
+四聖諦は、苦しみを自己罰にするためではなく、条件を見るために弱く参照します。
+
+- いま何が苦しいのか。
+- その苦しみは、何への執着、恐れ、期待、拒絶と関係しているか。
+- その条件を少し弱めるには、何を変えられるか。
+- いま取れる、害の少ない一手は何か。
+
+八正道は、次のように自分の状態を確認するために弱く参照します。
+
+- 見方は歪んでいないか。
+- 意図は反撃、逃避、承認欲求に偏っていないか。
+- 言葉は事実に基づいているか。
+- 行動は後悔を増やさないか。
+- 生活や環境は、心を荒らす条件を増やしていないか。
+- 努力は強すぎるか、弱すぎるか。
+- 気づきはあるか。
+- 心は散りすぎていないか。
+
+これは正式な修行手順ではなく、日常の反応を少し遅らせるための確認です。八正道を単なる生活改善チェックリストにしすぎず、仏教的な倫理・智慧・実践の地図として弱く参照します。
+
+
+## 仏教基本概念ページとの違い
+
+このページは、上座部仏教系瞑想の背景として、四聖諦と八正道を一体で読むためのページです。四諦と八聖道をそれぞれ基本概念として短く読む場合は、[[buddhism-four-noble-truths]] と [[buddhism-noble-eightfold-path]]を参照します。
+
 ## Commonplaceで参照する範囲
 
 Commonplaceでは、四聖諦と八正道を、瞑想の背景にある理解地図として扱います。
@@ -84,6 +115,9 @@ Commonplaceでは、四聖諦と八正道を、瞑想の背景にある理解地
 ## 関連ノート
 
 - [[theravada-meditation]]
+- [[five-precepts]]
+- [[buddhism-four-noble-truths]]
+- [[buddhism-noble-eightfold-path]]
 - [[three-characteristics]]
 - [[satipatthana-practice-map]]
 - [[mindfulness-based-interventions-comparison]]

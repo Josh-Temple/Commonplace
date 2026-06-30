@@ -3,9 +3,9 @@ type: research-note
 title: Volume Profile nodes and fast travel
 created: 2026-06-28
 source_agent: Codex
-status: draft
-evidence_level: low
-review_status: unreviewed
+status: reviewed-draft
+evidence_level: medium-for-definitions-low-for-trade-heuristics
+review_status: platform-docs-checked-2026-06-29
 allowed_use:
   - content_page
   - article_draft
@@ -18,53 +18,68 @@ How should HVN, LVN, low-volume areas, high-volume areas, and fast travel be exp
 
 # Working summary
 
-HVN and LVN are practitioner / platform terms used to describe high-volume and low-volume areas inside a selected Volume Profile. A high-volume area is often interpreted as prior acceptance, balance, congestion, or a place where price may slow and rotate. A low-volume area is often interpreted as prior rejection, low acceptance, transition between distributions, or a thin area that price may cross quickly if it is accepted through the boundary.
+HVN and LVN are supported by at least one official platform help article as Volume Profile node terms, but their exact detection is still profile-setting dependent. TradingView defines HVNs as volume peaks and LVNs as volume valleys in its Volume Profile basic concepts page. Other platform docs reviewed more reliably define POC, Value Area, period/range, and row/tick aggregation than named HVN/LVN automation. Fast travel was not found as a consistently official platform term in the reviewed documentation, so Lumen should treat it as practitioner language for a conditional low-volume transition scenario, not as a verified probability.
 
-Fast travel is a practitioner framing for price moving quickly through a thin or low-volume area. In this repository it should be treated only as a scenario to prepare for, not a prediction or a standalone signal. Any fast-travel discussion should require a defined profile range, an identified boundary, a confirmation idea, an invalidation condition, and likely slowdown areas such as the next HVN, POC, VAH, VAL, prior high/low, or horizontal level.
+# Verified definitions
 
-# Key claims
+- Source type: official platform documentation. TradingView documents “High volume nodes (HVN)” as peaks in volume at specific price levels and “Low volume nodes (LVN)” as valleys where volume dropped significantly. It also says Volume Profile is reactive and shows past activity rather than predicting future movement. URL: https://www.tradingview.com/support/solutions/43000502040-volume-profile-indicators-basic-concepts/
+- Source type: official platform documentation. NinjaTrader documents POC, Value Area, range, profile row aggregation, and “Ticks per level,” but the reviewed help page did not provide an HVN/LVN terminology section comparable to TradingView. URL: https://ninjatrader.com/support/helpGuides/nt8/order_flow_volume_profile.htm
+- Source type: official platform documentation. Sierra Chart's Volume by Price documentation supports the underlying idea of volume peaks/valleys through configurable Volume by Price profiles, POC, VAH, VAL, period types, and row aggregation, but the reviewed source does not establish a universal HVN/LVN calculation rule. URL: https://www.sierrachart.com/index.php?ID=141&page=doc%2FStudiesReference.php
+- Source type: informal / platform-adjacent practitioner article. ATAS blog material discusses fixed-range volume profile and high/low activity areas, but it should be treated as practitioner education rather than a canonical standard. URL: https://atas.net/blog/fixed-range-volume-profile-definition-and-trading-strategies/
 
-- HVN means High Volume Node: a price area with concentrated activity within a selected profile.
-- LVN means Low Volume Node: a relatively thin area between higher-volume areas, or an area where little activity occurred within the selected profile.
-- POC is often the dominant high-volume point or zone in a profile, but a profile can contain multiple HVNs and not every HVN is the POC.
-- Value Area can contain one or more high-volume distributions, and VAH / VAL can sometimes align with distribution edges or thinner zones.
-- Distribution structure can be described as single, double, or multiple distribution, but the label depends on range, row size, session definition, and data source.
-- Thin areas can be discussed as low-acceptance or transition areas, but they do not guarantee fast movement.
+# Platform terminology comparison
 
-# Practitioner heuristics
+| Platform/source | Terminology verified | What it supports | Limit |
+|---|---|---|---|
+| TradingView Help Center | HVN, LVN, POC, VA, VAH, VAL | Medium-confidence definitions for nodes and basic levels | Some “what to look for” language is practical guidance, not proof of edge |
+| NinjaTrader help guide | POC, Value Area, Range, ticks per level | Medium-confidence profile component and aggregation definitions | HVN/LVN labels not clearly defined in reviewed page |
+| Sierra Chart docs | Volume by Price, POC, VAH, VAL, period types, ticks per volume bar | Strong evidence that platform settings change profiles | HVN/LVN not established as universal terms by this page |
+| ATAS blog | high/low trading activity areas | Useful practitioner framing | Lower source priority than platform help |
 
-- HVNs are often watched as acceptance, balance, congestion, magnets, or slow zones.
-- LVNs are often watched as rejection zones, distribution boundaries, or possible transition areas.
-- If price accepts through an LVN or low-volume pocket, some traders watch for fast travel toward the next decision area.
-- If price re-enters an HVN after leaving it, the market may rotate or reassess there.
-- If price begins building new volume inside a previously thin area, the prior fast-travel idea weakens.
-- Single prints and poor structure are more directly associated with Market Profile / TPO interpretation than with pure Volume Profile, though practitioners may compare them with low-volume pockets.
+# HVN / LVN calculation differences
 
-# Uncertainty / limits
+HVN/LVN appearance is not fixed. It can change with:
 
-- This note does not verify a canonical definition across charting platforms.
-- HVN / LVN calculation and visual prominence can change with row size, bin size, tick aggregation, session settings, and selected profile range.
-- Fast travel is not a verified probability or win-rate claim here.
-- FX / CFD tick-volume profiles may not represent centralized traded volume.
-- Distribution labels can be subjective, especially on visible-range profiles.
+- selected profile range: session, visible range, fixed range, composite, manually drawn range;
+- row size / bin size / ticks per row / ticks per level;
+- whether rows are total volume, up/down split, delta, or another display mode;
+- session template: RTH, ETH, 24-hour, custom session;
+- lower-timeframe sampling and data feed;
+- market type: centralized futures/stocks versus FX/CFD/tick-volume contexts.
 
-# Candidate source types to verify
+# Fast travel source quality
 
-- charting-platform documentation for Volume Profile, HVN, LVN, POC, Value Area
-- Market Profile / auction market theory sources
-- CME/CBOT educational materials, if available
-- Steidlmayer / Dalton-style Market Profile references, if available
-- platform documentation such as TradingView, Sierra Chart, NinjaTrader, ATAS, Bookmap, or similar
-- educational sources distinguishing Volume Profile from Market Profile/TPO
+No reviewed official platform page established “fast travel” as a standardized Volume Profile term. TradingView's LVN discussion uses practical language about quick movement or bounce around low-volume valleys, but that is still educational guidance rather than an empirically verified probability. Lumen should therefore prefer “thin area scenario,” “low-volume transition scenario,” or “possible fast-travel scenario” in reader-facing pages.
 
-# Claims not yet supported
+# Thin area / low-volume pocket terminology
 
-- Any exact probability that price will travel through an LVN.
-- Any win rate for HVN / LVN reactions.
-- Any claim that single prints are Volume Profile rather than Market Profile / TPO concepts.
-- Any platform-specific calculation rule for nodes, value, ties, or row aggregation.
-- Any personalized trade entry, stop, or target instruction.
+“Thin area,” “low-volume area,” and “low-volume pocket” are clearer than “fast travel” when describing the observed profile feature. They state what the chart shows: a relative lack of historical activity at a price band. “Fast travel” should describe only the conditional scenario after price enters and is accepted through that area.
 
-# Notes for Codex
+# Distribution structure
 
-Use this note only for cautious definitions and practitioner-heuristic framing. Keep reader-facing claims confidence-bounded. Avoid inventing citations, page numbers, statistics, or verified probabilities. Prioritize source verification before upgrading confidence or adding examples that look like trading advice.
+Single, double, and multiple distribution labels are descriptive summaries of volume/activity clusters separated by thinner areas. These labels are useful for reading structure, but they are not platform-invariant. A visible-range profile can create or erase a double distribution by zooming; row aggregation can merge or split nodes.
+
+# Claims safe for reader-facing pages
+
+- HVN can be defined as a relative volume peak / high-activity price area inside a selected profile.
+- LVN can be defined as a relative volume valley / low-activity price area inside a selected profile.
+- POC is the highest-volume point/row in a selected profile and is often within or near a prominent HVN.
+- Not every HVN is the POC.
+- Nodes depend on range, session, row size, data source, and platform settings.
+- Thin areas can be used to prepare scenarios, but only with boundary, acceptance, invalidation, and next slowdown areas defined.
+
+# Claims that must remain low confidence
+
+- fast travel as a directional expectation;
+- LVN as an automatic breakout path;
+- HVN as automatic support/resistance;
+- any win-rate, percentage, or probability claim;
+- any entry, stop, target, or position-sizing rule;
+- profile shapes as predictive signals;
+- single prints / poor structure as identical to Volume Profile LVNs.
+
+# Open questions
+
+- Which additional platforms provide official HVN/LVN definitions or automatic node-detection rules?
+- Are “fast travel,” “repair,” “poor structure,” and “single prints” best kept in a separate Market Profile/TPO verification map?
+- Should Lumen add screenshots or fictional diagrams to show how row size changes node appearance without implying trade advice?

@@ -1,5 +1,239 @@
 # Handoff: Lumen MVP
 
+## Buddhism cluster duplicate-role and source-note integration pass — 2026-06-30
+
+### Purpose
+
+Clarified the relationship between the broad Buddhism basic-concepts cluster and the more specific Theravada meditation cluster. The pass preserves duplicate-looking pages by assigning them distinct roles, adds provisional source notes to previously source-empty Buddhism pages, lowers overconfident metadata, weakens self-help / mental-improvement language, and records remaining verification gaps.
+
+### Added source notes
+
+- `sources/research-notes/buddhism-basic-concepts-overview.md` — provisional support note for the broad Buddhism index and broad basic-concept pages, with checked sources, boundaries, safe Japanese wording, claims to avoid, and verification needs.
+- `sources/research-notes/buddhist-ethics-and-precepts.md` — provisional support note for Buddhist ethics / five precepts framing, with checked sources, reader-facing cautions, relationship to meditation, and verification needs.
+
+### Updated source notes
+
+- None. Existing Theravada notes were used as support without rewriting them in this pass.
+
+### Updated content pages
+
+- `content/indexes/buddhism.md` — converted to a low-confidence broad Buddhism basic-concepts entry point with sources, a clear Theravada meditation distinction, and quieter navigation language.
+- `content/concepts/buddhism-four-noble-truths.md` — added source notes, lowered confidence, weakened modern self-help framing, and linked to `four-noble-truths-and-eightfold-path` for the Theravada meditation-context treatment.
+- `content/concepts/buddhism-noble-eightfold-path.md` — added source notes, lowered confidence, reduced checklist / self-improvement framing, and linked to the combined Theravada context page.
+- `content/concepts/buddhism-five-precepts.md` — added Buddhist ethics source notes, lowered confidence, clarified ethics/precepts framing, and cautioned against self-punishment, other-judgment, legal advice, clinical guidance, and addiction-treatment claims.
+- `content/concepts/buddhism-five-hindrances.md` — added source notes, lowered confidence, clarified the broad basic-concept role, and linked to `five-hindrances` for Satipaṭṭhāna / Theravada meditation context.
+- `content/concepts/five-hindrances.md` — added role-split language linking back to `buddhism-five-hindrances`.
+- `content/concepts/four-noble-truths-and-eightfold-path.md` — added role-split language linking back to `buddhism-four-noble-truths` and `buddhism-noble-eightfold-path`.
+
+### Duplicate-role policy
+
+- `buddhism-*` pages now serve as broad, short Buddhism basic-concept pages.
+- Non-prefixed Theravada pages remain meditation-context pages supported by the Theravada source-note cluster.
+- Duplicate topics are linked bidirectionally rather than deleted: broad pages point to Theravada-context pages for practice-context reading; Theravada pages point back to broad pages for short basic-concept reading.
+
+### External materials checked
+
+- SuttaCentral SN 56.11 Dhammacakkappavattanasutta pages for four noble truths context.
+- SuttaCentral SN 45.8 Vibhaṅgasutta pages for noble eightfold path context.
+- Access to Insight SN 45.8 Magga-vibhaṅga Sutta, Thanissaro Bhikkhu translation, as an alternative path-factor translation.
+- SuttaCentral MN 10 / DN 22 material indirectly through existing repository source notes for Satipaṭṭhāna, five hindrances, and dhammas contemplation.
+- SuttaCentral SN 14.25 Pañcasikkhāpadasutta, AN 8.41 Saṁkhittūposathasutta, and Vb 14 Sikkhāpadavibhaṅga search results / pages for five-precept wording and heedlessness context.
+
+### Unchecked or insufficient materials
+
+- Detailed Bhikkhu Bodhi and Thanissaro Bhikkhu explanatory essays/books on Buddhist ethics, four noble truths, and eightfold path remain insufficiently reviewed.
+- Buddhist Publication Society materials remain insufficiently reviewed.
+- Non-Theravada sources for broad Buddhism pages were not systematically reviewed, so the broad pages remain low-confidence maps rather than doctrinal surveys.
+- Lay precepts, uposatha / retreat precepts, and monastic Vinaya differences need further separation.
+
+### Validation result
+
+- `npm run validate:content` passed for 94 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and production Next.js build.
+- Next generated 100 static pages.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning.
+- `gh issue list --state open --limit 20 || true` could not check open GitHub Issues because `gh` is not installed in this container.
+
+### Remaining uncertainty
+
+- The broad Buddhism pages are still provisional and should not be treated as complete Buddhist doctrine.
+- Exact source-level wording for the five precepts needs a deeper primary-text comparison.
+- Four noble truths and eightfold path pages need more direct review of translation differences and established explainers.
+- Japanese wording should be reviewed for accidental moralism, self-punishment, self-help overreach, or clinical implication.
+- The older `buddhism-*` pages now have source notes, but their long-term role relative to the Theravada-specific cluster may still need editorial review.
+
+### Recommended next task
+
+Perform a focused verification pass on Buddhist ethics and precepts using primary texts plus Bhikkhu Bodhi / Thanissaro Bhikkhu / Buddhist Publication Society explanations, then decide whether the broad Buddhism pages should remain as a separate index cluster or become short overview stubs that route mostly to the source-backed Theravada pages.
+
+## Five precepts integration pass — 2026-06-30
+
+### Purpose
+
+Added 五戒 / five precepts as a cautious low-confidence ethics concept inside the existing Theravada meditation cluster, without creating duplicate Buddhism pages for five hindrances, four noble truths, or the noble eightfold path. This was a content-writing, source-note, link-maintenance, validation, and documentation pass.
+
+### Files reviewed
+
+- `AGENTS.md`
+- `README.md`
+- `Handoff.md`
+- `content/indexes/meditation-and-mindfulness.md`
+- `content/indexes/theravada-meditation.md`
+- `content/concepts/five-hindrances.md`
+- `content/concepts/seven-awakening-factors.md`
+- `content/concepts/three-characteristics.md`
+- `content/concepts/four-noble-truths-and-eightfold-path.md`
+- `content/protocols/theravada-inspired-daily-practice.md`
+- `sources/research-notes/theravada-meditation-overview.md`
+- `sources/research-notes/five-hindrances-seven-awakening-factors.md`
+- `sources/research-notes/three-characteristics-four-noble-truths.md`
+- `sources/research-notes/satipatthana-primary-texts.md`
+- `sources/research-notes/meditation-safety-and-adverse-effects.md`
+
+### Files created
+
+- `sources/research-notes/five-precepts.md` — source note framing the five precepts as Buddhist ethical training, with reader-facing safety boundaries and explicit verification needs.
+- `content/concepts/five-precepts.md` — low-confidence reader-facing 五戒 page that treats the precepts as ethical training and harm-reduction boundaries, not moral superiority, self-hatred, legal advice, clinical guidance, or a complete modern ethics system.
+
+### Files updated
+
+- `content/indexes/theravada-meditation.md` — added `five-precepts` to related links and the doctrinal reading path; described 五戒 as connecting meditation to ethics, speech, conduct, and daily life.
+- `content/indexes/meditation-and-mindfulness.md` — added `five-precepts` to the Theravada route with minimal disruption to existing navigation.
+- `content/concepts/four-noble-truths-and-eightfold-path.md` — added a light daily reference section for four noble truths and noble eightfold path while preserving the warning against reducing the path to a life-hack checklist.
+- `content/protocols/theravada-inspired-daily-practice.md` — added a short connection to 五戒 as an ethics-background reference, without turning it into strict daily self-monitoring.
+- `Handoff.md` — recorded this pass.
+
+### Major changes
+
+- Kept `confidence: low` for the new 五戒 reader-facing page because primary-text and teacher-source verification remains incomplete.
+- Preserved existing pages for `five-hindrances`, `four-noble-truths-and-eightfold-path`, and related Theravada concepts rather than creating duplicate pages.
+- Maintained the project boundary that Buddhist literature is used for background, terminology, and tradition context, not clinical-effect evidence.
+- Added language to avoid moralism, self-punishment, other-judgment, addiction-treatment claims, and replacement of legal/professional ethics.
+
+### Commands run
+
+```bash
+git status --short
+sed -n '1,220p' AGENTS.md
+sed -n '1,220p' README.md
+sed -n '1,180p' Handoff.md
+gh issue list --state open --limit 20 || true
+sed -n '1,220p' content/indexes/meditation-and-mindfulness.md content/indexes/theravada-meditation.md content/concepts/five-hindrances.md content/concepts/seven-awakening-factors.md content/concepts/three-characteristics.md content/concepts/four-noble-truths-and-eightfold-path.md content/protocols/theravada-inspired-daily-practice.md sources/research-notes/theravada-meditation-overview.md sources/research-notes/five-hindrances-seven-awakening-factors.md sources/research-notes/three-characteristics-four-noble-truths.md sources/research-notes/satipatthana-primary-texts.md sources/research-notes/meditation-safety-and-adverse-effects.md
+rg -n "id: mindfulness-safety|five-precepts|four-noble-truths|日常で軽く参照|theravada" content sources | head -120
+npm run validate:content
+npm run validate
+```
+
+### Validation result
+
+- `npm run validate:content` passed for 94 content pages.
+- `npm run validate` passed TypeScript typecheck, content validation, and production Next.js build.
+- Next generated 100 static pages.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning.
+- `gh issue list --state open --limit 20 || true` could not check open GitHub Issues because `gh` is not installed in this container.
+
+### Remaining uncertainty
+
+- 五戒の標準定型句について、一次文献確認がまだ必要。
+- 在家戒、出家戒、リトリートでの戒の違いは未整理。
+- Bhikkhu Bodhi、Thanissaro Bhikkhu など信頼できる解説者資料による追加確認が必要。
+- 日本語表現が、道徳主義・自己処罰・他者批判に寄りすぎていないか追加レビューが必要。
+- 酩酊・不注意・依存に関する表現は、医療・法律・依存症治療の主張に見えないよう追加レビューが必要。
+
+### Recommended next task
+
+Verify the five-precept source note against direct primary-text references and reputable Theravada explanatory sources, then consider whether the older broad Buddhism pages should be cross-linked or de-emphasized relative to the newer Theravada-specific cluster.
+
+## Volume Profile source verification and content expansion pass — 2026-06-29
+
+### Purpose
+
+Performed a dedicated source verification, source-integration, content-writing, link-maintenance, validation, and documentation pass for the Volume Profile cluster. The pass strengthens platform-supported definitions while preserving clear boundaries around educational use, platform-specific calculation differences, and low-confidence practitioner heuristics.
+
+### Files reviewed
+
+- `AGENTS.md`
+- `Handoff.md`
+- `Commonplace Project Source.md`
+- `README.md`
+- Volume Profile cluster pages under `content/indexes/volume-profile.md`, `content/concepts/`, `content/methods/`, `content/protocols/`, and `content/rules/eighty-percent-rule.md`
+- Related trading pages listed in the task, including trading indexes, market structure, horizontal levels, entry decision, risk/reward, and pre-trade checklist pages
+- Volume Profile and trading source notes under `sources/research-notes/`
+
+### Sources checked
+
+- TradingView Help Center: Volume Profile indicators basic concepts. Verified Volume Profile as activity at price, POC, VA, VAH, VAL, Value Area calculation, volume data-type differences, and HVN/LVN terminology.
+- TradingView Help Center: Visible Range Volume Profile. Verified visible-range dependency and row layout / row size behavior.
+- Sierra Chart documentation: Volume by Price study. Verified period/range settings, Value Area Percentage, POC/VAH/VAL settings, and ticks-per-volume-bar style configuration.
+- NinjaTrader help guide: Order Flow Volume Profile. Verified profile components, POC as largest data point, configurable Value Area, range, and ticks-per-level aggregation.
+- NinjaTrader support article: Order Flow+ Volume Profile overview. Verified volume distribution at each price level over a specified time range.
+- ATAS fixed-range Volume Profile article. Treated as lower-priority practitioner/platform-adjacent education, not a canonical source.
+
+### Files updated
+
+- `sources/research-notes/volume-profile-basics.md` — added verified source summaries, platform-specific definitions, calculation/display differences, documentation-supported claims, practitioner heuristics, and remaining uncertainty.
+- `sources/research-notes/market-profile-and-value-area.md` — clarified Market Profile/TPO versus Volume Profile, Value Area conventions, POC/VAH/VAL terminology, single prints / poor structure boundaries, and unsupported interpretations.
+- `sources/research-notes/volume-profile-nodes-and-fast-travel.md` — changed from unreviewed low-evidence placeholder to reviewed draft with medium confidence for basic platform-supported definitions and low confidence for trading heuristics.
+- `sources/research-notes/eighty-percent-rule.md` — added source verification status, probability caution, internal HVN/LVN interaction, and unsupported claims while keeping the rule low confidence.
+- `content/indexes/volume-profile.md` — added trust/source-reading guidance and basic versus advanced reading order.
+- `content/concepts/volume-profile-overview.md` — expanded foundational explanations for what Volume Profile sees, what it does not see, profile ranges, row/bin size, real versus tick volume, platform differences, and safe/unsafe readings.
+- `content/concepts/point-of-control.md` — expanded POC calculation/display differences, session/composite/visible-range POC distinctions, POC/HVN relationship, and failure contexts.
+- `content/concepts/value-area.md` — expanded calculation differences, 70% convention handling, VAH/VAL as distribution edges, internal HVN/LVN structure, and close outside value versus acceptance outside value.
+- `content/concepts/high-volume-node.md` — added platform terminology, conditions that change HVN appearance, observations inside HVNs, and weak/strong interpretation examples.
+- `content/concepts/low-volume-node.md` — added platform terminology, LVN/thin-area distinction, boundary interpretation, failure contexts, and misuse examples.
+- `content/concepts/fast-travel-zone.md` — added source status, official-versus-practitioner wording, thin-area conditions, failure examples, and slowdown candidates.
+- `content/concepts/volume-profile-distribution-structure.md` — expanded single/double/multiple distribution, balance/imbalance, boundaries, thin areas between distributions, and range dependency.
+- `content/methods/lvn-hvn-analysis.md` — added the profile-selection-first rule and a practical node interpretation table.
+- `content/methods/fast-travel-scenario-analysis.md` — added scenario checklist and failure examples.
+- `content/protocols/volume-profile-advanced-checklist.md` — reworked into mobile-friendly 30-second and 3-minute sections with settings, node map, scenario, invalidation, and skip checks.
+- `content/rules/eighty-percent-rule.md` — added explicit reasons confidence remains low and internal-structure checks before using the rule.
+
+### New pages created
+
+- None. The pass expanded existing pages rather than adding optional settings or data-limitation pages.
+
+### Confidence changes made
+
+- Basic Volume Profile, POC, and Value Area definitions remain medium confidence, now with stronger source-note support from platform documentation.
+- `sources/research-notes/volume-profile-nodes-and-fast-travel.md` now distinguishes medium confidence for basic HVN/LVN definitions from low confidence for trade expectations.
+
+### Confidence changes intentionally not made
+
+- Fast travel remains low confidence as a scenario concept, not an official platform-standard or verified probability.
+- The 80% rule remains low confidence; no empirical probability claim was verified.
+- HVN/LVN support-resistance behavior, directional scenarios, entry/stop/target behavior, and profile-shape implications remain low-confidence heuristics.
+
+### Validation commands run
+
+```bash
+gh issue list --state open --limit 20 || true
+npm run validate
+git status --short
+git diff --stat
+```
+
+### Validation / build result
+
+- `npm run validate` passed TypeScript typecheck, content validation, and production Next.js build.
+- Content validation passed for 93 pages.
+- Next generated 99 static pages.
+- npm emitted the existing non-fatal `Unknown env config "http-proxy"` warning.
+- `gh issue list --state open --limit 20 || true` could not check open GitHub Issues because `gh` is not installed in this container.
+
+### Remaining weaknesses
+
+- Direct Steidlmayer / CBOT / Dalton-style Market Profile source review is still incomplete.
+- Single prints and poor structure need a separate TPO / Market Profile verification pass.
+- No public-safe schematic diagrams or fictional walkthrough examples were added.
+- No empirical tests or local backtests support the 80% rule, fast travel, or node reaction heuristics.
+- Platform docs differ in terminology and defaults, so any platform-specific tutorial should check the current tool settings before publication.
+
+### Recommended next task
+
+1. Add public-safe schematic diagrams for POC / Value Area / HVN / LVN / fast travel.
+2. Add fictional walkthrough examples that show how profile range and row size change interpretation without implying trade advice.
+3. Continue source verification for Market Profile / TPO concepts such as single prints and poor structure.
+
 ## Volume Profile nodes / fast travel deepening pass — 2026-06-28
 
 ### Purpose

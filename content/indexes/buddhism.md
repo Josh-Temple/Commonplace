@@ -3,61 +3,83 @@ id: buddhism
 title: 仏教テーマ索引
 type: index
 status: draft
-summary: 四諦・八聖道・五戒・五蓋を起点に、仏教の基本概念をCommonplace上で辿るための索引。
+summary: 四諦・八聖道・五戒・五蓋を、仏教基本概念としてCommonplace上で辿るための入口。
 tags:
   - buddhism
   - index
   - practice
-confidence: medium
-sources: []
+confidence: low
+sources:
+  - sources/research-notes/buddhism-basic-concepts-overview.md
+  - sources/research-notes/buddhist-mindfulness-background.md
 related:
   - buddhism-four-noble-truths
   - buddhism-noble-eightfold-path
   - buddhism-five-precepts
   - buddhism-five-hindrances
+  - theravada-meditation
 next:
   - buddhism-four-noble-truths
-updated: 2026-06-27
+updated: 2026-06-30
 ---
 
 # 仏教テーマ索引
 
-## 使い方
+## 要点
 
-この索引は、仏教の基本概念をCommonplace / Lumen上で辿りやすくするための入口である。
+このページは、仏教基本概念をCommonplace上で辿るための入口です。
 
-ここでは、仏教学上の厳密な体系化ではなく、日常の内省、感情調整、判断、実践に使いやすい読み順を優先する。
+ここで扱うページは、仏教学上の完成した体系ではなく、読書と理解のための地図です。仏教文献は、臨床効果の根拠としてではなく、概念・実践文脈・思想背景の根拠として扱います。
+
+## 概要
+
+この索引では、四諦、八聖道、五戒、五蓋を広い仏教基本概念として短く辿ります。
+
+日常の内省に応用できる可能性のある語彙として弱く参照できますが、自己啓発、感情調整、医療・心理療法、生活改善チェックリストとして断定的に扱いません。
+
+## 上座部仏教系瞑想との違い
+
+この索引は、仏教基本概念を広く辿る入口です。Satipaṭṭhāna、Ānāpānasati、samatha / vipassanā / jhāna など、上座部仏教系の瞑想実践を詳しく読む場合は、[[theravada-meditation]]へ進みます。
+
+ここで扱うページは、仏教学上の完成した体系ではなく、Commonplace上の読書地図です。
 
 ## 最初に読む
 
 1. [[buddhism-four-noble-truths|四諦]]  
-   苦しみを、苦・原因・止滅・道という四段階で見る基本枠組み。
+   苦・原因・止滅・道という仏教の基本的な問題設定を短く読む。
 2. [[buddhism-noble-eightfold-path|八聖道]]  
-   見方、意図、言葉、行動、生活、努力、気づき、集中を整える実践体系。
-3. [[buddhism-five-hindrances|五蓋]]  
-   集中や判断を曇らせる欲・怒り・眠気や鈍さ・そわそわした不安・疑いの分類。
-4. [[buddhism-five-precepts|五戒]]  
-   害を減らし、誠実さと判断力を守るための基本的な戒め。
+   見方、意図、言葉、行動、生活、努力、気づき、集中という道を短く読む。
+3. [[buddhism-five-precepts|五戒]]  
+   行動・言葉・不注意に関する倫理的な訓練原則を短く読む。
+4. [[buddhism-five-hindrances|五蓋]]  
+   心を覆う妨げを、仏教基本概念として短く読む。
 
 ## 目的別に読む
 
-### 感情を観察したい
+### 基本概念を広く見る
 
 - [[buddhism-four-noble-truths]]
-- [[buddhism-five-hindrances]]
-
-### 行動や言葉を整えたい
-
 - [[buddhism-noble-eightfold-path]]
 - [[buddhism-five-precepts]]
-
-### 集中できない理由を分けたい
-
 - [[buddhism-five-hindrances]]
+
+### 上座部仏教系瞑想とつなげる
+
+- [[theravada-meditation]]
+- [[satipatthana-practice-map]]
+- [[four-noble-truths-and-eightfold-path]]
+- [[five-hindrances]]
 
 ## 注意点
 
-この索引から辿るページは、現時点では source note 未作成の草稿である。  
-特定の経典、宗派、伝統、学術研究を代表するものとしてではなく、Commonplace内での概念整理として扱う。
+広い仏教基本概念ページは、宗派比較、文献学、注釈書、現代仏教学を網羅するものではありません。
 
-正確性を高めるには、初期仏教文献、パーリ仏典、伝統的注釈、信頼できる研究書に基づく source note を追加する必要がある。
+また、仏教概念を「メンタル改善の技術」として強く言い切りません。現代心理学、医療、法律、職業倫理、対人支援が必要な問題は、それぞれの専門的文脈と分けて扱います。
+
+## 関連ノート
+
+- [[theravada-meditation]]
+- [[buddhism-four-noble-truths]]
+- [[buddhism-noble-eightfold-path]]
+- [[buddhism-five-precepts]]
+- [[buddhism-five-hindrances]]

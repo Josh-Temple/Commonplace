@@ -19,7 +19,7 @@ related:
   - poc-reaction-breakout-analysis
 next:
   - value-area
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -64,6 +64,36 @@ POC付近では、少なくとも2つのシナリオを観察します。
 - Return / retest: 一度離れた後に戻り、再評価が起きる。
 
 これらは事前に予測するものではなく、観察してScenarioを更新する材料です。
+
+## POCの計算と表示差
+
+POCは、選択したprofile内で最も出来高や活動が大きいrow / price levelとしてプラットフォームが計算します。ただし、同じチャートでも次が変わるとPOCは変わります。
+
+- session template
+- fixed rangeの開始点と終了点
+- visible rangeのzoom / scroll
+- row size / ticks per row / ticks per level
+- data source
+- Value ProfileかTPO / Market Profileか
+
+## session POC / composite POC / visible range POC
+
+Session POCは短期の活動中心を示しやすく、composite POCは複数sessionの長めの活動中心を示しやすいです。Visible range POCは画面表示に連動するため、便利ですが後付けになりやすいです。
+
+POCを見る前に、「どのprofileのPOCか」を言葉にします。
+
+## POCとHVNの関係
+
+POCは多くの場合、目立つ[[high-volume-node|HVN]]の中、またはその中心付近にあります。しかしPOCはprofile内の最大点であり、HVNは相対的な高出来高帯です。ひとつのprofileに複数HVNがあり、そのうち1つだけがPOCになることがあります。
+
+## POCが機能しにくい場面
+
+- 強いニュースや急変で過去のprofileが無視される。
+- 価格がPOCを止まらずdrive-throughする。
+- profile rangeが恣意的で、POCの意味を説明できない。
+- POCが広いHVN中央にあり、risk/rewardやinvalidationが曖昧。
+- 現在のmarket structureが過去の受容より強く再価格付けしている。
+
 
 ## 注意点
 

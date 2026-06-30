@@ -14,11 +14,12 @@ sources:
   - sources/research-notes/satipatthana-primary-texts.md
 related:
   - satipatthana-practice-map
+  - buddhism-five-hindrances
   - theravada-inspired-daily-practice
   - mindfulness-safety
 next:
   - seven-awakening-factors
-updated: 2026-06-26
+updated: 2026-06-30
 ---
 
 # 五蓋
@@ -71,6 +72,11 @@ updated: 2026-06-26
 
 情報不足の疑いなら調べる必要があります。一方で、迷い続けることが回避になっている場合は、短い時間だけ試す、判断基準を決める、詳しい人に相談するなどが役に立ちます。
 
+
+## 仏教基本概念ページとの違い
+
+このページは、四念処や上座部仏教系瞑想の文脈で五蓋を読むためのページです。仏教基本概念として短く読む場合は、[[buddhism-five-hindrances]]を参照します。
+
 ## 日常で軽く参照する方法
 
 集中できない時に、次のように短く確認します。
@@ -110,6 +116,7 @@ updated: 2026-06-26
 ## 関連ノート
 
 - [[satipatthana-practice-map]]
+- [[buddhism-five-hindrances]]
 - [[seven-awakening-factors]]
 - [[theravada-inspired-daily-practice]]
 - [[mindfulness-safety]]
