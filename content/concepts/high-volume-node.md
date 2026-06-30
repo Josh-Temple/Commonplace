@@ -18,7 +18,7 @@ related:
   - lvn-hvn-analysis
 next:
   - low-volume-node
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -42,6 +42,33 @@ HVNでは次を観察します。
 - HVN内で動きが遅くなり、方向判断が難しくなるか。
 
 HVNは、文脈次第で「価格の磁石」「再評価エリア」「動きが遅くなる場所」「balanceの中心」になり得ます。
+
+## Platform terminology
+
+HVN / LVNはTradingViewの公式ヘルプで確認できる用語です。一方で、すべてのプラットフォームが同じ名称・同じ計算でnodeを表示するとは限りません。Sierra ChartやNinjaTraderでは、POC、Value Area、row / tick aggregationなどの設定確認が特に重要です。
+
+## HVNの見え方が変わる条件
+
+- profile rangeをsessionからcompositeへ変える。
+- visible rangeをzoom / scrollする。
+- row sizeを細かくする、または粗くする。
+- RTH / ETH / 24時間のsessionを変える。
+- FX / CFDのtick volumeと取引所出来高を混同する。
+
+## HVN内で起こりやすい観察
+
+HVN内では、過去に取引が集中したため、再評価、回転、滞在、方向感の低下、次の薄い境界探しが観察対象になります。ただし、これは「起きやすい可能性を観察する」ための言葉であり、反発保証ではありません。
+
+## HVNを誤用する例
+
+Weak interpretation:
+
+> HVNだから反発する。
+
+Stronger interpretation:
+
+> 選択したsession profileではこの価格帯に出来高が集中している。価格がここへ戻った場合、回転・再評価・滞在が起きるか、あるいは現在の構造がそれを無視して通過するかを観察する。
+
 
 ## POCとの違い
 

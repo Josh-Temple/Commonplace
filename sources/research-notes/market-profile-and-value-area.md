@@ -8,82 +8,45 @@ How should Lumen explain Market Profile, Value Area, VAH, VAL, POC, and profile 
 
 ## Working summary
 
-Market Profile is commonly associated with auction-market framing and time-at-price or TPO-style organization, while Volume Profile is commonly volume-at-price oriented. Value Area is often described as the central region containing about 70% of the session's activity, though the exact calculation and default settings may vary. Profile shapes such as D, P, and b are practitioner heuristics used to summarize auction behavior, not mechanical signals.
+Market Profile / TPO and Volume Profile are related auction-market tools but are not identical. Market Profile traditionally organizes opportunity or time-at-price through TPO-style displays; Volume Profile organizes traded or available volume at price. Value Area, POC, VAH, and VAL are shared in platform language, but calculations depend on whether the profile is TPO-based, volume-based, session-based, visible-range, fixed-range, or composite.
 
-## Key claims
+## Verified Market Profile / TPO background
 
-- Value Area usually refers to the central area containing roughly 70% of activity or volume, depending on the tool and settings.
-- VAH means Value Area High; VAL means Value Area Low.
-- POC is the highest-activity price or price zone in the selected profile.
-- D-shape profiles are often interpreted as balance, rotation, or two-sided trade.
-- P-shape and b-shape readings are practitioner heuristics and should be framed with low confidence unless verified by stronger sources.
-- A close above, below, or inside value can be used as context for next-session planning, but it is not a guaranteed continuation or reversal signal.
+- Source type: official platform documentation. Sierra Chart separates TPO Profile Chart and Volume by Price studies and supports overlaying independent Volume Profiles on TPO charts, which reinforces that TPO and volume-at-price are related but distinct data views. URL: https://www.sierrachart.com/index.php?ID=141&page=doc%2FStudiesReference.php
+- Source type: official platform documentation. NinjaTrader documents Order Flow Volume Profile separately from its broader order-flow tooling and defines volume-profile components by volume distribution at price rather than TPO letters. URL: https://ninjatrader.com/support/helpGuides/nt8/order_flow_volume_profile.htm
+- Source type: established practitioner reference, not directly re-verified in this pass. Steidlmayer / CBOT and Dalton-style Market Profile references remain candidate sources for deeper historical attribution and TPO-specific concepts. Do not cite exact page numbers or historical claims until reviewed directly.
 
-## Uncertainty / limits
+## Value Area calculation conventions
 
-- The 70% convention should not be described as a natural law.
-- Shape interpretation is subjective and may change with session definition, composite range, and instrument.
-- This note does not establish statistical edge for value-area closes or profile shapes.
-- Reader-facing pages should preserve the distinction between definition, interpretation, heuristic, and personal rule.
+- TradingView documents Value Area as the range containing a specified percentage of all volume in the chosen time period, typically 70%, and gives a POC-centered expansion algorithm. URL: https://www.tradingview.com/support/solutions/43000502040-volume-profile-indicators-basic-concepts/
+- NinjaTrader documents Value Area as configurable and describes a 68% value-area percentage in its Order Flow Volume Profile help guide. URL: https://ninjatrader.com/support/helpGuides/nt8/order_flow_volume_profile.htm
+- Sierra Chart exposes Value Area Percentage as an input and has separate studies for Volume Value Area Lines and Volume by Price. URL: https://www.sierrachart.com/index.php?ID=141&page=doc%2FStudiesReference.php
 
-## Candidate sources to verify
+## POC / VAH / VAL terminology
 
-- CBOT Market Profile materials on value area and TPO distribution.
-- J. Peter Steidlmayer's Market Profile work.
-- James Dalton / Mind Over Markets style Market Profile materials.
-- Charting platform documentation defining Value Area, VAH, VAL, POC, and profile shape examples.
+- POC is platform-supported terminology for the most active or highest-volume point/row in a selected profile.
+- VAH and VAL are platform-supported terminology for the high and low boundaries of the calculated Value Area.
+- The labels can be medium confidence as definitions, but any trading reaction around them remains a heuristic.
 
-## Notes for Codex
+## Market Profile vs Volume Profile
 
-- Use medium confidence for definitions such as POC and Value Area when framed as conventional platform terms.
-- Use low confidence for shape interpretation and close-location implications.
-- Avoid saying that a close outside value automatically predicts continuation.
+- Market Profile / TPO: usually time/opportunity-at-price oriented.
+- Volume Profile: volume/activity-at-price oriented.
+- Shared language such as POC and Value Area does not mean identical inputs or identical levels.
+- A TPO Value Area and a Volume Value Area can differ on the same session.
 
-## TODO: source verification pass
+## Single prints / poor structure
 
-- Verify Market Profile / auction market theory sources for value, balance, excess, failed auction, and profile-shape terminology.
-- Verify whether Value Area conventions differ across TPO and Volume Profile platforms before adding exact claims.
+Single prints and poor structure are more directly Market Profile / TPO concepts because they describe the pattern of TPO opportunities and auction structure. They may visually correspond to low-volume pockets in some cases, but that correspondence should not be treated as exact without a platform-specific check.
 
-## 2026-06-24 content-deepening verification TODOs
+## Unsupported or practitioner-only interpretations
 
-These notes remain candidate working notes. Do not promote stronger claims into reader-facing pages until primary or high-quality sources are checked.
+- D / P / b shape as a directional signal.
+- Close outside value as automatic continuation.
+- Re-entry into value as a verified 80% probability.
+- Single prints as automatic fill targets.
+- HVN/LVN support/resistance behavior.
 
-### Claims that need verification
-- Market Profile / auction market theory.
-- VAH / VAL definitions.
-- TPO versus volume-based Value Area calculations.
-- acceptance and rejection definitions.
+## Remaining uncertainty
 
-### Candidate source types
-
-- Primary Market Profile / auction market theory texts or official training material.
-- Platform documentation for Volume Profile, POC, Value Area, VAH, and VAL calculations.
-- Exchange or data-provider documentation where calculation or session definitions matter.
-- Risk management, journaling, and trading psychology sources with clear methodology.
-
-### Platform documentation to check
-
-- How POC is calculated and whether ties, tick aggregation, visible range, and session boundaries are handled differently.
-- How Value Area percentage is selected and expanded around POC.
-- Whether VAH / VAL are based on TPO count, volume, or vendor-specific logic.
-
-### Practitioner heuristics requiring caution
-
-- Horizontal level priority rules.
-- POC as support/resistance.
-- Profile-shape interpretations such as D / P / b shapes.
-- The 80% rule as a named probability claim.
-
-### Claims not yet supported
-
-- Any exact win rate, probability, or guaranteed edge.
-- Any personalized position-sizing or trade recommendation.
-- Any claim that a single indicator or pattern is sufficient for entry.
-
-## 2026-06-28 nodes / distribution verification TODOs
-
-- Verify HVN / LVN terminology where it overlaps with Market Profile, auction-market theory, and volume-at-price tools.
-- Verify single prints / poor structure as Market Profile / TPO terms and separate them from Volume Profile low-volume pockets.
-- Check platform differences in Value Area, POC, HVN, LVN, row size, bin size, and session definitions.
-- Verify double-distribution and multiple-distribution descriptions before raising confidence.
-- Keep fast travel and thin-area movement claims as practitioner heuristics until stronger sources are reviewed.
+Historical attribution to Steidlmayer, CBOT materials, and Dalton-style literature should be expanded in a future pass using direct sources. This pass verifies platform definitions and calculation variability, not a canonical auction-market theory lineage.

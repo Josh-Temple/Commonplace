@@ -20,7 +20,7 @@ related:
   - volume-profile-checklist
 next:
   - volume-profile-checklist
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## Rule status
@@ -55,6 +55,23 @@ updated: 2026-06-28
 - Where the idea is invalidated: 再び外側で受け入れられる、または反対方向のStructureが出るなど。
 - Trend-like or balance-like day: trend dayではValue内回帰の発想が弱くなる可能性。
 - False precision avoidance: 「80%」を勝率や保証として扱わず、未検証の名称として扱う。
+
+## なぜconfidenceはlowのままか
+
+- source qualityが実務家・ブログ・教育ページに偏りやすい。
+- 「80%」という数字が経験則名であり、検証済み確率として確認できていない。
+- Value Area計算はプラットフォームやpercentage設定で変わる。
+- re-entry、acceptance、target、invalidationの定義が人によって違う。
+- trend dayやnewsで前提が崩れやすい。
+
+## 80% ruleを使う前に確認する内部構造
+
+- internal POC: Value内で最初にstallしやすい中心点はどこか。
+- internal HVN: 反対側へ行く前に回転しやすい厚い帯はあるか。
+- LVN between current price and opposite value edge: 薄い境界で拒否される可能性はあるか。
+- single or double distribution: Valueがひとつの滑らかな分布か、2つ以上の分布か。
+- accepted re-entry or only touched: 境界を一瞬触っただけか、内側で受け入れられているか。
+
 
 ## LVN / HVN structure check
 

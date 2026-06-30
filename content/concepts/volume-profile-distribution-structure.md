@@ -21,7 +21,7 @@ related:
   - point-of-control
 next:
   - fast-travel-zone
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -50,6 +50,35 @@ Distribution structureは、次の問いを立てる助けになります。
 - どこを速く動き、あまり出来高を作らなかったか。
 - どこで価格が遅くなり、rotateまたはreassessしやすいか。
 - thin zoneを越えた場合、次のdecision areaはどこか。
+
+## Single distribution
+
+Single distributionは、ひとつの中心的な高出来高帯に活動がまとまる形です。Balance、rotation、二方向の取引が集中した候補として記述できますが、次の方向を予測する形ではありません。
+
+## Double distribution
+
+Double distributionは、2つの高出来高帯がthin areaやLVNで分かれて見える形です。上の分布と下の分布のどちらを価格が受け入れているか、間の薄い境界をどう扱うかを観察します。
+
+## Multiple distribution
+
+Multiple distributionは、複数の受容帯がある複雑な形です。nodeが増えるほど、優先順位、時間軸、profile rangeを明確にしないと後付け解釈になりやすくなります。
+
+## Balance and imbalance
+
+厚い分布はbalanceや滞在の候補、薄い移動はimbalanceやtransitionの候補として読まれます。ただし、balance / imbalanceは説明ラベルであり、単独の売買シグナルではありません。
+
+## Distribution boundary
+
+Distribution boundaryは、厚い領域から薄い領域へ移る場所です。VAH / VAL、LVN、水平線、prior high / lowと重なる場合はdecision areaとして観察しやすくなります。
+
+## Thin area between distributions
+
+2つの分布の間にあるthin areaは、rejection候補にもtransition候補にもなります。受け入れられれば通過シナリオ、拒否されれば元の分布への回帰シナリオを用意します。
+
+## Profile range dependency
+
+Double distributionは、sessionやrangeの切り方で作られたり消えたりします。visible rangeだけで都合よく形を選ばず、[[market-structure]]と[[horizontal-levels]]で確認します。
+
 
 ## POC / Value Areaとの関係
 

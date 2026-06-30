@@ -20,7 +20,7 @@ related:
   - risk-reward-and-invalidation
 next:
   - eighty-percent-rule
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -39,6 +39,17 @@ fast travel scenario analysisの目的は、低出来高帯を通過する可能
 - 価格がthin area内でacceptanceを作り始めている。
 - 次の[[high-volume-node|HVN]]、POC、VAH / VAL、prior high / lowまでの距離が説明できる。
 
+## Scenario checklist
+
+1. Thin area identified: どのprofileで薄い場所か説明できる。
+2. Boundary defined: 上下の境界と元のHVNを言語化した。
+3. Entry into thin area observed: 境界に触れただけでなく、thin areaへ入った観察がある。
+4. Acceptance beyond boundary observed: 境界外で滞在、retest、戻りの浅さなどがある。
+5. Invalidation defined: 元のHVNへ戻る、境界を維持できないなどを決めた。
+6. Next slowdown area identified: next HVN、POC、VAH / VAL、prior high / low、水平線を置いた。
+7. No-trade condition defined: 根拠不足、近すぎるslowdown、news、感情状態などで見送れる。
+
+
 ## Confirmation ideas
 
 確認は固定ルールではなく、事前に決める観察条件です。
@@ -56,6 +67,15 @@ fast travel scenario analysisの目的は、低出来高帯を通過する可能
 - LVNでrejectionが出る。
 - thin area内でstallし、新しい出来高を作り始める。
 - 上位足の水平線やニュースがシナリオを壊す。
+
+## Failure examples
+
+- touches LVN and rejects: LVNに触れただけで元の分布へ戻る。
+- enters thin area but immediately returns: thin areaへ入ったが、acceptanceがない。
+- stalls and builds volume inside thin area: 低出来高帯だった場所に新しい出来高が作られる。
+- hits nearby higher-timeframe level: 上位足水平線やprior high / lowで止まる。
+- news-driven move invalidates normal profile reading: ニュース主導で通常のprofile解釈が弱くなる。
+
 
 ## Target / slowdown candidates
 

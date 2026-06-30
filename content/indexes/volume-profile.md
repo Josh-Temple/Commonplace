@@ -26,7 +26,7 @@ related:
   - volume-profile-advanced-checklist
 next:
   - volume-profile-overview
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 目的
@@ -58,6 +58,30 @@ Volume Profileは、選んだセッションや範囲で、どの価格帯に出
 13. [[eighty-percent-rule|80% rule]]
 14. [[volume-profile-checklist|Volume Profile checklist]]
 15. [[volume-profile-advanced-checklist|Volume Profile advanced checklist]]
+
+## 信頼度と根拠の読み方
+
+- 基本定義: Volume Profile、POC、Value Area、VAH、VALは複数のプラットフォーム文書で確認できるため、このクラスターでは比較的安定した定義として扱います。
+- 計算差: 同じ用語でも、session、visible range、fixed range、row size、ticks per level、Value Area percentage、data sourceで表示が変わります。
+- Advanced terms: HVN / LVNはTradingViewの公式ヘルプで用語確認できましたが、全プラットフォーム共通の自動計算規格ではありません。
+- Scenario terms: fast travel、profile shape、80% ruleは実務ヒューリスティックです。確率や勝率として読まず、条件付きシナリオとして扱います。
+
+## 詳細に読む順序
+
+Basic layer:
+
+1. [[volume-profile-overview]]
+2. [[point-of-control]]
+3. [[value-area]]
+
+Advanced layer:
+
+1. [[high-volume-node]] / [[low-volume-node]]
+2. [[volume-profile-distribution-structure]]
+3. [[fast-travel-zone]]
+4. [[lvn-hvn-analysis]] / [[fast-travel-scenario-analysis]]
+5. [[eighty-percent-rule]]
+
 
 ## 追加で見る価格帯
 

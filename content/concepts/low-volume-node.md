@@ -19,7 +19,7 @@ related:
   - lvn-hvn-analysis
 next:
   - volume-profile-distribution-structure
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 ## 要点
@@ -41,6 +41,37 @@ LVNでは次を観察します。
 - 価格が滞在できず、片側へ戻される可能性。
 - 反対に、価格が受け入れられればtransition zoneになる可能性。
 - 薄い場所へ新しい出来高が作られ、過去のLVNの意味が変わる可能性。
+
+## Platform terminology
+
+LVNはTradingViewの公式ヘルプで確認できるnode用語ですが、すべてのプラットフォームが同じ方法でLVNを自動検出するわけではありません。より中立に書くなら、low-volume area、thin area、low-volume pocketと表現できます。
+
+## LVNとthin area
+
+LVNは、選択したprofileの中で相対的に出来高が落ちている谷です。Thin areaは、その低出来高の帯をより説明的に呼ぶ言葉です。LVNという名前よりも、「どのprofileで、どのrow設定で、どの上下の高出来高帯に挟まれているか」を明確にします。
+
+## LVNが境界になりやすい理由
+
+LVNは、過去に価格が滞在しにくかった場所、または上下の受容帯の間のtransitionとして見えることがあります。このため、分布境界、rejection候補、または別のHVNへ移る通路として観察されます。これは解釈であり、定義そのものではありません。
+
+## LVNが機能しにくい場面
+
+- 価格がLVN内で新しい出来高を作り始める。
+- row sizeを変えるとLVNが消える。
+- 上位足の水平線やニュースがprofileより優先される。
+- 見ているLVNがvisible rangeのzoomで偶然作られている。
+- 周辺にslowdown候補が近すぎて、fast travelの余地がない。
+
+## LVNを誤用する例
+
+Weak interpretation:
+
+> LVNだから自動的に抜ける。
+
+Stronger interpretation:
+
+> このprofileでは上下のHVNの間に相対的な低出来高帯がある。価格が境界を受け入れて滞在できるか、拒否されて元の分布へ戻るか、新しく出来高を作ってLVNの意味を変えるかを観察する。
+
 
 ## fast travelとの関係
 
