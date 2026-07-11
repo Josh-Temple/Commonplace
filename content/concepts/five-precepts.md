@@ -1,7 +1,7 @@
 ---
 id: five-precepts
 title: 五戒
- type: concept
+type: concept
 status: draft
 summary: 上座部仏教の五戒を、在家者が自ら受持する基本的な訓練規則として、八戒・十戒・Vinayaとの違いを含めて整理するページ。
 tags:
