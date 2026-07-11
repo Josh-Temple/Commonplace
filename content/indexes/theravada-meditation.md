@@ -3,7 +3,7 @@ id: theravada-meditation
 title: 上座部仏教系の瞑想
 type: index
 status: draft
-summary: 上座部仏教系の瞑想を、四念処、呼吸への気づき、メッタ、samatha / vipassanā、現代マインドフルネスとの違いから整理する入口ページ。
+summary: 上座部仏教系の瞑想を、戒と律、四念処、呼吸への気づき、メッタ、samatha / vipassanā、現代マインドフルネスとの違いから整理する入口ページ。
 tags:
   - theravada
   - buddhism
@@ -13,28 +13,34 @@ confidence: low
 sources:
   - sources/research-notes/theravada-meditation-overview.md
   - sources/research-notes/buddhist-mindfulness-background.md
+  - sources/research-notes/theravada-precepts-and-vinaya.md
 related:
+  - theravada-ethics-and-precepts
+  - five-precepts
+  - eight-and-ten-precepts
+  - theravada-vinaya-and-patimokkha
   - meditation-family-of-practices
   - breath-awareness-meditation
   - loving-kindness-meditation
-  - five-precepts
   - mindfulness-based-interventions-comparison
 next:
+  - theravada-ethics-and-precepts
   - satipatthana-practice-map
   - anapanasati-sixteen-steps
-updated: 2026-06-30
+updated: 2026-07-11
 ---
 
 ## 要点
 
-上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。
+上座部仏教系瞑想は、注意訓練だけでなく、倫理・僧団規律・智慧・非執着・解脱の文脈を持ちます。
 
 このページでは、宗教実践そのものを再現するのではなく、理解の地図として整理します。現代マインドフルネス、MBSR、MBCT、ACTと同じものとして扱いません。
 
 ## Androidでの最短ルート
 
-- 全体像: [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]]。
-- 教理地図: [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]]。
+- 倫理と生活の土台: [[theravada-ethics-and-precepts]] → [[five-precepts]]。
+- 瞑想の全体像: [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]]。
+- 教理地図: [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]]。
 - 混同を避ける: [[theravada-lineages-overview]] → [[mindfulness-based-interventions-comparison]]。
 
 ## 上座部仏教系瞑想とは何を指すか
@@ -43,13 +49,24 @@ updated: 2026-06-30
 
 Satipaṭṭhāna、Ānāpānasati、mettā、samatha、vipassanā、jhānaなどは、単なるリラックス法や注意トレーニングではなく、仏教的な実践体系の中で読まれます。
 
+## 戒と律を先に分ける
+
+日本語の「戒律」は、在家者の倫理訓練と出家僧団の規律を一つに見せることがあります。
+
+Commonplaceでは、[[theravada-ethics-and-precepts]]を入口に、次を分けて読みます。
+
+- [[five-precepts|五戒]]: 在家者の基本的な訓練規則。
+- [[eight-and-ten-precepts|八戒]]: 布薩日やリトリートで在家者が受持する、より出離的な訓練。
+- [[eight-and-ten-precepts|十戒]]: 主に沙弥・沙弥尼の訓練。
+- [[theravada-vinaya-and-patimokkha|VinayaとPāṭimokkha]]: 具足戒を受けた比丘・比丘尼と僧団の規律体系。
+
+瞑想を日常の行為や共同体から切り離さないための背景ですが、在家者に出家戒をそのまま適用しません。
+
 ## 現代マインドフルネスとの違い
 
 現代マインドフルネスは、注意、身体感覚、感情反応、ストレス反応の観察として説明されることがあります。
 
-上座部仏教系の文脈では、それに加えて戒、智慧、苦の理解、非執着、解脱といった語彙が関わります。重なる部分はありますが、目的も根拠も同じではありません。
-
-[[five-precepts|五戒]]は、瞑想を注意訓練だけに切り離さず、倫理・言葉・行動・生活の土台とつなぐための入口として扱います。
+上座部仏教系の文脈では、それに加えて戒、Vinaya、智慧、苦の理解、非執着、解脱といった語彙が関わります。重なる部分はありますが、目的も根拠も同じではありません。
 
 ## 主要な実践地図
 
@@ -84,9 +101,11 @@ samathaを単なるリラックス法、vipassanāを単なるオープンモニ
 
 ## 実践を支える教理地図
 
-四念処を読む前後に、[[five-precepts]]、[[five-hindrances]]、[[seven-awakening-factors]]、[[three-characteristics]]、[[four-noble-truths-and-eightfold-path]]を確認します。
+倫理的背景は[[theravada-ethics-and-precepts]]から読みます。
 
-これらは臨床効果の根拠ではなく、上座部仏教系瞑想の宗教的・哲学的・実践的背景です。五戒は、言葉・行動・生活の境界線を確認するためのページであり、他者批判や自己処罰の道具ではありません。瞑想を注意技法だけに縮小せず、倫理・集中・智慧・非執着の体系として読むための地図です。
+四念処を読む前後に、[[five-hindrances]]、[[seven-awakening-factors]]、[[three-characteristics]]、[[four-noble-truths-and-eightfold-path]]を確認します。
+
+これらは臨床効果の根拠ではなく、上座部仏教系瞑想の宗教的・哲学的・実践的背景です。瞑想を注意技法だけに縮小せず、戒・定・慧、共同体、非執着の体系として読むための地図です。
 
 ## 系譜差を知る
 
@@ -98,17 +117,23 @@ samathaを単なるリラックス法、vipassanāを単なるオープンモニ
 
 日常では、短い呼吸への気づき、感受の名づけ、心の状態の確認、善意の短い句、五蓋に気づく程度に留めます。
 
+倫理を確認する場合も、[[five-precepts]]を自己処罰や他者監視に使いません。
+
 実践化する場合は、[[theravada-inspired-daily-practice]]を読み、短く、安全に戻れる形で扱います。
 
 ## 自己流で扱わないほうがよい範囲
 
 死体観、不浄観、強い無我観、長時間の内観、強集中、jhānaの到達判定は、読者向け自己実践として扱いません。
 
+出家戒の受持、Vinaya違反の判定、授戒や僧団手続も、公開ページから自己流で行いません。
+
 強い不安、トラウマ反応、解離、躁的高揚、精神病症状、自傷・他害リスク、睡眠悪化がある場合は、自己流で深めず[[mindfulness-safety]]を優先します。
 
 ## 読む順番
 
-[[theravada-meditation]] → [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+[[theravada-ethics-and-precepts]] → [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[three-characteristics]] → [[four-noble-truths-and-eightfold-path]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+
+八戒・十戒を知る場合は[[eight-and-ten-precepts]]、出家僧団の律を知る場合は[[theravada-vinaya-and-patimokkha]]へ進みます。
 
 メッタと四梵住を知る場合は、[[theravada-metta-and-brahmavihara]]へ進みます。日常で慎重に参照する場合は、[[theravada-inspired-daily-practice]]を読みます。
 
@@ -116,12 +141,15 @@ samathaを単なるリラックス法、vipassanāを単なるオープンモニ
 
 このページは、経典・伝統・現代的な翻訳・心理学的応用を分けるための入口です。
 
-仏教文献は、臨床効果の根拠としてではなく、実践体系・用語・思想背景の根拠として扱います。翻訳差、伝統差、流派差は残っており、source noteで追加検証が必要です。
+仏教文献は、臨床効果の根拠としてではなく、実践体系・用語・思想背景の根拠として扱います。翻訳差、伝統差、流派差、Vinaya運用差は残っており、source noteで追加検証が必要です。
 
 ## 関連ノート
 
-- [[meditation-family-of-practices]]
+- [[theravada-ethics-and-precepts]]
 - [[five-precepts]]
+- [[eight-and-ten-precepts]]
+- [[theravada-vinaya-and-patimokkha]]
+- [[meditation-family-of-practices]]
 - [[mindfulness-based-interventions-comparison]]
 - [[breath-awareness-meditation]]
 - [[loving-kindness-meditation]]

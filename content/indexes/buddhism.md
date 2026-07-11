@@ -17,10 +17,11 @@ related:
   - buddhism-noble-eightfold-path
   - buddhism-five-precepts
   - buddhism-five-hindrances
+  - theravada-ethics-and-precepts
   - theravada-meditation
 next:
   - buddhism-four-noble-truths
-updated: 2026-06-30
+updated: 2026-07-11
 ---
 
 # 仏教テーマ索引
@@ -37,9 +38,13 @@ updated: 2026-06-30
 
 日常の内省に応用できる可能性のある語彙として弱く参照できますが、自己啓発、感情調整、医療・心理療法、生活改善チェックリストとして断定的に扱いません。
 
-## 上座部仏教系瞑想との違い
+## 上座部仏教系ページとの違い
 
-この索引は、仏教基本概念を広く辿る入口です。Satipaṭṭhāna、Ānāpānasati、samatha / vipassanā / jhāna など、上座部仏教系の瞑想実践を詳しく読む場合は、[[theravada-meditation]]へ進みます。
+この索引は、仏教基本概念を広く辿る入口です。
+
+上座部仏教の五戒・八戒・十戒・Vinayaを対象者別に詳しく読む場合は、[[theravada-ethics-and-precepts]]へ進みます。
+
+Satipaṭṭhāna、Ānāpānasati、samatha / vipassanā / jhāna など、上座部仏教系の瞑想実践を詳しく読む場合は、[[theravada-meditation]]へ進みます。
 
 ここで扱うページは、仏教学上の完成した体系ではなく、Commonplace上の読書地図です。
 
@@ -63,6 +68,13 @@ updated: 2026-06-30
 - [[buddhism-five-precepts]]
 - [[buddhism-five-hindrances]]
 
+### 上座部仏教の戒と律を詳しく見る
+
+- [[theravada-ethics-and-precepts]]
+- [[five-precepts]]
+- [[eight-and-ten-precepts]]
+- [[theravada-vinaya-and-patimokkha]]
+
 ### 上座部仏教系瞑想とつなげる
 
 - [[theravada-meditation]]
@@ -78,6 +90,7 @@ updated: 2026-06-30
 
 ## 関連ノート
 
+- [[theravada-ethics-and-precepts]]
 - [[theravada-meditation]]
 - [[buddhism-four-noble-truths]]
 - [[buddhism-noble-eightfold-path]]
