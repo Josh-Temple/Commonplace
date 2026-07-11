@@ -29,13 +29,14 @@ related:
   - mbct
   - act-and-mindfulness
   - theravada-meditation
+  - theravada-ethics-and-precepts
   - five-precepts
   - satipatthana-practice-map
 next:
   - mindfulness
   - meditation-family-of-practices
   - mindfulness-safety
-updated: 2026-06-30
+updated: 2026-07-11
 ---
 
 ## 要点
@@ -49,6 +50,7 @@ updated: 2026-06-30
 - 初回: [[mindfulness]] → [[mindfulness-safety]] → [[five-minute-mindfulness-reset]]。
 - 実践を選ぶ: [[mindfulness-practice-cards]] → [[daily-mindfulness-practice]]。
 - 体系比較: [[mindfulness-based-interventions-comparison]] → [[mbsr]] / [[mbct]] / [[act-and-mindfulness]] / [[theravada-meditation]]。
+- 上座部の倫理的背景: [[theravada-ethics-and-precepts]] → [[five-precepts]]。
 
 ## 実践の理由と効果を知る
 
@@ -63,7 +65,6 @@ updated: 2026-06-30
 [[mindfulness]] → [[meditation-family-of-practices]] → [[mindfulness-safety]] → [[five-minute-mindfulness-reset]]
 
 まずは「長く座る」より、「安全に止められる」「日常に戻れる」ことを優先します。
-
 
 ## MBSRを詳しく知る
 
@@ -109,9 +110,9 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 
 ## 上座部仏教系の瞑想を知る
 
-[[theravada-meditation]] → [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
+[[theravada-meditation]] → [[theravada-ethics-and-precepts]] → [[five-precepts]] → [[five-hindrances]] → [[seven-awakening-factors]] → [[satipatthana-practice-map]] → [[anapanasati-sixteen-steps]] → [[samatha-vipassana-jhana]]
 
-上座部仏教系瞑想は、注意訓練だけでなく、倫理・智慧・非執着・解脱の文脈を持ちます。[[five-precepts|五戒]]は、その倫理的背景を日常の言葉・行動・生活の境界線として弱く参照する入口です。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
+上座部仏教系瞑想は、注意訓練だけでなく、倫理・僧団規律・智慧・非執着・解脱の文脈を持ちます。[[theravada-ethics-and-precepts|戒と律の索引]]で、在家の五戒・八戒、沙弥・沙弥尼の十戒、比丘・比丘尼のVinayaを区別してから読むことができます。MBSR、MBCT、ACT、現代的な短い瞑想法と混同しません。
 
 メッタと四梵住を知る場合は、[[theravada-metta-and-brahmavihara]]へ進みます。日常で慎重に参照する場合は、[[theravada-inspired-daily-practice]]を読みます。
 
@@ -144,6 +145,8 @@ MBSR、MBCT、ACT、仏教的背景、一般的な瞑想実践は重なる部分
 - [[mbsr]]
 - [[mbct]]
 - [[act-and-mindfulness]]
+- [[theravada-meditation]]
+- [[theravada-ethics-and-precepts]]
 
 ## 次に読むページ
 
