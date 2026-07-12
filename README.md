@@ -63,3 +63,10 @@ npm run validate:content
 ```
 
 The app is designed to deploy directly on Vercel as a standard Next.js project. It includes a web app manifest and service worker so supported browsers can install Lumen as a standalone PWA and reuse cached pages when offline.
+
+## Handoff workflow
+
+- Read `Handoff.md` for the current repository state, active limitations, validation status, and recommended next tasks.
+- Read `handoffs/YYYY-MM.md` for detailed recent work history.
+- Keep the current-state document concise.
+- Store detailed completion logs in the monthly archive rather than appending them to `Handoff.md`.

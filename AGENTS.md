@@ -8,9 +8,10 @@ Before starting work, Codex should:
 
 1. Read `AGENTS.md`.
 2. Read `Handoff.md`.
-3. Check open GitHub Issues before selecting work.
-4. Prefer working from GitHub Issues unless the user gives a direct instruction in chat.
-5. Identify whether the task is:
+3. Read the current monthly file under `handoffs/YYYY-MM.md` when recent detailed work history is relevant.
+4. Check open GitHub Issues before selecting work.
+5. Prefer working from GitHub Issues unless the user gives a direct instruction in chat.
+6. Identify whether the task is:
    - app development
    - content writing
    - source integration
@@ -18,12 +19,19 @@ Before starting work, Codex should:
    - validation
    - documentation
    - review or cleanup
-6. After completing work, update `Handoff.md` with:
-   - files changed
-   - commands run
-   - validation results
-   - remaining limitations
-   - suggested next tasks
+7. After completing work:
+   1. Update `Handoff.md` only when the current repository state, active limitations, validation status, or recommended next tasks change.
+   2. Add the detailed work record to `handoffs/YYYY-MM.md`; create the monthly file if it does not exist.
+   3. Keep `Handoff.md` concise and current.
+   4. Do not use `Handoff.md` as an append-only historical log.
+   5. The monthly record should include:
+      - purpose
+      - files created, updated, or deleted
+      - important implementation or editorial decisions
+      - commands run
+      - validation results
+      - remaining limitations
+      - suggested next tasks
 
 ## Content boundaries
 
