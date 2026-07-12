@@ -2,6 +2,7 @@
 id: buddhism
 title: 仏教テーマ索引
 type: index
+lens: ideas-life
 status: draft
 summary: 四諦・八聖道・五戒・五蓋を、仏教基本概念としてCommonplace上で辿るための入口。
 tags:

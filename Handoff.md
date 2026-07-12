@@ -10,8 +10,7 @@ Commonplace contains **Lumen**, a Vercel-ready Next.js personal knowledge-base r
 - Reader-facing pages live under `content/` and are rendered through Lumen routes, search, index pages, wikilinks, and mobile-first article layouts.
 - Research notes and source summaries live under `sources/` and are used as evidence/supporting material, not as final reader-facing pages.
 - The app includes PWA metadata, install icons, service worker registration, and an offline fallback page.
-- Current navigation includes a home page, theme/index listings, article search, detail pages, quiet metadata treatment, Markdown table support, and reader font-size controls.
-- The current branch is `work`; the latest local merge shown during this handoff pass was PR #21, `agent/theravada-precepts-and-vinaya`.
+- Current navigation includes a home page with top-level theme-area entry points, grouped theme/index listings, article search, detail pages, quiet metadata treatment, Markdown table support, and reader font-size controls.
 
 ## Content architecture
 
@@ -28,7 +27,7 @@ Reader-facing material belongs in `content/`. Source notes and research extracti
 
 ## Current major content areas
 
-Current index pages cover:
+Current index pages are grouped by `lens` frontmatter into top-level theme areas. Current index pages cover:
 
 - Buddhism basics
 - Theravada ethics and precepts
@@ -44,11 +43,11 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run during the handoff migration on 2026-07-11:
+Latest validation run during the lens navigation update on 2026-07-12:
 
 - `npm run validate:content`: passed for 97 content pages.
-- `npm run validate`: passed, including TypeScript typechecking, content validation, and production `next build`.
-- Production build: passed locally through `npm run validate` on 2026-07-11.
+- `npm run validate`: passed on 2026-07-12, including TypeScript typechecking, content validation, and production `next build`.
+- Production build: passed locally through `npm run validate` on 2026-07-12; build output included `/`, `/indexes`, `/indexes/markets`, and `/indexes/ideas-life`.
 - Vercel: project is structured for Vercel deployment, but no live Vercel deployment was checked in this session.
 - GitHub Actions: no workflow file was present under `.github/workflows/` during this session; only the content request issue template was found.
 - Known non-fatal warning: `gh` was unavailable in the local container, so open Issues/PRs could not be queried with GitHub CLI during this pass.
@@ -69,6 +68,7 @@ Latest validation run during the handoff migration on 2026-07-11:
 
 ## Recent work
 
+- 2026-07-12: Added top-level lens navigation for theme indexes and grouped index routes. See [July 2026](handoffs/2026-07.md).
 - 2026-07-11: Split the oversized append-only handoff into a concise current-state document and monthly archives. See [July 2026](handoffs/2026-07.md).
 - 2026-06-30: Integrated Buddhism duplicate-role handling and source-note updates. See [June 2026](handoffs/2026-06.md).
 - 2026-06-30: Completed a five precepts integration pass. See [June 2026](handoffs/2026-06.md).

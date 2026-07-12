@@ -22,6 +22,7 @@ const requiredFields = [
 ];
 const allowedTypes = new Set(['concept', 'method', 'protocol', 'rule', 'index', 'output']);
 const allowedConfidence = new Set(['low', 'medium', 'high']);
+const allowedLenses = new Set(['business', 'markets', 'ideas-life']);
 
 /** @type {{file:string,message:string}[]} */
 const errors = [];
@@ -82,6 +83,16 @@ for (const page of pages) {
 
   if (!isNonEmptyString(page.data.confidence) || !allowedConfidence.has(page.data.confidence)) {
     addError(page.file, `Field "confidence" must be one of: ${Array.from(allowedConfidence).join(', ')}.`);
+  }
+
+  if (page.data.type === 'index') {
+    if (!isNonEmptyString(page.data.lens)) {
+      addError(page.file, 'Index pages must define a non-empty "lens" field.');
+    } else if (!allowedLenses.has(page.data.lens)) {
+      addError(page.file, `Field "lens" must be one of: ${Array.from(allowedLenses).join(', ')}.`);
+    }
+  } else if ('lens' in page.data) {
+    addError(page.file, 'Only pages with type: index may define "lens".');
   }
 
   for (const arrayField of ['tags', 'sources', 'related', 'next']) {

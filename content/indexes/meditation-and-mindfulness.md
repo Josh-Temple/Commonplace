@@ -2,6 +2,7 @@
 id: meditation-and-mindfulness
 title: 瞑想とマインドフルネス
 type: index
+lens: ideas-life
 status: draft
 summary: 瞑想・マインドフルネスの主要概念、実践法、心理療法との関係、安全上の注意を整理する入口ページ。
 tags:

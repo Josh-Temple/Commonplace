@@ -2,6 +2,7 @@
 id: emotion-control
 title: 感情コントロール
 type: index
+lens: ideas-life
 status: draft
 summary: 強い感情に飲み込まれず、観察・調整・行動選択へ戻るためのテーマ索引。
 tags:
