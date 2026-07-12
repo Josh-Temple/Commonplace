@@ -12,7 +12,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - Static content routes generated from Markdown files
 - `[[wikilink]]` and `[[wikilink|label]]` internal links
 - Minimal Markdown table rendering with horizontal scroll for narrow mobile screens
-- Home page, theme/index listing, searchable full page listing, and detail pages
+- Home page with top-level theme-area entry points, grouped theme/index listings, searchable full page listing, and detail pages
 - Quiet detail-page headers with secondary page metadata kept lower on the page
 - Android-friendly mobile-first reading layout
 - Compact `Aa` reader font-size control with a noticeably smaller compact option plus standard and large text options
@@ -54,7 +54,7 @@ Run the full repository validation command before deployment:
 npm run validate
 ```
 
-`npm run validate` runs TypeScript typechecking, the content validator, and the production Next.js build. The content validator checks required content frontmatter, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
+`npm run validate` runs TypeScript typechecking, the content validator, and the production Next.js build. The content validator checks required content frontmatter, valid `lens` values on index pages, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
 
 For a faster content-only check, run:
 

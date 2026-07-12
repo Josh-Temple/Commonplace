@@ -65,6 +65,8 @@ Every content page should include:
 - `next`
 - `updated`
 
+Index pages (`type: index`) also include a `lens` field for their top-level theme area. Supported lens slugs are `markets`, `ideas-life`, and `business`; non-index pages do not use `lens`.
+
 Internal links use `[[page-id]]` or `[[page-id|label]]` wikilink syntax.
 
 Keep content concise and mobile-friendly. Prefer short sections, practical headings, and clear distinctions between facts, interpretation, speculation, and personal rules.

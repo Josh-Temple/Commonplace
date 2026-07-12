@@ -2,6 +2,7 @@
 id: trading-process
 title: トレーディング判断プロセス
 type: index
+lens: markets
 status: draft
 summary: Context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review の実務順序を整理するページ。
 tags:

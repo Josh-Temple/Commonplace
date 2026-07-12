@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FontSizeControl } from "./font-size-control";
-import type { ContentPage } from "../lib/content";
+import type { ContentPage, LensInfo, Lens } from "../lib/content";
 
 type PageListEntry = Pick<ContentPage, "id" | "title" | "summary" | "href">;
 
@@ -33,6 +33,20 @@ export function PageGrid({ pages }: { pages: ContentPage[] }) {
     <div className="page-list">
       {pages.map((page) => (
         <PageListItem key={page.id} page={page} />
+      ))}
+    </div>
+  );
+}
+
+export function LensList({ lenses, counts }: { lenses: readonly LensInfo[]; counts: Record<Lens, number> }) {
+  return (
+    <div className="page-list lens-list">
+      {lenses.map((lens) => (
+        <Link href={`/indexes/${lens.slug}`} className="page-list-item lens-list-item" key={lens.slug}>
+          <span className="item-count">{counts[lens.slug]}件のテーマ索引</span>
+          <h3>{lens.title}</h3>
+          <p>{lens.description}</p>
+        </Link>
       ))}
     </div>
   );

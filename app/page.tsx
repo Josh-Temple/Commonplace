@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { PageGrid, TopNav } from "./components";
-import { getIndexPages } from "../lib/content";
+import { LensList, TopNav } from "./components";
+import { getAvailableLenses, getIndexCountsByLens } from "../lib/content";
 
 export default function HomePage() {
-  const indexes = getIndexPages();
+  const lenses = getAvailableLenses();
+  const indexCounts = getIndexCountsByLens();
 
   return (
     <>
@@ -19,12 +20,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section-block">
+        <section className="section-block" aria-labelledby="lens-heading">
           <div className="section-heading">
-            <h2>テーマ索引</h2>
-            <Link href="/indexes">すべて見る</Link>
+            <h2 id="lens-heading">上位領域から選ぶ</h2>
+            <Link href="/indexes">すべてのテーマ索引を見る</Link>
           </div>
-          <PageGrid pages={indexes} />
+          <LensList lenses={lenses} counts={indexCounts} />
         </section>
       </main>
     </>

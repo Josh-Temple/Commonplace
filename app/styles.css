@@ -502,3 +502,21 @@ main {
     column-gap: 34px;
   }
 }
+
+.section-summary {
+  margin: -4px 0 2px;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.lens-list-item {
+  position: relative;
+}
+
+.item-count {
+  display: inline-flex;
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+}

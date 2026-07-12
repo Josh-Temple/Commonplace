@@ -2,6 +2,7 @@
 id: theravada-meditation
 title: 上座部仏教系の瞑想
 type: index
+lens: ideas-life
 status: draft
 summary: 上座部仏教系の瞑想を、戒と律、四念処、呼吸への気づき、メッタ、samatha / vipassanā、現代マインドフルネスとの違いから整理する入口ページ。
 tags:

@@ -2,6 +2,7 @@
 id: decision-making
 title: 意思決定
 type: index
+lens: ideas-life
 status: draft
 summary: 感情、認知バイアス、不確実性の中で、よりよい判断を行うための概念・方法・プロトコル・ルールの入口。
 tags:

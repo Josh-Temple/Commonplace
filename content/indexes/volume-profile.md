@@ -2,6 +2,7 @@
 id: volume-profile
 title: Volume Profile
 type: index
+lens: markets
 status: draft
 summary: Volume Profileを、水平線と市場構造を補助する価格帯別出来高の観察レイヤーとして読む入口ページ。
 tags:

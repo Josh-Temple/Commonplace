@@ -2,6 +2,7 @@
 id: theravada-ethics-and-precepts
 title: 上座部仏教の戒と律
 type: index
+lens: ideas-life
 status: draft
 summary: 上座部仏教の五戒、八戒、十戒、Vinaya、Pāṭimokkhaを、対象者と実践文脈の違いから辿る入口ページ。
 tags:

@@ -2,6 +2,7 @@
 id: trading
 title: トレーディング
 type: index
+lens: markets
 status: draft
 summary: 相場文脈、市場構造、水平線、Volume Profile、エントリー、リスク、感情管理、振り返りをつなぐトレーディング領域の入口ページ。
 tags:
