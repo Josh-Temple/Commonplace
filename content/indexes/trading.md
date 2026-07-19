@@ -22,8 +22,8 @@ related:
   - horizontal-line-trading-framework
   - no-trade-checklist
 next:
-  - trading-process
-updated: 2026-06-28
+  - financial-macro-for-trading
+updated: 2026-07-18
 ---
 
 ## この領域の目的
@@ -40,15 +40,16 @@ updated: 2026-06-28
 
 ## 読む順序
 
-1. [[trading-context|相場文脈]] — 上位足、セッション、ニュース、流動性を見る。
-2. [[market-structure|市場構造]] — トレンド、レンジ、ブレイク、失敗を整理する。
-3. [[horizontal-levels|水平線・重要水準]] — prior high/low、swing、日足・週足、セッション高安を判断エリアにする。
-4. [[volume-profile|Volume Profile]] — POC / Value Area / VAH / VALを補助観察に使う。
-5. [[entry-decision-process|エントリー判断]] — scenario、trigger、invalidationを接続する。
-6. [[risk-reward-and-invalidation|risk/rewardとinvalidation]] — 入る前に撤退条件と損失の形を決める。
-7. [[pre-trade-emotion-check|感情と実行規律]] — 焦り、怒り、取り返したい気持ちを確認する。
-8. [[post-trade-review|トレード後レビュー]] — 結果とプロセスを分けて振り返る。
-9. [[trading-rules|トレーディングルール]] — 見送り、リスク、レビューの行動ルールに戻す。
+1. [[financial-macro-for-trading|金融マクロ文脈]] — 金利、インフレ、政策、ドルを上位のContextとして整理する。
+2. [[trading-context|相場文脈]] — 上位足、セッション、ニュース、流動性を見る。
+3. [[market-structure|市場構造]] — トレンド、レンジ、ブレイク、失敗を整理する。
+4. [[horizontal-levels|水平線・重要水準]] — prior high/low、swing、日足・週足、セッション高安を判断エリアにする。
+5. [[volume-profile|Volume Profile]] — POC / Value Area / VAH / VALを補助観察に使う。
+6. [[entry-decision-process|エントリー判断]] — scenario、trigger、invalidationを接続する。
+7. [[risk-reward-and-invalidation|risk/rewardとinvalidation]] — 入る前に撤退条件と損失の形を決める。
+8. [[pre-trade-emotion-check|感情と実行規律]] — 焦り、怒り、取り返したい気持ちを確認する。
+9. [[post-trade-review|トレード後レビュー]] — 結果とプロセスを分けて振り返る。
+10. [[trading-rules|トレーディングルール]] — 見送り、リスク、レビューの行動ルールに戻す。
 
 ## この領域で育てる判断力
 
@@ -65,7 +66,7 @@ updated: 2026-06-28
 
 [[trading-process]]では、次の順序で実務的に確認します。
 
-Context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review
+Macro context → Price context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review
 
 水平線は主な判断エリア、[[market-structure]]は文脈、[[volume-profile]]は確認・警戒・代替シナリオの補助として扱います。
 

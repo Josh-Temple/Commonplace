@@ -36,6 +36,7 @@ Current index pages are grouped by `lens` frontmatter into top-level theme areas
 - Emotion control
 - Decision-making
 - Trading
+- Financial macro for trading
 - Trading process
 - Volume Profile
 
@@ -43,11 +44,11 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run during the lens navigation update on 2026-07-12:
+Latest validation run during the financial-macro cluster update on 2026-07-18:
 
-- `npm run validate:content`: passed for 97 content pages.
-- `npm run validate`: passed on 2026-07-12, including TypeScript typechecking, content validation, and production `next build`.
-- Production build: passed locally through `npm run validate` on 2026-07-12; build output included `/`, `/indexes`, `/indexes/markets`, and `/indexes/ideas-life`.
+- `npm run validate:content`: passed for 116 content pages.
+- `npm run validate`: passed on 2026-07-18, including TypeScript typechecking, content validation, and production `next build`.
+- Production build: passed locally through `npm run validate` on 2026-07-18; build output included `/`, `/indexes`, `/indexes/markets`, and `/indexes/ideas-life`.
 - Vercel: project is structured for Vercel deployment, but no live Vercel deployment was checked in this session.
 - GitHub Actions: no workflow file was present under `.github/workflows/` during this session; only the content request issue template was found.
 - Known non-fatal warning: `gh` was unavailable in the local container, so open Issues/PRs could not be queried with GitHub CLI during this pass.
@@ -67,6 +68,8 @@ Latest validation run during the lens navigation update on 2026-07-12:
 5. Keep future handoff updates split: concise current-state changes in `Handoff.md`, detailed work records in `handoffs/YYYY-MM.md`.
 
 ## Recent work
+
+- 2026-07-18: Added the source-backed Financial Macro for Trading cluster and integrated it into the trading Context workflow. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-12: Added top-level lens navigation for theme indexes and grouped index routes. See [July 2026](handoffs/2026-07.md).
 - 2026-07-11: Split the oversized append-only handoff into a concise current-state document and monthly archives. See [July 2026](handoffs/2026-07.md).
