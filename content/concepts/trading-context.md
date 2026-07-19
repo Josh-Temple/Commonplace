@@ -15,9 +15,11 @@ related:
   - trading-process
   - market-structure
   - pre-trade-context-checklist
+  - financial-macro-for-trading
+  - macro-context-assessment
 next:
   - market-structure
-updated: 2026-06-24
+updated: 2026-07-18
 ---
 
 ## 要点
@@ -27,6 +29,13 @@ updated: 2026-06-24
 ## 概要
 
 トレーディング文脈は、現在の価格がどの環境にいるかを説明するための枠組みです。予測ではなく、シナリオの背景です。
+
+## 二層のContext
+
+- **Macro context:** rates、inflation、policy、dollar、liquidity、risk sentiment。[[financial-macro-for-trading]]と[[macro-context-assessment]]で、asset・timeframeに関連する時だけ整理する。
+- **Price context:** timeframe、session、volatility、market structure、levels、profile。
+
+Macroは価格based invalidationを置き換えず、Entry後に理由を足すものでもありません。
 
 ## どう読むか
 

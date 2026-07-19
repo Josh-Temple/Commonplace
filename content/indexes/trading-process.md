@@ -4,7 +4,7 @@ title: トレーディング判断プロセス
 type: index
 lens: markets
 status: draft
-summary: Context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review の実務順序を整理するページ。
+summary: Macro context → Price context → Structure → Level → Scenario → Trigger → Invalidation → Risk → Emotion check → Entry / No trade → Review の実務順序を整理するページ。
 tags:
   - trading
   - process
@@ -21,8 +21,8 @@ related:
   - horizontal-line-trading-framework
   - no-trade-checklist
 next:
-  - trading-context
-updated: 2026-06-24
+  - financial-macro-for-trading
+updated: 2026-07-18
 ---
 
 ## 目的
@@ -31,16 +31,19 @@ updated: 2026-06-24
 
 ## 判断フロー
 
-1. Context: [[trading-context]]と[[pre-trade-context-checklist]]で上位足、セッション、ニュース、流動性を確認する。
-2. Structure: [[market-structure-assessment]]でトレンド、レンジ、ブレイク、失敗を観察する。
-3. Level: [[horizontal-level-analysis]]で水平線・重要水準を判断エリアとして絞る。
-4. Scenario: その場所で起こりうる反応、受容、拒否、突破、失敗を複数置く。
-5. Trigger: [[entry-decision-process]]で、何を見たら行動するかを事前に決める。
-6. Invalidation: [[risk-reward-and-invalidation]]で、何が起きたら前提が崩れるかを決める。
-7. Risk: risk/reward、損失許容、サイズ、流動性を確認する。
-8. Emotion check: [[pre-trade-emotion-check]]で焦りや取り返したい気持ちを確認する。
-9. Entry / No trade: 条件が揃えば行動し、揃わなければ見送る。
-10. Review: [[post-trade-review]]と[[post-trade-review-checklist]]でプロセスを記録する。
+1. Macro context: 関連するasset/timeframeなら[[macro-context-assessment]]と[[pre-trade-macro-checklist]]でrates、inflation、policy、dollar、event riskを確認する。
+2. Price context: [[trading-context]]と[[pre-trade-context-checklist]]で上位足、セッション、ニュース、流動性を確認する。
+3. Structure: [[market-structure-assessment]]でトレンド、レンジ、ブレイク、失敗を観察する。
+4. Level: [[horizontal-level-analysis]]で水平線・重要水準を判断エリアとして絞る。
+5. Scenario: その場所で起こりうる反応、受容、拒否、突破、失敗を複数置く。
+6. Trigger: [[entry-decision-process]]で、何を見たら行動するかを事前に決める。
+7. Invalidation: [[risk-reward-and-invalidation]]で、何が起きたら前提が崩れるかを決める。
+8. Risk: risk/reward、損失許容、サイズ、流動性を確認する。
+9. Emotion check: [[pre-trade-emotion-check]]で焦りや取り返したい気持ちを確認する。
+10. Entry / No trade: 条件が揃えば行動し、揃わなければ見送る。
+11. Review: [[post-trade-review]]と[[post-trade-review-checklist]]でプロセスを記録する。
+
+Macro analysisはEntry選択の後付け理由ではなくContext内に置きます。関連性が低い短期判断へ強制はしません。
 
 ## 実務用decision table
 
