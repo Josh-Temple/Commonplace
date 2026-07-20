@@ -16,28 +16,51 @@ related:
   - pre-trade-macro-checklist
 next:
   - pre-trade-macro-checklist
-updated: 2026-07-18
+updated: 2026-07-19
 ---
+## 目的
+
+資産と時間軸に必要なマクロだけを選び、最低二つの説明、反証、価格要件を作ります。マクロから売買命令は作りません。
+
+## 前提
+
+主要発表が近い、金や指数が金利・ドル再評価へ反応している、数日以上の背景を整理する時に有用です。非常に短い時間軸で固有の価格要因が支配し、イベントが遠い時は省略できます。
+
 ## 手順
 
-1. Traded assetを特定する。 2. 関連macro variablesを絞る。 3. Growth/inflation narrativeを記す。 4. Nominal yieldsを見る。 5. Real yieldsとbreakevensを見る。 6. Curveを見る。 7. Dollarを見る。 8. Credit spreadsとrisk sentimentを見る。 9. Upcoming eventsを確認する。 10. 最低二scenarioを作る。 11. Macro interpretationの反証を決める。 12. [[market-structure]]、[[horizontal-levels]]、[[volume-profile]]へ戻る。
+1. 資産、時間軸、主要な問いを一文にする。
+2. 金なら実質・名目金利、ドル、ブレークイーブン。S&P 500なら2・10年、実質金利、信用、利益、ドルを優先する。
+3. 成長とインフレの変化を、静的ラベルでなく予想差として書く。
+4. 名目金利を実質、インフレ補償、残差候補へ分ける。
+5. 3か月から30年のどこが主導したか、両脚を見てカーブを読む。
+6. ドル高・安の原因が相対金利、成長、安全需要、資金ストレスのどれか問う。
+7. 信用スプレッド、ボラティリティ、市場・資金流動性を確認する。
+8. 公式時刻、改定、政策・入札イベントの近さを確認する。
+9. Scenario A/Bを作り、それぞれ確認変数を置く。
+10. 観察事実と矛盾する反証を一つ以上書く。
+11. マクロを無視する条件を決める。
+12. 市場構造、水平線、Volume Profile、価格無効条件へ戻る。
 
-## Template
+## 架空例: ゴールド
 
-```text
-Asset:
-Current macro narrative:
-Nominal-yield direction:
-Real-yield direction:
-Inflation-expectation direction:
-Yield-curve change:
-Dollar direction:
-Financial conditions:
-Main upcoming event:
-Bullish scenario:
-Bearish scenario:
-What would change this view:
-Reason to ignore macro context:
-```
+**観察:** 10年名目↑、実質↓、ブレークイーブン↑、ドル横ばい、金は週足水平線上。
 
-Macro contextはprice-based invalidationを置き換えません。Asset、timeframe、event proximityに関連が薄い時は、無理に説明を作らずprice contextを優先します。
+**解釈A:** インフレ補償が主導し、実質機会費用低下が金を支える。**解釈B:** 一時的なエネルギー再評価で、政策経路が後から上がる。2年急上昇と実質反転はAの反証です。
+
+マクロだけで取引しない理由は、金が水平線を割りValue Area下で受け入れられれば追い風解釈が価格に確認されないからです。水準の保持・拒否を観察し、価格構造で無効化します。
+
+## 架空例: S&P 500
+
+**観察:** 2年↓、10年↓、HY spread↑、利益改定↓、指数はレンジ中央。
+
+**解釈A:** 成功したディスインフレで倍率を支える。**解釈B:** 景気悪化による安全需要で、信用と利益が悪化。HY拡大はAへの矛盾、信用縮小と均等加重株の改善はBへの反証です。
+
+レンジ中央では場所の優位性と無効条件がありません。マクロが明確でも、重要水平線かValue Area端で構造が形成されるまで正当化に使いません。
+
+## 観察テンプレート
+
+[[pre-trade-macro-brief-template]]を使い、事実、解釈、反証、価格要件を別欄にします。
+
+## マクロを無視する条件
+
+一文で説明できない、変数衝突の理由がない、資産・時間軸に関連しない、価格が確認しない場合は、マクロを取引理由にしません。

@@ -16,33 +16,51 @@ related:
   - major-macro-event-checklist
 next:
   - pre-trade-context-checklist
-updated: 2026-07-18
+updated: 2026-07-19
 ---
+## 目的
+
+資産、時間軸、イベント距離に応じてマクロの関連性を短く判定します。全短期取引への必須項目ではありません。
+
 ## 30秒版
 
-- Major eventは近いか。
-- 2年・10年yieldは何をしているか。
-- 関連するならreal yieldはどうか。
-- Dollarはどうか。
-- Asset自身はmacro moveを確認しているか、divergeしているか。
-- Macro contextは判断に使えるほど明確か。
-- 待つべきか。
+- 近い主要イベントと公式時刻はあるか。
+- 2年・10年は同方向か、どちらが主導か。
+- 資産に関係する実質金利、ドル、信用は確認しているか。
+- 一文の解釈と一つの矛盾を言えるか。
+- 資産自身は重要水準で確認しているか。
+- 説明不能ならマクロを無視できるか。
 
 ## 3分版
 
-```text
-Asset:
-Growth / inflation narrative:
-Nominal yields:
-Real yields / breakevens:
-Curve:
-Dollar:
-Financial conditions / credit:
-Upcoming event:
-Positioning uncertainty:
-Price structure and level:
-Invalidation:
-No-trade reason:
-```
+1. 資産と時間軸を決める。
+2. 成長・インフレ・政策経路の変化を一文にする。
+3. 名目金利を実質とブレークイーブンへ分ける。
+4. 2s10s等は両脚を見る。
+5. ドル高・安の原因を相対金利かリスクか問う。
+6. IG/HY信用、ボラティリティ、利益・リスク選好を確認する。
+7. Scenario A/B、反証、価格要件を書く。
 
-非常に短いtimeframeの全判断に強制しません。Asset、timeframe、event proximityに応じて使います。Macroが曖昧でもprice setupが明確な場合と、event riskで通常のtechnical analysisが不安定な場合を区別します。
+## ゴールド分岐
+
+- 2年・10年の名目利回り。
+- 10年実質利回り。
+- 5年・10年ブレークイーブン。
+- DXYだけでなくドルの原因。
+- CPI、FOMC、入札等のイベント。
+- 金が水平線と構造で確認・拒否したか。
+
+## S&P 500分岐
+
+- 2年と10年、カーブの両脚。
+- 実質金利とterm-premium候補。
+- IG/HY信用スプレッド。
+- 利益改定、指数の広がり、リスク選好。
+- ドルと多国籍利益、主要イベント。
+- S&P 500、均等加重、小型株の確認。
+
+## 明示的なスキップ規則
+
+**マクロ解釈を一文で言えない、またはクロスアセット変数の衝突に明確な理由がないなら、マクロを取引の正当化に使いません。**
+
+価格がレンジ・Value Area中央、重要水準がない、無効条件が置けない場合も[[pre-trade-context-checklist]]へ戻って見送ります。

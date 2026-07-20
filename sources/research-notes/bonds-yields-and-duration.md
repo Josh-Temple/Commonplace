@@ -10,10 +10,20 @@ Support bond cash-flow definitions, inverse price/yield logic, duration, convexi
 - **Investor Bulletin: Interest Rate Risk—When Interest Rates Go Up, Prices of Fixed-Rate Bonds Fall** — U.S. SEC, 2013. https://www.sec.gov/investor/alerts/ib_interestraterisk.pdf — Supports inverse price/yield relation and maturity sensitivity. Limitation: introductory investor bulletin.
 - **Fixed Income Mathematics** — CFA Institute curriculum overview. https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2024/fixed-income-mathematics — Supports yield measures, duration, and convexity concepts. Limitation: established practitioner education rather than primary empirical evidence.
 
+## Claim-to-source map
+
+| Claim | Claim type | Source | Source type | Safe wording | Limitation |
+|---|---|---|---|---|---|
+| 固定利付債は市場金利上昇時に価格が低下する | Accounting / pricing identity | SEC bulletin; TreasuryDirect | 公式・教育 | 他条件一定の価格関係として述べる | 信用・オプション・再投資は別 |
+
+## Confidence decision
+
+Official definitions, documented procedures, and pricing mechanics support medium or higher confidence in definitions. Directional asset relationships, event reactions, lead/lag claims, and causal attribution remain conditional; added detail does not raise their confidence.
+
 ## Editorial limits
 
 These sources support definitions and causal channels, not a stable trading coefficient or mechanical signal. Market reactions depend on expectations, starting conditions, risk premiums, positioning, and the shock's cause. URLs were selected from official or institutional publishers; no current-policy claim is preserved here.
 
 ## Retrieved
 
-2026-07-18.
+2026-07-19.

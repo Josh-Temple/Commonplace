@@ -20,32 +20,36 @@ related:
 next:
   - bond-prices-and-yields
   - macro-context-assessment
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 ## 目的
 
-金融マクロを売買シグナルではなく、既存の判断プロセスの **Context層** として使います。これは教育資料であり、個別の金融助言ではありません。相関は制度、ポジショニング、織り込み、ショックの種類で変わります。
+金融マクロを売買シグナルではなく、既存プロセスの **Context層** として使います。資産、時間軸、イベント距離に関係する時だけ読み、必ず価格構造へ戻ります。教育資料であり個別の金融助言ではありません。
 
-## 基礎ルート
+## 最短ルート
 
-[[bond-prices-and-yields]] → [[nominal-and-real-interest-rates]] → [[yield-curve]] → [[inflation-and-inflation-expectations]] → [[monetary-policy-expectations]]
+[[rates-market-reading-method]] → [[cross-asset-confirmation-and-divergence]] → [[macro-context-assessment]] → [[pre-trade-macro-checklist]]。イベント時は[[macro-event-reaction-analysis]]を挟みます。
 
-## トレード応用ルート
+## Foundation — 金利とインフレ
 
-[[macro-context-assessment]]から、金なら[[gold-rates-dollar-relationship]]、株なら[[equities-and-interest-rates]]へ進み、[[pre-trade-macro-checklist]]で圧縮します。最後は必ず価格の[[market-structure]]、[[horizontal-levels]]、無効条件へ戻ります。
+[[bond-prices-and-yields]] → [[nominal-and-real-interest-rates]] → [[yield-curve]] → [[inflation-and-inflation-expectations]] → [[term-premium]] → [[risk-premium-and-asset-pricing]]
 
-## 発展ルート
+## Market plumbing — 政策と国債供給
 
-[[term-premium]] → [[financial-conditions-and-liquidity]] → [[risk-premium-and-asset-pricing]] → [[growth-inflation-policy-regimes]] → [[macro-data-surprises]]
+[[monetary-policy-expectations]] → [[policy-rates-money-markets-and-sofr]] → [[financial-conditions-and-liquidity]] → [[treasury-auctions-and-debt-supply]] → [[us-dollar-and-financial-markets]]
 
-## 変数の地図
+## Asset application — 金と株式
 
-- 金利: [[bond-prices-and-yields]]、[[nominal-and-real-interest-rates]]、[[yield-curve]]。
-- 物価と政策: [[inflation-and-inflation-expectations]]、[[monetary-policy-expectations]]。
-- 横断環境: [[us-dollar-and-financial-markets]]、[[financial-conditions-and-liquidity]]。
-- 資産価格: [[risk-premium-and-asset-pricing]]、[[gold-rates-dollar-relationship]]、[[equities-and-interest-rates]]。
-- 実務: [[rates-market-reading-method]]、[[macro-scenario-matrix]]、[[major-macro-event-checklist]]。
+金は[[gold-rates-dollar-relationship]]、S&P 500を含む株式は[[equities-and-interest-rates]]で、金利方向を原因別に分解します。[[growth-inflation-policy-regimes]]は静的なラベルでなく変化と反証を扱います。
 
-## 原則
+## Practical workflow
 
-「金利上昇だから売る」のような一変数の命令へ変換しません。変化の理由、他市場の確認、反証、価格構造をセットにし、説明力が低ければマクロを無視する選択も残します。
+- 金利: [[rates-market-reading-method]]
+- 確認と乖離: [[cross-asset-confirmation-and-divergence]]
+- 全体評価: [[macro-context-assessment]] / [[macro-scenario-matrix]]
+- イベント: [[macro-data-surprises]] / [[macro-event-reaction-analysis]] / [[major-macro-event-checklist]]
+- 圧縮: [[pre-trade-macro-brief-template]] / [[pre-trade-macro-checklist]]
+
+## 価格分析への戻り方
+
+マクロの説明が明確でも、[[market-structure]]、[[horizontal-levels]]、[[volume-profile]]が確認しなければ正当化に使いません。非常に短期で関連が低い、変数の衝突を説明できない、価格無効条件がない場合はマクロを無視します。

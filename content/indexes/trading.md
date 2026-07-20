@@ -23,7 +23,7 @@ related:
   - no-trade-checklist
 next:
   - financial-macro-for-trading
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 
 ## この領域の目的
@@ -40,7 +40,7 @@ updated: 2026-07-18
 
 ## 読む順序
 
-1. [[financial-macro-for-trading|金融マクロ文脈]] — 金利、インフレ、政策、ドルを上位のContextとして整理する。
+1. [[financial-macro-for-trading|金融マクロ文脈]]（必要な資産・時間軸・イベント時のみ） — 金利、インフレ、政策、ドルを上位のContextとして整理する。
 2. [[trading-context|相場文脈]] — 上位足、セッション、ニュース、流動性を見る。
 3. [[market-structure|市場構造]] — トレンド、レンジ、ブレイク、失敗を整理する。
 4. [[horizontal-levels|水平線・重要水準]] — prior high/low、swing、日足・週足、セッション高安を判断エリアにする。

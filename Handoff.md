@@ -44,30 +44,31 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run during the financial-macro cluster update on 2026-07-18:
+Latest validation run during the financial-macro second pass on 2026-07-19:
 
-- `npm run validate:content`: passed for 116 content pages.
-- `npm run validate`: passed on 2026-07-18, including TypeScript typechecking, content validation, and production `next build`.
-- Production build: passed locally through `npm run validate` on 2026-07-18; build output included `/`, `/indexes`, `/indexes/markets`, and `/indexes/ideas-life`.
-- Vercel: project is structured for Vercel deployment, but no live Vercel deployment was checked in this session.
-- GitHub Actions: no workflow file was present under `.github/workflows/` during this session; only the content request issue template was found.
-- Known non-fatal warning: `gh` was unavailable in the local container, so open Issues/PRs could not be queried with GitHub CLI during this pass.
+- `npm run validate:content`: passed for 121 content pages.
+- `npm run validate`: passed, including TypeScript, content validation, and production build (129 static pages generated).
+- `git diff --check`: passed.
+- GitHub Issues/PRs: web access returned HTTP 401, `gh` is unavailable, and no remote is configured.
+- No UI code changed; no screenshot was required for this content-only pass.
 
 ## Active limitations
 
-- Open GitHub Issues and open PRs still need verification from an environment with `gh` or connector access; this session could not query them because `gh` is not installed.
-- Some content areas intentionally remain source-confidence limited where the underlying notes say materials were checked but insufficient or not fully verified; consult page-level `confidence` fields and source notes before deepening claims.
-- Handoff history has now been split, but the June archive preserves the former long `Handoff.md` largely as historical text rather than a normalized database of records.
+- Open GitHub Issues and PRs still need verification from an authenticated environment.
+- Directional gold, equity, cross-asset, lead/lag, event-reaction, and auction-impact claims intentionally remain low-confidence and regime-dependent.
+- Source notes are claim-mapped evidence records, not exhaustive literature reviews; official methodologies and URLs should be rechecked when revising.
+- The widest claim-to-source tables live only in research notes; reader-facing scenario tables are limited to four columns or replaced by stacked cards.
 
 ## Recommended next tasks
 
-1. Verify open GitHub Issues and PRs with GitHub access, then update this current-state handoff only if active priorities change.
-2. Continue source-backed refinement of Theravada ethics/precepts/Vinaya pages after checking primary and scholarly materials.
-3. Revisit Volume Profile pages for any remaining source-confidence limitations before making stronger claims.
-4. Perform an Android/mobile reading QA pass after the next visible UI change.
-5. Keep future handoff updates split: concise current-state changes in `Handoff.md`, detailed work records in `handoffs/YYYY-MM.md`.
+1. Perform a deployed Android reading QA pass on the longest gold, rates, and scenario pages.
+2. Recheck official policy-implementation and Treasury auction methodology after institutional changes.
+3. Add historical macro case studies only after a dedicated, episode-specific source review.
+4. Verify open GitHub Issues and PRs with authenticated access.
 
 ## Recent work
+
+- 2026-07-19: Deepened the Financial Macro for Trading cluster, added three missing concepts, an event method, and a public macro brief. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-18: Added the source-backed Financial Macro for Trading cluster and integrated it into the trading Context workflow. See [July 2026](handoffs/2026-07.md).
 
