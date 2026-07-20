@@ -22,7 +22,7 @@ related:
   - no-trade-checklist
 next:
   - financial-macro-for-trading
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 
 ## 目的
@@ -43,7 +43,7 @@ updated: 2026-07-18
 10. Entry / No trade: 条件が揃えば行動し、揃わなければ見送る。
 11. Review: [[post-trade-review]]と[[post-trade-review-checklist]]でプロセスを記録する。
 
-Macro analysisはEntry選択の後付け理由ではなくContext内に置きます。関連性が低い短期判断へ強制はしません。
+Macro analysisはEntry選択の後付け理由ではなくContext内に置き、必要なら[[macro-event-reaction-analysis]]で反応を検証します。関連性が低い短期判断へ強制はしません。
 
 ## 実務用decision table
 

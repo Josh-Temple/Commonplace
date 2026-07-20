@@ -11,10 +11,20 @@ Support nominal/real decomposition, TIPS, breakeven limitations, and official in
 - **Consumer Price Index: Overview** — U.S. Bureau of Labor Statistics. https://www.bls.gov/cpi/overview.htm — Supports CPI scope and construction.
 - **PCE Price Index** — U.S. Bureau of Economic Analysis. https://www.bea.gov/data/personal-consumption-expenditures-price-index — Supports PCE definition. Limitation: CPI and PCE differ in scope and weighting and should not be substituted mechanically.
 
+## Claim-to-source map
+
+| Claim | Claim type | Source | Source type | Safe wording | Limitation |
+|---|---|---|---|---|---|
+| breakevenは純粋なインフレ予報ではない | Model-based estimate | Fed TIPS curve; TreasuryDirect | 公式・モデル | プレミアムと流動性差を含むと述べる | 成分は直接観察不能 |
+
+## Confidence decision
+
+Official definitions, documented procedures, and pricing mechanics support medium or higher confidence in definitions. Directional asset relationships, event reactions, lead/lag claims, and causal attribution remain conditional; added detail does not raise their confidence.
+
 ## Editorial limits
 
 These sources support definitions and causal channels, not a stable trading coefficient or mechanical signal. Market reactions depend on expectations, starting conditions, risk premiums, positioning, and the shock's cause. URLs were selected from official or institutional publishers; no current-policy claim is preserved here.
 
 ## Retrieved
 
-2026-07-18.
+2026-07-19.

@@ -16,20 +16,65 @@ related:
   - gold-rates-dollar-relationship
 next:
   - pre-trade-macro-checklist
-updated: 2026-07-18
+updated: 2026-07-19
 ---
-## Matrix
+## 目的
 
-| Observed change | Possible interpretation | Gold context | Equity context | Dollar context | Contradiction |
-|---|---|---|---|---|---|
-| Nominal↑ real↑ | hawkish/growth/term premium | opportunity cost逆風候補 | discount rate対earnings | relative rate支援候補 | gold/株の強いprice confirmation |
-| Nominal↑ breakevenがより↑ | inflation repricing、real↓も可 | 支援候補 | margin/policy次第 | 実質差次第 | real yieldも上昇 |
-| Nominal↓ disinflation | inflation/policy path低下 | real yield次第 | multiple支援候補 | 相対金利次第 | credit悪化 |
-| Nominal↓ recession fear | safe haven bonds | 支援も換金売りも | earnings/credit逆風 | safe havenで上昇可 | cyclicals/credit改善 |
-| Dollar↑ + real↑ | relative policy/rate | 逆風候補 | global conditions引締め | 確認 | gold上昇、spread縮小 |
-| Dollar↑ risk aversion | funding/safe haven | goldも上昇可 | risk-off候補 | 確認 | credit/equity改善 |
-| Equity↑ + yields↑ | growth/earnings改善 | 原因次第 | positive growth | relative growth次第 | earnings revision悪化 |
-| Equity↓ + yields↑ | discount/term premium shock | real/nominal次第 | valuation圧力 | 原因次第 | spreads縮小 |
-| Gold↑ despite yields↑ | inflation/fiscal/safe haven/demand | 自身が確認 | mixed | 同時上昇可 | real yield急上昇と需要弱化 |
+観察から一方向の物語へ飛ばず、原因A/B、確認、矛盾、価格要件を積み上げます。Androidで横に広がらないようシナリオカードで使います。
 
-各行は候補であり保証ではありません。[[market-structure]]と反証がなければtrade thesisに昇格させません。
+## 金利分解
+
+### 名目↑・実質↑
+原因Aは政策・実質成長、Bはterm premium。金には機会費用、株には割引率の逆風候補。2年主導ならA、30年主導と政策先物不変ならBを確認します。金や株が重要水準上で強く、信用が縮小するなら単純弱気と矛盾します。
+
+### 名目↑・実質↓
+インフレ補償かTIPS需給が候補。金を支え得る一方、株は利益率と政策次第。ブレークイーブン上昇を確認し、2年・実質が後追い上昇すれば反証です。
+
+## カーブ
+
+### ブル・スティープ化
+緩和成功か景気悪化か。金は実質低下で支援候補、株は信用安定なら前者、HY拡大なら後者。価格が水準を受け入れるまで結論にしません。
+
+### ベア・スティープ化
+成長改善か供給・term premiumか。株は利益・信用改善なら成長、倍率低下と信用悪化なら供給ショック候補。金は実質金利と財政需要が競合します。
+
+## ドル
+
+### ドル↑・信用安定
+相対金利・成長候補。金への逆風、米株への資金流入が同居し得ます。広いドル指数と二国間レートを確認します。
+
+### ドル↑・信用悪化
+安全需要・資金ストレス候補。金も上がり得て、株には逆風。レポ、スプレッド、ボラティリティが確認しなければ矛盾です。
+
+## 信用・流動性
+
+### 金利↓・HY spread↑
+景気悪化か金融安定ショック。金は安全需要と換金売り、株は利益・信用悪化を比較。準備預金増だけでは反証になりません。
+
+### 株↑・市場depth↓
+価格上昇と市場流動性改善を混同しない。広がり、出来高、信用、価格影響を確認し、薄い上昇なら無効条件を厳密にします。
+
+## 金の分岐
+
+### 金↑・実質↑
+安全・財政・中央銀行需要か、時間軸差。ドル・信用・ETF/現物データを確認。需要証拠なく価格が重要水準を割れば反証です。
+
+### 金↓・実質↓
+強制売却、ドル、安全需要後退候補。信用安定とドル安でも下落するなら金固有需給を問います。
+
+## 株の分岐
+
+### 株↑・金利↑
+利益改善かリスクプレミアム低下。利益改定、均等加重、信用縮小を確認。上位集中だけなら広範な成長解釈と矛盾します。
+
+### 株↓・金利↓
+景気悪化か一時的ポジション解消。HY拡大、利益低下、volatility上昇を確認。信用安定なら弱い説明です。
+
+## イベント
+
+### 初動と二次反応が逆
+見出し対内訳、改定、政策含意、混雑解消が候補。2年、実質、ドル、信用のどれが反転を主導したか記録し、価格がイベント前水準の内外を受け入れたかを必須条件にします。
+
+## 価格分析要件
+
+全シナリオに、現在構造、水平線、Volume Profile上の場所、確認、価格無効条件、マクロを無視する理由を付けます。

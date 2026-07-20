@@ -11,10 +11,20 @@ Support dollar-index distinctions, global funding, FCIs, and separate meanings o
 - **National Financial Conditions Index** — Federal Reserve Bank of Chicago. https://www.chicagofed.org/research/data/nfci/current-data — Supports multi-variable financial-conditions measurement. Limitation: model composition differs from other FCIs.
 - **Global Liquidity: Changing Instrument and Currency Patterns** — BIS, CGFS Papers No. 62, 2020. https://www.bis.org/publ/cgfs62.htm — Supports cross-border funding and multiple liquidity channels. Limitation: institutional analysis, not a single real-time liquidity gauge.
 
+## Claim-to-source map
+
+| Claim | Claim type | Source | Source type | Safe wording | Limitation |
+|---|---|---|---|---|---|
+| 流動性とFCIは単一系列ではない | Institutional mechanism | BIS; Chicago Fed NFCI | 国際機関・公式研究 | 複数経路・指数構成として述べる | 指数ごとに重みが違う |
+
+## Confidence decision
+
+Official definitions, documented procedures, and pricing mechanics support medium or higher confidence in definitions. Directional asset relationships, event reactions, lead/lag claims, and causal attribution remain conditional; added detail does not raise their confidence.
+
 ## Editorial limits
 
 These sources support definitions and causal channels, not a stable trading coefficient or mechanical signal. Market reactions depend on expectations, starting conditions, risk premiums, positioning, and the shock's cause. URLs were selected from official or institutional publishers; no current-policy claim is preserved here.
 
 ## Retrieved
 
-2026-07-18.
+2026-07-19.

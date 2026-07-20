@@ -20,14 +20,14 @@ related:
   - pre-trade-macro-checklist
 next:
   - entry-decision-process
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 
 ## 目的
 
 エントリー前に、文脈、構造、水平線、Volume Profile補助観察、ニュース、見送り条件を短く確認します。教育目的の整理であり、金融助言ではありません。
 
-Asset、timeframe、主要eventまでの距離に応じ、必要なら先に[[pre-trade-macro-checklist]]を使います。非常に短期の全判断にmacro checklistを強制しません。
+Asset、timeframe、主要eventまでの距離に応じ、必要なら[[pre-trade-macro-brief-template]]または[[pre-trade-macro-checklist]]を使います。非常に短期の全判断にmacro checklistを強制しません。
 
 ## 30秒版
 

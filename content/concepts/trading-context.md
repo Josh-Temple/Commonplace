@@ -19,7 +19,7 @@ related:
   - macro-context-assessment
 next:
   - market-structure
-updated: 2026-07-18
+updated: 2026-07-19
 ---
 
 ## 要点
@@ -32,7 +32,7 @@ updated: 2026-07-18
 
 ## 二層のContext
 
-- **Macro context:** rates、inflation、policy、dollar、liquidity、risk sentiment。[[financial-macro-for-trading]]と[[macro-context-assessment]]で、asset・timeframeに関連する時だけ整理する。
+- **Macro context:** rates、inflation、policy、dollar、liquidity、risk sentiment。[[financial-macro-for-trading]]、[[cross-asset-confirmation-and-divergence]]、[[macro-context-assessment]]で、asset・timeframeに関連する時だけ整理する。
 - **Price context:** timeframe、session、volatility、market structure、levels、profile。
 
 Macroは価格based invalidationを置き換えず、Entry後に理由を足すものでもありません。
