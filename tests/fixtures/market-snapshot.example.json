@@ -1,0 +1,19 @@
+{
+  "record_type": "market_snapshot",
+  "instrument_id": "gold",
+  "instrument_name": "Gold fixture (not real data)",
+  "symbol": null,
+  "asset_class": "commodity",
+  "observed_at": "2099-02-01T21:00:00Z",
+  "observation_kind": "daily_close",
+  "timezone": "UTC",
+  "price": 123.45,
+  "change": null,
+  "change_percent": null,
+  "unit": "usd_per_troy_ounce",
+  "source_name": "Test fixture only",
+  "source_url": "https://example.invalid/not-real-data",
+  "retrieved_at": "2099-02-01T21:05:00Z",
+  "notes": "Synthetic values solely for automated validation; excluded from production data scans.",
+  "fixture": true
+}

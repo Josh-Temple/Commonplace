@@ -9,6 +9,7 @@ Commonplace contains **Lumen**, a Vercel-ready Next.js personal knowledge-base r
 - The app uses the Next.js App Router with static Markdown-backed content routes.
 - Reader-facing pages live under `content/` and are rendered through Lumen routes, search, index pages, wikilinks, and mobile-first article layouts.
 - Research notes and source summaries live under `sources/` and are used as evidence/supporting material, not as final reader-facing pages.
+- Append-only machine-readable macro releases, sparse market snapshots, positioning records, schemas, and the indicator registry live under `data/`; dated Markdown analysis packets are derived into `sources/market-packets/`.
 - The app includes PWA metadata, install icons, service worker registration, and an offline fallback page.
 - Current navigation includes a home page with top-level theme-area entry points, grouped theme/index listings, article search, detail pages, quiet metadata treatment, Markdown table support, and reader font-size controls.
 
@@ -44,15 +45,19 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run during the financial-macro second pass on 2026-07-19:
+Latest validation run during the macro/market data foundation work on 2026-07-25:
 
-- `npm run validate:content`: passed for 121 content pages.
-- `npm run validate`: passed, including TypeScript, content validation, and production build (129 static pages generated).
+- `npm run validate:content`: passed for 123 content pages.
+- `npm run validate:data`: passed with no production observations and all three fixture-based tests passing.
+- `npm run validate`: passed, including TypeScript, content/data validation, fixture tests, and production build.
 - `git diff --check`: passed.
-- GitHub Issues/PRs: web access returned HTTP 401, `gh` is unavailable, and no remote is configured.
-- No UI code changed; no screenshot was required for this content-only pass.
+- GitHub Issues/PRs remain unverifiable because `gh` is unavailable and no remote is configured.
+- No UI code changed; no screenshot was required.
 
 ## Active limitations
+
+- The data foundation intentionally contains no verified live observations, external API retrieval, automatic ChatGPT analysis, or paid/restricted data.
+- Consensus and licensed market data require a source-by-source redistribution review before storage.
 
 - Open GitHub Issues and PRs still need verification from an authenticated environment.
 - Directional gold, equity, cross-asset, lead/lag, event-reaction, and auction-impact claims intentionally remain low-confidence and regime-dependent.
@@ -61,12 +66,14 @@ Latest validation run during the financial-macro second pass on 2026-07-19:
 
 ## Recommended next tasks
 
-1. Perform a deployed Android reading QA pass on the longest gold, rates, and scenario pages.
-2. Recheck official policy-implementation and Treasury auction methodology after institutional changes.
-3. Add historical macro case studies only after a dedicated, episode-specific source review.
+1. Review licensing and vintage requirements for one official economic-release source and one legally redistributable market series.
+2. Add the first verified observations through a reviewed, append-only pull request and inspect the generated packet.
+3. Design automated acquisition only after source terms, idempotency, secret storage, and correction review are documented.
 4. Verify open GitHub Issues and PRs with authenticated access.
 
 ## Recent work
+
+- 2026-07-25: Added the append-only macro/market data foundation, validation and fixture tests, dated packet generation, reusable analysis prompt, and Lumen entry page. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-19: Deepened the Financial Macro for Trading cluster, added three missing concepts, an event method, and a public macro brief. See [July 2026](handoffs/2026-07.md).
 

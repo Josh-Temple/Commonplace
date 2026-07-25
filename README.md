@@ -34,9 +34,16 @@ content/
 sources/
   research-notes/
   source-summaries/
+data/
+  indicators/
+  releases/
+  markets/
+  positioning/
+  schemas/
 ```
 
 `content/` is for reader-facing pages. `sources/` is for research notes and source summaries, not final user-facing content.
+`data/` is for append-only, machine-readable macro releases, sparse market observations, positioning snapshots, and their schemas. It contains sourced observations rather than prose or analysis; see [`data/README.md`](data/README.md) for the data model, vintage policy, licensing checks, and operating procedure.
 
 ## Run locally
 
@@ -55,13 +62,22 @@ Run the full repository validation command before deployment:
 npm run validate
 ```
 
-`npm run validate` runs TypeScript typechecking, the content validator, and the production Next.js build. The content validator checks required content frontmatter, valid `lens` values on index pages, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
+`npm run validate` runs TypeScript typechecking, content validation, macro/market data validation and fixture tests, and the production Next.js build. The content validator checks required content frontmatter, valid `lens` values on index pages, duplicate page ids, broken `related` / `next` page references, broken `[[wikilink]]` targets, and missing or unsafe `sources/` references.
 
 For a faster content-only check, run:
 
 ```bash
 npm run validate:content
 ```
+
+Validate only structured observations, or generate a reviewed Markdown packet for a date, with:
+
+```bash
+npm run validate:data
+npm run market:packet -- --date 2026-07-25
+```
+
+The packet is written to `sources/market-packets/YYYY-MM-DD.md`. Missing sections remain explicit, and the generator does not infer a market conclusion. Use it with the reader-facing prompt at `content/outputs/macro-market-analysis-prompt.md`; after human review, save any publishable analysis under `content/outputs/` with the standard frontmatter. No external API, automatic analysis, credentials, or unverified live values are part of this MVP.
 
 The app is designed to deploy directly on Vercel as a standard Next.js project. It includes a web app manifest and service worker so supported browsers can install Lumen as a standalone PWA and reuse cached pages when offline.
 
