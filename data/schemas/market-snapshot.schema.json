@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#", "$id": "market-snapshot.schema.json", "type": "object", "additionalProperties": false,
+  "required": ["record_type", "instrument_id", "instrument_name", "symbol", "asset_class", "observed_at", "observation_kind", "timezone", "price", "change", "change_percent", "unit", "source_name", "source_url", "retrieved_at", "notes"],
+  "properties": {
+    "record_type": { "const": "market_snapshot" }, "instrument_id": { "type": "string", "minLength": 1 }, "instrument_name": { "type": "string", "minLength": 1 }, "symbol": { "type": ["string", "null"] },
+    "asset_class": { "enum": ["rate", "inflation_expectation", "currency", "commodity", "equity", "volatility", "credit", "energy", "metal", "other"] },
+    "observed_at": { "type": "string", "format": "date-time" }, "observation_kind": { "enum": ["daily_close", "intraday", "pre_release", "post_release"] }, "related_release_id": { "type": ["string", "null"] },
+    "timezone": { "type": "string", "minLength": 1 }, "price": { "type": ["number", "null"] }, "change": { "type": ["number", "null"] }, "change_percent": { "type": ["number", "null"] },
+    "unit": { "enum": ["percent", "percentage_point", "index", "usd", "usd_per_troy_ounce", "basis_points"] }, "source_name": { "type": "string", "minLength": 1 }, "source_url": { "type": "string", "format": "uri" },
+    "retrieved_at": { "type": "string", "format": "date-time" }, "notes": { "type": ["string", "null"] }, "fixture": { "type": "boolean" }
+  }
+}

@@ -9,7 +9,9 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "validate:content": "node scripts/validate-content.mjs",
-    "validate": "npm run typecheck && npm run validate:content && npm run build"
+    "validate:data": "node scripts/validate-data.mjs && node --test tests/data-validation.test.mjs",
+    "market:packet": "node scripts/generate-market-packet.mjs",
+    "validate": "npm run typecheck && npm run validate:content && npm run validate:data && npm run build"
   },
   "dependencies": {
     "@types/node": "^20.14.10",

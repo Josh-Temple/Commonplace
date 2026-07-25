@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#", "$id": "positioning-snapshot.schema.json", "type": "object", "additionalProperties": false,
+  "required": ["record_type", "dataset_id", "instrument_id", "report_date", "published_at", "retrieved_at", "long", "short", "spreading", "net", "open_interest", "trader_category", "unit", "source_name", "source_url", "notes"],
+  "properties": {
+    "record_type": { "const": "positioning_snapshot" }, "dataset_id": { "type": "string", "minLength": 1 }, "instrument_id": { "type": "string", "minLength": 1 }, "report_date": { "type": "string", "format": "date" },
+    "published_at": { "type": "string", "format": "date-time" }, "retrieved_at": { "type": "string", "format": "date-time" }, "long": { "type": ["number", "null"] }, "short": { "type": ["number", "null"] },
+    "spreading": { "type": ["number", "null"] }, "net": { "type": ["number", "null"] }, "open_interest": { "type": ["number", "null"] }, "trader_category": { "type": "string", "minLength": 1 },
+    "unit": { "enum": ["contracts", "percent_open_interest"] }, "source_name": { "type": "string", "minLength": 1 }, "source_url": { "type": "string", "format": "uri" }, "notes": { "type": ["string", "null"] }, "fixture": { "type": "boolean" }
+  }
+}

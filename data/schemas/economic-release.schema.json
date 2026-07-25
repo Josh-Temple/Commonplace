@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "economic-release.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_type", "indicator_id", "indicator_name", "country", "category", "period", "released_at", "retrieved_at", "actual", "consensus", "consensus_source", "previous_initial", "previous_revised", "unit", "change_basis", "frequency", "seasonal_adjustment", "source_name", "source_url", "vintage", "notes"],
+  "properties": {
+    "record_type": { "const": "economic_release" },
+    "indicator_id": { "type": "string", "minLength": 1 },
+    "indicator_name": { "type": "string", "minLength": 1 },
+    "country": { "type": "string", "minLength": 2 },
+    "category": { "type": "string", "minLength": 1 },
+    "period": { "type": "string", "minLength": 1 },
+    "released_at": { "type": "string", "format": "date-time" },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "actual": { "type": ["number", "null"] },
+    "consensus": { "type": ["number", "null"] },
+    "consensus_source": { "type": ["string", "null"] },
+    "previous_initial": { "type": ["number", "null"] },
+    "previous_revised": { "type": ["number", "null"] },
+    "unit": { "enum": ["percent", "percentage_point", "index", "count", "thousands", "usd", "basis_points"] },
+    "change_basis": { "enum": ["level", "mom", "yoy", "qoq", "annualized", "change"] },
+    "frequency": { "enum": ["daily", "weekly", "monthly", "quarterly", "annual", "event"] },
+    "seasonal_adjustment": { "enum": ["seasonally_adjusted", "not_seasonally_adjusted", "not_applicable", "unknown"] },
+    "source_name": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "format": "uri" },
+    "vintage": { "type": "string", "minLength": 1 },
+    "notes": { "type": ["string", "null"] },
+    "fixture": { "type": "boolean" }
+  }
+}
