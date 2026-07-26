@@ -1,132 +1,257 @@
-version: 1
-updated: 2026-07-25
+version: 2
+updated: 2026-07-25T00:00:00.000Z
 indicators:
   - id: us-2y-treasury-yield
     name: 米国2年債利回り
     classification: rates
-    frequency: daily
-    unit: percent
     primary_source: U.S. Department of the Treasury / FRED
     analysis_notes: 政策金利予想だけでなく需給やプレミアムも含む。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - percent
+    asset_class: rate
   - id: us-10y-treasury-yield
     name: 米国10年債利回り
     classification: rates
-    frequency: daily
-    unit: percent
     primary_source: U.S. Department of the Treasury / FRED
     analysis_notes: 期待短期金利とタームプレミアムを分離して検討する。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - percent
+    asset_class: rate
   - id: us-10y-real-yield
     name: 米国10年実質金利
     classification: rates
-    frequency: daily
-    unit: percent
     primary_source: U.S. Department of the Treasury / FRED
     analysis_notes: TIPS由来であり期待実質金利の完全な純測定ではない。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - percent
+    asset_class: rate
   - id: us-10y-breakeven-inflation
     name: 米国10年期待インフレ率
     classification: inflation_expectations
-    frequency: daily
-    unit: percent
     primary_source: Federal Reserve Bank of St. Louis (FRED)
     analysis_notes: インフレ期待に流動性・リスクプレミアムが混在し得る。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - percent
+    asset_class: inflation_expectation
   - id: us-cpi
     name: CPI
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: U.S. Bureau of Labor Statistics
     analysis_notes: 総合、変化形式、季節調整、vintageを区別する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-core-cpi
     name: コアCPI
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: U.S. Bureau of Labor Statistics
     analysis_notes: 除外項目と変化形式を確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-pce-price-index
     name: PCE価格指数
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: U.S. Bureau of Economic Analysis
     analysis_notes: CPIとウェイト・範囲が異なり改定される。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-core-pce-price-index
     name: コアPCE価格指数
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: U.S. Bureau of Economic Analysis
     analysis_notes: vintageと同時公表された所得・支出も確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-nonfarm-payrolls
     name: 非農業部門雇用者数
     classification: economic_release
-    frequency: monthly
-    unit: thousands
     primary_source: U.S. Bureau of Labor Statistics
     analysis_notes: 前月改定、家計調査との差、ストライキ等を確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - thousands
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-unemployment-rate
     name: 失業率
     classification: economic_release
-    frequency: monthly
-    unit: percent
     primary_source: U.S. Bureau of Labor Statistics
     analysis_notes: 労働参加率と標本変動を併せて確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-average-hourly-earnings
     name: 平均時給
     classification: economic_release
-    frequency: monthly
-    unit: percent
     primary_source: U.S. Bureau of Labor Statistics
     analysis_notes: 前月比・前年比、構成効果、改定を区別する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - percent
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-ism-manufacturing-pmi
     name: ISM製造業景況指数
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: Institute for Supply Management
     analysis_notes: 50の閾値だけでなく新規受注・価格等の内訳を見る。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-ism-services-pmi
     name: ISMサービス業景況指数
     classification: economic_release
-    frequency: monthly
-    unit: index
     primary_source: Institute for Supply Management
     analysis_notes: 内訳と回答期間を確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - monthly
+    allowed_units:
+      - index
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: us-initial-jobless-claims
     name: 新規失業保険申請件数
     classification: economic_release
-    frequency: weekly
-    unit: count
     primary_source: U.S. Department of Labor
     analysis_notes: 週次変動、季節調整、継続受給者数を確認する。
+    record_types:
+      - economic_release
+    allowed_frequencies:
+      - weekly
+    allowed_units:
+      - count
+    allowed_change_basis:
+      - level
+      - mom
+      - yoy
   - id: gold
     name: ゴールド
     classification: commodity
-    frequency: daily
-    unit: usd_per_troy_ounce
     primary_source: Licensed market venue or documented public series
     analysis_notes: 現物、先物、fixのどれかと時点を明記する。
+    record_types:
+      - market_snapshot
+      - positioning_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - usd_per_troy_ounce
+    asset_class: commodity
   - id: sp500
     name: S&P 500
     classification: equity
-    frequency: daily
-    unit: index
     primary_source: S&P Dow Jones Indices or licensed market venue
     analysis_notes: 指数と先物を混同せず、時点とライセンスを確認する。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - index
+    asset_class: equity
   - id: dxy
     name: DXY
     classification: currency
-    frequency: daily
-    unit: index
     primary_source: ICE or licensed market data provider
     analysis_notes: 構成通貨が固定的で広範なドル指数とは異なる。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - index
+    asset_class: currency
   - id: vix
     name: VIX
     classification: volatility
-    frequency: daily
-    unit: index
     primary_source: Cboe
     analysis_notes: 期間と算出対象を確認し、恐怖の直接測定とは扱わない。
+    record_types:
+      - market_snapshot
+    allowed_frequencies:
+      - daily
+    allowed_units:
+      - index
+    asset_class: volatility
 future_candidates:
   - 政策金利予想
   - CFTC建玉

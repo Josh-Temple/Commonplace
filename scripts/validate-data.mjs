@@ -17,6 +17,7 @@ for (const file of files) {
   const relative = path.relative(repoRoot, file).split(path.sep).join('/');
   const result = validateDocument(document, { registry, validators, file: relative });
   errors.push(...result.errors);
+  for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
   const match = relative.match(/^data\/(releases|markets|positioning)\/(\d{4})\/(\d{2})\/(\d{4}-\d{2}-\d{2})\.json$/);
   if (!match) errors.push(`${relative}: expected data/<kind>/YYYY/MM/YYYY-MM-DD.json path.`);
   for (const record of result.records) {
@@ -27,11 +28,23 @@ for (const file of files) {
   }
 }
 
-if (process.env.ALLOW_DATA_CORRECTION !== '1') {
-  try {
-    const changed = execFileSync('git', ['diff', '--name-only', '--diff-filter=MD', 'HEAD', '--', 'data/releases', 'data/markets', 'data/positioning'], { cwd: repoRoot, encoding: 'utf8' }).trim();
-    if (changed) errors.push(`Tracked history files were modified/deleted instead of appended: ${changed.split('\n').join(', ')}. Use a new vintage/record; documented corrections require ALLOW_DATA_CORRECTION=1.`);
-  } catch { /* No HEAD in a new repository: schema and duplicate checks still run. */ }
+const baseRef = process.env.DATA_BASE_REF;
+const correction = process.env.ALLOW_DATA_CORRECTION === '1';
+if (correction && !process.env.DATA_CORRECTION_REASON?.trim()) errors.push('ALLOW_DATA_CORRECTION=1 requires a non-empty DATA_CORRECTION_REASON.');
+if (correction && process.env.DATA_CORRECTION_REASON?.trim()) console.warn(`Warning: append-only correction escape hatch enabled: ${process.env.DATA_CORRECTION_REASON.trim()}`);
+if (!correction) {
+  if (!baseRef) {
+    const message = 'DATA_BASE_REF is not set; append-only comparison was not run.';
+    if (process.env.CI) errors.push(`${message} CI requires an explicit base revision.`);
+    else console.warn(`Warning: ${message} Schema and registry checks continue.`);
+  } else {
+    try {
+      execFileSync('git', ['rev-parse', '--verify', `${baseRef}^{commit}`], { cwd: repoRoot, stdio: 'ignore' });
+      const output = execFileSync('git', ['diff', '--name-status', '--find-renames', '--find-copies', `${baseRef}...HEAD`, '--', 'data/releases', 'data/markets', 'data/positioning'], { cwd: repoRoot, encoding: 'utf8' }).trim();
+      const violations = output.split('\n').filter(Boolean).filter((line) => !line.startsWith('A\t'));
+      if (violations.length) errors.push(`Append-only history violation(s) relative to ${baseRef}: ${violations.join(', ')}. Only new files (A) are allowed; use a new vintage/record.`);
+    } catch (error) { errors.push(`Cannot compare append-only history with DATA_BASE_REF=${JSON.stringify(baseRef)}: ${error.message}.`); }
+  }
 }
 if (errors.length) {
   for (const error of errors) console.error(`Error: ${error}`);

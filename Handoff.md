@@ -9,7 +9,7 @@ Commonplace contains **Lumen**, a Vercel-ready Next.js personal knowledge-base r
 - The app uses the Next.js App Router with static Markdown-backed content routes.
 - Reader-facing pages live under `content/` and are rendered through Lumen routes, search, index pages, wikilinks, and mobile-first article layouts.
 - Research notes and source summaries live under `sources/` and are used as evidence/supporting material, not as final reader-facing pages.
-- Append-only machine-readable macro releases, sparse market snapshots, positioning records, schemas, and the indicator registry live under `data/`; dated Markdown analysis packets are derived into `sources/market-packets/`.
+- Append-only machine-readable macro releases, sparse market snapshots, positioning records, schemas, and an enforced indicator registry live under `data/`; dated Markdown packets are derived point-in-time using explicit retrieval cutoffs, and Actions validates committed history against an explicit base revision.
 - The app includes PWA metadata, install icons, service worker registration, and an offline fallback page.
 - Current navigation includes a home page with top-level theme-area entry points, grouped theme/index listings, article search, detail pages, quiet metadata treatment, Markdown table support, and reader font-size controls.
 
@@ -45,13 +45,14 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run during the macro/market data foundation work on 2026-07-25:
+Latest validation run after the PR #26 point-in-time and CI hardening work on 2026-07-25:
 
 - `npm run validate:content`: passed for 123 content pages.
-- `npm run validate:data`: passed with no production observations and all three fixture-based tests passing.
+- `npm run validate:data`: passed with no production observations and 16 schema, registry, packet, timezone, and temporary-Git append-only tests passing.
 - `npm run validate`: passed, including TypeScript, content/data validation, fixture tests, and production build.
 - `git diff --check`: passed.
-- GitHub Issues/PRs remain unverifiable because `gh` is unavailable and no remote is configured.
+- `npm ci` passed from the committed lockfile; `DATA_BASE_REF=HEAD npm run validate` passed, including the 131-page build.
+- GitHub Issues/PR review threads remain unverifiable because web access returned HTTP 401, `gh` is unavailable, and no remote is configured.
 - No UI code changed; no screenshot was required.
 
 ## Active limitations
@@ -66,12 +67,15 @@ Latest validation run during the macro/market data foundation work on 2026-07-25
 
 ## Recommended next tasks
 
-1. Review licensing and vintage requirements for one official economic-release source and one legally redistributable market series.
-2. Add the first verified observations through a reviewed, append-only pull request and inspect the generated packet.
-3. Design automated acquisition only after source terms, idempotency, secret storage, and correction review are documented.
-4. Verify open GitHub Issues and PRs with authenticated access.
+1. From an authenticated checkout, post the implementation details to and resolve the remaining PR #26 review threads.
+2. Review licensing and vintage requirements for one official economic-release source and one legally redistributable market series.
+3. Add the first verified observations through a reviewed, append-only pull request and inspect the generated packet.
+4. Design automated acquisition only after source terms, idempotency, secret storage, and correction review are documented.
+5. Verify open GitHub Issues and PRs with authenticated access.
 
 ## Recent work
+
+- 2026-07-25: Hardened PR #26 with point-in-time packet cutoffs/vintage selection, commit-to-commit append-only checks, registry enforcement, direct validation dependencies, tests, and GitHub Actions. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-25: Added the append-only macro/market data foundation, validation and fixture tests, dated packet generation, reusable analysis prompt, and Lumen entry page. See [July 2026](handoffs/2026-07.md).
 
