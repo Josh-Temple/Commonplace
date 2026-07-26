@@ -29,7 +29,7 @@ export function createValidators(repoRoot) {
 export function recordKey(record) {
   if (record.record_type === 'economic_release') return `${record.record_type}|${record.indicator_id}|${record.period}|${record.released_at}|${record.vintage}`;
   if (record.record_type === 'market_snapshot') return `${record.record_type}|${record.instrument_id}|${record.observed_at}|${record.observation_kind}`;
-  if (record.record_type === 'positioning_snapshot') return `${record.record_type}|${record.dataset_id}|${record.instrument_id}|${record.report_date}|${record.trader_category}`;
+  if (record.record_type === 'positioning_snapshot') return `${record.record_type}|${record.dataset_id}|${record.instrument_id}|${record.report_date}|${record.trader_category}|${record.retrieved_at}`;
   return `unknown|${JSON.stringify(record)}`;
 }
 
@@ -37,12 +37,16 @@ function registryErrors(record, entry, where) {
   const errors = [];
   if (!entry) return [`${where}: id ${JSON.stringify(record.indicator_id ?? record.instrument_id)} is not in registry.yaml.`];
   if (!entry.record_types?.includes(record.record_type)) errors.push(`${where}: ${record.record_type} is not allowed for registry id ${entry.id}.`);
-  if (!entry.allowed_units?.includes(record.unit)) errors.push(`${where}: unit ${JSON.stringify(record.unit)} is not allowed for registry id ${entry.id}.`);
+  const units = Array.isArray(entry.allowed_units)
+    ? entry.allowed_units
+    : entry.allowed_units?.[record.record_type];
+  if (!Array.isArray(units) || !units.includes(record.unit)) errors.push(`${where}: unit ${JSON.stringify(record.unit)} is not allowed for registry id ${entry.id} and record_type ${record.record_type}.`);
   if (record.record_type === 'economic_release') {
     if (!entry.allowed_frequencies?.includes(record.frequency)) errors.push(`${where}: frequency ${JSON.stringify(record.frequency)} is not allowed for registry id ${entry.id}.`);
     if (!entry.allowed_change_basis?.includes(record.change_basis)) errors.push(`${where}: change_basis ${JSON.stringify(record.change_basis)} is not allowed for registry id ${entry.id}.`);
   }
-  if (record.record_type === 'market_snapshot' && entry.asset_class !== record.asset_class) errors.push(`${where}: asset_class ${JSON.stringify(record.asset_class)} does not match registry value ${JSON.stringify(entry.asset_class)}.`);
+  const assetClass = typeof entry.asset_class === 'string' ? entry.asset_class : entry.asset_class?.[record.record_type];
+  if (record.record_type === 'market_snapshot' && assetClass !== record.asset_class) errors.push(`${where}: asset_class ${JSON.stringify(record.asset_class)} does not match registry value ${JSON.stringify(assetClass)} for record_type ${record.record_type}.`);
   return errors;
 }
 
