@@ -48,3 +48,23 @@ test('registry permits declared multiple units and production rejects fixtures',
   assert.deepEqual(validateDocument(percentCpi, { registry, validators, allowFixture: true }).errors, []);
   assert.ok(validateDocument(percentCpi, { registry, validators }).errors.some((error) => error.includes('fixture records are forbidden')));
 });
+
+test('registry applies units by record type for multi-purpose instruments', () => {
+  const market = fixture('market-snapshot.example.json');
+  const positioning = {
+    record_type: 'positioning_snapshot', dataset_id: 'fixture-cot', instrument_id: 'gold', report_date: '2099-01-30',
+    published_at: '2099-02-01T20:00:00Z', retrieved_at: '2099-02-01T20:05:00Z', long: 1, short: 1,
+    spreading: null, net: 0, open_interest: 2, trader_category: 'fixture', unit: 'contracts', source_name: 'Fixture',
+    source_url: 'https://example.invalid/positioning', notes: 'Synthetic', fixture: true,
+  };
+  for (const unit of ['contracts', 'percent_open_interest']) {
+    assert.deepEqual(validateDocument({ ...positioning, unit }, { registry, validators, allowFixture: true }).errors, []);
+  }
+  for (const [record, unit] of [[market, 'contracts'], [positioning, 'usd_per_troy_ounce']]) {
+    const errors = validateDocument({ ...record, unit }, { registry, validators, allowFixture: true }).errors;
+    assert.ok(errors.some((error) => error.includes('gold') && error.includes(record.record_type) && error.includes(unit)));
+  }
+  assert.deepEqual(validateDocument(market, { registry, validators, allowFixture: true }).errors, []);
+  const unknownType = validateDocument({ ...positioning, record_type: 'unknown', unit: 'contracts' }, { registry, validators, allowFixture: true }).errors;
+  assert.ok(unknownType.some((error) => error.includes('unsupported record_type')));
+});

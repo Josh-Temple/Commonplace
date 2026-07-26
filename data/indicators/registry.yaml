@@ -214,8 +214,13 @@ indicators:
     allowed_frequencies:
       - daily
     allowed_units:
-      - usd_per_troy_ounce
-    asset_class: commodity
+      market_snapshot:
+        - usd_per_troy_ounce
+      positioning_snapshot:
+        - contracts
+        - percent_open_interest
+    asset_class:
+      market_snapshot: commodity
   - id: sp500
     name: S&P 500
     classification: equity

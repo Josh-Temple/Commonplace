@@ -45,14 +45,14 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run after the PR #26 point-in-time and CI hardening work on 2026-07-25:
+Latest validation run after the PR #27 follow-up fixes on 2026-07-26:
 
 - `npm run validate:content`: passed for 123 content pages.
-- `npm run validate:data`: passed with no production observations and 16 schema, registry, packet, timezone, and temporary-Git append-only tests passing.
-- `npm run validate`: passed, including TypeScript, content/data validation, fixture tests, and production build.
+- `npm run validate:data`: passed with no production observations and 19 schema, registry, packet-integration, timezone, and temporary-Git append-only tests passing.
+- `DATA_BASE_REF=HEAD npm run validate`: passed, including TypeScript, 123-page content validation, data validation, and the 131-page production build.
 - `git diff --check`: passed.
 - `npm ci` passed from the committed lockfile; `DATA_BASE_REF=HEAD npm run validate` passed, including the 131-page build.
-- GitHub Issues/PR review threads remain unverifiable because web access returned HTTP 401, `gh` is unavailable, and no remote is configured.
+- GitHub Issues/PR review threads remain unverifiable because web access returned HTTP 401, `gh` is unavailable, and no remote is configured; the two specified PR #27 findings are covered by code and regression tests but could not be replied to or resolved here.
 - No UI code changed; no screenshot was required.
 
 ## Active limitations
@@ -67,13 +67,15 @@ Latest validation run after the PR #26 point-in-time and CI hardening work on 20
 
 ## Recommended next tasks
 
-1. From an authenticated checkout, post the implementation details to and resolve the remaining PR #26 review threads.
+1. From an authenticated checkout, post the cross-file vintage and record-type unit implementation details to the two remaining PR #27 review threads and resolve them.
 2. Review licensing and vintage requirements for one official economic-release source and one legally redistributable market series.
 3. Add the first verified observations through a reviewed, append-only pull request and inspect the generated packet.
 4. Design automated acquisition only after source terms, idempotency, secret storage, and correction review are documented.
 5. Verify open GitHub Issues and PRs with authenticated access.
 
 ## Recent work
+
+- 2026-07-26: Fixed PR #27 follow-ups for cross-file economic vintages, as-of positioning, record-type-specific gold units, collision-safe packet names, integration tests, and documentation. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-25: Hardened PR #26 with point-in-time packet cutoffs/vintage selection, commit-to-commit append-only checks, registry enforcement, direct validation dependencies, tests, and GitHub Actions. See [July 2026](handoffs/2026-07.md).
 

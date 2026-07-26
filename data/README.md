@@ -17,7 +17,7 @@ Each daily JSON file is one record or an array of records. There is intentionall
 
 ## Append-only and vintages
 
-Published history is append-only. An economic record's identity includes indicator, period, release time, and `vintage`. A revision is a new record with a new retrieval time and vintage; retain `previous_initial` and `previous_revised` as they were known for that release. Never replace an initial observation with a revised number.
+Published history is append-only. An economic record's identity includes indicator, period, release time, and `vintage`. A revision is a new record with a new retrieval time and vintage; retain `previous_initial` and `previous_revised` as they were known for that release. Never replace an initial observation with a revised number. For example, an initial release may remain in `releases/2026/07/2026-07-25.json`, while a revision retrieved on August 20 is appended to `releases/2026/08/2026-08-20.json` with the same `indicator_id`, `period`, and `released_at`.
 
 `npm run validate:data` checks schema, duplicate identities, fixture exclusion, and every record against the registry's permitted record types, units, frequencies, change bases, and asset classes. Names that differ from the registry produce warnings. Append-only enforcement compares committed history to the explicit `DATA_BASE_REF`; only added paths are allowed, while modified, deleted, renamed, and copied/replaced history fails. Locally, omitting the ref emits a visible warning and still runs data checks; CI treats a missing ref as an error.
 
@@ -29,6 +29,18 @@ For a genuine correction to a malformed committed record, document the reason an
 2. Record display name, permitted `record_types`, `allowed_frequencies`, `allowed_units`, `allowed_change_basis`, applicable `asset_class`, principal official source, and a concise analysis caution.
 3. Use only units permitted by the relevant schema; extend schema and tests when a legitimate new unit is needed.
 4. Run validation before adding observations.
+
+`allowed_units` is an array only when an entry has one record type. Entries serving multiple record types use an explicit mapping, with no fallback between types:
+
+```yaml
+allowed_units:
+  market_snapshot: [usd_per_troy_ounce]
+  positioning_snapshot: [contracts, percent_open_interest]
+asset_class:
+  market_snapshot: commodity
+```
+
+Thus a gold market price cannot use `contracts`, and gold positioning cannot use `usd_per_troy_ounce`. This structure can be extended to other multi-purpose instruments without weakening validation.
 
 ## Add daily data
 
@@ -45,15 +57,22 @@ For a genuine correction to a malformed committed record, document the reason an
 DATA_BASE_REF=origin/main npm run validate:data
 npm run market:packet -- --date 2026-07-25 \
   --as-of 2026-07-25T23:59:59-04:00
+npm run market:packet -- --date 2026-07-25 \
+  --as-of 2026-08-25T23:59:59Z \
+  --output sources/market-packets/review-copy.md
 
 ALLOW_DATA_CORRECTION=1 \
 DATA_CORRECTION_REASON="Fix malformed timestamp in committed record" \
 npm run validate:data
 ```
 
-`--as-of` is an ISO 8601 instant with `Z` or an explicit UTC offset. Records are eligible only when `retrieved_at <= as-of`, compared as absolute epoch times. Among economic records sharing `indicator_id`, `period`, and `released_at`, the generator selects the eligible record with the latest absolute `retrieved_at`; later revisions remain stored but cannot leak into an earlier packet. Without `--as-of`, the cutoff is exactly `YYYY-MM-DDT23:59:59.999Z`. The packet records the cutoff, its timezone, the rule, the latest selected retrieval, and the count excluded for future retrieval.
+`--date` is the event/observation date being analyzed; `--as-of` is the later (or equal) knowledge cutoff. `--as-of` must be an ISO 8601 instant with `Z` or an explicit UTC offset. All timestamp comparisons use absolute epoch time. Without it, the cutoff is exactly `YYYY-MM-DDT23:59:59.999Z`.
 
-The generator reads only the three production files for the specified date and writes `sources/market-packets/YYYY-MM-DD.md`. Missing sections remain explicit. Inspect the packet, then give it together with the reusable instructions in `content/outputs/macro-market-analysis-prompt.md` to ChatGPT. Review the response, keep facts/interpretations/hypotheses labeled, and save an approved reader-facing result under `content/outputs/` with complete Commonplace frontmatter. Never paste account details or secrets.
+- **Economic releases:** the generator scans JSON date files under `data/releases/`, because an append-only revision can live in a later retrieval-date file. It retains only records whose `released_at` UTC date equals `--date` and whose `retrieved_at <= as-of`, groups by `indicator_id + period + released_at`, then chooses the greatest `retrieved_at`. A selected group with more than one eligible retrieval counts as a subsequent vintage.
+- **Market snapshots:** only the `--date` market file is opened, and its `observed_at` UTC date must also equal `--date`. A later market file is never imported into a historical reaction merely because `as-of` is later.
+- **Positioning snapshots:** dated publication files only through the UTC `as-of` date are considered (later files are not scanned). Both `published_at` and `retrieved_at` must be no later than `as-of`, the greatest available `report_date` is selected, and duplicate versions of `dataset_id + instrument_id + trader_category + report_date` use the greatest `retrieved_at`. Unlike market reactions, this section is an as-of context snapshot rather than a value observed strictly on `--date`.
+
+The default output is `sources/market-packets/YYYY-MM-DD--as-of-YYYYMMDDTHHMMSSZ.md`. Offset input is normalized to its UTC absolute instant, so distinct cutoffs do not silently overwrite one another; identical date/cutoff generation may overwrite its own derived packet. `--output` provides an explicit custom path. Missing sections remain explicit. Inspect the packet, then give it together with the reusable instructions in `content/outputs/macro-market-analysis-prompt.md` to ChatGPT. Review the response, keep facts/interpretations/hypotheses labeled, and save an approved reader-facing result under `content/outputs/` with complete Commonplace frontmatter. Never paste account details or secrets.
 
 ## Corrections and source/license review
 
