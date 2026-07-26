@@ -33,8 +33,22 @@ export function recordKey(record) {
   return `unknown|${JSON.stringify(record)}`;
 }
 
+function registryErrors(record, entry, where) {
+  const errors = [];
+  if (!entry) return [`${where}: id ${JSON.stringify(record.indicator_id ?? record.instrument_id)} is not in registry.yaml.`];
+  if (!entry.record_types?.includes(record.record_type)) errors.push(`${where}: ${record.record_type} is not allowed for registry id ${entry.id}.`);
+  if (!entry.allowed_units?.includes(record.unit)) errors.push(`${where}: unit ${JSON.stringify(record.unit)} is not allowed for registry id ${entry.id}.`);
+  if (record.record_type === 'economic_release') {
+    if (!entry.allowed_frequencies?.includes(record.frequency)) errors.push(`${where}: frequency ${JSON.stringify(record.frequency)} is not allowed for registry id ${entry.id}.`);
+    if (!entry.allowed_change_basis?.includes(record.change_basis)) errors.push(`${where}: change_basis ${JSON.stringify(record.change_basis)} is not allowed for registry id ${entry.id}.`);
+  }
+  if (record.record_type === 'market_snapshot' && entry.asset_class !== record.asset_class) errors.push(`${where}: asset_class ${JSON.stringify(record.asset_class)} does not match registry value ${JSON.stringify(entry.asset_class)}.`);
+  return errors;
+}
+
 export function validateDocument(document, { registry, validators, file = '<document>', allowFixture = false } = {}) {
   const errors = [];
+  const warnings = [];
   const records = Array.isArray(document) ? document : [document];
   if (records.length === 0) errors.push(`${file}: record array must not be empty.`);
   const seen = new Set();
@@ -43,12 +57,13 @@ export function validateDocument(document, { registry, validators, file = '<docu
     if (!record || typeof record !== 'object' || Array.isArray(record)) { errors.push(`${where}: record must be an object.`); return; }
     const validator = validators[record.record_type];
     if (!validator) { errors.push(`${where}: unsupported record_type ${JSON.stringify(record.record_type)}.`); return; }
-    if (!validator(record)) {
-      for (const issue of validator.errors ?? []) errors.push(`${where}${issue.dataPath}: ${issue.message}.`);
-    }
+    if (!validator(record)) for (const issue of validator.errors ?? []) errors.push(`${where}${issue.dataPath}: ${issue.message}.`);
     if (record.fixture === true && !allowFixture) errors.push(`${where}: fixture records are forbidden in production data/.`);
     const id = record.indicator_id ?? record.instrument_id;
-    if (typeof id === 'string' && !registry.has(id)) errors.push(`${where}: id ${JSON.stringify(id)} is not in registry.yaml.`);
+    const entry = typeof id === 'string' ? registry.get(id) : undefined;
+    errors.push(...registryErrors(record, entry, where));
+    const suppliedName = record.indicator_name ?? record.instrument_name;
+    if (entry && suppliedName !== undefined && suppliedName !== entry.name) warnings.push(`${where}: name ${JSON.stringify(suppliedName)} differs from registry name ${JSON.stringify(entry.name)}.`);
     const retrieved = Date.parse(record.retrieved_at);
     const available = Date.parse(record.released_at ?? record.observed_at ?? record.published_at);
     if (Number.isFinite(retrieved) && Number.isFinite(available) && retrieved < available) errors.push(`${where}: retrieved_at precedes the release/observation/publication time.`);
@@ -57,7 +72,7 @@ export function validateDocument(document, { registry, validators, file = '<docu
     if (seen.has(key)) errors.push(`${where}: duplicate record key ${key}.`);
     seen.add(key);
   });
-  return { errors, records };
+  return { errors, warnings, records };
 }
 
 export function dataJsonFiles(repoRoot) {

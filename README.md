@@ -73,11 +73,11 @@ npm run validate:content
 Validate only structured observations, or generate a reviewed Markdown packet for a date, with:
 
 ```bash
-npm run validate:data
-npm run market:packet -- --date 2026-07-25
+DATA_BASE_REF=origin/main npm run validate:data
+npm run market:packet -- --date 2026-07-25 --as-of 2026-07-25T23:59:59-04:00
 ```
 
-The packet is written to `sources/market-packets/YYYY-MM-DD.md`. Missing sections remain explicit, and the generator does not infer a market conclusion. Use it with the reader-facing prompt at `content/outputs/macro-market-analysis-prompt.md`; after human review, save any publishable analysis under `content/outputs/` with the standard frontmatter. No external API, automatic analysis, credentials, or unverified live values are part of this MVP.
+`--as-of` must include `Z` or an explicit UTC offset; when omitted it defaults to `23:59:59.999Z` on `--date`. Only records retrieved by that absolute instant are eligible, and the latest eligible economic vintage is selected per indicator, period, and release time. The packet is written to `sources/market-packets/YYYY-MM-DD.md`. Missing sections remain explicit, and the generator does not infer a market conclusion. Use it with the reader-facing prompt at `content/outputs/macro-market-analysis-prompt.md`; after human review, save any publishable analysis under `content/outputs/` with the standard frontmatter. Before committing real observations, validate registry compatibility and regenerate a historical packet to confirm that a future vintage is excluded. GitHub Actions runs `npm ci` and `npm run validate` on pull requests and pushes to `main`, passing an explicit Git base revision so committed history edits cannot be silently accepted. No external API, automatic analysis, credentials, or unverified live values are part of this MVP.
 
 The app is designed to deploy directly on Vercel as a standard Next.js project. It includes a web app manifest and service worker so supported browsers can install Lumen as a standalone PWA and reuse cached pages when offline.
 

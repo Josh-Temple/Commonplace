@@ -28,3 +28,23 @@ test('unknown record types and duplicate records fail', () => {
   assert.ok(validateDocument({ record_type: 'opinion' }, { registry, validators }).errors.length > 0);
   assert.ok(validateDocument([valid, valid], { registry, validators, allowFixture: true }).errors.some((error) => error.includes('duplicate')));
 });
+
+test('registry rejects mismatched ids, units, frequencies, and asset classes', () => {
+  const economic = fixture('economic-release.example.json');
+  for (const [change, expected] of [
+    [{ indicator_id: 'missing-id' }, 'not in registry'],
+    [{ unit: 'usd' }, 'unit'],
+    [{ frequency: 'weekly' }, 'frequency'],
+  ]) {
+    const errors = validateDocument({ ...economic, ...change }, { registry, validators, allowFixture: true }).errors;
+    assert.ok(errors.some((error) => error.includes(expected)));
+  }
+  const market = fixture('market-snapshot.example.json');
+  assert.ok(validateDocument({ ...market, asset_class: 'equity' }, { registry, validators, allowFixture: true }).errors.some((error) => error.includes('asset_class')));
+});
+
+test('registry permits declared multiple units and production rejects fixtures', () => {
+  const percentCpi = { ...fixture('economic-release.example.json'), unit: 'percent', change_basis: 'yoy' };
+  assert.deepEqual(validateDocument(percentCpi, { registry, validators, allowFixture: true }).errors, []);
+  assert.ok(validateDocument(percentCpi, { registry, validators }).errors.some((error) => error.includes('fixture records are forbidden')));
+});

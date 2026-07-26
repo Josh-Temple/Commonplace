@@ -9,7 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "validate:content": "node scripts/validate-content.mjs",
-    "validate:data": "node scripts/validate-data.mjs && node --test tests/data-validation.test.mjs",
+    "validate:data": "node scripts/validate-data.mjs && node --test tests/data-validation.test.mjs tests/market-packet.test.mjs tests/append-only.test.mjs",
     "market:packet": "node scripts/generate-market-packet.mjs",
     "validate": "npm run typecheck && npm run validate:content && npm run validate:data && npm run build"
   },
@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.4"
+    "eslint-config-next": "^14.2.4",
+    "ajv": "^6.12.6",
+    "js-yaml": "^4.1.0"
   }
 }
