@@ -45,11 +45,11 @@ Notable clusters include trading process design, Volume Profile and horizontal-l
 
 ## Validation status
 
-Latest validation run after the PR #27 follow-up fixes on 2026-07-26:
+Latest validation run after the Currency Carry Trades and Yen Funding integration on 2026-07-27:
 
-- `npm run validate:content`: passed for 123 content pages.
+- `npm run validate:content`: passed for 137 content pages.
 - `npm run validate:data`: passed with no production observations and 19 schema, registry, packet-integration, timezone, and temporary-Git append-only tests passing.
-- `DATA_BASE_REF=HEAD npm run validate`: passed, including TypeScript, 123-page content validation, data validation, and the 131-page production build.
+- `DATA_BASE_REF=HEAD npm run validate`: passed, including TypeScript, 137-page content validation, data validation, and the 145-page production build.
 - `git diff --check`: passed.
 - `npm ci` passed from the committed lockfile; `DATA_BASE_REF=HEAD npm run validate` passed, including the 131-page build.
 - GitHub Issues/PR review threads remain unverifiable because web access returned HTTP 401, `gh` is unavailable, and no remote is configured; the two specified PR #27 findings are covered by code and regression tests but could not be replied to or resolved here.
@@ -61,7 +61,7 @@ Latest validation run after the PR #27 follow-up fixes on 2026-07-26:
 - Consensus and licensed market data require a source-by-source redistribution review before storage.
 
 - Open GitHub Issues and PRs still need verification from an authenticated environment.
-- Directional gold, equity, cross-asset, lead/lag, event-reaction, and auction-impact claims intentionally remain low-confidence and regime-dependent.
+- Directional gold, equity, FX-carry, cross-asset, lead/lag, event-reaction, and auction-impact claims intentionally remain low-confidence and regime-dependent. Current yen-carry size, leverage, and trade intent are not treated as precisely observable.
 - Source notes are claim-mapped evidence records, not exhaustive literature reviews; official methodologies and URLs should be rechecked when revising.
 - The widest claim-to-source tables live only in research notes; reader-facing scenario tables are limited to four columns or replaced by stacked cards.
 
@@ -74,6 +74,8 @@ Latest validation run after the PR #27 follow-up fixes on 2026-07-26:
 5. Verify open GitHub Issues and PRs with authenticated access.
 
 ## Recent work
+
+- 2026-07-27: Added the source-backed Currency Carry Trades and Yen Funding subcluster inside Financial Macro for Trading, with methods, checklist, reusable output, cross-asset integration, and six evidence notes. See [July 2026](handoffs/2026-07.md).
 
 - 2026-07-26: Fixed PR #27 follow-ups for cross-file economic vintages, as-of positioning, record-type-specific gold units, collision-safe packet names, integration tests, and documentation. See [July 2026](handoffs/2026-07.md).
 

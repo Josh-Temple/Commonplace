@@ -17,9 +17,10 @@ related:
   - pre-trade-context-checklist
   - financial-macro-for-trading
   - macro-context-assessment
+  - yen-carry-context-assessment
 next:
   - market-structure
-updated: 2026-07-19
+updated: 2026-07-27
 ---
 
 ## 要点
@@ -32,7 +33,7 @@ updated: 2026-07-19
 
 ## 二層のContext
 
-- **Macro context:** rates、inflation、policy、dollar、liquidity、risk sentiment。[[financial-macro-for-trading]]、[[cross-asset-confirmation-and-divergence]]、[[macro-context-assessment]]で、asset・timeframeに関連する時だけ整理する。
+- **Macro context:** rates、inflation、policy、dollar、liquidity、risk sentiment、必要な場合のFX fundingとcapital flows。[[financial-macro-for-trading]]、[[cross-asset-confirmation-and-divergence]]、[[macro-context-assessment]]で、asset・timeframe・event proximity・evidence qualityに関連する時だけ整理する。円キャリー仮説は[[yen-carry-context-assessment]]で反証可能にする。
 - **Price context:** timeframe、session、volatility、market structure、levels、profile。
 
 Macroは価格based invalidationを置き換えず、Entry後に理由を足すものでもありません。

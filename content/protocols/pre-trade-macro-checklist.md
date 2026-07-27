@@ -14,9 +14,10 @@ related:
   - macro-context-assessment
   - pre-trade-context-checklist
   - major-macro-event-checklist
+  - carry-trade-risk-checklist
 next:
   - pre-trade-context-checklist
-updated: 2026-07-19
+updated: 2026-07-27
 ---
 ## 目的
 
@@ -40,6 +41,10 @@ updated: 2026-07-19
 5. ドル高・安の原因を相対金利かリスクか問う。
 6. IG/HY信用、ボラティリティ、利益・リスク選好を確認する。
 7. Scenario A/B、反証、価格要件を書く。
+
+## 為替・国際資金フロー分岐
+
+円、国際株、信用、金が対象で、時間軸とイベント距離に意味がある場合だけ[[carry-trade-risk-checklist]]を使います。金利差、複数円クロス、FXボラティリティ、調達条件を確認し、証拠品質が低ければ省略します。円だけの動きや、現在ポジションの根拠なき推計を取引理由にしません。
 
 ## ゴールド分岐
 

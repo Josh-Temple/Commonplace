@@ -19,7 +19,7 @@ The repository is named **Commonplace**, but the app is called **Lumen**.
 - Minimal, border-light visual design that uses whitespace and divider lines instead of boxed cards
 - Quiet theme index lists that show only titles and summaries in the main navigation UI
 - Client-side article search across page titles, summaries, tags, ids, and types
-- Deepened source-backed financial-macro system with rates decomposition, gold and equity scenarios, market plumbing, event analysis, and reusable briefs connected to the trading Context workflow
+- Deepened source-backed financial-macro system with rates decomposition, FX carry and yen funding, international capital flows, gold and equity scenarios, market plumbing, event analysis, and reusable briefs connected to the trading Context workflow
 
 ## Content directories
 
