@@ -20,9 +20,10 @@ related:
   - entry-decision-process
   - horizontal-line-trading-framework
   - no-trade-checklist
+  - carry-trade-risk-checklist
 next:
   - financial-macro-for-trading
-updated: 2026-07-19
+updated: 2026-07-27
 ---
 
 ## 目的
@@ -31,7 +32,7 @@ updated: 2026-07-19
 
 ## 判断フロー
 
-1. Macro context: 関連するasset/timeframeなら[[macro-context-assessment]]と[[pre-trade-macro-checklist]]でrates、inflation、policy、dollar、event riskを確認する。
+1. Macro context: 関連するasset/timeframeなら[[macro-context-assessment]]と[[pre-trade-macro-checklist]]でrates、inflation、policy、dollar、event riskを確認する。円や国際資産が関係する場合だけ[[yen-carry-context-assessment]]を加える。
 2. Price context: [[trading-context]]と[[pre-trade-context-checklist]]で上位足、セッション、ニュース、流動性を確認する。
 3. Structure: [[market-structure-assessment]]でトレンド、レンジ、ブレイク、失敗を観察する。
 4. Level: [[horizontal-level-analysis]]で水平線・重要水準を判断エリアとして絞る。

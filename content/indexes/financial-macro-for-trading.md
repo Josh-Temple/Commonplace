@@ -17,10 +17,12 @@ related:
   - macro-context-assessment
   - gold-rates-dollar-relationship
   - equities-and-interest-rates
+  - yen-funded-carry-trade
+  - international-capital-flows
 next:
   - bond-prices-and-yields
   - macro-context-assessment
-updated: 2026-07-19
+updated: 2026-07-27
 ---
 ## 目的
 
@@ -38,6 +40,12 @@ updated: 2026-07-19
 
 [[monetary-policy-expectations]] → [[policy-rates-money-markets-and-sofr]] → [[financial-conditions-and-liquidity]] → [[treasury-auctions-and-debt-supply]] → [[us-dollar-and-financial-markets]]
 
+## 為替・キャリートレード
+
+[[currency-carry-trade]] → [[funding-and-target-currencies]] → [[yen-funded-carry-trade]] → [[fx-forwards-swaps-and-forward-points]] → [[covered-and-uncovered-interest-parity]] → [[cross-currency-basis]] → [[fx-volatility-and-carry]] → [[carry-trade-unwind]] → [[yen-carry-context-assessment]] → [[carry-trade-risk-checklist]]。
+
+発展ルートは[[international-capital-flows]] → [[cross-asset-carry-confirmation]] → [[carry-trade-unwind-analysis]]です。現在の規模を精密に測れるとは仮定せず、金利差、ヘッジ、実際の調達費用、ボラティリティ、価格をつなぎます。
+
 ## Asset application — 金と株式
 
 金は[[gold-rates-dollar-relationship]]、S&P 500を含む株式は[[equities-and-interest-rates]]で、金利方向を原因別に分解します。[[growth-inflation-policy-regimes]]は静的なラベルでなく変化と反証を扱います。
@@ -48,6 +56,7 @@ updated: 2026-07-19
 - 確認と乖離: [[cross-asset-confirmation-and-divergence]]
 - 全体評価: [[macro-context-assessment]] / [[macro-scenario-matrix]]
 - イベント: [[macro-data-surprises]] / [[macro-event-reaction-analysis]] / [[major-macro-event-checklist]]
+- キャリー文脈: [[yen-carry-context-assessment]] / [[yen-carry-context-template]] / [[carry-trade-risk-checklist]]
 - 圧縮: [[pre-trade-macro-brief-template]] / [[pre-trade-macro-checklist]]
 
 ## 価格分析への戻り方
