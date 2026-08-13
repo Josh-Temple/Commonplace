@@ -82,6 +82,10 @@ npm run market:packet -- --date 2026-07-25 --as-of 2026-08-25T23:59:59Z
 
 Before adding real data, run `npm ci`, `DATA_BASE_REF=<base-commit> npm run validate:data`, and `npm run validate`; then generate both a pre-revision and post-revision packet and compare each with the original publication. Missing sections remain explicit, and the generator does not infer a market conclusion. GitHub Actions performs the clean install and full validation with an explicit append-only base revision. No external API, automatic analysis, credentials, or unverified live values are part of this MVP.
 
+## Deployment
+
+- Production: https://commonplace-sable.vercel.app/
+
 The app is designed to deploy directly on Vercel as a standard Next.js project. It includes a web app manifest and service worker so supported browsers can install Lumen as a standalone PWA and reuse cached pages when offline.
 
 ## Handoff workflow
