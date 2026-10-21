@@ -4,22 +4,23 @@ import { PageGrid, TopNav } from "../../components";
 import { getAvailableLenses, getIndexPagesByLens, getLensInfo, isLens } from "../../../lib/content";
 
 type LensPageProps = {
-  params: {
+  params: Promise<{
     lens: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return getAvailableLenses().map((lens) => ({ lens: lens.slug }));
 }
 
-export default function LensIndexPage({ params }: LensPageProps) {
-  if (!isLens(params.lens)) notFound();
+export default async function LensIndexPage({ params }: LensPageProps) {
+  const { lens: lensSlug } = await params;
+  if (!isLens(lensSlug)) notFound();
 
-  const pages = getIndexPagesByLens(params.lens);
+  const pages = getIndexPagesByLens(lensSlug);
   if (pages.length === 0) notFound();
 
-  const lens = getLensInfo(params.lens);
+  const lens = getLensInfo(lensSlug);
 
   return (
     <>
