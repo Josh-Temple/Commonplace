@@ -26,13 +26,15 @@ export function generateStaticParams() {
   return getAllPages().map((page) => ({ slug: page.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string[] } }) {
-  const page = getPageBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const page = getPageBySlug(slug);
   return { title: page ? `${page.title} · Lumen` : "Lumen" };
 }
 
-export default function ContentDetailPage({ params }: { params: { slug: string[] } }) {
-  const page = getPageBySlug(params.slug);
+export default async function ContentDetailPage({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const page = getPageBySlug(slug);
   if (!page) notFound();
 
   const related = resolvePageRefs(page.related);
